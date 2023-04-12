@@ -2,8 +2,9 @@
       Custom css start
 ==========================  **/
 body {
-  font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-  font-feature-settings: "salt";
+  font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
+  font-feature-settings: 'salt';
 }
 * {
   &:focus {
@@ -61,7 +62,7 @@ strong {
   height: 100%;
   text-align: center;
   color: #fff;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   padding: 50px 0;
 
   p {
@@ -135,10 +136,10 @@ strong {
   border-radius: 50%;
 }
 .pc-icon {
-  &:not([class*="wid-"]) {
+  &:not([class*='wid-']) {
     width: 22px;
   }
-  &:not([class*="hei-"]) {
+  &:not([class*='hei-']) {
     height: 22px;
   }
 }
@@ -234,7 +235,7 @@ strong {
   margin-bottom: 15px;
 
   .row {
-    > [class^="col-"],
+    > [class^='col-'],
     > .col {
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
@@ -361,19 +362,19 @@ strong {
   }
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   background: transparent;
 }
 
 /* ================================    Blockquote Start  ===================== */
 
 svg.feather {
-  &:not([class*="wid-"]) {
+  &:not([class*='wid-']) {
     width: 20px;
   }
 
-  &:not([class*="hei-"]) {
+  &:not([class*='hei-']) {
     height: 20px;
   }
 }
@@ -384,18 +385,18 @@ svg.feather {
   }
 }
 
-pre[class*="language-"]:before,
-pre[class*="language-"]:after {
+pre[class*='language-']:before,
+pre[class*='language-']:after {
   display: none;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   display: flex;
   margin: 0;
 }
 
-pre[class*="language-"] > code {
+pre[class*='language-'] > code {
   width: 100%;
 }
 

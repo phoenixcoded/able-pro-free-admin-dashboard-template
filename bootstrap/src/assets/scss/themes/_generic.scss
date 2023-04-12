@@ -140,18 +140,18 @@ $i: 1;
 /*====== border color css ends ======*/
 /*====== text-color, background color css starts ======*/
 $social-colors: (
-  "facebook": #4267b2,
-  "twitter": #42c0fb,
-  "dribbble": #ec4a89,
-  "pinterest": #bf2131,
-  "youtube": #e0291d,
-  "googleplus": #c73e2e,
-  "instagram": #aa7c62,
-  "viber": #7b519d,
-  "behance": #0057ff,
-  "dropbox": #3380ff,
-  "linkedin": #0077b5,
-  "amazon": #000000,
+  'facebook': #4267b2,
+  'twitter': #42c0fb,
+  'dribbble': #ec4a89,
+  'pinterest': #bf2131,
+  'youtube': #e0291d,
+  'googleplus': #c73e2e,
+  'instagram': #aa7c62,
+  'viber': #7b519d,
+  'behance': #0057ff,
+  'dropbox': #3380ff,
+  'linkedin': #0077b5,
+  'amazon': #000000
 );
 @each $color, $value in $social-colors {
   .bg-light-#{$color} {
@@ -290,7 +290,7 @@ $more-colors: (
     600: $blue-600,
     700: $blue-700,
     800: $blue-800,
-    900: $blue-900,
+    900: $blue-900
   ),
   'indigo': (
     100: $indigo-100,
@@ -301,7 +301,7 @@ $more-colors: (
     600: $indigo-600,
     700: $indigo-700,
     800: $indigo-800,
-    900: $indigo-900,
+    900: $indigo-900
   ),
   'purple': (
     100: $purple-100,
@@ -312,7 +312,7 @@ $more-colors: (
     600: $purple-600,
     700: $purple-700,
     800: $purple-800,
-    900: $purple-900,
+    900: $purple-900
   ),
   'pink': (
     100: $pink-100,
@@ -323,7 +323,7 @@ $more-colors: (
     600: $pink-600,
     700: $pink-700,
     800: $pink-800,
-    900: $pink-900,
+    900: $pink-900
   ),
   'red': (
     100: $red-100,
@@ -334,7 +334,7 @@ $more-colors: (
     600: $red-600,
     700: $red-700,
     800: $red-800,
-    900: $red-900,
+    900: $red-900
   ),
   'orange': (
     100: $orange-100,
@@ -345,7 +345,7 @@ $more-colors: (
     600: $orange-600,
     700: $orange-700,
     800: $orange-800,
-    900: $orange-900,
+    900: $orange-900
   ),
   'yellow': (
     100: $yellow-100,
@@ -356,7 +356,7 @@ $more-colors: (
     600: $yellow-600,
     700: $yellow-700,
     800: $yellow-800,
-    900: $yellow-900,
+    900: $yellow-900
   ),
   'green': (
     100: $green-100,
@@ -367,7 +367,7 @@ $more-colors: (
     600: $green-600,
     700: $green-700,
     800: $green-800,
-    900: $green-900,
+    900: $green-900
   ),
   'teal': (
     100: $teal-100,
@@ -378,7 +378,7 @@ $more-colors: (
     600: $teal-600,
     700: $teal-700,
     800: $teal-800,
-    900: $teal-900,
+    900: $teal-900
   ),
   'cyan': (
     100: $cyan-100,
@@ -389,7 +389,7 @@ $more-colors: (
     600: $cyan-600,
     700: $cyan-700,
     800: $cyan-800,
-    900: $cyan-900,
+    900: $cyan-900
   ),
   'gray': (
     100: $gray-100,
@@ -400,8 +400,8 @@ $more-colors: (
     600: $gray-600,
     700: $gray-700,
     800: $gray-800,
-    900: $gray-900,
-  ),
+    900: $gray-900
+  )
 );
 @each $name, $value in $more-colors {
   $i: 100;
