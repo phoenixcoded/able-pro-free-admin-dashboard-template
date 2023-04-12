@@ -1,0 +1,206 @@
+/**  =====================
+      Authentication css start
+==========================  **/
+
+.auth-main {
+  position: relative;
+
+  .auth-wrapper {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+
+    .saprator {
+      position: relative;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--bs-border-color);
+        z-index: 1;
+      }
+
+      span {
+        font-size: 0.875rem;
+        padding: 8px 24px;
+        background: var(--bs-card-bg);
+        z-index: 5;
+        text-transform: capitalize;
+        color: var(--pc-heading-color);
+        font-weight: 500;
+      }
+    }
+
+    .auth-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+
+      .card {
+        width: 100%;
+        max-width: 480px;
+        box-shadow: none;
+      }
+
+      img+span {
+        padding-left: 10px;
+      }
+
+      h5 {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.v1 {
+      display: flex;
+      align-items: center;
+
+      .auth-form {
+        flex-direction: column;
+        background: url("../images/authentication/img-auth-bg.jpg");
+        min-height: 100vh;
+        padding: 24px;
+        background-size: cover;
+        position: relative;
+        justify-content: center;
+
+        .card-body {
+          padding: 40px;
+          @include media-breakpoint-down(sm) {
+            padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+          }
+        }
+      }
+    }
+
+    &.v2 {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+
+      .img-auth-side {
+        height: 100vh;
+        @include media-breakpoint-down(xl) {
+          display: none;
+        }
+      }
+
+      .auth-form .card {
+        border: none;
+        box-shadow: none;
+        
+      }
+    }
+
+    &.v3 {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+
+      .auth-sidecontent {
+        width: 580px;
+        align-self: stretch;
+        background: var(--bs-primary);
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        >* {
+          position: relative;
+          z-index: 5;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          z-index: 2;
+          background: linear-gradient(338deg, rgb(0, 0, 0, .3), transparent);
+        }
+
+        .carousel-indicators {
+          [data-bs-target] {
+            height: 6px;
+            border-radius: 4px;
+            border-top: none;
+            border-bottom: none;
+
+            &:not(.active) {
+              width: 6px;
+            }
+          }
+        }
+        @include media-breakpoint-down(xl) {
+          display: none;
+        }
+      }
+
+      .auth-form {
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        padding: 24px;
+
+        .auth-footer,
+        .auth-header {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .card {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.auth-option {
+  .auth-megaoption {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+
+    svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn-check:checked {
+    +.auth-megaoption {
+      border-color: var(--bs-primary);
+      background: var(--bs-primary-light);
+      box-shadow: 0 0 0 1px var(--bs-primary), 0px 8px 24px rgba(27, 46, 94, 0.12);
+
+      svg,
+      span {
+        color: var(--bs-primary);
+      }
+    }
+  }
+}
+
+/**====== Authentication css end ======**/

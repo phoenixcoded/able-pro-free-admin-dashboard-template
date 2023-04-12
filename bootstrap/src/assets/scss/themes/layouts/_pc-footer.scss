@@ -1,0 +1,31 @@
+// ============================
+//     header css start
+// ============================
+
+.pc-footer {
+  position: relative;
+  z-index: 995;
+  margin-left: $sidebar-width;
+  margin-top: $header-height;
+  padding: 15px 0;
+  a {
+    color: var(--bs-body-color);
+    &:hover {
+      color: var(--bs-primary);
+    }
+  }
+  .footer-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .footer-link {
+    .list-inline-item:not(:last-child) {
+      margin-right: 0.9rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-left: 0;
+  }
+}
+
+// header css end

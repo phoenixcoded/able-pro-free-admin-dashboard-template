@@ -1,0 +1,257 @@
+// ============================
+//     Widget css start
+// ============================
+
+.available-balance-card {
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: '';
+    background: linear-gradient(245deg, transparent 25.46%, rgba(0, 0, 0, 0.2) 68.77%, rgba(0, 0, 0, 0.3) 81.72%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.6;
+  }
+  > * {
+    position: relative;
+    z-index: 5;
+  }
+  .avtar {
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+}
+.analytics-tab {
+  border-bottom: 0;
+  .nav-item {
+    margin-bottom: -0px;
+
+    .nav-link {
+      position: relative;
+      padding: 1rem 0.8rem;
+      margin: 0 0.2rem;
+      font-weight: 500;
+      color: var(--bs-body-color);
+      display: inline-flex;
+      align-items: center;
+      &:after {
+        content: '';
+        background: var(--bs-primary);
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        left: 50%;
+        right: 50%;
+        bottom: -1px;
+        height: 2px;
+        border-radius: 2px 2px 0 0;
+      }
+    }
+  }
+
+  .nav-link:hover {
+    border-color: transparent;
+    background: transparent;
+    color: var(--bs-primary);
+  }
+
+  .nav-item.show .nav-link,
+  .nav-link.active {
+    border-color: transparent;
+    color: var(--bs-primary);
+    background: transparent;
+    &:after {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+.overview-product-legends {
+  border: 1px solid var(--bs-border-color);
+  padding: 16px;
+  border-radius: var(--bs-border-radius);
+  p {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: currentColor;
+      margin-left: -10px;
+    }
+    span {
+      color: var(--bs-body-color);
+    }
+  }
+}
+.able-user-group {
+  .avtar {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.table-card .card-body,
+.table-body.card-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+
+  .table {
+    > thead > tr > th {
+      border-top: 0;
+    }
+
+    tr {
+      td,
+      th {
+        &:first-child {
+          padding-left: 25px;
+        }
+
+        &:last-child {
+          padding-right: 25px;
+        }
+      }
+    }
+
+    &.without-header {
+      tr {
+        &:first-child {
+          td {
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.social-widget-card {
+  color: #fff;
+
+  i {
+    position: absolute;
+    right: 14px;
+    top: 24px;
+    font-size: 48px;
+    opacity: 0.4;
+    transition: all ease-in 0.3s;
+  }
+  &:hover i {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.task-card {
+  .task-list {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: $border-color;
+      height: 100%;
+      width: 2px;
+      top: 0;
+      left: 10px;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $border-color;
+      height: 15px;
+      width: 15px;
+      bottom: -14px;
+      left: 3px;
+      z-index: 2;
+      border-radius: 50%;
+    }
+
+    li {
+      margin-bottom: 30px;
+      padding-left: 30px;
+      position: relative;
+
+      .task-icon {
+        position: absolute;
+        left: 3px;
+        top: 1px;
+        border-radius: 50%;
+        padding: 2px;
+        color: #fff;
+        min-width: 15px;
+        min-height: 15px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.new-cust-card {
+  img {
+    width: 40px;
+  }
+
+  h6 {
+    margin-bottom: 0;
+  }
+
+  .align-middle {
+    position: relative;
+
+    .status {
+      position: absolute;
+      right: 0;
+      top: 19px;
+      font-size: 13px;
+
+      &.active {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $success;
+      }
+    }
+  }
+}
+
+.table-card {
+  .row-table {
+    display: flex;
+    align-items: center;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    svg {
+      margin: 0 20px;
+    }
+
+    > [class*='col-'] {
+      display: table-cell;
+      float: none;
+      table-layout: fixed;
+      vertical-align: middle;
+
+      .row {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

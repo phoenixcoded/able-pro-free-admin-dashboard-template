@@ -1,0 +1,139 @@
+// =======================================
+//     List of variables for layout
+// =======================================
+:root {
+  // body
+  --#{$variable-prefix}body-bg: #{$body-bg};
+  --bs-body-bg-rgb: #{to-rgb($body-bg)};
+
+  --pc-heading-color: #{$gray-800};
+  --pc-active-background: #{$gray-200};
+
+  // Navbar
+  --pc-sidebar-background: transparent;
+  --pc-sidebar-color: #{$gray-600};
+  --pc-sidebar-color-rgb: #{to-rgb($gray-600)};
+  --pc-sidebar-active-color: #{$primary};
+  --pc-sidebar-shadow: none;
+  --pc-sidebar-caption-color: #{$gray-700};
+  --pc-sidebar-border: 1px dashed #{$gray-400};
+  --pc-sidebar-user-background: #{$gray-200};
+
+  // header
+  --pc-header-background: rgba(#{var(--bs-body-bg-rgb)}, 0.7);
+  --pc-header-color: #{$gray-600};
+  --pc-header-shadow: none;
+
+  // card
+  --pc-card-box-shadow: none;
+
+  // horizontal menu
+  --pc-header-submenu-background: #{$white};
+  --pc-header-submenu-color: #{$gray-600};
+}
+
+[data-pc-theme_contrast='true'] {
+  // body
+  --#{$variable-prefix}body-bg: #{$white};
+
+  // Navbar
+  --pc-sidebar-background: transparent;
+  --pc-sidebar-active-color: #{$primary};
+  --pc-sidebar-shadow: 1px 0 3px 0px #{$gray-300};
+  --pc-sidebar-border: none;
+
+  // card
+  --pc-card-box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
+}
+
+$header-height: 74px;
+$sidebar-width: 280px;
+$sidebar-collapsed-width: 100px;
+$sidebar-collapsed-active-width: 300px;
+$sidebar-tab-width: 75px;
+$sidebar-tab-navbar-width: 320px;
+
+// horizontal menu
+$topbar-height: 60px;
+
+$soft-bg-level: -90%;
+// =====================================
+//      Variables for dark layouts
+// =====================================
+$dark-layout-color: $gray-900;
+
+// =====================================
+//      Variables for bootstrap color
+// =====================================
+
+$blue: $blue-500;
+$secondary: $gray-600;
+$indigo: $indigo-500;
+$purple: $purple-500;
+$pink: $pink-500;
+$red: $red-500;
+$orange: $orange-500;
+$yellow: $yellow-500;
+$green: $green-500;
+$teal: $teal-500;
+$cyan: $cyan-500;
+
+$primary-text: $blue-600;
+$secondary-text: $gray-600;
+$success-text: $green-600;
+$info-text: $cyan-700;
+$warning-text: $yellow-700;
+$danger-text: $red-600;
+$light-text: $gray-600;
+$dark-text: $gray-700;
+
+$primary-bg-subtle: $blue-100;
+$secondary-bg-subtle: $gray-100;
+$success-bg-subtle: $green-100;
+$info-bg-subtle: $cyan-100;
+$warning-bg-subtle: $yellow-100;
+$danger-bg-subtle: $red-100;
+$light-bg-subtle: mix($gray-100, $white);
+$dark-bg-subtle: $gray-400;
+
+$primary-border-subtle: $blue-200;
+$secondary-border-subtle: $gray-200;
+$success-border-subtle: $green-200;
+$info-border-subtle: $cyan-200;
+$warning-border-subtle: $yellow-200;
+$danger-border-subtle: $red-200;
+$light-border-subtle: $gray-200;
+$dark-border-subtle: $gray-500;
+
+$preset-colors: (
+  preset-1: (
+    primary: $blue-500
+  ),
+  preset-2: (
+    primary: $indigo-500
+  ),
+  preset-3: (
+    primary: $purple-500
+  ),
+  preset-4: (
+    primary: $pink-500
+  ),
+  preset-5: (
+    primary: $red-500
+  ),
+  preset-6: (
+    primary: $orange-500
+  ),
+  preset-7: (
+    primary: $yellow-500
+  ),
+  preset-8: (
+    primary: $green-500
+  ),
+  preset-9: (
+    primary: $teal-500
+  ),
+  preset-10: (
+    primary: $cyan-500
+  )
+);
