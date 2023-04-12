@@ -1,16 +1,15 @@
 var gulp = require("gulp"), // main
   sass = require("gulp-sass")(require("sass")), // scss compiler
-  del = require('del'), // demove directory
+  del = require('del'), // remove directory
   sourcemaps = require("gulp-sourcemaps"), // scss sourcemaps
   uglify = require("gulp-uglify"), // minify js files
-  sourcemaps = require("gulp-sourcemaps"), // scss sourcemaps
   cssmin = require("gulp-cssmin"), // minify css files
-  merge = require("merge-stream"), // mearge two task
+  merge = require("merge-stream"), // merge two task
   babel = require("gulp-babel"), // convert next generation JavaScript, today.
-  npmlodash = require("lodash"), // perfoming oops in gulp
+  npmlodash = require("lodash"), // performing oops in gulp
   smushit = require("gulp-smushit"), // image optimizer
-  autoprefixer = require("gulp-autoprefixer"), // css propertys autoprefixer
-  cssbeautify = require("gulp-cssbeautify"), // css cssbeautify
+  autoprefixer = require("gulp-autoprefixer"), // css property autoprefixer
+  cssbeautify = require("gulp-cssbeautify"), // css css beautify
   fileinclude = require("gulp-file-include"), // include html files
   browsersync = require("browser-sync"), // browser reload
   htmlmin = require("gulp-htmlmin"); // html minify
@@ -51,10 +50,10 @@ gulp.task("build", function () {
       gulp.src(assets).pipe(gulp.dest("dist/assets/js/plugins"));
     }
   });
-  var cpyassets = gulp
+  var copyAssets = gulp
     .src(["src/assets/**/*.*", "!src/assets/scss/**/*.*"])
     .pipe(gulp.dest("dist/assets"));
-  return merge(cpyassets);
+  return merge(copyAssets);
 });
 
 //  [ Copy assets ] end
@@ -173,18 +172,9 @@ gulp.task("watch", function () {
   gulp
     .watch("src/html/**/*.html", gulp.series("build-html"))
     .on("change", browsersync.reload);
-  gulp
-    .watch("src/doc/**/*.html", gulp.series("build"))
-    .on("change", browsersync.reload);
-});
+  });
 //  [ watch ] start
 const compile = gulp.parallel("browserSync", "watch");
-//  [ Default task ] start
-gulp.task(
-  "default",
-  gulp.series("cleandist", "build", "sass", "build-js", "build-html", "imgmin", compile)
-);
-//  [ Default task ] end
 
 //  [ watch minify ] start
 gulp.task("watch-minify", function () {
@@ -194,6 +184,13 @@ gulp.task("watch-minify", function () {
   gulp.watch("src/doc/**/*.html", gulp.series("build"));
 });
 //  [ watch minify ] start
+
+//  [ Default task ] start
+gulp.task(
+  "default",
+  gulp.series("cleandist", "build", "sass", "build-js", "build-html", "imgmin", compile)
+);
+//  [ Default task ] end
 
 // build in production mode
 gulp.task(

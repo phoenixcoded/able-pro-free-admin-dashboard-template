@@ -1,13 +1,13 @@
 {
-  "name": "able-pro-bootstrap",
-  "version": "9.0.0",
-  "description": "Able Pro Bootstrap 5 Admin Template",
+  "name": "able-pro-bootstrap-free-admin-dashboard",
+  "version": "1.0.0",
+  "description": "Able Pro Bootstrap 5 Admin Template - No JQuery",
   "main": "index.js",
-  "Author": "Phoenixcoded",
+  "author": "PhoenixCoded",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Phoenixcoded",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
