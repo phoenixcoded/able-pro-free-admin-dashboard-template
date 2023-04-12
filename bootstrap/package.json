@@ -16,7 +16,6 @@
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-cssbeautify": "^1.0.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-htmlmin": "^5.0.1",
     "gulp-inject": "^5.0.2",
     "gulp-minify": "^3.1.0",
     "gulp-sass": "^5.1.0",

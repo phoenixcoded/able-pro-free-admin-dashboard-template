@@ -11,8 +11,7 @@ var gulp = require("gulp"), // main
   autoprefixer = require("gulp-autoprefixer"), // css property autoprefixer
   cssbeautify = require("gulp-cssbeautify"), // css css beautify
   fileinclude = require("gulp-file-include"), // include html files
-  browsersync = require("browser-sync"), // browser reload
-  htmlmin = require("gulp-htmlmin"); // html minify
+  browsersync = require("browser-sync"); // browser reload
 
 //  [ scss compiler ] start
 gulp.task("sass", function () {
@@ -23,7 +22,6 @@ gulp.task("sass", function () {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
-    // .pipe(cssbeautify())
     .pipe(gulp.dest("dist/assets/css"));
 });
 //  [ scss compiler ] end
@@ -118,27 +116,6 @@ gulp.task("uglify", function () {
 });
 //  [ uglify js ] end
 
-//  [ minify html ] start
-gulp.task("htmlmin", function () {
-  return gulp
-    .src("src/html/**/*.html")
-    .pipe(
-      fileinclude({
-        context: layout,
-        prefix: "@@",
-        basepath: "@file",
-        indent: true,
-      })
-    )
-    .pipe(
-      htmlmin({
-        collapseWhitespace: true,
-      })
-    )
-    .pipe(gulp.dest("dist"));
-});
-//  [ minify html ] end
-
 //  [ image optimizer ] start
 gulp.task("imgmin", function () {
   return gulp
@@ -175,15 +152,6 @@ gulp.task("watch", function () {
   });
 //  [ watch ] start
 const compile = gulp.parallel("browserSync", "watch");
-
-//  [ watch minify ] start
-gulp.task("watch-minify", function () {
-  gulp.watch("src/assets/scss/**/*.scss", gulp.series("mincss"));
-  gulp.watch("src/assets/js/**/*.js", gulp.series("uglify"));
-  gulp.watch("src/html/**/*.html", gulp.series("htmlmin"));
-  gulp.watch("src/doc/**/*.html", gulp.series("build"));
-});
-//  [ watch minify ] start
 
 //  [ Default task ] start
 gulp.task(
