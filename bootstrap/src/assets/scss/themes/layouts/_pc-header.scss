@@ -68,10 +68,6 @@
       height: 34px;
       border-radius: $border-radius;
     }
-
-    // @media (max-width: 1024px){
-    //     margin: 0 15px;
-    // }
   }
 
   .pc-h-item {
@@ -204,20 +200,10 @@
     }
     transform: none !important;
     top: 100% !important;
-    // transform: scale(0) !important;
-    // display: block;
-    // transform-origin: top left;
-    // animation: none;
-    // transition: transform 0.4s ease-in-out;
     &.dropdown-menu-end {
       right: 0 !important;
       left: auto !important;
-      // transform-origin: top right;
     }
-    // &.show{
-    //   animation: none;
-    //   transform: scale(1) !important;
-    // }
   }
 
   .pc-level-menu {
@@ -492,14 +478,6 @@
   }
 }
 
-// @media (min-width: 1025px) {
-//   .pc-header{
-//     .header-mobile-collapse {
-//       display: none;
-//     }
-//   }
-// }
-
 @media (max-width: 1024px) {
   .pc-header {
     top: 0;
@@ -510,20 +488,12 @@
       display: none;
     }
 
-    // .user-avtar {
-    //     margin-right: 0;
-    // }
-
     .pc-head-link {
       .user-desc,
       .user-name {
         display: none;
       }
 
-      // &#mobile-collapse {
-      //     position: absolute;
-      //     left: 10px;
-      // }
     }
 
     .pcm-logo {
@@ -561,20 +531,8 @@
     }
 
     .pc-mob-drp {
-      // transition: left 0.15s ease-in-out;
-      // left: -#{$sidebar-width};
-      // width: $sidebar-width;
-      // position: fixed;
-      // top: $header-height;
-      // bottom: 0;
-      // background: var(--pc-header-background);
 
       &.mob-drp-active {
-        // left: 0;
-        // z-index: 1026;
-        // overflow-y: auto;
-        // padding: 30px 0;
-
         .pc-h-item {
           display: block;
           min-height: auto;

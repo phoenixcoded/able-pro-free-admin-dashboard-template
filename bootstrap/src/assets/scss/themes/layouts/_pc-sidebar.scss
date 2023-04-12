@@ -105,7 +105,6 @@
         opacity: 0.1;
       }
     }
-    // &.pc-trigger,
     &.active {
       > .pc-link {
         font-weight: 500;
@@ -333,8 +332,7 @@
     display: none;
   }
 }
-// <li class="pc-h-item pc-sidebar-collapse">
-// <li class="pc-h-item pc-sidebar-popup">
+
 @media (max-width: 1024px) {
   .pc-header .pc-h-item.pc-sidebar-collapse {
     display: none;

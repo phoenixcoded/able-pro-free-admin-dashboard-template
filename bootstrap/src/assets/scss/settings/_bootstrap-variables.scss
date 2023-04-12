@@ -825,16 +825,7 @@ $form-range-thumb-transition: background-color 0.15s ease-in-out, border-color 0
 $form-file-button-color: $input-color;
 $form-file-button-bg: $input-group-addon-bg;
 $form-file-button-hover-bg: shade-color($form-file-button-bg, 5%);
-
-//$form-floating-height:            auto;
-//$form-floating-padding-x:         $input-padding-x ;
-//$form-floating-padding-y:         1rem ;
-//$form-floating-input-padding-t:   $input-padding-y ;
-//$form-floating-input-padding-b:   $input-padding-y ;
 $form-floating-label-opacity: 1;
-//$form-floating-label-transform:   scale(0.85) translateY(-1.2rem) translateX(0.45rem);
-//$form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in-out ;
-
 // Form validation
 
 $form-feedback-margin-top: $form-text-margin-top;
