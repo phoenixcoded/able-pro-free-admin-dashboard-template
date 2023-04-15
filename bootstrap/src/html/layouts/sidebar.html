@@ -1,0 +1,72 @@
+<!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a href="#" class="b-brand text-primary">
+        <!-- ========   Change your logo from here   ============ -->
+        <img src="../assets/images/logo-dark.svg" />
+        <span class="badge bg-light-success rounded-pill ms-2 theme-version"></span>
+      </a>
+    </div>
+    <div class="navbar-content">
+      <div class="card pc-user-card">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+            </div>
+            <div class="flex-grow-1 ms-3 me-2">
+              <h6 class="mb-0">Jonh Smith</h6>
+              <small>Administrator</small>
+            </div>
+            <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
+              <svg class="pc-icon">
+                <use xlink:href="#custom-sort-outline"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="collapse pc-user-links" id="pc_sidebar_userlink">
+            <div class="pt-3">
+              <a href="#!">
+                <i class="ti ti-user"></i>
+                <span>My Account</span>
+              </a>
+              <a href="#!">
+                <i class="ti ti-settings"></i>
+                <span>Settings</span>
+              </a>
+              <a href="#!">
+                <i class="ti ti-lock"></i>
+                <span>Lock Screen</span>
+              </a>
+              <a href="#!">
+                <i class="ti ti-power"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="pc-navbar">
+        @@include('./menu-list.html')
+      </ul>
+      <div class="card pc-user-card mt-3">
+        <div class="card-body text-center">
+          <img src="../assets/images/application/img-coupon.png" alt="img" class="img-fluid w-50" />
+          <h5 class="mb-0 mt-1">Able Pro</h5>
+          <p>Checkout pro features</p>
+          <a
+            href="https://1.envato.market/c/1289604/275988/4415?subId1=phoenixcoded&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fable-pro-responsive-bootstrap-4-admin-template%2F19300403"
+            target="_blank"
+            class="btn btn-warning">
+            <svg class="pc-icon me-2">
+              <use xlink:href="#custom-logout-1-outline"></use>
+            </svg>
+            Upgrade to Pro
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end -->
