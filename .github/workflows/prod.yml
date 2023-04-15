@@ -7,7 +7,7 @@ on:
     branches:
       - master
     paths:
-      - "/bootstrap"
+      - bootstrap
   pull_request:
     types:
       - closed
