@@ -1,8 +1,8 @@
 # Able-pro Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://ableproadmin.com&via=codedthemes&hashtags=bootstrap,webdev,developers,javascript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/blob/master/LICENSE)
-[![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/berry-free-bootstrap-admin-template)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/)
+[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
+[![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/able-pro-free-admin-dashboard-template)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/)
 
 
 Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver the best possible user experience with highly customizable feature-rich pages. Able-pro has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
@@ -14,7 +14,7 @@ Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver
 
 [Pro version](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) of Able-pro react template contains features like Mutiple Layouts, Apps, Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
-| [Able-pro Free](https://ableproadmin.com/bootstrap/free/)    | [Able-pro](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) |
+| [Able-pro Free](https://ableproadmin.com/bootstrap/free/)    | [Able-pro](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403) |
 | ---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------|
 | **9** Demo pages                                                                         | **45+** demo pages                                                       |
 | -                                                                                        | ✓ Multi-language                                                         |
@@ -24,7 +24,7 @@ Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver
 | -                                                                                        | ✓ 6+ color Options                                                       |
 | -                                                                                        | ✓ RTL                                                                    |
 | -                                                                                        | ✓ JWT, Firebase, Auth0 authentications                                   |
-| -                                                                                        | ✓ [More components](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)         |  
+| -                                                                                        | ✓ [More components](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403)         |  
 
 
 ## Why Able-pro?
@@ -41,12 +41,12 @@ Get started with a sweet set of features including:
 ## Free Able-pro Bootstrap 5 version
 
  - [Preview](https://ableproadmin.com/bootstrap/free/)
- - [Download from Github](https://github.com/codedthemes/berry-free-bootstrap-admin-template)
+ - [Download from Github](https://github.com/codedthemes/able-pro-free-admin-dashboard-template)
  
 ## Able-pro Pro Bootstap 5 version
 
  - [Preview](https://ableproadmin.com/bootstrap/default/dashboard/index.html)
- - [Purchase from CodedThemes](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)
+ - [Buy Now](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403)
 
 ## Table of contents
 
@@ -63,17 +63,16 @@ Get started with a sweet set of features including:
 
 Clone from Github 
 ```
-git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git
+git clone https://github.com/codedthemes/able-pro-free-admin-dashboard-template.git
 ```
-- Run Yarn
-- Run Gulp
+1. Run `npm i`
+2. Run `gulp`
 
-OR
 - Goto /dist and open `index.html`
 
 ## Documentation
 
-[Able-pro documentation](https://codedthemes.gitbook.io/berry-bootstrap/) helps you with installation, deployment, and troubleshooting.
+[Able-pro documentation](https://codedthemes.gitbook.io/able-pro-bootstrap/) helps you with installation, deployment, and troubleshooting.
 
 ## Technology Stack
 
@@ -88,7 +87,7 @@ Able-pro is developed by Team [CodedThemes](https://codedthemes.com).
 
 ## Issues
 
-To report a bug, please submit an [issue](https://github.com/codedthemes/berry-free-bootstrap-admin-template/issues) on Github. We will respond as soon as possible to resolve the issue.
+To report a bug, please submit an [issue](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/issues) on Github. We will respond as soon as possible to resolve the issue.
 
 ## License
 
