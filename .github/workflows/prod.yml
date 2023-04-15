@@ -1,0 +1,47 @@
+name: Node - Prod deploy
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches:
+      - master
+    paths:
+      - "/bootstrap"
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js 18
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      - name: 🔨 Build Project
+        run: |
+          cd bootstrap
+          npm install  
+          gulp build-prod
+
+      - name: 📂 Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          # ARGS: "-rltgoDzvO --delete"
+          SOURCE: "bootstrap/dist/"
+          REMOTE_HOST: 192.34.62.123
+          REMOTE_USER: ableproadmin
+          TARGET: public_html/bootstrap/free
+          EXCLUDE: "/bootstrap/node_modules/"
