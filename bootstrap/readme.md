@@ -9,7 +9,7 @@ Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like the theme  :star: :star: :star:
 
-![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-bootstrap-repo-1.jpg).
+![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-bootstrap-repo-1.jpg)
 
 
 [Pro version](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) of Able-pro react template contains features like Mutiple Layouts, Apps, Advance Components, Form Plugins, Layouts, Widgets, and many more.
