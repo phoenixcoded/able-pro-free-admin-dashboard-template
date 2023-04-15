@@ -5,7 +5,7 @@
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/able-pro-free-admin-dashboard-template)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/)
 
 
-Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver the best possible user experience with highly customizable feature-rich pages. Able-pro has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
+Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver the best possible user experience with highly customizable feature-rich pages. Able-pro has easy and intuitive responsive design whether it is viewed on retina screens or laptops..
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like the theme  :star: :star: :star:
 
