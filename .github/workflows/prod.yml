@@ -8,16 +8,16 @@ on:
       - master
     paths:
       - 'bootstrap/**'
-#  pull_request:
-#    types:
-#      - closed
-#    branches:
-#      - master
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
 
 jobs:
-  #if_merged:
-  #  if: github.event.pull_request.merged == true
-  Deploy:
+  if_merged:
+    if: github.event.pull_request.merged == true
+  #Deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
 
