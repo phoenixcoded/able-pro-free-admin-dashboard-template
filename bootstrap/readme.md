@@ -1,4 +1,4 @@
-# Able-pro Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io&via=codedthemes&hashtags=bootstrap,webdev,developers,javascript)
+# Able-pro Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://ableproadmin.com&via=codedthemes&hashtags=bootstrap,webdev,developers,javascript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/blob/master/LICENSE)
@@ -14,7 +14,7 @@ Able-pro is a free Bootstrap admin dashboard template. It is designed to deliver
 
 [Pro version](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) of Able-pro react template contains features like Mutiple Layouts, Apps, Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
-| [Able-pro Free](https://berrydashboard.io/bootstrap/free/)    | [Able-pro](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) |
+| [Able-pro Free](https://ableproadmin.com/bootstrap/free/)    | [Able-pro](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) |
 | ---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------|
 | **9** Demo pages                                                                         | **45+** demo pages                                                       |
 | -                                                                                        | ✓ Multi-language                                                         |
@@ -40,12 +40,12 @@ Get started with a sweet set of features including:
 
 ## Free Able-pro Bootstrap 5 version
 
- - [Preview](https://berrydashboard.io/bootstrap/free/)
+ - [Preview](https://ableproadmin.com/bootstrap/free/)
  - [Download from Github](https://github.com/codedthemes/berry-free-bootstrap-admin-template)
  
 ## Able-pro Pro Bootstap 5 version
 
- - [Preview](https://berrydashboard.io/bootstrap/default/dashboard/index.html)
+ - [Preview](https://ableproadmin.com/bootstrap/default/dashboard/index.html)
  - [Purchase from CodedThemes](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)
 
 ## Table of contents
@@ -115,7 +115,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
  - [Able Pro](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403)
  
 ## Follow us
- - [Website](https://berrydashboard.io)
+ - [Website](https://ableproadmin.com/)
  - [Blog](https://blog.berrydashboard.io)
  - [CodedThemes](https://codedthemes.com)
  - [Dribbble](https://dribbble.com/codedthemes)
