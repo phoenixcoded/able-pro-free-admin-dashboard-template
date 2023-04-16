@@ -56,7 +56,6 @@ Able Pro is the ultimate Bootstrap 5 Admin & Dashboard Template, providing you w
 - [Author](#author)
 - [Issues?](#issues)
 - [License](#license)
-- [More Products](#more-free-react-material-admin-templates)
 - [Follow us](#follow-us)
 
 ## Getting Started
