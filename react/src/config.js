@@ -8,7 +8,7 @@ export const HEADER_HEIGHT = 74;
 
 // basename: only at build time to set, and Don't add '/' at end off BASENAME for breadcrumbs, also Don't put only '/' use blank('') instead,
 // like '/react/default'
-export const APP_BASE_NAME = '/react';
+export const APP_BASE_NAME = '/react/free';
 
 // ==============================|| THEME CONFIG  ||============================== //
 

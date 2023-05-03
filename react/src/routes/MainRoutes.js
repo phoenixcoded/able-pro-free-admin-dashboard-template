@@ -9,8 +9,8 @@ import Loadable from 'components/Loadable';
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
 
 // pages routing
-const AuthLogin = Loadable(lazy(() => import('pages/auth/auth1/login')));
-const AuthRegister = Loadable(lazy(() => import('pages/auth/auth1/register')));
+const AuthLogin = Loadable(lazy(() => import('pages/auth/login')));
+const AuthRegister = Loadable(lazy(() => import('pages/auth/register')));
 
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/sample-page')));

@@ -1,8 +1,8 @@
 {
-  "name": "able-pro-material-react-js",
+  "name": "able-pro-react-free-admin-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://ableproadmin.com/react",
+  "homepage": "https://ableproadmin.com/react/free",
   "dependencies": {
     "@date-io/date-fns": "^2.16.0",
     "@emotion/cache": "^11.10.5",
