@@ -7,7 +7,7 @@ on:
     branches:
       - master
     paths:
-      - 'bootstrap/**'
+      - 'react/**'
   #pull_request:
   #  types:
   #    - closed
@@ -17,8 +17,8 @@ on:
 jobs:
   #if_merged:
   #  if: github.event.pull_request.merged == true
-  Bootstrap-Deploy:
-    name: 🎉 Bootstrap Deploy
+  React-Deploy:
+    name: 🎉 React Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -32,17 +32,17 @@ jobs:
 
       - name: 🔨 Build Project
         run: |
-          cd bootstrap
-          npm install  
-          gulp build-prod
+          cd react
+          npm install --legacy-peer-deps 
+          npm run build
 
       - name: 📂 Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           # ARGS: "-rltgoDzvO --delete"
-          SOURCE: "bootstrap/dist/"
+          SOURCE: "react/build/"
           REMOTE_HOST: 192.34.62.123
           REMOTE_USER: ableproadmin
-          TARGET: public_html/bootstrap/free
-          EXCLUDE: "/bootstrap/node_modules/"
+          TARGET: public_html/react/free
+          EXCLUDE: "/react/node_modules/"
