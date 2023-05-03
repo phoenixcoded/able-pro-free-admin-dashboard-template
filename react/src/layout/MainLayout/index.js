@@ -19,51 +19,51 @@ import { DRAWER_WIDTH } from 'config';
 // ==============================|| MAIN LAYOUT ||============================== //
 
 const MainLayout = () => {
-    const theme = useTheme();
-    const matchDownLG = useMediaQuery(theme.breakpoints.down('xl'));
-    const { drawerOpen } = useSelector((state) => state.menu);
+  const theme = useTheme();
+  const matchDownLG = useMediaQuery(theme.breakpoints.down('xl'));
+  const { drawerOpen } = useSelector((state) => state.menu);
 
-    // drawer toggler
-    const [open, setOpen] = useState(drawerOpen);
-    const handleDrawerToggle = () => {
-        setOpen(!open);
-        dispatch(openDrawer({ drawerOpen: !open }));
-    };
+  // drawer toggler
+  const [open, setOpen] = useState(drawerOpen);
+  const handleDrawerToggle = () => {
+    setOpen(!open);
+    dispatch(openDrawer({ drawerOpen: !open }));
+  };
 
-    // set media wise responsive drawer
-    useEffect(() => {
-        setOpen(!matchDownLG);
-        dispatch(openDrawer({ drawerOpen: !matchDownLG }));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [matchDownLG]);
+  // set media wise responsive drawer
+  useEffect(() => {
+    setOpen(!matchDownLG);
+    dispatch(openDrawer({ drawerOpen: !matchDownLG }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [matchDownLG]);
 
-    useEffect(() => {
-        if (open !== drawerOpen) setOpen(drawerOpen);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [drawerOpen]);
+  useEffect(() => {
+    if (open !== drawerOpen) setOpen(drawerOpen);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [drawerOpen]);
 
-    return (
-        <Box sx={{ display: 'flex', width: '100%' }}>
-            <Header open={open} handleDrawerToggle={handleDrawerToggle} />
-            <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />
+  return (
+    <Box sx={{ display: 'flex', width: '100%' }}>
+      <Header open={open} handleDrawerToggle={handleDrawerToggle} />
+      <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />
 
-            <Box component="main" sx={{ width: `calc(100% - ${DRAWER_WIDTH}px)`, flexGrow: 1, p: { xs: 2, sm: 3 } }}>
-                <Toolbar sx={{ mt: 'inherit' }} />
-                <Container
-                    sx={{
-                        position: 'relative',
-                        minHeight: 'calc(100vh - 110px)',
-                        display: 'flex',
-                        flexDirection: 'column'
-                    }}
-                >
-                    <Breadcrumbs navigation={navigation} title titleBottom card={false} divider={false} />
-                    <Outlet />
-                    <Footer />
-                </Container>
-            </Box>
-        </Box>
-    );
+      <Box component="main" sx={{ width: `calc(100% - ${DRAWER_WIDTH}px)`, flexGrow: 1, p: { xs: 2, sm: 3 } }}>
+        <Toolbar sx={{ mt: 'inherit' }} />
+        <Container
+          sx={{
+            position: 'relative',
+            minHeight: 'calc(100vh - 110px)',
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <Breadcrumbs navigation={navigation} title titleBottom card={false} divider={false} />
+          <Outlet />
+          <Footer />
+        </Container>
+      </Box>
+    </Box>
+  );
 };
 
 export default MainLayout;

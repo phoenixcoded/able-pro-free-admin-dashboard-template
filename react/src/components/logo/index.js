@@ -12,16 +12,16 @@ import { APP_DEFAULT_PATH } from 'config';
 // ==============================|| MAIN LOGO ||============================== //
 
 const LogoSection = ({ reverse, isIcon, sx, to }) => (
-    <ButtonBase disableRipple component={Link} to={!to ? APP_DEFAULT_PATH : to} sx={sx}>
-        {isIcon ? <LogoIcon /> : <Logo reverse={reverse} />}
-    </ButtonBase>
+  <ButtonBase disableRipple component={Link} to={!to ? APP_DEFAULT_PATH : to} sx={sx}>
+    {isIcon ? <LogoIcon /> : <Logo reverse={reverse} />}
+  </ButtonBase>
 );
 
 LogoSection.propTypes = {
-    reverse: PropTypes.bool,
-    sx: PropTypes.object,
-    isIcon: PropTypes.bool,
-    to: PropTypes.string
+  reverse: PropTypes.bool,
+  sx: PropTypes.object,
+  isIcon: PropTypes.bool,
+  to: PropTypes.string
 };
 
 export default LogoSection;

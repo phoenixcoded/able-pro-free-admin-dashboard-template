@@ -10,17 +10,17 @@ import MobileSection from './MobileSection';
 // ==============================|| HEADER - CONTENT ||============================== //
 
 const HeaderContent = () => {
-    const downLG = useMediaQuery((theme) => theme.breakpoints.down('lg'));
-    return (
-        <>
-            {!downLG && <Search />}
-            {downLG && <Box sx={{ width: '100%', ml: 1 }} />}
+  const downLG = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+  return (
+    <>
+      {!downLG && <Search />}
+      {downLG && <Box sx={{ width: '100%', ml: 1 }} />}
 
-            <Notification />
-            {!downLG && <Profile />}
-            {downLG && <MobileSection />}
-        </>
-    );
+      <Notification />
+      {!downLG && <Profile />}
+      {downLG && <MobileSection />}
+    </>
+  );
 };
 
 export default HeaderContent;

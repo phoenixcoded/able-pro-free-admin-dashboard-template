@@ -1,13 +1,13 @@
 // ==============================|| OVERRIDES - FORM HELPER TEXT ||============================== //
 
 export default function FormHelperText() {
-    return {
-        MuiFormHelperText: {
-            styleOverrides: {
-                root: {
-                    marginLeft: 8
-                }
-            }
+  return {
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          marginLeft: 8
         }
-    };
+      }
+    }
+  };
 }

@@ -28,28 +28,28 @@ import Typography from './Typography';
 // ==============================|| OVERRIDES - MAIN ||============================== //
 
 export default function ComponentsOverrides(theme) {
-    return merge(
-        Body(),
-        Button(theme),
-        ButtonBase(),
-        ButtonGroup(),
-        CardContent(),
-        Checkbox(theme),
-        Chip(theme),
-        Drawer(),
-        FormHelperText(),
-        IconButton(theme),
-        InputLabel(theme),
-        LinearProgress(),
-        Link(),
-        ListItemButton(theme),
-        ListItemIcon(theme),
-        LoadingButton(),
-        OutlinedInput(theme),
-        Tab(theme),
-        Tabs(),
-        ToggleButton(theme),
-        Tooltip(theme),
-        Typography()
-    );
+  return merge(
+    Body(),
+    Button(theme),
+    ButtonBase(),
+    ButtonGroup(),
+    CardContent(),
+    Checkbox(theme),
+    Chip(theme),
+    Drawer(),
+    FormHelperText(),
+    IconButton(theme),
+    InputLabel(theme),
+    LinearProgress(),
+    Link(),
+    ListItemButton(theme),
+    ListItemIcon(theme),
+    LoadingButton(),
+    OutlinedInput(theme),
+    Tab(theme),
+    Tabs(),
+    ToggleButton(theme),
+    Tooltip(theme),
+    Typography()
+  );
 }

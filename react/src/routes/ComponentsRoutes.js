@@ -14,22 +14,22 @@ const Shadow = Loadable(lazy(() => import('pages/components-overview/shadows')))
 // ==============================|| COMPONENTS ROUTES ||============================== //
 
 const ComponentsRoutes = {
-    path: 'components-overview',
-    element: <MainLayout />,
-    children: [
-        {
-            path: 'typography',
-            element: <Typography />
-        },
-        {
-            path: 'color',
-            element: <Color />
-        },
-        {
-            path: 'shadows',
-            element: <Shadow />
-        }
-    ]
+  path: 'components-overview',
+  element: <MainLayout />,
+  children: [
+    {
+      path: 'typography',
+      element: <Typography />
+    },
+    {
+      path: 'color',
+      element: <Color />
+    },
+    {
+      path: 'shadows',
+      element: <Shadow />
+    }
+  ]
 };
 
 export default ComponentsRoutes;

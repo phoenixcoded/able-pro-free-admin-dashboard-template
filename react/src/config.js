@@ -13,15 +13,15 @@ export const APP_BASE_NAME = '/react';
 // ==============================|| THEME CONFIG  ||============================== //
 
 const config = {
-    fontFamily: `Inter var`, // Pro Version
-    menuOrientation: 'vertical', // Pro Version
-    menuCaption: true, // Pro Version
-    miniDrawer: false, // Pro Version
-    container: true, // Pro Version
-    mode: 'light', // Pro Version
-    presetColor: 'default', // Pro Version
-    themeDirection: 'ltr', // Pro Version
-    themeContrast: false // Pro Version
+  fontFamily: `Inter var`, // Pro Version
+  menuOrientation: 'vertical', // Pro Version
+  menuCaption: true, // Pro Version
+  miniDrawer: false, // Pro Version
+  container: true, // Pro Version
+  mode: 'light', // Pro Version
+  presetColor: 'default', // Pro Version
+  themeDirection: 'ltr', // Pro Version
+  themeContrast: false // Pro Version
 };
 
 export default config;

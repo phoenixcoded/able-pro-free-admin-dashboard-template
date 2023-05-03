@@ -18,41 +18,41 @@ const SamplePage = Loadable(lazy(() => import('pages/sample-page')));
 // ==============================|| MAIN ROUTES ||============================== //
 
 const MainRoutes = {
-    path: '/',
-    children: [
+  path: '/',
+  children: [
+    {
+      path: '/',
+      element: <MainLayout />,
+      children: [
         {
-            path: '/',
-            element: <MainLayout />,
-            children: [
-                {
-                    path: '/',
-                    element: <DashboardDefault />
-                },
-                {
-                    path: 'dashboard',
-                    element: <DashboardDefault />
-                },
-                {
-                    path: 'sample-page',
-                    element: <SamplePage />
-                }
-            ]
+          path: '/',
+          element: <DashboardDefault />
         },
         {
-            path: '/auth',
-            element: <CommonLayout />,
-            children: [
-                {
-                    path: 'login',
-                    element: <AuthLogin />
-                },
-                {
-                    path: 'register',
-                    element: <AuthRegister />
-                }
-            ]
+          path: 'dashboard',
+          element: <DashboardDefault />
+        },
+        {
+          path: 'sample-page',
+          element: <SamplePage />
         }
-    ]
+      ]
+    },
+    {
+      path: '/auth',
+      element: <CommonLayout />,
+      children: [
+        {
+          path: 'login',
+          element: <AuthLogin />
+        },
+        {
+          path: 'register',
+          element: <AuthRegister />
+        }
+      ]
+    }
+  ]
 };
 
 export default MainRoutes;

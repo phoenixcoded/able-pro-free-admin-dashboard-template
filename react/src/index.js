@@ -25,11 +25,11 @@ const root = createRoot(container);
 // ==============================|| MAIN - REACT DOM RENDER  ||============================== //
 
 root.render(
-    <ReduxProvider store={store}>
-        <BrowserRouter basename={APP_BASE_NAME}>
-            <App />
-        </BrowserRouter>
-    </ReduxProvider>
+  <ReduxProvider store={store}>
+    <BrowserRouter basename={APP_BASE_NAME}>
+      <App />
+    </BrowserRouter>
+  </ReduxProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

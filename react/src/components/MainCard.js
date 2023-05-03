@@ -7,49 +7,49 @@ import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
 // header style
 const headerSX = {
-    p: 2.5,
-    '& .MuiCardHeader-action': { m: '0px auto', alignSelf: 'center' }
+  p: 2.5,
+  '& .MuiCardHeader-action': { m: '0px auto', alignSelf: 'center' }
 };
 
 // ==============================|| CUSTOM - MAIN CARD ||============================== //
 
 const MainCard = forwardRef(({ children, content = true, contentSX = {}, divider = true, secondary, sx = {}, title, ...others }, ref) => {
-    const theme = useTheme();
+  const theme = useTheme();
 
-    return (
-        <Card
-            elevation={0}
-            ref={ref}
-            {...others}
-            sx={{
-                position: 'relative',
-                border: '1px solid',
-                borderRadius: 1.5,
-                borderColor: theme.palette.divider,
-                ...sx
-            }}
-        >
-            {/* card header and action */}
-            {title && <CardHeader sx={headerSX} titleTypographyProps={{ variant: 'subtitle1' }} title={title} action={secondary} />}
+  return (
+    <Card
+      elevation={0}
+      ref={ref}
+      {...others}
+      sx={{
+        position: 'relative',
+        border: '1px solid',
+        borderRadius: 1.5,
+        borderColor: theme.palette.divider,
+        ...sx
+      }}
+    >
+      {/* card header and action */}
+      {title && <CardHeader sx={headerSX} titleTypographyProps={{ variant: 'subtitle1' }} title={title} action={secondary} />}
 
-            {/* content & header divider */}
-            {title && divider && <Divider />}
+      {/* content & header divider */}
+      {title && divider && <Divider />}
 
-            {/* card content */}
-            {content && <CardContent sx={contentSX}>{children}</CardContent>}
-            {!content && children}
-        </Card>
-    );
+      {/* card content */}
+      {content && <CardContent sx={contentSX}>{children}</CardContent>}
+      {!content && children}
+    </Card>
+  );
 });
 
 MainCard.propTypes = {
-    contentSX: PropTypes.object,
-    divider: PropTypes.bool,
-    secondary: PropTypes.object,
-    content: PropTypes.number,
-    title: PropTypes.string,
-    sx: PropTypes.object,
-    children: PropTypes.node
+  contentSX: PropTypes.object,
+  divider: PropTypes.bool,
+  secondary: PropTypes.object,
+  content: PropTypes.number,
+  title: PropTypes.string,
+  sx: PropTypes.object,
+  children: PropTypes.node
 };
 
 export default MainCard;

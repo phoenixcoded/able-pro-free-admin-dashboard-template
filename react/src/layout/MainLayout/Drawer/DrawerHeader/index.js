@@ -12,27 +12,27 @@ import { HEADER_HEIGHT } from 'config';
 // ==============================|| DRAWER HEADER ||============================== //
 
 const DrawerHeader = ({ open }) => {
-    const theme = useTheme();
+  const theme = useTheme();
 
-    return (
-        <DrawerHeaderStyled
-            theme={theme}
-            open={open}
-            sx={{
-                minHeight: HEADER_HEIGHT,
-                width: 'inherit',
-                paddingTop: '8px',
-                paddingBottom: '8px',
-                paddingLeft: open ? '24px' : 0
-            }}
-        >
-            <Logo isIcon={!open} sx={{ width: open ? 'auto' : 52, height: 'auto' }} />
-        </DrawerHeaderStyled>
-    );
+  return (
+    <DrawerHeaderStyled
+      theme={theme}
+      open={open}
+      sx={{
+        minHeight: HEADER_HEIGHT,
+        width: 'inherit',
+        paddingTop: '8px',
+        paddingBottom: '8px',
+        paddingLeft: open ? '24px' : 0
+      }}
+    >
+      <Logo isIcon={!open} sx={{ width: open ? 'auto' : 52, height: 'auto' }} />
+    </DrawerHeaderStyled>
+  );
 };
 
 DrawerHeader.propTypes = {
-    open: PropTypes.bool
+  open: PropTypes.bool
 };
 
 export default DrawerHeader;
