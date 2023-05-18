@@ -46,8 +46,8 @@ MainCard.propTypes = {
   contentSX: PropTypes.object,
   divider: PropTypes.bool,
   secondary: PropTypes.object,
-  content: PropTypes.number,
-  title: PropTypes.string,
+  content: PropTypes.bool,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   sx: PropTypes.object,
   children: PropTypes.node
 };

@@ -24,7 +24,7 @@ function ShadowBox({ shadow }) {
 }
 
 ShadowBox.propTypes = {
-  shadow: PropTypes.object
+  shadow: PropTypes.string
 };
 
 // ===============================|| CUSTOM - SHADOW BOX ||=============================== //

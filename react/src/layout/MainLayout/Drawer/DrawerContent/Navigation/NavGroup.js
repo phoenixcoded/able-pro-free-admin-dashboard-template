@@ -118,7 +118,7 @@ const NavGroup = ({ item, lastItem, remItems, lastItemId }) => {
 NavGroup.propTypes = {
   item: PropTypes.object,
   lastItem: PropTypes.bool,
-  remItems: PropTypes.object,
+  remItems: PropTypes.array,
   lastItemId: PropTypes.string,
   children: PropTypes.node,
   title: PropTypes.string,

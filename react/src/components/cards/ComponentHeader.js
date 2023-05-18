@@ -55,7 +55,7 @@ ComponentHeader.propTypes = {
   title: PropTypes.string,
   caption: PropTypes.string,
   directory: PropTypes.node,
-  link: PropTypes.bool
+  link: PropTypes.string
 };
 
 export default ComponentHeader;

@@ -55,7 +55,7 @@ function a11yProps(index) {
 export default function Transactions() {
   const [value, setValue] = useState(0);
 
-  const handleChange = (newValue) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
