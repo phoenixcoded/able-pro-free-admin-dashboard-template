@@ -78,7 +78,7 @@ const TaskStatusChart = ({ color, data }) => {
 
 TaskStatusChart.propTypes = {
   color: PropTypes.string,
-  data: PropTypes.object
+  data: PropTypes.array
 };
 // ==============================|| CHART - PROJECT OVERVIEW ||============================== //
 

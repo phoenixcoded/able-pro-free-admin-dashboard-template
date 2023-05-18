@@ -101,9 +101,8 @@ const Breadcrumbs = ({ navigation, title, sx, ...others }) => {
 
 Breadcrumbs.propTypes = {
   navigation: PropTypes.object,
-  title: PropTypes.string,
+  title: PropTypes.bool,
   sx: PropTypes.object,
-  navigation: PropTypes.bool,
   items: PropTypes.object,
   children: PropTypes.node
 };

@@ -96,7 +96,7 @@ const EcommerceDataCard = ({ title, count, percentage, color, iconPrimary, child
 EcommerceDataCard.propTypes = {
   title: PropTypes.string,
   count: PropTypes.string,
-  percentage: PropTypes.string,
+  percentage: PropTypes.node,
   color: PropTypes.string,
   iconPrimary: PropTypes.node,
   children: PropTypes.node
