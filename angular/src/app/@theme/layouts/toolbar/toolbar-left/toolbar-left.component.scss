@@ -1,0 +1,21 @@
+::ng-deep.dropdown-item-search {
+  min-width: 20rem !important;
+  border-radius: 8px;
+
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none !important;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: var(--accent-50) !important;
+  }
+
+  .mdc-text-field {
+    position: inherit;
+    will-change: inherit;
+  }
+
+  .drp-search {
+    padding: 8px 16px;
+  }
+}

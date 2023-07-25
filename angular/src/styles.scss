@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+// font
+@import 'scss/fonts/tabler-icons.min.css';
+
+// load fonts
+// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+
+// theme setup
+@import './app/@theme/styles/theme-palette-colors.scss';
+@import './app/@theme/styles/theme.scss';
+@include mat.all-component-typographies(theme-typography("'Inter var', sans-serif")); // theme typography
+
+// default theme
+@include mat.all-component-themes(get-light-theme($blue-theme));
+
+// generate non material classes based on theme
+.blue-theme {
+  @include generate-theme-classes($blue-theme); // generate non material classes based on theme
+}
+
+// common
+@import './scss/generic';
+@import './scss/common';
+@import './scss/variables';
+
+// theme layouts
+@import './app/@theme/styles/layouts/menu';
+@import './app/@theme/styles/pages/dashboard.scss';
+
+// grid
+@import './app/@theme/styles/grid';

@@ -1,0 +1,397 @@
+// ============================
+//     menu css start
+// ============================
+
+.drawer-container {
+  height: 100vh;
+  display: block;
+  overflow: auto;
+}
+
+.pc-sidebar {
+  background: none;
+  width: $sidebar-width;
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  z-index: 1026;
+  overflow: hidden;
+  box-shadow: none;
+
+  .version {
+    padding: 0.15rem 0.25rem;
+    color: var(--primary-500);
+    background: var(--primary-50);
+    border-radius: 50rem;
+    margin-left: 0.5rem;
+    font-size: 12px;
+  }
+
+  .m-header {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 10px 16px 24px;
+  }
+
+  .navbar-wrapper {
+    width: $sidebar-width;
+    background: inherit;
+  }
+
+  .user-card {
+    margin: 0 15px 15px;
+    box-shadow: none !important;
+    background: var(--accent-200) !important;
+
+    .user-avatar {
+      width: 45px;
+    }
+
+    .user-details {
+      margin-left: 16px;
+      margin-right: 8px;
+
+      > h6 {
+        margin-bottom: 0px;
+        font-weight: 600 !important;
+      }
+    }
+
+    .user-setting {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      font-weight: 600;
+      border-radius: 20px;
+
+      .pc-icon {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .coded-badge {
+    font-size: 75%;
+    position: absolute;
+    right: 30px;
+    top: 12px;
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+
+  .coded-inner-navbar {
+    flex-direction: column;
+
+    li {
+      position: relative;
+      padding-bottom: 2px;
+
+      > a {
+        padding: 14px 20px;
+        display: block;
+        border-radius: 5px;
+        position: relative;
+        color: var(--accent-600);
+
+        .coded-mtext {
+          position: relative;
+        }
+
+        > .coded-micon {
+          font-size: 18px;
+          align-items: center;
+          margin-right: 15px;
+          height: 24px;
+          width: 24px;
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+
+          .pc-icon {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+          }
+
+          + .coded-mtext {
+            position: relative;
+            vertical-align: middle;
+            text-align: center;
+          }
+        }
+      }
+
+      &.coded-hasmenu {
+        > a {
+          &:after {
+            content: '\ea61';
+            font-family: 'tabler-icons';
+            font-size: 15px;
+            border: none;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            transition: 0.3s ease-in-out;
+          }
+        }
+
+        .coded-submenu {
+          app-menu-collapse li {
+            &.coded-hasmenu {
+              > a {
+                &:after {
+                  content: '\ea61';
+                  font-family: 'tabler-icons';
+                  font-size: 15px;
+                  border: none;
+                  position: absolute;
+                  top: 11px;
+                  right: 20px;
+                  transition: 0.3s ease-in-out;
+                }
+              }
+
+              .coded-submenu {
+                app-menu-collapse li {
+                  &.coded-hasmenu {
+                    > a {
+                      &:after {
+                        content: '\ea61';
+                        font-family: 'tabler-icons';
+                        font-size: 15px;
+                        border: none;
+                        position: absolute;
+                        top: 11px;
+                        right: 11px;
+                        transition: 0.3s ease-in-out;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.coded-trigger {
+          > a {
+            &:after {
+              transform: rotate(90deg);
+            }
+          }
+        }
+
+        .coded-submenu {
+          display: none;
+        }
+
+        &.coded-trigger.active {
+          > .coded-submenu {
+            display: block;
+          }
+
+          > a {
+            position: relative;
+          }
+        }
+
+        .coded-submenu {
+          > app-menu-item,
+          > app-menu-collapse {
+            li {
+              > a {
+                text-align: left;
+                padding: 12px 30px 12px 63px;
+                margin: 0;
+                display: block;
+                color: var(--accent-600);
+
+                &:before {
+                  content: '';
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 20px;
+                  width: 5px;
+                  height: 5px;
+                  left: 28px;
+                  background: var(--accent-600);
+                  opacity: 0.8;
+                  transition: all 0.08s cubic-bezier(0.37, 0.24, 0.53, 0.99);
+                }
+              }
+
+              .coded-submenu {
+                > app-menu-item li {
+                  > a {
+                    padding: 10px 30px 10px 75px;
+                  }
+                }
+              }
+            }
+
+            ul {
+              app-menu-collapse {
+                li {
+                  > a {
+                    padding: 10px 30px 10px 75px;
+                  }
+                }
+
+                .coded-submenu {
+                  > app-menu-item li {
+                    > a {
+                      padding: 10px 30px 10px 69px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.coded-menu-caption {
+        font-size: 0.688rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin: 0px 10px;
+        padding: 24px 23px 8px;
+        text-transform: uppercase;
+        position: relative;
+        color: var(--accent-700);
+      }
+
+      &.disabled {
+        > a {
+          cursor: default;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    > app-nav-group > app-menu-item {
+      li {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 2px;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .coded-inner-navbar {
+    > app-menu-group-vertical > app-menu-collapse li {
+      .coded-submenu > app-menu-item li {
+        &.active,
+        &:focus,
+        &:hover {
+          > a {
+            color: var(--primary-500);
+
+            &:before {
+              background: var(--primary-500);
+            }
+          }
+        }
+      }
+    }
+
+    .coded-hasmenu {
+      .coded-submenu {
+        app-menu-collapse li,
+        app-menu-item li {
+          &.active,
+          &.coded-trigger {
+            > a {
+              color: var(--primary-500);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    app-menu-item > li.nav-item,
+    > app-menu-group-vertical > app-menu-collapse > li {
+      &.active,
+      &.coded-trigger {
+        > a {
+          color: var(--primary-500);
+          font-weight: 500;
+
+          &:before {
+            background: var(--primary-500);
+          }
+        }
+      }
+
+      &:hover:not(.coded-trigger, .active) {
+        > a {
+          &:before {
+            background: var(--accent-500);
+          }
+        }
+      }
+
+      > a {
+        &::before {
+          content: '';
+          border-radius: $border-radius;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          left: 2px;
+          bottom: 2px;
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+
+  .coded-inner-navbar {
+    li {
+      margin: 0px 10px;
+
+      &.coded-hasmenu {
+        position: relative;
+        margin: 0px 10px;
+
+        .coded-submenu {
+          opacity: 0;
+          visibility: hidden;
+          transform-origin: 50% 50%;
+          transition:
+            transform 0.3s,
+            opacity 0.3s;
+          transform-style: preserve-3d;
+          transform: rotateX(-90deg);
+          position: absolute;
+          display: block;
+        }
+
+        &.coded-trigger {
+          > .coded-submenu {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            transform: rotateX(0deg);
+          }
+        }
+      }
+    }
+  }
+}

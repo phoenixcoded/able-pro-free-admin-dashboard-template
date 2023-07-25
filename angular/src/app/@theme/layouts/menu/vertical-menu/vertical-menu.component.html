@@ -1,0 +1,73 @@
+<ng-scrollbar style="height: calc(100vh - 88px)" visibility="hover">
+  <app-card [showHeader]="false" cardClass="user-card" [padding]="20">
+    <div class="flex align-items-center">
+      <div class="flex-shrink-0">
+        <img src="assets/images/user/avatar-1.jpg" alt="user-image" class="user-avatar" />
+      </div>
+      <div class="flex-grow-1 user-details">
+        <h6>Jonh Smith</h6>
+        <small>Administrator</small>
+      </div>
+      <div class="user-setting">
+        <a href="javascript:" [matMenuTriggerFor]="menu" class="text-muted">
+          <svg class="pc-icon">
+            <use xlink:href="assets/fonts/custom-icon.svg#custom-sort-outline"></use>
+          </svg>
+        </a>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="below" xPosition="after">
+          <button mat-menu-item>
+            <a href="javascript:" class="text-muted">
+              <i class="ti ti-user f-18 m-r-10"></i>
+              <span class="mat-body">My Account</span>
+            </a>
+          </button>
+          <button mat-menu-item>
+            <a href="javascript:" class="text-muted">
+              <i class="ti ti-settings f-18 m-r-10"></i>
+              <span class="mat-body">Settings</span>
+            </a>
+          </button>
+          <button mat-menu-item>
+            <a href="javascript:" class="text-muted">
+              <i class="ti ti-lock f-18 m-r-10"></i>
+              <span class="mat-body">Lock Screen</span>
+            </a>
+          </button>
+          <button mat-menu-item>
+            <a href="javascript:" class="text-muted">
+              <i class="ti ti-power f-18 m-r-10"></i>
+              <span class="mat-body">Logout</span>
+            </a>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </app-card>
+  <div class="navbar-content">
+    <ul class="nav coded-inner-navbar" (click)="fireOutClick()" aria-hidden="true">
+      <ng-container *ngFor="let item of menus">
+        <app-menu-group-vertical *ngIf="item.type === 'group'" [item]="item"></app-menu-group-vertical>
+        <app-menu-collapse *ngIf="item.type === 'collapse'" [item]="item"></app-menu-collapse>
+        <app-menu-item *ngIf="item.type === 'item'" [item]="item"></app-menu-item>
+      </ng-container>
+    </ul>
+  </div>
+  <app-card [showHeader]="false" cardClass="pro-card m-15 bg-accent-200" [padding]="20">
+    <div class="text-center">
+      <img src="assets/images/application/img-coupon.png" alt="img" class="img-fluid w-50" />
+      <h5 class="m-b-0 f-16 f-w-600 m-t-5">Able Pro</h5>
+      <p>Checkout pro features</p>
+      <button mat-flat-button class="upgrade-button hei-45">
+        <a
+          href="https://1.envato.market/c/1289604/275988/4415?subId1=phoenixcoded&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fable-pro-responsive-bootstrap-4-admin-template%2F19300403"
+          class="flex-inline align-item-center"
+        >
+          <svg class="pc-icon m-r-10">
+            <use xlink:href="assets/fonts/custom-icon.svg#custom-logout-1-outline"></use>
+          </svg>
+          Upgrade to Pro
+        </a>
+      </button>
+    </div>
+  </app-card>
+</ng-scrollbar>

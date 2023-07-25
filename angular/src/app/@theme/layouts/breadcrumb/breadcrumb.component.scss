@@ -1,0 +1,96 @@
+@import '../../../../scss/variables';
+
+.page-header {
+  display: flex;
+  align-items: center;
+  top: $header-height;
+  left: $sidebar-width;
+  right: 0;
+  z-index: 1023;
+  min-height: 55px;
+  padding: 13px 0px;
+  background: transparent;
+  border-radius: $border-radius;
+
+  .page-block {
+    width: 100%;
+  }
+
+  .page-header-title {
+    display: inline-block;
+
+    h2 {
+      margin: 0px;
+    }
+  }
+
+  h5 {
+    margin-bottom: 0;
+    margin-right: 8px;
+    padding-right: 8px;
+    font-weight: 500;
+  }
+
+  .breadcrumb {
+    padding: 0;
+    display: inline-flex;
+    margin-bottom: 0;
+    background: transparent;
+    font-size: 13px;
+
+    .breadcrumb-item + .breadcrumb-item {
+      padding-left: 0.5rem;
+
+      &::before {
+        content: '\ea61';
+        font-family: 'tabler-icons';
+        position: absolute;
+        font-size: 15px;
+        top: 2px;
+        padding-right: 0.5rem;
+      }
+    }
+
+    a {
+      color: var(--accent-900);
+    }
+
+    .breadcrumb-item {
+      a:hover {
+        color: var(--primary-500);
+      }
+
+      + .breadcrumb-item::before {
+        position: relative;
+        top: 2px;
+      }
+
+      &:last-child {
+        opacity: 0.75;
+      }
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: baseline;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-header {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-header {
+    padding: 0px;
+    margin: 0px;
+  }
+}

@@ -1,0 +1,57 @@
+// ============================
+//     footer css start
+// ============================
+
+.theme-footer {
+  position: relative;
+  padding: 15px 0;
+  a {
+    color: var(--accent-900);
+    &:hover {
+      color: var(--primary-500);
+    }
+  }
+  .footer-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .col {
+      flex: 1 0 0%;
+    }
+    .col-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    .list-inline {
+      padding-left: 0;
+      list-style: none;
+
+      .list-inline-item {
+        display: inline-block;
+      }
+    }
+  }
+  .footer-link {
+    .list-inline-item:not(:last-child) {
+      margin-right: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .theme-footer {
+    padding: 0px 0px 15px 0;
+    .footer-wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      > div {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// ============================
+//     footer css end
+// ============================

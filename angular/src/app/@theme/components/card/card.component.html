@@ -1,0 +1,15 @@
+<mat-card [ngClass]="cardClass">
+  <mat-card-header class="card-header justify-content-between align-item-center" *ngIf="showHeader" [ngClass]="headerClass">
+    <h5>
+      {{ cardTitle }}
+      <ng-container *ngTemplateOutlet="headerTitleTemplate"></ng-container>
+    </h5>
+    <ng-container *ngTemplateOutlet="headerOptionsTemplate"></ng-container>
+  </mat-card-header>
+  <mat-card-content *ngIf="showContent" [style.padding.px]="padding">
+    <ng-content></ng-content>
+  </mat-card-content>
+  <mat-card-actions [ngClass]="actionClass" *ngIf="actionTemplate">
+    <ng-container *ngTemplateOutlet="actionTemplate"></ng-container>
+  </mat-card-actions>
+</mat-card>
