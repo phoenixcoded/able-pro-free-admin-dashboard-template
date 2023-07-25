@@ -1,7 +1,7 @@
 {
   "name": "able-pro-angular-free",
   "version": "1.0.0",
-  "author": "CodedThemes",
+  "author": "PhoenixCoded",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
