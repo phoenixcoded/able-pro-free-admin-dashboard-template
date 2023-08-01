@@ -1,0 +1,231 @@
+* {
+  margin: 0px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  background-color: var(--accent-100);
+  font-feature-settings: 'salt' !important;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    outline: none;
+  }
+
+  &:not([href]) {
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.block {
+  display: block !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-inline {
+  display: inline-flex !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.float-end {
+  float: right;
+}
+
+.float-start {
+  float: left;
+}
+
+.align-item-center {
+  align-items: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-start {
+  text-align: start !important;
+}
+
+.text-end {
+  text-align: end !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.text-muted {
+  color: var(--accent-600);
+}
+
+.text-white {
+  color: var(--accent-50);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/// adjust position when applying bade on custom elements
+.mat-badge-content {
+  // inside div
+  .badge-on-text & {
+    right: auto !important;
+  }
+
+  // inside button
+  .badge-on-button & {
+    right: 0px !important;
+    top: -2px !important;
+  }
+}
+
+// all theme in use multi images in one row
+.user-group {
+  display: inline-flex;
+  align-items: center;
+
+  .avatar,
+  img {
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    transition: all 0.1s ease-in-out;
+    border: 2px solid var(--accent-50);
+
+    + .avatar,
+    + img {
+      margin-left: -14px;
+    }
+
+    &:hover {
+      z-index: 5;
+    }
+  }
+}
+
+// this style use all theme while use ul and li
+.list-group-flush {
+  padding-left: 0px;
+
+  li {
+    padding: 16px 24px;
+  }
+}
+
+//  end
+
+.user-avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.pc-icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+.list-inline {
+  padding-left: 0px;
+  list-style: none;
+
+  .list-inline-item {
+    display: inline-block;
+  }
+}
+
+// mat card
+.mat-mdc-card {
+  &.user-account-card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  &.block {
+    box-shadow: none !important;
+  }
+
+  .mat-mdc-card-header {
+    &.card-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--accent-300);
+    }
+  }
+}
+
+// ============================
+//     avatar css start
+// ============================
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  font: {
+    size: 18px;
+    weight: 600;
+  }
+
+  width: 48px;
+  height: 48px;
+
+  &.hover {
+    &:hover {
+      background: var(--accent-100);
+      color: var(--accent-500);
+    }
+  }
+
+  &.avatar-s {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,85 @@
+body {
+  &.mat-typography {
+    font-feature-settings: 'salt' !important;
+  }
+  /* -------------------------------------------------------------------------- */
+  /*  @ mat drawer
+  /* -------------------------------------------------------------------------- */
+  .mat-drawer-container {
+    background-color: var(--accent-100) !important;
+    color: var(--accent-800) !important;
+
+    .mat-drawer {
+      background-color: var(--accent-100) !important;
+
+      &.mat-drawer-side {
+        border-right: 1px dashed var(--accent-400) !important;
+      }
+
+      .mat-drawer-inner-container {
+        overflow: hidden !important;
+      }
+    }
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*  @ mat toolbar
+  /* -------------------------------------------------------------------------- */
+  .mat-toolbar {
+    background: transparent !important;
+
+    &.mat-toolbar-single-row {
+      padding: 0px !important; // reduce toolbar padding to match up with container
+      width: -webkit-fill-available !important;
+    }
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*  @ mat text field
+  /* -------------------------------------------------------------------------- */
+
+  // Outlined text input
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__trailing,
+    .mdc-notched-outline__notch {
+      border-color: var(--accent-300) !important;
+    }
+  }
+
+  // filled text input
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: var(--accent-200) !important;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*  @ mat card
+  /* -------------------------------------------------------------------------- */
+  .mat-mdc-card {
+    border: 1px solid var(--accent-300) !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    margin-bottom: 24px;
+
+    &.mdc-card {
+      .mat-mdc-card-header {
+        .mat-mdc-card-header-text {
+          display: none;
+        }
+
+        h5 {
+          margin: 0px;
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*  @ mat badge
+  /* -------------------------------------------------------------------------- */
+
+  .mat-badge-content {
+    color: #ffffff !important;
+  }
+}

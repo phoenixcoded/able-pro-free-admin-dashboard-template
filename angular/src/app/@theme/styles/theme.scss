@@ -1,0 +1,103 @@
+/// setup theme based on param received
+///
+/// @param {string} $color
+///   color of theme to be send from src\app\@theme\styles\theme.scss
+/// @return {number} mat-theme
+
+@function get-light-theme($color) {
+  @return mat.define-light-theme(
+    (
+      color: (
+        primary: mat.define-palette($color),
+        accent: mat.define-palette($grey-theme),
+        warn: mat.define-palette($red-theme)
+      )
+    )
+  );
+}
+
+/// setup theme based on param received
+///
+/// @param {string} $font
+///   font string
+/// @return {number} mat-typography
+@function theme-typography($font) {
+  @return mat.define-typography-config(
+    $font-family: $font,
+    $headline-1: mat.define-typography-level(2.25rem, 3.1, 500),
+    $headline-2: mat.define-typography-level(2rem, 2.28, 500),
+    $headline-3: mat.define-typography-level(1.75rem, 2.57, 500),
+    $headline-4: mat.define-typography-level(1.5rem, 2.28, 500),
+    $headline-5: mat.define-typography-level(1.5rem, 1.2, 500),
+    // h1
+    $headline-6: mat.define-typography-level(1.875rem, 1.27, 500),
+    // h2
+    $subtitle-1: mat.define-typography-level(1.5rem, 1.33, 500),
+    // h3
+    $body-1: mat.define-typography-level(0.875rem, 1.5),
+    // h4
+    $body-2: mat.define-typography-level(0.875rem, 1.57),
+    $subtitle-2: mat.define-typography-level(0.75rem, 1.66, 500),
+    $caption: mat.define-typography-level(0.75rem, 1.66, 400),
+    $button: mat.define-typography-level(0.875, 0, 500)
+  );
+}
+
+/// This will generate classed based on selected theme color
+/// Useful for applying background and color prop of css for non material components
+/// generated class will be like bg-primary-100, bg-accent-100, text-primary-100, text-accent-100 etc
+/// up to available pallette colors
+///
+/// @param {string} $color
+///   color of theme to be send from src\app\@theme\styles\theme.scss
+@mixin generate-theme-classes($color) {
+  $color-themes: (
+    'primary': $color,
+    'accent': $grey-theme,
+    'warn': $red-theme,
+    'success': $green-theme,
+    'warning': $yellow-theme
+  );
+
+  @each $color-name, $color-values in $color-themes {
+    $i: 50;
+    $color: $color-values;
+
+    @while $i<=900 {
+      .bg-#{$color-name}-#{$i} {
+        background: map-get($color, $i);
+      }
+
+      .text-#{$color-name}-#{$i} {
+        color: map-get($color, $i) !important;
+      }
+
+      .b-#{$color-name}-#{$i} {
+        border-color: map-get($color, $i) !important;
+      }
+
+      --#{$color-name}-#{$i}: #{map-get($color, $i)};
+
+      @if $i == 50 {
+        // First 50
+        $i: $i + 50;
+      } @else {
+        // Rest 100-900
+        $i: $i + 100;
+      }
+    }
+  }
+}
+
+/// Start: Additional style that are not available via material functions
+
+h5 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+h6 {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+/// End

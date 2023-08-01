@@ -1,0 +1,201 @@
+<div class="header-button">
+  <button mat-button [matMenuTriggerFor]="Notification" aria-label="mode" class="header-item">
+    <a href="javascript:" class="pc-head-link badge-on-button" matBadge="4" matBadgeColor="primary" matBadgeOverlap="false">
+      <svg class="pc-icon">
+        <use xlink:href="assets/fonts/custom-icon.svg#custom-notification"></use>
+      </svg>
+    </a>
+  </button>
+  <button mat-button [matMenuTriggerFor]="user" aria-label="mode" class="header-item">
+    <a class="pc-head-link">
+      <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="user-avatar" />
+    </a>
+  </button>
+  <mat-menu #Notification="matMenu" xPosition="before" class="dropdown-notification">
+    <div class="dropdown-header flex align-item-center justify-content-between">
+      <h5 class="m-b-0">Notification</h5>
+      <a href="javascript:" class="mat-body text-primary-500">Mark all read</a>
+    </div>
+    <ng-scrollbar style="height: calc(100vh - 215px)" visibility="hover">
+      <div class="dropdown-body">
+        <h6 class="m-b-10">Today</h6>
+        <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16" *ngFor="let card of cards">
+          <div class="flex">
+            <div class="topic-icon flex-shrink-0">
+              <svg class="pc-icon text-primary-500">
+                <use attr.xlink:href="assets/fonts/custom-icon.svg#{{ card.icon }}"></use>
+              </svg>
+            </div>
+            <div class="topic-description flex-grow-1 m-l-15">
+              <span class="mat-small float-end text-muted">{{ card.time }}</span>
+              <h5 class="m-b-10">{{ card.position }}</h5>
+              <p class="m-b-0 mat-body">{{ card.description }}</p>
+            </div>
+          </div>
+        </app-card>
+        <h6 class="m-b-10">Yesterday</h6>
+        <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16" *ngFor="let card of cards2">
+          <div class="flex">
+            <div class="topic-icon">
+              <svg class="pc-icon text-primary-500">
+                <use attr.xlink:href="assets/fonts/custom-icon.svg#{{ card.icon }}"></use>
+              </svg>
+            </div>
+            <div class="topic-description m-l-15">
+              <span class="mat-small float-end text-muted">{{ card.time }}</span>
+              <h5 class="m-b-10">{{ card.position }}</h5>
+              <p class="m-b-0 mat-body">{{ card.description }}</p>
+            </div>
+          </div>
+        </app-card>
+        <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16">
+          <div class="flex">
+            <div class="topic-icon">
+              <svg class="pc-icon text-primary-500">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-user-bold"></use>
+              </svg>
+            </div>
+            <div class="topic-description m-l-15">
+              <span class="mat-small float-end text-muted">15 hour ago</span>
+              <h5 class="m-b-10">Challenge invitation</h5>
+              <p class="m-b-2 mat-body"> Jonny aber invites to join the challenge </p>
+              <button mat-stroked-button class="m-r-10">Decline</button>
+              <button mat-raised-button color="primary">Accept</button>
+            </div>
+          </div>
+        </app-card>
+      </div>
+    </ng-scrollbar>
+  </mat-menu>
+  <mat-menu #user="matMenu" xPosition="before" class="dropdown-user-profile">
+    <div class="dropdown-header flex align-item-center justify-content-between">
+      <h5 class="user-title">Profile</h5>
+    </div>
+    <ng-scrollbar style="height: calc(100vh - 225px)" visibility="hover">
+      <div class="dropdown-body">
+        <div class="flex m-b-5">
+          <div class="topic-icon">
+            <img src="assets/images/user/avatar-2.jpg" alt="user-images" class="user-avatar" />
+          </div>
+          <div class="topic-description m-l-15">
+            <h6 class="user-name">Carson Darrin 🖖</h6>
+            <p class="mat-body">carson.darrin@company.io</p>
+          </div>
+        </div>
+        <mat-divider class="m-b-15 m-t-15"></mat-divider>
+        <app-card [showHeader]="false" [padding]="16">
+          <div class="flex align-items-center justify-content-between">
+            <h5 class="m-b-0 flex-inline align-item-center f-16 f-w-600">
+              <svg class="pc-icon text-muted m-r-10">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-notification-outline"></use>
+              </svg>
+              Notification
+            </h5>
+            <mat-slide-toggle color="primary" (click)="$event.stopPropagation()"></mat-slide-toggle>
+          </div>
+        </app-card>
+        <h6 class="m-b-15">Manage</h6>
+        <a href="javascript:" class="dropdown-item text-muted">
+          <svg class="pc-icon m-r-10">
+            <use xlink:href="assets/fonts/custom-icon.svg#custom-setting-outline"></use>
+          </svg>
+          <h6 class="m-b-0">Settings</h6>
+        </a>
+        <a href="javascript:" class="dropdown-item text-muted">
+          <svg class="pc-icon m-r-10">
+            <use xlink:href="assets/fonts/custom-icon.svg#custom-share-bold"></use>
+          </svg>
+          <h6 class="m-b-0">Share</h6>
+        </a>
+        <a href="javascript:" class="dropdown-item text-muted">
+          <svg class="pc-icon m-r-10">
+            <use xlink:href="assets/fonts/custom-icon.svg#custom-lock-outline"></use>
+          </svg>
+          <h6 class="m-b-0">Change Password</h6>
+        </a>
+        <mat-divider class="m-b-15 m-t-15"></mat-divider>
+        <h6 class="m-b-15">Team</h6>
+        <a href="javascript:" class="dropdown-item text-muted justify-content-between">
+          <span class="flex">
+            <svg class="pc-icon m-r-10">
+              <use xlink:href="assets/fonts/custom-icon.svg#custom-profile-2user-outline"></use>
+            </svg>
+            <h6 class="m-b-0">UI Design team</h6>
+          </span>
+          <div class="user-group">
+            <img src="assets/images/user/avatar-1.jpg" alt="user-images" class="avatar" />
+            <span class="avatar bg-warn-500 text-white">K</span>
+            <span class="avatar bg-success-500 text-white">
+              <svg class="pc-icon">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-user"></use>
+              </svg>
+            </span>
+            <span class="avatar bg-primary-50 text-primary-500">+2</span>
+          </div>
+        </a>
+        <a href="javascript:" class="dropdown-item text-muted justify-content-between">
+          <span class="flex">
+            <svg class="pc-icon m-r-10">
+              <use xlink:href="assets/fonts/custom-icon.svg#custom-profile-2user-outline"></use>
+            </svg>
+            <h6 class="m-b-0">Friends Groups</h6>
+          </span>
+          <div class="user-group">
+            <img src="assets/images/user/avatar-1.jpg" alt="user-images" class="avatar" />
+            <span class="avatar bg-warn-500 text-white">K</span>
+            <span class="avatar bg-success-500 text-white">
+              <svg class="pc-icon">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-user"></use>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a href="javascript:" class="dropdown-item text-muted justify-content-between">
+          <span class="flex">
+            <svg class="pc-icon m-r-10">
+              <use xlink:href="assets/fonts/custom-icon.svg#custom-add-outline"></use>
+            </svg>
+            <h6 class="m-b-0">Add New</h6>
+          </span>
+          <div class="user-group">
+            <span class="avatar bg-primary-500 text-white">
+              <svg class="pc-icon">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-add-outline"></use>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <mat-divider class="m-b-15 m-t-15"></mat-divider>
+        <div class="grid m-b-15">
+          <button mat-flat-button color="primary" class="user-logout">
+            <div class="flex-inline align-item-center">
+              <svg class="pc-icon m-r-10">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-logout-1-outline"></use>
+              </svg>
+              Logout
+            </div>
+          </button>
+        </div>
+        <app-card cardClass="m-b-0 user-account-card" [showHeader]="false" [padding]="16">
+          <div class="user-group">
+            <img src="assets/images/user/avatar-1.jpg" alt="user-image" class="avatar" />
+            <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="avatar" />
+            <img src="assets/images/user/avatar-3.jpg" alt="user-image" class="avatar" />
+            <img src="assets/images/user/avatar-4.jpg" alt="user-image" class="avatar" />
+            <img src="assets/images/user/avatar-5.jpg" alt="user-image" class="avatar" />
+            <span class="avatar bg-primary-50 text-primary-500">+20</span>
+          </div>
+          <h3 class="user-followers"> 245.3k <small class="text-muted">Followers</small> </h3>
+          <button mat-flat-button class="upgrade-button">
+            <div class="flex-inline align-item-center">
+              <svg class="pc-icon m-r-10">
+                <use xlink:href="assets/fonts/custom-icon.svg#custom-logout-1-outline"></use>
+              </svg>
+              Upgrade to Business
+            </div>
+          </button>
+        </app-card>
+      </div>
+    </ng-scrollbar>
+  </mat-menu>
+</div>

@@ -1,0 +1,18 @@
+.color-block {
+  padding: 20px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+  .color-code-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.block-border {
+  border: 1px dashed #ffffff;
+}

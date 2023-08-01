@@ -1,0 +1,8 @@
+<li class="nav-item coded-menu-caption">
+  <label for="group-title">{{ item.title }}</label>
+</li>
+<ng-container *ngFor="let item of item.children">
+  <app-menu-group-vertical *ngIf="item.type === 'group'" [item]="item"></app-menu-group-vertical>
+  <app-menu-collapse *ngIf="item.type === 'collapse'" [item]="item"></app-menu-collapse>
+  <app-menu-item *ngIf="item.type === 'item'" [item]="item"></app-menu-item>
+</ng-container>

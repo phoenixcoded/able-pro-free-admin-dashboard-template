@@ -1,0 +1,139 @@
+@import '../../../styles/theme-palette-colors.scss';
+
+::ng-deep.dropdown-notification {
+  min-width: 450px !important;
+  max-width: 100% !important;
+
+  .topic-icon {
+    .pc-icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .topic-description {
+    .mdc-button {
+      border-radius: 20px;
+    }
+  }
+
+  .notification-card {
+    &:hover {
+      background: var(--accent-200);
+      cursor: pointer;
+    }
+  }
+}
+
+::ng-deep.dropdown-user-profile {
+  min-width: 352px !important;
+  max-width: 100% !important;
+
+  .user-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0px !important;
+  }
+
+  .user-name {
+    font-weight: 600 !important;
+    margin: 0px !important;
+  }
+
+  .dropdown-item {
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-900);
+      background: var(--accent-300);
+      border-color: var(--accent-300);
+    }
+
+    .pc-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .user-group {
+    .avatar {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+
+  .user-logout {
+    &.mdc-button {
+      border-radius: 20px;
+    }
+  }
+
+  .user-followers {
+    margin: 16px 0px;
+    color: map-get($grey-theme, contrast, 500);
+  }
+
+  .upgrade-button {
+    background: map-get($yellow-theme, 500) !important;
+    color: map-get($grey-theme, contrast, 800) !important;
+
+    &.mdc-button {
+      border-radius: 20px;
+    }
+  }
+}
+::ng-deep.user-account-card {
+  background-image: url('../../../../../assets/images/layout/img-profile-card.jpg');
+}
+
+.dropdown-header,
+.dropdown-body {
+  padding: 16px 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .pc-header {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pc-header {
+    .header-wrapper {
+      padding: 10px;
+    }
+
+    .pc-head-link {
+      margin: 0px;
+    }
+
+    .header-item {
+      &.mdc-button {
+        min-width: 50px;
+        padding: 0;
+      }
+    }
+
+    .mdc-button {
+      min-width: 0px !important;
+    }
+
+    .mat-drawer-content {
+      .app-container {
+        padding: 15px;
+      }
+    }
+  }
+
+  ::ng-deep {
+    .dropdown-notification {
+      min-width: 350px !important;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<div class="auth-main">
+  <div class="auth-wrapper version-1">
+    <div class="auth-form">
+      <div class="auth-background">
+        <div class="yellow-circle"></div>
+        <div class="red-circle"></div>
+      </div>
+      <div class="main-form">
+        <app-card [showHeader]="false" class="auth-form-card" [padding]="40">
+          <div class="text-center">
+            <a href="javascript:">
+              <img src="assets/images/logo-dark.svg" alt="logo" />
+            </a>
+            <div class="login-with">
+              <button mat-stroked-button class="m-t-10 text-muted">
+                <div class="flex">
+                  <img src="assets/images/authentication/facebook.svg" alt="facebook" />
+                  <span class="mat-body p-l-10">Sign In with Facebook</span>
+                </div>
+              </button>
+              <button mat-stroked-button class="m-t-10 text-muted">
+                <div class="flex">
+                  <img src="assets/images/authentication/twitter.svg" alt="facebook" />
+                  <span class="mat-body p-l-10">Sign In with Twitter</span>
+                </div>
+              </button>
+              <button mat-stroked-button class="m-t-10 text-muted">
+                <div class="flex">
+                  <img src="assets/images/authentication/google.svg" alt="facebook" />
+                  <span class="mat-body p-l-10">Sign In with Google</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="separator">
+            <span>OR</span>
+          </div>
+          <h4 class="text-center m-b-25 f-20 f-w-500">Sign up with your work email.</h4>
+          <div class="row text-start">
+            <div class="col-md-6">
+              <label for="name" class="f-w-500">First Name</label>
+              <mat-form-field appearance="outline" class="w-100 m-t-5">
+                <input type="text" matInput placeholder="First Name" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <label for="name" class="f-w-500">Last Name</label>
+              <mat-form-field appearance="outline" class="w-100 m-t-5">
+                <input type="text" matInput placeholder="Last Name" />
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <label for="name" class="f-w-500">Enter Your Email</label>
+              <mat-form-field appearance="outline" class="w-100 m-t-5">
+                <input matInput [formControl]="email" required placeholder="Email Address" />
+                <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <label for="name" class="f-w-500">Enter your password</label>
+              <mat-form-field appearance="outline" class="w-100 m-t-5">
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" />
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <label for="name" class="f-w-500">Enter your Confirm Password</label>
+              <mat-form-field appearance="outline" class="w-100 m-t-5">
+                <input matInput [type]="coHide ? 'password' : 'text'" placeholder="Enter your password" />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="coHide = !coHide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="coHide"
+                >
+                  <mat-icon>{{ coHide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="check-me">
+            <mat-checkbox class="float-start" checked color="primary">I agree to all the Terms & Condition</mat-checkbox>
+          </div>
+          <div class="grid">
+            <button mat-flat-button color="primary" class="b-rad-20 m-t-15">Register</button>
+          </div>
+          <div class="check-me m-t-15">
+            <h6 class="f-w-400 text-muted m-b-0">Don't have an Account?</h6>
+            <a class="text-primary-500" [routerLink]="['/auth/login']">Login Account</a>
+          </div>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</div>

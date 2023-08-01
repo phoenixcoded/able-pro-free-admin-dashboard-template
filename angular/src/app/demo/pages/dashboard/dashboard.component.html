@@ -1,0 +1,516 @@
+<div class="row widget-chart p-t-25">
+  <div class="col-md-6 col-xxl-3">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center">
+        <div class="flex-shrink-0">
+          <div class="avatar avatar-s bg-primary-50 text-primary-500">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                opacity="0.4"
+                d="M13 9H7"
+                stroke="var(--primary-500)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22.0002 10.9702V13.0302C22.0002 13.5802 21.5602 14.0302 21.0002 14.0502H19.0402C17.9602 14.0502 16.9702 13.2602 16.8802 12.1802C16.8202 11.5502 17.0602 10.9602 17.4802 10.5502C17.8502 10.1702 18.3602 9.9502 18.9202 9.9502H21.0002C21.5602 9.9702 22.0002 10.4202 22.0002 10.9702Z"
+                stroke="var(--primary-500)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.48 10.55C17.06 10.96 16.82 11.55 16.88 12.18C16.97 13.26 17.96 14.05 19.04 14.05H21V15.5C21 18.5 19 20.5 16 20.5H7C4 20.5 2 18.5 2 15.5V8.5C2 5.78 3.64 3.88 6.19 3.56C6.45 3.52 6.72 3.5 7 3.5H16C16.26 3.5 16.51 3.50999 16.75 3.54999C19.33 3.84999 21 5.76 21 8.5V9.95001H18.92C18.36 9.95001 17.85 10.17 17.48 10.55Z"
+                stroke="var(--primary-500)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex-grow-1 card-head">
+          <h5 class="m-b-0 f-w-600">All Earnings</h5>
+        </div>
+      </div>
+      <div class="chart-body">
+        <div class="m-t-15 row align-item-center">
+          <div class="col-7">
+            <apx-chart
+              [series]="earningChart.series!"
+              [chart]="earningChart.chart!"
+              [colors]="preset"
+              [plotOptions]="earningChart.plotOptions!"
+              [xaxis]="earningChart.xaxis!"
+              [tooltip]="earningChart.tooltip!"
+            >
+            </apx-chart>
+          </div>
+          <div class="col-5 text-end">
+            <h5 class="m-b-5">$30200</h5>
+            <h6 class="text-primary-500 m-b-0"><i class="ti ti-arrow-up-right"></i> 30.6%</h6>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-6 col-xxl-3">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center">
+        <div class="flex-shrink-0">
+          <div class="avatar avatar-s bg-warning-50 text-warning-500">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                stroke="#E58A00"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.6"
+                d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
+                stroke="#E58A00"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.6"
+                d="M8 13H12"
+                stroke="#E58A00"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.6"
+                d="M8 17H16"
+                stroke="#E58A00"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex-grow-1 card-head">
+          <h5 class="m-b-0 f-w-600">Page Views</h5>
+        </div>
+      </div>
+      <div class="chart-body">
+        <div class="m-t-15 row align-item-center">
+          <div class="col-7">
+            <apx-chart
+              [series]="pageViewChart.series!"
+              [chart]="pageViewChart.chart!"
+              [colors]="pageViewChart.colors!"
+              [plotOptions]="pageViewChart.plotOptions!"
+              [xaxis]="pageViewChart.xaxis!"
+              [tooltip]="pageViewChart.tooltip!"
+            >
+            </apx-chart>
+          </div>
+          <div class="col-5 text-end">
+            <h5 class="m-b-5">29K+</h5>
+            <h6 class="text-warning-500 m-b-0"><i class="ti ti-arrow-up-right"></i> 30.6%</h6>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-6 col-xxl-3">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center">
+        <div class="flex-shrink-0">
+          <div class="avatar avatar-s bg-success-50 text-success-500">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2V5" stroke="#2ca87f" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 2V5" stroke="#2ca87f" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                opacity="0.4"
+                d="M3.5 9.08984H20.5"
+                stroke="#2ca87f"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
+                stroke="#2ca87f"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M15.6947 13.7002H15.7037"
+                stroke="#2ca87f"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M15.6947 16.7002H15.7037"
+                stroke="#2ca87f"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M11.9955 13.7002H12.0045"
+                stroke="#2ca87f"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M11.9955 16.7002H12.0045"
+                stroke="#2ca87f"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M8.29431 13.7002H8.30329"
+                stroke="#2ca87f"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M8.29395 16.7002H8.30293"
+                stroke="#2ca87f"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex-grow-1 card-head">
+          <h5 class="m-b-0 f-w-600"> Total Task</h5>
+        </div>
+      </div>
+      <div class="chart-body">
+        <div class="m-t-15 row align-item-center">
+          <div class="col-7">
+            <apx-chart
+              [series]="totalTaskChart.series!"
+              [chart]="totalTaskChart.chart!"
+              [colors]="totalTaskChart.colors!"
+              [plotOptions]="totalTaskChart.plotOptions!"
+              [xaxis]="totalTaskChart.xaxis!"
+              [tooltip]="totalTaskChart.tooltip!"
+            >
+            </apx-chart>
+          </div>
+          <div class="col-5 text-end">
+            <h5 class="m-b-5">14568</h5>
+            <h6 class="text-success-500 m-b-0"><i class="ti ti-arrow-up-right"></i> 30.6%</h6>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-6 col-xxl-3">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center">
+        <div class="flex-shrink-0">
+          <div class="avatar avatar-s bg-warn-50 text-warn-500">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="#DC2626"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                opacity="0.4"
+                d="M8.4707 10.7402L12.0007 14.2602L15.5307 10.7402"
+                stroke="#DC2626"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex-grow-1 card-head">
+          <h6 class="m-b-0 f-w-600">Download</h6>
+        </div>
+      </div>
+      <div class="chart-body">
+        <div class="m-t-15 row align-item-center">
+          <div class="col-7">
+            <apx-chart
+              [series]="downloadChart.series!"
+              [chart]="downloadChart.chart!"
+              [colors]="downloadChart.colors!"
+              [plotOptions]="downloadChart.plotOptions!"
+              [xaxis]="downloadChart.xaxis!"
+              [tooltip]="downloadChart.tooltip!"
+            >
+            </apx-chart>
+          </div>
+          <div class="col-5 text-end">
+            <h5 class="m-b-5">$30200</h5>
+            <p class="text-warn-500 m-b-0"><i class="ti ti-arrow-up-right"></i> 30.6%</p>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-lg-9">
+    <app-card cardTitle="Monthly Revenue">
+      <apx-chart
+        [chart]="monthlyRevenueChart.chart!"
+        [colors]="monthlyColor"
+        [fill]="monthlyRevenueChart.fill!"
+        [dataLabels]="monthlyRevenueChart.dataLabels!"
+        [stroke]="monthlyRevenueChart.stroke!"
+        [plotOptions]="monthlyRevenueChart.plotOptions!"
+        [grid]="monthlyRevenueChart.grid!"
+        [series]="monthlyRevenueChart.series!"
+        [xaxis]="monthlyRevenueChart.xaxis!"
+      >
+      </apx-chart>
+    </app-card>
+  </div>
+  <div class="col-lg-3">
+    <app-card cardTitle="Project - Able Pro">
+      <div class="m-b-25">
+        <p class="m-b-10">Tasks done <span class="float-end">30%</span></p>
+        <mat-progress-bar mode="determinate" color="primary" value="50"></mat-progress-bar>
+      </div>
+      <div class="grid gap">
+        <a href="javascript:">
+          <div class="flex align-item-center">
+            <div class="flex-shrink-0 m-r-10">
+              <div class="dot wid-10 hei-10"></div>
+            </div>
+            <div class="flex-grow-1">
+              <p class="m-b-0 grid text-start">
+                <span class="text-muted text-truncate w-100">Horizontal Layout</span>
+              </p>
+            </div>
+            <div class="user-status bg-accent-300 text-muted m-l-10 f-12"><i class="ti ti-paperclip mat-small"></i> 2 </div>
+          </div>
+        </a>
+        <a href="javascript:" *ngFor="let task of project">
+          <div class="flex align-item-center">
+            <div class="flex-shrink-0 m-r-10">
+              <div class="dot wid-10 hei-10"></div>
+            </div>
+            <div class="flex-grow-1">
+              <p class="m-b-0 grid text-start">
+                <span class="text-muted w-100">{{ task.title }}</span>
+              </p>
+            </div>
+          </div>
+        </a>
+        <div class="grid m-t-15">
+          <button mat-flat-button color="primary" class="b-rad-20"><i class="ti ti-plus f-18"></i>Add Task</button>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-lg-9">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center justify-content-between">
+        <h5 class="m-b-0 customer-report">Project overview</h5>
+        <a [matMenuTriggerFor]="menu" class="avatar avatar-s hover"><i class="ti ti-dots f-18"></i></a>
+        <mat-menu #menu="matMenu">
+          <a mat-menu-item>Today</a>
+          <a mat-menu-item>Weekly</a>
+          <a mat-menu-item>Monthly</a>
+        </mat-menu>
+      </div>
+      <div class="row align-item-center justify-content-center">
+        <div class="col-md-6 col-xl-4">
+          <div class="m-t-15 row align-item-center">
+            <div class="col-6">
+              <p class="text-muted m-b-5">Total Tasks</p>
+              <h5 class="m-b-0">34,686</h5>
+            </div>
+            <div class="col-6">
+              <apx-chart
+                [series]="totalTasksChart.series!"
+                [chart]="totalTasksChart.chart!"
+                [colors]="totalTasksChart.colors!"
+                [stroke]="totalTasksChart.stroke!"
+                [fill]="totalTasksChart.fill!"
+              >
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="m-t-15 row align-item-center">
+            <div class="col-6">
+              <p class="text-muted m-b-5">Pending Tasks</p>
+              <h5 class="m-b-0">3,786</h5>
+            </div>
+            <div class="col-6">
+              <apx-chart
+                [series]="pendingTasksChart.series!"
+                [chart]="pendingTasksChart.chart!"
+                [colors]="pendingTasksChart.colors!"
+                [stroke]="pendingTasksChart.stroke!"
+                [fill]="pendingTasksChart.fill!"
+              >
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="m-t-15 grid">
+            <button mat-flat-button class="b-rad-20" color="primary"><i class="ti ti-plus"></i> Add project</button>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-lg-3">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center">
+        <div class="flex-shrink-0">
+          <div class="avatar avatar-s bg-primary-50 text-primary-500">
+            <i class="ti ti-at f-20"></i>
+          </div>
+        </div>
+        <div class="flex-grow-1 m-l-15">
+          <h6 class="m-b-0">Able pro</h6>
+          <small class="text-muted">@ableprodevelop</small>
+        </div>
+        <a [matMenuTriggerFor]="menu" class="avatar avatar-s"><i class="ti ti-dots-vertical f-18"></i></a>
+      </div>
+      <div class="flex justify-content-between align-item-center m-t-25 able-user-group">
+        <div class="user-group">
+          <img src="assets/images/user/avatar-1.jpg" alt="user-image" class="avatar" />
+          <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="avatar" />
+          <img src="assets/images/user/avatar-3.jpg" alt="user-image" class="avatar" />
+          <img src="assets/images/user/avatar-4.jpg" alt="user-image" class="avatar" />
+          <img src="assets/images/user/avatar-5.jpg" alt="user-image" class="avatar" />
+          <span class="avatar bg-primary-50 text-primary-500 mat-body">+2</span>
+        </div>
+        <a href="javascript:" class="avatar avatar-s bg-primary-500 text-white">
+          <i class="ti ti-plus f-20"></i>
+        </a>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-6">
+    <app-card cardTitle="Transaction" headerClass="transaction-card-header" actionClass="card-action block" [padding]="0">
+      <ng-template #headerOptionsTemplate>
+        <a [matMenuTriggerFor]="menu" class="avatar avatar-s hover"><i class="ti ti-dots-vertical f-18"></i></a>
+      </ng-template>
+      <mat-tab-group mat-stretch-tabs="false" class="transactions" mat-align-tabs="start">
+        <mat-tab label="All Transaction">
+          <ng-container *ngTemplateOutlet="Transaction"></ng-container>
+        </mat-tab>
+        <mat-tab label="Success">
+          <ng-container *ngTemplateOutlet="Transaction"></ng-container>
+        </mat-tab>
+        <mat-tab label="Pending">
+          <ng-container *ngTemplateOutlet="Transaction"></ng-container>
+        </mat-tab>
+      </mat-tab-group>
+      <ng-template #actionTemplate>
+        <div class="row g-2">
+          <div class="col-lg-6 m-t-10">
+            <div class="grid">
+              <button class="grid b-rad-20" mat-stroked-button
+                ><span class="text-truncate w-100">View all Transaction History</span></button
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 m-t-10">
+            <div class="grid">
+              <button class="grid b-rad-20" mat-flat-button color="primary"
+                ><span class="text-truncate w-100">Create new Transaction</span></button
+              >
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </app-card>
+  </div>
+  <div class="col-md-6">
+    <app-card [showHeader]="false">
+      <div class="flex align-item-center justify-content-between">
+        <h5 class="m-b-0">Total Income</h5>
+        <a [matMenuTriggerFor]="menu" class="avatar avatar-s hover"><i class="ti ti-dots-vertical f-18"></i></a>
+      </div>
+      <apx-chart
+        [series]="totalIncomeChart.series!"
+        [chart]="totalIncomeChart.chart!"
+        [colors]="incomeColors"
+        [labels]="totalIncomeChart.labels!"
+        [plotOptions]="totalIncomeChart.plotOptions!"
+        [fill]="totalIncomeChart.fill!"
+        [legend]="totalIncomeChart.legend!"
+        [responsive]="totalIncomeChart.responsive!"
+        [dataLabels]="totalIncomeChart.dataLabels!"
+      >
+      </apx-chart>
+      <div class="row g-3 m-t-15">
+        <div class="col-sm-6 m-t-15" *ngFor="let task of income_card">
+          <div class="income-value">
+            <div class="flex align-item-center m-b-10">
+              <div class="flex-shrink-0">
+                <span class="p-5 block {{ task.background }} border-50"> </span>
+              </div>
+              <div class="flex-grow-1 m-l-10">
+                <p class="m-b-0">{{ task.item }}</p>
+              </div>
+            </div>
+            <h6 class="m-b-0 f-w-600"
+              >{{ task.value }} <small class="text-muted"><i class="ti ti-chevrons-up"></i> {{ task.number }}</small></h6
+            >
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>
+
+<ng-template #Transaction>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let task of List_transaction">
+      <div class="flex align-item-center">
+        <div class="flex-shrink-0">
+          <div class="avatar avatar-s border {{ task.bg }}" matTooltip="{{ task.tooltip }}">{{ task.icon }}</div>
+        </div>
+        <div class="flex-grow-1 m-l-15">
+          <div class="row g-1">
+            <div class="col-6">
+              <h6 class="m-b-0">{{ task.name }}</h6>
+              <p class="text-muted m-b-0"
+                ><small>{{ task.time }}</small></p
+              >
+            </div>
+            <div class="col-6 text-end">
+              <h6 class="m-b-5">{{ task.amount }}</h6>
+              <p class="{{ task.amount_type }} m-b-0"><i class="{{ task.amount_position }}"></i> {{ task.percentage }} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ng-template>

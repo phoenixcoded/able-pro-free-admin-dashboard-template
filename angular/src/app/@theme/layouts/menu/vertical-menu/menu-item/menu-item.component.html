@@ -1,0 +1,26 @@
+<li [ngClass]="item.classes!" *ngIf="item.url && !item.external" [routerLinkActive]="['active']">
+  <a class="nav-link" [target]="item.target ? '_blank' : '_self'" [routerLink]="[item.url]" (click)="toggleMenu($event)">
+    <span *ngIf="item.icon" class="coded-micon">
+      <svg class="pc-icon">
+        <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item.icon }}"></use>
+      </svg>
+    </span>
+    <span class="coded-mtext" *ngIf="item.icon; else directTitle">{{ item.title }}</span>
+    <ng-template #directTitle>
+      {{ item.title }}
+    </ng-template>
+  </a>
+</li>
+<li [ngClass]="item.classes!" *ngIf="item.url && item.external">
+  <a [target]="item.target ? '_blank' : '_self'" [href]="sanitizeURL(item.url)">
+    <span *ngIf="item.icon" class="coded-micon">
+      <svg class="pc-icon">
+        <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item.icon }}"></use>
+      </svg>
+    </span>
+    <span class="coded-mtext" *ngIf="item.icon; else directTitle">{{ item.title }}</span>
+    <ng-template #directTitle>
+      {{ item.title }}
+    </ng-template>
+  </a>
+</li>

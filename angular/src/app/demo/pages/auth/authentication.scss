@@ -1,0 +1,117 @@
+.auth-main {
+  position: relative;
+
+  .auth-wrapper {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+
+    .auth-form {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+
+      .auth-form-card {
+        margin: 40px 0px;
+        width: 100%;
+        max-width: 480px;
+        box-shadow: none;
+      }
+
+      .login-with {
+        display: grid;
+        margin: 16px 0px;
+      }
+    }
+
+    .separator {
+      position: relative;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      margin: 24px 0px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--accent-300);
+        z-index: 1;
+      }
+
+      span {
+        font-size: 0.875rem;
+        padding: 8px 24px;
+        background: var(--accent-50);
+        z-index: 5;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+    }
+
+    .check-me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &.version-1 {
+      display: flex;
+      align-items: stretch;
+
+      .auth-form {
+        position: relative;
+        justify-content: center;
+
+        .auth-background {
+          position: absolute;
+          filter: blur(140px);
+          z-index: -1;
+          inset: 0px;
+          overflow: hidden;
+
+          &::before {
+            content: ' ';
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgb(247, 220, 179);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            opacity: 1;
+          }
+        }
+
+        .yellow-circle {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          background-color: rgb(192, 229, 217);
+          margin-left: 160px;
+          position: absolute;
+          bottom: 180px;
+          opacity: 1;
+        }
+
+        .red-circle {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: rgb(231, 103, 103);
+          position: absolute;
+          bottom: 0px;
+          left: -50px;
+          opacity: 1;
+        }
+
+        .main-form {
+          display: flex;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<li data-username="able-pro dashboard" class="nav-item coded-hasmenu" [routerLinkActive]="['active']">
+  <a [routerLinkActive]="['active']" class="nav-link" (click)="navCollapse($event)" aria-hidden="true">
+    <span class="coded-micon" *ngIf="item.icon">
+      <svg class="pc-icon">
+        <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item.icon }}"></use>
+      </svg>
+    </span>
+    <span class="coded-mtext">{{ item.title }} </span>
+  </a>
+  <ul class="coded-submenu" [routerLinkActive]="['active']" [ngClass]="item.classes!">
+    <ng-container *ngFor="let item of item.children">
+      <app-menu-group-vertical *ngIf="item.type === 'group'" [item]="item"></app-menu-group-vertical>
+      <app-menu-collapse *ngIf="item.type === 'collapse'" [item]="item"></app-menu-collapse>
+      <app-menu-item *ngIf="item.type === 'item'" [item]="item"></app-menu-item>
+    </ng-container>
+  </ul>
+</li>

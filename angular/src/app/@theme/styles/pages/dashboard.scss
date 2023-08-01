@@ -1,0 +1,93 @@
+// this scss file use only for bug fixing  beacuase this css in dashboard folder not work there so here put
+
+// ================================//
+//      dashboard us css start     //
+// ================================//
+
+.mat-mdc-tab-group.transactions {
+  .mat-mdc-tab-labels {
+    padding: 0px 20px !important;
+  }
+
+  .mat-mdc-tab-body-wrapper {
+    ul {
+      padding-left: 0px !important;
+
+      li {
+        padding: 16px 24px;
+        border-top: 1px solid var(--accent-300) !important;
+      }
+    }
+  }
+}
+
+.upgrade-button {
+  background: map-get($yellow-theme, 500) !important;
+
+  a {
+    color: var(--accent-50) !important;
+  }
+
+  &.mdc-button {
+    border-radius: 20px;
+  }
+}
+
+.project-chart {
+  .mat-mdc-tab-header {
+    padding: 20px 20px 0px 19px;
+    border-bottom: 1px solid var(--accent-300);
+  }
+
+  .mat-mdc-tab-body-wrapper {
+    margin: 0px;
+  }
+
+  .project-body {
+    .list-inline {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-left: 0px;
+
+      .list-inline-item {
+        a {
+          color: inherit;
+        }
+
+        .select-item {
+          border-color: var(--accent-300);
+          padding: 10px;
+          border-radius: 8px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    .project-report {
+      padding-left: 0px;
+      .list-group-item {
+        padding: 16px 20px;
+
+        .avatar {
+          border-radius: 8px;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--accent-300);
+        }
+      }
+    }
+  }
+}
+
+.transaction-card-header {
+  padding: 20px 20px 0px 20px !important;
+  border-bottom: none !important;
+}
+
+// ================================//
+//      dashboard us css end       //
+// ================================//
