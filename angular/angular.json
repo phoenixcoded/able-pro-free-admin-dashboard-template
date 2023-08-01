@@ -20,7 +20,7 @@
             "allowedCommonJsDependencies": [
               "apexcharts"
             ],
-            "outputPath": "dist/able-pro-angular-free",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
