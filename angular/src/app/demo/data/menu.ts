@@ -75,7 +75,7 @@ export const menus: Navigation[] = [
         url: 'https://tabler-icons.io/',
         icon: '#custom-mouse-circle',
         target: true,
-        external: false
+        external: true,
       }
     ]
   },
