@@ -2,16 +2,16 @@
   "name": "able-pro-angular-free",
   "version": "1.0.0",
   "author": "PhoenixCoded",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --base-href /angular/free/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
     "lint-fix": "ng lint --fix"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^16.0.0",
     "@angular/cdk": "^16.1.5",

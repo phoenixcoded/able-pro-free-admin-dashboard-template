@@ -23,10 +23,10 @@ jobs:
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Node.js 18
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "18.x"
 
@@ -37,7 +37,7 @@ jobs:
           gulp build-prod
 
       - name: 📂 Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           # ARGS: "-rltgoDzvO --delete"
