@@ -311,18 +311,20 @@
             <div class="user-status bg-accent-300 text-muted m-l-10 f-12"><i class="ti ti-paperclip mat-small"></i> 2 </div>
           </div>
         </a>
-        <a href="javascript:" *ngFor="let task of project">
-          <div class="flex align-item-center">
-            <div class="flex-shrink-0 m-r-10">
-              <div class="dot wid-10 hei-10"></div>
+        @for (task of project; track task) {
+          <a href="javascript:">
+            <div class="flex align-item-center">
+              <div class="flex-shrink-0 m-r-10">
+                <div class="dot wid-10 hei-10"></div>
+              </div>
+              <div class="flex-grow-1">
+                <p class="m-b-0 grid text-start">
+                  <span class="text-muted w-100">{{ task.title }}</span>
+                </p>
+              </div>
             </div>
-            <div class="flex-grow-1">
-              <p class="m-b-0 grid text-start">
-                <span class="text-muted w-100">{{ task.title }}</span>
-              </p>
-            </div>
-          </div>
-        </a>
+          </a>
+        }
         <div class="grid m-t-15">
           <button mat-flat-button color="primary" class="b-rad-20"><i class="ti ti-plus f-18"></i>Add Task</button>
         </div>
@@ -395,7 +397,7 @@
         </div>
         <div class="flex-grow-1 m-l-15">
           <h6 class="m-b-0">Able pro</h6>
-          <small class="text-muted">@ableprodevelop</small>
+          <small class="text-muted">&#64;ableprodevelop</small>
         </div>
         <a [matMenuTriggerFor]="menu" class="avatar avatar-s"><i class="ti ti-dots-vertical f-18"></i></a>
       </div>
@@ -469,21 +471,23 @@
       >
       </apx-chart>
       <div class="row g-3 m-t-15">
-        <div class="col-sm-6 m-t-15" *ngFor="let task of income_card">
-          <div class="income-value">
-            <div class="flex align-item-center m-b-10">
-              <div class="flex-shrink-0">
-                <span class="p-5 block {{ task.background }} border-50"> </span>
+        @for (task of income_card; track task) {
+          <div class="col-sm-6 m-t-15">
+            <div class="income-value">
+              <div class="flex align-item-center m-b-10">
+                <div class="flex-shrink-0">
+                  <span class="p-5 block {{ task.background }} border-50"> </span>
+                </div>
+                <div class="flex-grow-1 m-l-10">
+                  <p class="m-b-0">{{ task.item }}</p>
+                </div>
               </div>
-              <div class="flex-grow-1 m-l-10">
-                <p class="m-b-0">{{ task.item }}</p>
-              </div>
+              <h6 class="m-b-0 f-w-600"
+                >{{ task.value }} <small class="text-muted"><i class="ti ti-chevrons-up"></i> {{ task.number }}</small></h6
+              >
             </div>
-            <h6 class="m-b-0 f-w-600"
-              >{{ task.value }} <small class="text-muted"><i class="ti ti-chevrons-up"></i> {{ task.number }}</small></h6
-            >
           </div>
-        </div>
+        }
       </div>
     </app-card>
   </div>
@@ -491,26 +495,28 @@
 
 <ng-template #Transaction>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item" *ngFor="let task of List_transaction">
-      <div class="flex align-item-center">
-        <div class="flex-shrink-0">
-          <div class="avatar avatar-s border {{ task.bg }}" matTooltip="{{ task.tooltip }}">{{ task.icon }}</div>
-        </div>
-        <div class="flex-grow-1 m-l-15">
-          <div class="row g-1">
-            <div class="col-6">
-              <h6 class="m-b-0">{{ task.name }}</h6>
-              <p class="text-muted m-b-0"
-                ><small>{{ task.time }}</small></p
-              >
-            </div>
-            <div class="col-6 text-end">
-              <h6 class="m-b-5">{{ task.amount }}</h6>
-              <p class="{{ task.amount_type }} m-b-0"><i class="{{ task.amount_position }}"></i> {{ task.percentage }} </p>
+    @for (task of List_transaction; track task) {
+      <li class="list-group-item">
+        <div class="flex align-item-center">
+          <div class="flex-shrink-0">
+            <div class="avatar avatar-s border {{ task.bg }}" matTooltip="{{ task.tooltip }}">{{ task.icon }}</div>
+          </div>
+          <div class="flex-grow-1 m-l-15">
+            <div class="row g-1">
+              <div class="col-6">
+                <h6 class="m-b-0">{{ task.name }}</h6>
+                <p class="text-muted m-b-0"
+                  ><small>{{ task.time }}</small></p
+                >
+              </div>
+              <div class="col-6 text-end">
+                <h6 class="m-b-5">{{ task.amount }}</h6>
+                <p class="{{ task.amount_type }} m-b-0"><i class="{{ task.amount_position }}"></i> {{ task.percentage }} </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </li>
+      </li>
+    }
   </ul>
 </ng-template>

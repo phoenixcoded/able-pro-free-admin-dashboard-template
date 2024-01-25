@@ -18,52 +18,31 @@
     </div>
     <ng-scrollbar style="height: calc(100vh - 215px)" visibility="hover">
       <div class="dropdown-body">
-        <h6 class="m-b-10">Today</h6>
-        <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16" *ngFor="let card of cards">
-          <div class="flex">
-            <div class="topic-icon flex-shrink-0">
-              <svg class="pc-icon text-primary-500">
-                <use attr.xlink:href="assets/fonts/custom-icon.svg#{{ card.icon }}"></use>
-              </svg>
-            </div>
-            <div class="topic-description flex-grow-1 m-l-15">
-              <span class="mat-small float-end text-muted">{{ card.time }}</span>
-              <h5 class="m-b-10">{{ card.position }}</h5>
-              <p class="m-b-0 mat-body">{{ card.description }}</p>
-            </div>
-          </div>
-        </app-card>
-        <h6 class="m-b-10">Yesterday</h6>
-        <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16" *ngFor="let card of cards2">
-          <div class="flex">
-            <div class="topic-icon">
-              <svg class="pc-icon text-primary-500">
-                <use attr.xlink:href="assets/fonts/custom-icon.svg#{{ card.icon }}"></use>
-              </svg>
-            </div>
-            <div class="topic-description m-l-15">
-              <span class="mat-small float-end text-muted">{{ card.time }}</span>
-              <h5 class="m-b-10">{{ card.position }}</h5>
-              <p class="m-b-0 mat-body">{{ card.description }}</p>
-            </div>
-          </div>
-        </app-card>
-        <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16">
-          <div class="flex">
-            <div class="topic-icon">
-              <svg class="pc-icon text-primary-500">
-                <use xlink:href="assets/fonts/custom-icon.svg#custom-user-bold"></use>
-              </svg>
-            </div>
-            <div class="topic-description m-l-15">
-              <span class="mat-small float-end text-muted">15 hour ago</span>
-              <h5 class="m-b-10">Challenge invitation</h5>
-              <p class="m-b-2 mat-body"> Jonny aber invites to join the challenge </p>
-              <button mat-stroked-button class="m-r-10">Decline</button>
-              <button mat-raised-button color="primary">Accept</button>
-            </div>
-          </div>
-        </app-card>
+        @for (list of mainCards; track list) {
+          <h6 class="m-b-10">{{ list.day }}</h6>
+          @for (card of list.cards; track card) {
+            <app-card [showHeader]="false" cardClass="notification-card m-b-10" [padding]="16">
+              <div class="flex">
+                <div class="topic-icon flex-shrink-0">
+                  <svg class="pc-icon text-primary-500">
+                    <use attr.xlink:href="assets/fonts/custom-icon.svg#{{ card.icon }}"></use>
+                  </svg>
+                </div>
+                <div class="topic-description flex-grow-1 m-l-15">
+                  <span class="mat-small float-end text-muted">{{ card.time }}</span>
+                  <h5 class="m-b-10">{{ card.position }}</h5>
+                  <p class="m-b-0 mat-body">{{ card.description }}</p>
+                  @if (card.status === true) {
+                    <div class="m-t-10">
+                      <button mat-stroked-button class="m-r-10">Decline</button>
+                      <button mat-flat-button color="primary">Accept</button>
+                    </div>
+                  }
+                </div>
+              </div>
+            </app-card>
+          }
+        }
       </div>
     </ng-scrollbar>
   </mat-menu>
@@ -79,7 +58,7 @@
           </div>
           <div class="topic-description m-l-15">
             <h6 class="user-name">Carson Darrin 🖖</h6>
-            <p class="mat-body">carson.darrin@company.io</p>
+            <p class="mat-body">carson.darrin&#64;company.io</p>
           </div>
         </div>
         <mat-divider class="m-b-15 m-t-15"></mat-divider>

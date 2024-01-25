@@ -1,5 +1,7 @@
 // angular import
 import { Component } from '@angular/core';
+
+// project import
 import { LayoutService } from 'src/app/@theme/services/layout.service';
 
 @Component({

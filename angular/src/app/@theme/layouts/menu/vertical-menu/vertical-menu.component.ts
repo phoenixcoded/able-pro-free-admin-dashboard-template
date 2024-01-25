@@ -45,4 +45,23 @@ export class VerticalMenuComponent {
       }
     }
   }
+
+  accountList = [
+    {
+      icon: 'ti ti-user',
+      title: 'My Account'
+    },
+    {
+      icon: 'ti ti-settings',
+      title: 'Settings'
+    },
+    {
+      icon: 'ti ti-lock',
+      title: 'Lock Screen'
+    },
+    {
+      icon: 'ti ti-power',
+      title: 'Logout'
+    }
+  ];
 }

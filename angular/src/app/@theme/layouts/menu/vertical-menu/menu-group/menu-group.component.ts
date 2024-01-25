@@ -1,9 +1,9 @@
 // Angular import
 import { Component, Input, OnInit } from '@angular/core';
+import { Location, LocationStrategy } from '@angular/common';
 
 // project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
-import { Location, LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-menu-group-vertical',

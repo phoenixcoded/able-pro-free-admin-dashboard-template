@@ -11,21 +11,21 @@ Able Pro is a free Material admin dashboard template built with Angular. It is d
 
 Looking for even more features? Check out Able Pro's Angular [premium version](https://links.codedthemes.com/fCkWk), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-| [Able-pro Free](https://ableproadmin.com/Angular/free) | [Able-Pro Pro Version](https://links.codedthemes.com/fCkWk)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Dark/Light  🌓                                                                                          |
-| -                                                         | ✓ Material Components                                                                                  |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ LTR/RTL Layouts                                                                                         |
-| -                                                         | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/Angular/free) | [Able-Pro Pro Version](https://links.codedthemes.com/fCkWk) |
+| ------------------------------------------------------ | :---------------------------------------------------------- |
+| **7** Demo pages                                       | **100+** pages                                              |
+| -                                                      | ✓ Modern UserInterface & Easy Developer Experience          |
+| -                                                      | ✓ Dark/Light 🌓                                             |
+| -                                                      | ✓ Material Components                                       |
+| -                                                      | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
+| -                                                      | ✓ 10+ color Presets                                         |
+| -                                                      | ✓ LTR/RTL Layouts                                           |
+| -                                                      | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts             |
+| -                                                      | ✓ Advance Components                                        |
+| -                                                      | ✓ Form Variants                                             |
+| -                                                      | ✓ Table Variants                                            |
+| -                                                      | ✓ 7+ Conceptual Apps                                        |
+| -                                                      | ✓ Front Pages                                               |
 
 ## About Able-pro Angular Admin Dashboard Template?
 
@@ -37,7 +37,7 @@ Welcome to Able Pro, the ultimate free Angular Dashboard Template powered by the
 - Flexible & High-Performance code
 - Easy [Documentation](https://codedthemes.gitbook.io/able-pro-bootstrap/) Guide
 
-## Able Pro Premium Angular Dashboard version 
+## Able Pro Premium Angular Dashboard version
 
 - [Preview](https://ableproadmin.com/angular/default/)
 - [Buy Now](https://links.codedthemes.com/fCkWk)
@@ -68,7 +68,7 @@ git clone https://github.com/codedthemes/able-pro-free-admin-dashboard-template.
 
 ## Documentation
 
-[Able-pro documentation]([https://codedthemes.gitbook.io/able-pro-bootstrap/](https://codedthemes.gitbook.io/able-pro/v/able-pro-angular/)) helps you with installation, deployment, and troubleshooting.
+[Able-pro documentation](<[https://codedthemes.gitbook.io/able-pro-bootstrap/](https://codedthemes.gitbook.io/able-pro/v/able-pro-angular/)>) helps you with installation, deployment, and troubleshooting.
 
 ## Technology Stack
 
