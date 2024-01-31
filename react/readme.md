@@ -81,13 +81,13 @@ git clone https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template
 2. Install packages
 
 ```
-npm install
+yarn
 ```
 
 3. Run project
 
 ```
-npm start
+yarn start
 ```
 
 ## Documentation
