@@ -1,4 +1,4 @@
-# Able Pro Free React Material UI Dashboard Template
+# Able Pro Free React Material UI Dashboard Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%Able%20%20Pro%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://ableproadmin.com/react&via=codedthemes&hashtags=angular,webdev,developers,javascript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
@@ -32,14 +32,30 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
 Welcome to Able Pro, the ultimate free React Dashboard Template powered by the Material-UI components library. With its modern design interface and flexible developer experience, Able Pro is the perfect solution for creating stunning and feature-rich admin dashboards. Whether you're a beginner or an experienced developer, this template offers a seamless and intuitive workflow, allowing you to easily customize and build beautiful user interfaces. Experience the power of Able Pro and elevate your web application to new heights.
 
 - Modern UI design
+- Angular Material component
 - Fully Responsive, all modern browser supported
-- Easy to use code structure for best Developer Experience
+- Easy to use code structure
 - Flexible & High-Performance code
-- Easy [Documentation](https://codedthemes.gitbook.io/able-pro-bootstrap/) Guide
+- Easy Documentation Guide
 
-## Able Pro Premium React Dashboard version 
+## Able Pro Free version
 
-- [Preview](https://ableproadmin.com/react)
+#### Preview
+
+- [Preview](https://ableproadmin.com/react/free)
+
+#### Download
+
+- [Download from GitHub](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template)
+
+## Able Pro Premium version
+
+#### Preview
+
+- [Preview](https://ableproadmin.com/react/)
+
+#### Purchase
+
 - [Buy Now](https://links.codedthemes.com/fCkWk)
 
 ## Table of contents
@@ -50,24 +66,33 @@ Welcome to Able Pro, the ultimate free React Dashboard Template powered by the M
 - [Author](#author)
 - [Issues?](#issues)
 - [License](#license)
+- [More Free Angular Templates](#more-free-angular-dashboard-templates)
+- [More Pro Angular Templates](#more-premium-angular-dashboard-templates)
 - [Follow us](#follow-us)
 
 ## Getting Started
 
-Clone from Github
+1. Clone from Github
 
 ```
-git clone https://github.com/codedthemes/able-pro-free-admin-dashboard-template.git
+git clone https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template.git
 ```
 
-1. Run `npm i`
-2. Run `gulp`
+2. Install packages
 
-- Goto /dist and open `index.html`
+```
+npm install
+```
+
+3. Run project
+
+```
+npm start
+```
 
 ## Documentation
 
-[Able-pro documentation](https://codedthemes.gitbook.io/able-pro-bootstrap/) helps you with installation, deployment, and troubleshooting.
+[Able-pro documentation](https://phoenixcoded.gitbook.io/able-pro/v/react/) helps you with installation, deployment, and troubleshooting.
 
 ## Technology Stack
 
@@ -101,25 +126,26 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 
 ## Able Pro is Available in Following Technologies
 
-- Bootstrap 5
-- React MUI (Material-UI)
-- CodeIgniter
-- Asp.net
+- [Bootstrap 5](https://ableproadmin.com/)
+- [React MUI (Material-UI)](https://ableproadmin.com/react/)
+- [CodeIgniter](https://ableproadmin.com/codeigniter/default/public/)
+- [Asp.net](https://able-pro.azurewebsites.net/)
+- [Angular](https://ableproadmin.com/angular/default/)
 
-## More Free Bootstrap Admin Templates
+## More Free React Admin Templates
 
-- [Free Datta Able](https://codedthemes.com/item/datta-able-bootstrap-lite/)
-- [Free Gradient Able](https://codedthemes.com/item/gradient-able-bootstrap-lite/)
-- [Free Flash Able](https://codedthemes.com/item/flash-able-free-admin-template/)
+- [Free Datta Able](https://github.com/codedthemes/datta-able-free-react-admin-template)
+- [Free Gradient Able](https://github.com/codedthemes/gradient-able-free-admin-template)
+- [Free Materially](https://github.com/codedthemes/materially-free-react-admin-template)
 
-## More Premium Bootstrap Admin Templates
+## More Premium React Admin Templates
 
-- [By Phoenixcoded](https://themeforest.net/collections/6544381-bootstrap-admin-dashboard-templates)
-- [By CodedThemes](https://codedthemes.com/item/category/templates/bootstrap-admin-templates/)
+- [By Phoenixcoded](https://themeforest.net/collections/7774628-reactjs-dashboard-template)
+- [By CodedThemes](https://codedthemes.com/item/category/templates/react-admin-templates/)
 
 ## Follow us
 
-- [Website](https://ableproadmin.com/)
+- [Website](https://ableproadmin.com/react)
 - [Phoenixcoded](https://themeforest.net/user/phoenixcoded)
 - [CodedThemes](https://codedthemes.com)
 - [Dribbble](https://dribbble.com/codedthemes)
