@@ -7,7 +7,7 @@ Able Pro is a free Material admin dashboard template built with Angular. It is d
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like the Able Pro :star: :star: :star:
 
-![IMG_8566.jpg](https://ableproadmin.com/adv-banner/adv-able-pro-redefined-github-react.png)
+![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-REACT-REPO%20-%20Able%20pro%20admin.jpg)
 
 Looking for even more features? Check out Able Pro's Angular [premium version](https://links.codedthemes.com/fCkWk), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
