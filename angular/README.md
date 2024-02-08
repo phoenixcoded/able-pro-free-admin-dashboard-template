@@ -9,9 +9,9 @@ Able Pro is a free Material admin dashboard template built with Angular. It is d
 
 ![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-ANGULAR-REPO%20-%20Able%20pro%20admin.jpg)
 
-Looking for even more features? Check out Able Pro's Angular [premium version](https://links.codedthemes.com/fCkWk), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
+Looking for even more features? Check out Able Pro's Angular [premium version](https://1.envato.market/zNkqj6), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-| [Able-pro Free](https://ableproadmin.com/angular/free) | [Able-Pro Pro Version](https://links.codedthemes.com/fCkWk) |
+| [Able-pro Free](https://ableproadmin.com/angular/free) | [Able-Pro Pro Version](https://1.envato.market/zNkqj6) |
 | ------------------------------------------------------ | :---------------------------------------------------------- |
 | **7** Demo pages                                       | **100+** pages                                              |
 | -                                                      | ✓ Modern UserInterface & Easy Developer Experience          |
@@ -56,7 +56,7 @@ Welcome to Able Pro, the ultimate free Angular Dashboard Template powered by the
 
 #### Purchase
 
-- [Buy Now](https://links.codedthemes.com/fCkWk)
+- [Buy Now](https://1.envato.market/zNkqj6)
 
 ## Table of contents
 
@@ -99,9 +99,9 @@ yarn start
 - Angular 17
 - Angular Material
 - TypeScript
-- Auth0, JWT, Firebase, Amazon Cognito (i.e. Pro version)
+- JWT (i.e. Pro version)
 - Apex Charts
-- npm/yarn package installer
+- npm package installer
 
 ## Author
 
@@ -113,7 +113,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 
 ## License
 
-- Licensed cover under MIT
+- Licensed cover under [MIT](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
 
 ## Able Pro is Available in Following Technologies
 
