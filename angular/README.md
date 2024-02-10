@@ -27,6 +27,7 @@ Looking for even more features? Check out Able Pro's Angular [premium version](h
 | -                                                      | ✓ 7+ Conceptual Apps                                        |
 | -                                                      | ✓ Front Pages                                               |
 
+
 ## About Able-pro Angular Admin Dashboard Template?
 
 Welcome to Able Pro, the ultimate free Angular Dashboard Template powered by the Material-UI components library. With its modern design interface and flexible developer experience, Able Pro is the perfect solution for creating stunning and feature-rich admin dashboards. Whether you're a beginner or an experienced developer, this template offers a seamless and intuitive workflow, allowing you to easily customize and build beautiful user interfaces. Experience the power of Able Pro and elevate your web application to new heights.
