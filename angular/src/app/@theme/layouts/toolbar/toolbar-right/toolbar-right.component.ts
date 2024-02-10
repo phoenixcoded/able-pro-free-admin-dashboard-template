@@ -8,36 +8,53 @@ import { Component } from '@angular/core';
 })
 export class NavRightComponent {
   // public props
-
-  cards = [
+  mainCards = [
     {
-      icon: 'custom-layer',
-      time: '2 min ago',
-      position: 'UI/UX Design',
-      description:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type"
+      day: 'Today',
+      cards: [
+        {
+          icon: 'custom-layer',
+          time: '2 min ago',
+          position: 'UI/UX Design',
+          description:
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type",
+          status: false
+        },
+        {
+          icon: 'custom-sms',
+          time: '1 hour ago',
+          position: 'Message',
+          description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500.",
+          status: false
+        }
+      ]
     },
     {
-      icon: 'custom-sms',
-      time: '1 hour ago',
-      position: 'Message',
-      description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500."
-    }
-  ];
-
-  cards2 = [
-    {
-      icon: 'custom-document-text',
-      time: '12 hour ago',
-      position: 'Forms',
-      description:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type"
-    },
-    {
-      icon: 'custom-security-safe',
-      time: '18 hour ago',
-      position: 'Security',
-      description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500."
+      day: 'Yesterday',
+      cards: [
+        {
+          icon: 'custom-document-text',
+          time: '12 hour ago',
+          position: 'Forms',
+          description:
+            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type",
+          status: false
+        },
+        {
+          icon: 'custom-security-safe',
+          time: '18 hour ago',
+          position: 'Security',
+          description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500.",
+          status: false
+        },
+        {
+          icon: 'custom-user-bold',
+          time: '15 hour ago',
+          position: 'Challenge invitation',
+          description: 'Jonny aber invites to join the challenge',
+          status: true
+        }
+      ]
     }
   ];
 

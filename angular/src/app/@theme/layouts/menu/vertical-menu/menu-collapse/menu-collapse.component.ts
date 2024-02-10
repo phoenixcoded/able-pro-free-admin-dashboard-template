@@ -1,9 +1,9 @@
 // Angular import
 import { Component, Input } from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 // project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
-import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-menu-collapse',

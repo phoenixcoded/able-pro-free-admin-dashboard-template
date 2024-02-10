@@ -1,3 +1,4 @@
+// angular import
 import { Component } from '@angular/core';
 
 @Component({
