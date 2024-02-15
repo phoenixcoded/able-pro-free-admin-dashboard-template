@@ -73,7 +73,9 @@ git clone https://github.com/codedthemes/able-pro-free-admin-dashboard-template.
 
 ## Documentation
 
-[Able-pro documentation](https://codedthemes.gitbook.io/able-pro-bootstrap/) helps you with installation, deployment, and troubleshooting.
+
+
+[Able-pro documentation](https://phoenixcoded.gitbook.io/able-pro/) helps you with installation, deployment, and troubleshooting.
 
 ## Technology Stack
 
@@ -93,7 +95,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 
 ## License
 
-- Licensed cover under MIT
+- Licensed cover under [MIT](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
 
 ## Able-pro EcoSystem available technologies
 
@@ -101,6 +103,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 - React MUI (Material-UI)
 - CodeIgniter
 - Asp.net
+- Angular
 
 ## More Free Bootstrap Admin Templates
 
