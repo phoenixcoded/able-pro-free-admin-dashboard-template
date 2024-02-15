@@ -1,5 +1,5 @@
 // ============================
-//     dropdown css start
+//   14. Dropdown css start
 // ============================
 
 .dropdown-toggle {
@@ -78,4 +78,15 @@
     }
   }
 }
-// dropdown css end
+
+.dropdown-menu-dark {
+  .dropdown-item {
+    &.active, &:active {
+      color: var(--bs-dropdown-link-hover-color);
+      background-color: var(--bs-dropdown-link-hover-bg);
+    }
+  }
+}
+// ============================
+//   14. Dropdown css end
+// ============================

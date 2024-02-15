@@ -1,6 +1,7 @@
 // ============================
-//     Common layout css start
+//   6. Common layout css start
 // ============================
+
 
 .pc-container {
   $temp: $header-height + 61;
@@ -8,18 +9,23 @@
   top: $header-height;
   margin-left: $sidebar-width;
   min-height: calc(100vh - #{$temp});
-  // background: var(--bs-body-bg);
 
   .pc-content {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 20px;
+    @include media-breakpoint-down(xl) {
+      &.container{
+        max-width: 100%;
+      }
+    }
   }
 
-  .page-header + .row {
+  .page-header+.row {
     padding-top: 24px;
   }
-  .page-header + .pc-content {
+
+  .page-header+.pc-content {
     padding-top: calc(30px + 55px);
   }
 }
@@ -33,7 +39,6 @@
   z-index: 1023;
   min-height: 55px;
   padding: 13px 0px;
-  // box-shadow: var(--bs-card-box-shadow);
   background: transparent;
   border-radius: $border-radius;
 
@@ -55,7 +60,6 @@
   .breadcrumb {
     padding: 0;
     display: inline-flex;
-    margin-bottom: 0;
     background: transparent;
     font-size: 13px;
 
@@ -68,7 +72,7 @@
         color: $primary;
       }
 
-      + .breadcrumb-item::before {
+      +.breadcrumb-item::before {
         position: relative;
         top: 2px;
       }
@@ -93,7 +97,7 @@
     position: relative;
   }
 
-  > .container {
+  >.container {
     z-index: 5;
     position: relative;
     margin-top: -60px;
@@ -107,7 +111,7 @@
     th {
       border: none;
 
-      + th {
+      +th {
         border-radius: 5px 5px 0 0;
         padding: 20px 0;
       }
@@ -125,17 +129,18 @@
     th {
       text-align: right;
 
-      + td,
-      + th {
+      +td,
+      +th {
         text-align: center;
       }
 
-      + td {
+      +td {
         border-left: 1px solid $body-bg;
       }
     }
   }
 }
+
 // ======= Burgur menu start
 
 .hamburger {
@@ -204,13 +209,15 @@
 .hamburger--arrowturn.is-active .hamburger-inner::after {
   transform: translate3d(4px, -2px, 0) rotate(-45deg) scale(0.7, 1);
 }
+
 // ======= Burgur menu End
 @media (max-width: 1024px) {
   .pc-container {
     margin-left: 0px;
     margin-right: 0px;
-    .page-header + .row,
-    .page-header + .pc-content,
+
+    .page-header+.row,
+    .page-header+.pc-content,
     .pc-content {
       padding-top: 20px;
       padding-left: 15px;
@@ -226,7 +233,12 @@
     margin-right: 10px;
   }
 }
+
 @include media-breakpoint-down(sm) {
+  .col-form-label {
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
   .pc-container {
     .pc-content {
       padding: 15px;
@@ -236,10 +248,17 @@
       padding-left: 0;
       padding-right: 0;
     }
+
+    .page-header+.row,
+    .page-header+.pc-content
+    {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   }
 
   .page-header {
-    padding: 13px 20px;
 
     h5 {
       padding-bottom: 5px;
@@ -334,6 +353,7 @@
 }
 
 .simplebar-content {
+
   &:before,
   &:after {
     content: ' ';
@@ -485,7 +505,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-// Common layout css end
+
 .footer-wrapper,
 .pc-content {
   &.container {
@@ -506,3 +526,6 @@
     }
   }
 }
+// ============================
+//   6. Common layout css end
+// ============================

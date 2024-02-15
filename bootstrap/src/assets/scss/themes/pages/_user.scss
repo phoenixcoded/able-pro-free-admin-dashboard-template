@@ -1,0 +1,259 @@
+/**  =====================
+  24. User card css start
+==========================  **/
+.user-upload {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+
+  .img-avtar-upload {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    .img-avtar-upload {
+      opacity: 1;
+    }
+  }
+}
+
+.social-profile {
+  .img-profile-avtar {
+    border-radius: 50%;
+    width: 90px;
+    margin-top: -20%;
+    box-shadow: 0 0 0 3px var(--bs-card-bg);
+  }
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+
+    .img-profile-avtar {
+      margin-top: -70px;
+    }
+
+    .soc-profile-data {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.user-story-block {
+  display: flex;
+  align-items: flex-start;
+
+  .user-story {
+    min-width: 115px;
+    margin-bottom: 0;
+    margin-right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      .card-img {
+        transform: scale(1.4);
+      }
+
+      .card-img-overlay {
+        backdrop-filter: blur(3px);
+      }
+    }
+
+    .card-img {
+      transition: all 0.15s ease-in-out;
+    }
+
+    .card-img-overlay {
+      transition: all 0.15s ease-in-out;
+
+      .img-user {
+        box-shadow: 0 0 0 2px var(--bs-card-bg);
+      }
+    }
+
+    &.add-story {
+      .card-img-overlay {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .btn-plus {
+          background: var(--bs-card-bg);
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 8px;
+          border: 1px dashed var(--bs-border-color);
+        }
+      }
+    }
+  }
+
+  .horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: darken($body-bg, 05%);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: darken($body-bg, 25%);
+    }
+  }
+}
+
+.img-post {
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0;
+
+  .card-img {
+    transition: all 0.15s ease-in-out;
+  }
+
+  .card-img-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 35px;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:hover {
+    .card-img {
+      transform: scale(1.2);
+    }
+
+    .card-img-overlay {
+      opacity: 1;
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+.post-modal-lightbox {
+  backdrop-filter: blur(4px);
+}
+.post-user-group {
+  .avtar {
+    width: 25px;
+    height: 25px;
+    + .avtar {
+      margin-left: -9px;
+    }
+  }
+}
+.comment-block {
+  .comment {
+    background: var(--bs-body-bg);
+    border-radius: var(--bs-border-radius);
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    margin-bottom: 24px;
+    + .comment-content {
+      margin-left: 65px;
+    }
+    &.sub-comment {
+      position: relative;
+      margin-left: 70px;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background: var(--bs-body-bg);
+        border-radius: var(--bs-border-radius);
+      }
+      &:before {
+        width: 35px;
+        height: 2px;
+        right: 100%;
+        top: 40px;
+      }
+      &:after {
+        width: 2px;
+        height: 133px;
+        right: calc(100% + 32px);
+        top: -90px;
+      }
+      + .comment-content {
+        margin-left: 140px;
+      }
+    }
+  }
+  .comment-content {
+    margin-left: 57px;
+  }
+}
+.input-comment {
+  position: relative;
+  .form-control {
+    padding: 0.56rem 5.5rem 0.56rem 3.5rem;
+  }
+  .list-inline {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    &.start-0 {
+      padding-left: 0.35rem;
+    }
+    &.end-0 {
+      padding-right: 0.35rem;
+    }
+  }
+}
+.social-event-card {
+  .carousel-indicators {
+    left: auto;
+    margin-left: auto;
+    margin-right: 0;
+    [data-bs-target] {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+}
+.social-gallery-card {
+  .card-img-overlay {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+/**  =====================
+  24. User card css end
+==========================  **/

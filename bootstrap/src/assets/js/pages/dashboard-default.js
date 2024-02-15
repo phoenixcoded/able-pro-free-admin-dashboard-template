@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function floatchart() {
   (function () {
-    var options = {
+    var options1 = {
       chart: { type: 'bar', height: 50, sparkline: { enabled: true } },
       colors: ['#4680FF'],
       plotOptions: { bar: { columnWidth: '80%' } },
@@ -30,11 +30,9 @@ function floatchart() {
         marker: { show: false }
       }
     };
-    var chart = new ApexCharts(document.querySelector('#all-earnings-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#all-earnings-graph'), options1);
     chart.render();
-  })();
-  (function () {
-    var options = {
+    var options2 = {
       chart: { type: 'bar', height: 50, sparkline: { enabled: true } },
       colors: ['#E58A00'],
       plotOptions: { bar: { columnWidth: '80%' } },
@@ -57,11 +55,9 @@ function floatchart() {
         marker: { show: false }
       }
     };
-    var chart = new ApexCharts(document.querySelector('#page-views-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#page-views-graph'), options2);
     chart.render();
-  })();
-  (function () {
-    var options = {
+    var options3 = {
       chart: { type: 'bar', height: 50, sparkline: { enabled: true } },
       colors: ['#2CA87F'],
       plotOptions: { bar: { columnWidth: '80%' } },
@@ -84,11 +80,9 @@ function floatchart() {
         marker: { show: false }
       }
     };
-    var chart = new ApexCharts(document.querySelector('#total-task-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#total-task-graph'), options3);
     chart.render();
-  })();
-  (function () {
-    var options = {
+    var options4 = {
       chart: { type: 'bar', height: 50, sparkline: { enabled: true } },
       colors: ['#DC2626'],
       plotOptions: { bar: { columnWidth: '80%' } },
@@ -111,12 +105,9 @@ function floatchart() {
         marker: { show: false }
       }
     };
-    var chart = new ApexCharts(document.querySelector('#download-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#download-graph'), options4);
     chart.render();
-  })();
-
-  (function () {
-    var options = {
+    var options5 = {
       chart: {
         fontFamily: 'Inter var, sans-serif',
         type: 'area',
@@ -173,12 +164,9 @@ function floatchart() {
         }
       }
     };
-    var chart = new ApexCharts(document.querySelector('#customer-rate-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#customer-rate-graph'), options5);
     chart.render();
-  })();
-
-  (function () {
-    var options = {
+    var options6 = {
       chart: {
         type: 'area',
         height: 60,
@@ -199,11 +187,9 @@ function floatchart() {
       stroke: { curve: 'smooth', width: 2 },
       series: [{ data: [5, 25, 3, 10, 4, 50, 0] }]
     };
-    var chart = new ApexCharts(document.querySelector('#total-tasks-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#total-tasks-graph'), options6);
     chart.render();
-  })();
-  (function () {
-    var options = {
+    var options7 = {
       chart: {
         type: 'area',
         height: 60,
@@ -224,12 +210,9 @@ function floatchart() {
       stroke: { curve: 'smooth', width: 2 },
       series: [{ data: [0, 50, 4, 10, 3, 25, 5] }]
     };
-    var chart = new ApexCharts(document.querySelector('#pending-tasks-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#pending-tasks-graph'), options7);
     chart.render();
-  })();
-
-  (function () {
-    var options = {
+    var options8 = {
       chart: {
         height: 320,
         type: 'donut'
@@ -280,7 +263,7 @@ function floatchart() {
         }
       ]
     };
-    var chart = new ApexCharts(document.querySelector('#total-income-graph'), options);
+    var chart = new ApexCharts(document.querySelector('#total-income-graph'), options8);
     chart.render();
   })();
 }

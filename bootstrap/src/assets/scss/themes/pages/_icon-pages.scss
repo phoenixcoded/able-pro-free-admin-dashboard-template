@@ -1,5 +1,5 @@
 /**  =====================
-      Icon layouts css start
+  23. Icon layouts css start
 ==========================  **/
 
 .i-main {
@@ -11,6 +11,7 @@
     height: 70px;
     margin: 5px;
     border: 1px solid $border-color;
+    border-radius: var(--bs-border-radius);
     position: relative;
     cursor: pointer;
 
@@ -30,4 +31,6 @@
     }
   }
 }
-/**====== Icon layouts css end ======**/
+/**  =====================
+  23. Icon layouts css end
+==========================  **/

@@ -17,7 +17,7 @@
       justify-content: center;
 
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0;
@@ -50,7 +50,7 @@
         box-shadow: none;
       }
 
-      img + span {
+      img+span {
         padding-left: 10px;
       }
 
@@ -67,7 +67,7 @@
 
       .auth-form {
         flex-direction: column;
-        background: url('../images/authentication/img-auth-bg.jpg');
+        background: url("../images/authentication/img-auth-bg.jpg");
         min-height: 100vh;
         padding: 24px;
         background-size: cover;
@@ -98,6 +98,7 @@
       .auth-form .card {
         border: none;
         box-shadow: none;
+        
       }
     }
 
@@ -114,20 +115,20 @@
         display: flex;
         align-items: center;
 
-        > * {
+        >* {
           position: relative;
           z-index: 5;
         }
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 100%;
           top: 0px;
           left: 0px;
           z-index: 2;
-          background: linear-gradient(338deg, rgb(0, 0, 0, 0.3), transparent);
+          background: linear-gradient(338deg, rgb(0, 0, 0, .3), transparent);
         }
 
         .carousel-indicators {
@@ -189,7 +190,7 @@
   }
 
   .btn-check:checked {
-    + .auth-megaoption {
+    +.auth-megaoption {
       border-color: var(--bs-primary);
       background: var(--bs-primary-light);
       box-shadow: 0 0 0 1px var(--bs-primary), 0px 8px 24px rgba(27, 46, 94, 0.12);

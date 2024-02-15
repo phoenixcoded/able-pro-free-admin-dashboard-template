@@ -1,0 +1,47 @@
+/**  =====================
+   22. Pages css start
+==========================  **/
+@import "price";
+// contact us page start
+.contact-hero {
+    padding: 110px 0 50px;
+    background-size: cover;
+    position: relative;
+    justify-content: center;
+}
+
+.contact-form {
+    padding: 90px 0;
+}
+
+.contact-footer {
+    position: relative;
+
+    .top-footer {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 80px 0;
+    }
+
+    .bottom-footer {
+        padding: 10px 0;
+    }
+
+    .footer-link {
+        a {
+            margin: 14px 0;
+            display: block;
+            color: var(--bs-primary);
+
+            &:not(:hover) {
+                opacity: 0.6;
+                color: var(--bs-body-color);
+            }
+        }
+    }
+
+    .footer-sos-link i {
+        font-size: 18px;
+    }
+}
+
+// contact us page end

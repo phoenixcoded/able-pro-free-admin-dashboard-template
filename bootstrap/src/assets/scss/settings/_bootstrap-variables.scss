@@ -194,7 +194,13 @@ $cyans: (
 // fusv-enable
 
 // Characters which are escaped by the escape-svg function
-$escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29'));
+$escaped-characters: (
+  ('<', '%3c'),
+  ('>', '%3e'),
+  ('#', '%23'),
+  ('(', '%28'),
+  (')', '%29')
+);
 
 // Options
 //
@@ -439,11 +445,13 @@ $font-sizes: (
   5: $h5-font-size,
   6: $h6-font-size
 );
+
 // scss-docs-end font-sizes
 h1,
 h2 {
   font-weight: 700;
 }
+
 $headings-margin-bottom: calc($spacer / 2);
 $headings-font-family: null;
 $headings-font-style: null;
@@ -648,7 +656,7 @@ $form-label-margin-bottom: 0.5rem;
 $form-label-font-size: null;
 $form-label-font-style: null;
 $form-label-font-weight: null;
-$form-label-color: $gray-600;
+$form-label-color: var(--pc-heading-color);
 
 $input-padding-y: 0.8rem;
 $input-padding-x: 0.75rem;
@@ -773,10 +781,8 @@ $form-select-bg-size: 16px 12px; // In pixels because image dimensions
 $form-select-indicator-color: $gray-800;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
 
-$form-select-feedback-icon-padding-end: add(
-  1em * 0.75,
-  (2 * $form-select-padding-y * 0.75) + $form-select-padding-x + $form-select-indicator-padding
-);
+$form-select-feedback-icon-padding-end: add(1em * 0.75,
+    (2 * $form-select-padding-y * 0.75) + $form-select-padding-x + $form-select-indicator-padding);
 $form-select-feedback-icon-position: center right ($form-select-padding-x + $form-select-indicator-padding);
 $form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-half;
 
@@ -825,7 +831,16 @@ $form-range-thumb-transition: background-color 0.15s ease-in-out, border-color 0
 $form-file-button-color: $input-color;
 $form-file-button-bg: $input-group-addon-bg;
 $form-file-button-hover-bg: shade-color($form-file-button-bg, 5%);
+
+//$form-floating-height:            auto;
+//$form-floating-padding-x:         $input-padding-x ;
+//$form-floating-padding-y:         1rem ;
+//$form-floating-input-padding-t:   $input-padding-y ;
+//$form-floating-input-padding-b:   $input-padding-y ;
 $form-floating-label-opacity: 1;
+//$form-floating-label-transform:   scale(0.85) translateY(-1.2rem) translateX(0.45rem);
+//$form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in-out ;
+
 // Form validation
 
 $form-feedback-margin-top: $form-text-margin-top;
@@ -842,14 +857,10 @@ $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.o
 
 // scss-docs-start form-validation-states
 $form-validation-states: (
-  'valid': (
-    'color': $form-feedback-valid-color,
-    'icon': $form-feedback-icon-valid
-  ),
-  'invalid': (
-    'color': $form-feedback-invalid-color,
-    'icon': $form-feedback-icon-invalid
-  )
+  'valid': ('color': $form-feedback-valid-color,
+    'icon': $form-feedback-icon-valid ),
+  'invalid': ('color': $form-feedback-invalid-color,
+    'icon': $form-feedback-icon-invalid )
 );
 // scss-docs-end form-validation-states
 
@@ -1005,7 +1016,9 @@ $pagination-color: var(--#{$prefix}link-color);
 $pagination-bg: $white;
 $pagination-border-radius: $border-radius;
 $pagination-border-width: $border-width;
-$pagination-margin-start: ($pagination-border-width * -1);
+$pagination-margin-start: (
+  $pagination-border-width * -1
+);
 $pagination-border-color: $gray-300;
 
 $pagination-focus-color: var(--#{$prefix}link-hover-color);
@@ -1264,7 +1277,7 @@ $list-group-active-color: $component-active-color;
 $list-group-active-bg: $component-active-bg;
 $list-group-active-border-color: $list-group-active-bg;
 
-$list-group-disabled-color: $gray-600;
+$list-group-disabled-color: $gray-300;
 $list-group-disabled-bg: $list-group-bg;
 
 $list-group-action-color: $gray-700;

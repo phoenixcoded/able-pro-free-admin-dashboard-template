@@ -1,5 +1,5 @@
 // ============================
-//     Sidebar css start
+//    3. Sidebar css start
 // ============================
 
 .pc-sidebar {
@@ -17,11 +17,13 @@
     width: $sidebar-width;
     background: inherit;
   }
+
   ul {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
   }
+
   .pc-caption {
     color: var(--pc-sidebar-caption-color);
     display: block;
@@ -30,17 +32,28 @@
     position: relative;
     line-height: 1.66;
 
+    &:first-child {
+      padding-top: 10px !important;
+
+      &::after {
+        display: none;
+      }
+    }
+
     font: {
       size: 11px;
       weight: 600;
     }
+
     svg,
     i {
       display: none;
     }
+
     label {
       margin-bottom: 0;
     }
+
     span:not(.badge) {
       display: block;
       color: #67758a;
@@ -51,6 +64,7 @@
       }
     }
   }
+
   .pc-micon {
     margin-right: 15px;
     height: 24px;
@@ -69,21 +83,24 @@
       }
     }
 
-    > svg {
+    >svg {
       width: 22px;
       height: 22px;
       display: inline-block;
     }
   }
+
   .pc-link {
     display: block;
     padding: 14px 20px;
     color: var(--pc-sidebar-color);
     position: relative;
+
     font: {
       size: 14px;
       weight: 400;
     }
+
     &:focus,
     &.active,
     &:hover {
@@ -91,9 +108,10 @@
     }
   }
 
-  .pc-navbar > .pc-item {
+  .pc-navbar>.pc-item {
     margin: 0 10px;
-    > .pc-link {
+
+    >.pc-link {
       &::after {
         content: '';
         border-radius: var(--bs-border-radius);
@@ -105,25 +123,29 @@
         opacity: 0.1;
       }
     }
+
     &.active {
-      > .pc-link {
+      >.pc-link {
         font-weight: 500;
         color: var(--pc-sidebar-active-color);
+
         &:after {
           background: var(--pc-sidebar-active-color);
         }
       }
     }
+
     &:hover:not(.active) {
-      > .pc-link {
+      >.pc-link {
         &:after {
           background: var(--pc-sidebar-color);
         }
       }
     }
+
     .pc-submenu {
       .pc-item {
-        > .pc-link {
+        >.pc-link {
           &:after {
             content: '';
             border-radius: 50%;
@@ -136,20 +158,23 @@
             transition: all 0.08s cubic-bezier(0.37, 0.24, 0.53, 0.99);
           }
         }
+
         &.pc-trigger,
         &.active {
-          > .pc-link {
+          >.pc-link {
             font-weight: 500;
+
             &:after {
               background: var(--pc-sidebar-active-color);
             }
           }
         }
+
         &.pc-trigger,
         &.active,
         &:focus,
         &:hover {
-          > .pc-link {
+          >.pc-link {
             &:after {
               opacity: 1;
               transform: scale(1.2);
@@ -159,7 +184,50 @@
         }
       }
     }
+
+    .pc-submenu {
+      &:after {
+        left: 30px;
+      }
+
+      .pc-link {
+        padding: 12px 30px 12px 60px;
+
+        &:after {
+          left: 28px;
+        }
+      }
+
+      .pc-submenu {
+        &:after {
+          left: 46px;
+        }
+
+        .pc-link {
+          padding: 12px 30px 12px 80px;
+
+          &:after {
+            left: 62px;
+          }
+        }
+
+        .pc-submenu {
+          &:after {
+            left: 63px;
+          }
+
+          .pc-link {
+            padding: 12px 30px 12px 95px;
+
+            &:after {
+              left: 79px;
+            }
+          }
+        }
+      }
+    }
   }
+
   .pc-item {
     &.disabled {
       a {
@@ -168,16 +236,18 @@
       }
     }
   }
+
   .pc-arrow {
     float: right;
     display: inline-block;
     transition: all 0.2s ease-in-out;
 
-    > svg {
+    >svg {
       width: 14px;
       height: 14px;
     }
   }
+
   .pc-badge {
     margin-right: 5px;
     display: inline-flex;
@@ -192,6 +262,7 @@
     float: right;
     background: var(--bs-primary);
   }
+
   .m-header {
     height: $header-height;
     display: flex;
@@ -202,57 +273,38 @@
       display: none;
     }
   }
+
   .navbar-content {
     position: relative;
     height: calc(100vh - #{$header-height});
     padding: 10px 0;
   }
-  .pc-submenu {
-    .pc-link {
-      padding: 12px 30px 12px 63px;
-      &:after {
-        left: 28px;
-      }
-    }
 
-    .pc-submenu {
-      .pc-link {
-        padding: 12px 30px 12px 80px;
-        &:after {
-          left: 48px;
-        }
-      }
-
-      .pc-submenu {
-        .pc-link {
-          padding: 12px 30px 12px 100px;
-          &:after {
-            left: 68px;
-          }
-        }
-      }
-    }
-  }
   .card {
     box-shadow: var(--bs-card-box-shadow);
     margin: 15px;
+
     &.pc-user-card {
       margin: 0 15px 15px;
       box-shadow: none;
       background: var(--pc-sidebar-user-background);
+
       .card-body {
         padding: 20px;
       }
+
       .pc-user-links {
         a {
           display: flex;
           align-items: center;
           color: var(--pc-sidebar-color);
           padding: 8px 0px;
+
           i {
             font-size: 18px;
             margin-right: 10px;
           }
+
           &:focus,
           &:hover {
             color: var(--pc-sidebar-active-color);
@@ -261,14 +313,21 @@
       }
     }
   }
+
   .pc-hasmenu {
+    &:not(.pc-trigger) {
+      >.pc-submenu {
+        display: none;
+      }
+    }
+
     &.pc-trigger {
-      > .pc-submenu {
+      >.pc-submenu {
         display: block;
       }
 
-      > .pc-link {
-        > .pc-arrow {
+      >.pc-link {
+        >.pc-arrow {
           transform: rotate(90deg);
         }
       }
@@ -286,11 +345,13 @@
   backdrop-filter: blur(3px);
   background: rgba(0, 0, 0, 0.15);
 }
+
 [data-pc-sidebar-caption='false'] {
   .pc-sidebar .pc-caption {
     display: none;
   }
 }
+
 @media (min-width: 1025px) {
   .navbar-overlay {
     .pc-sidebar {
@@ -307,27 +368,34 @@
       }
     }
   }
+
   .pc-sidebar {
     transition: width 0.2s ease;
-    ~ .pc-header {
+
+    ~.pc-header {
       transition: left 0.2s ease;
     }
-    ~ .pc-footer,
-    ~ .pc-container {
+
+    ~.pc-footer,
+    ~.pc-container {
       transition: margin-left 0.2s ease;
     }
+
     &.pc-sidebar-hide {
       width: 0;
       --pc-sidebar-border: none;
-      ~ .pc-header {
+
+      ~.pc-header {
         left: 0;
       }
-      ~ .pc-footer,
-      ~ .pc-container {
+
+      ~.pc-footer,
+      ~.pc-container {
         margin-left: 0px;
       }
     }
   }
+
   .pc-header .pc-h-item.pc-sidebar-popup {
     display: none;
   }
@@ -337,12 +405,14 @@
   .pc-header .pc-h-item.pc-sidebar-collapse {
     display: none;
   }
+
   .pc-sidebar {
     left: -#{$sidebar-width};
     box-shadow: none;
     background: var(--bs-body-bg);
     top: 0;
     transition: all 0.2s ease-in-out;
+
     &.mob-sidebar-active {
       left: 0;
 
@@ -355,4 +425,95 @@
   }
 }
 
-// Sidebar css end
+.layout-2 {
+  --pc-sidebar-background: #fff;
+  --pc-sidebar-border: none;
+  --pc-header-color: #fff;
+  background: var(--pc-layout-2-color);
+  position: relative;
+
+  $i: 1;
+
+  @each $name,
+  $value in $preset-colors {
+    a.preset.preset-#{$i} {
+      background: map-get($value, 'primary');
+    }
+    a.preset.preset-gradient-#{$i} {
+      background: linear-gradient(to right, map-get($value, 'primary') 0%, lighten(map-get($value, 'primary'), 10%) 100%);
+    }
+
+    &.preset-#{$i} {
+      --pc-layout-2-color: #{map-get($value, 'primary')};
+    }
+    &.preset-gradient-#{$i} {
+      --pc-layout-2-color: linear-gradient(to right, #{map-get($value, 'primary')} 0%, #{lighten(map-get($value, 'primary'), 10%)} 100%);
+    }
+
+    $i: $i + 1;
+  }
+
+  .pc-header {
+    position: absolute;
+    background: transparent;
+
+    .pc-head-link::before {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .pc-sidebar {
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    .navbar-wrapper{
+      height: 100%;
+    }
+    .navbar-content {
+      box-shadow: inset 0 0 1px 1px var(--bs-border-color);
+      background: var(--pc-sidebar-background);
+      border-radius: 0 12px 0 0;
+      padding: 18px 0 10px;
+      height: calc(100% - #{$header-height});
+      position: relative;
+    }
+  }
+  .pc-footer{
+    background: var(--bs-body-bg);
+  }
+  .pc-container {
+    padding-top: 140px;
+
+    .pc-content {
+      background: var(--bs-body-bg);
+      min-height: calc(100vh - 273px);
+    }
+
+    .page-header {
+      margin-top: -140px;
+      padding: 0;
+
+      h2 {
+        color: #fff;
+      }
+
+      .breadcrumb {
+        margin-bottom: 5px;
+        --bs-breadcrumb-divider-color: #fff;
+
+        .breadcrumb-item+.breadcrumb-item::before {
+          content: var(--bs-breadcrumb-divider, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='14' height='14' stroke='%23ffffff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E"));
+        }
+
+        .breadcrumb-item,
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// ============================
+//    3. Sidebar css end
+// ============================
