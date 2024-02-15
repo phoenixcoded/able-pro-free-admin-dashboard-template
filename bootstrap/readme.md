@@ -36,7 +36,7 @@ Able Pro is the ultimate Bootstrap 5 Admin & Dashboard Template, providing you w
 - Fully Responsive, all modern browser supported
 - Easy to use code structure
 - Flexible & High-Performance code
-- Easy [Documentation](https://codedthemes.gitbook.io/able-pro-bootstrap/) Guide
+- Easy [Documentation](https://phoenixcoded.gitbook.io/able-pro/) Guide
 
 ## Free Able-pro Bootstrap 5 Dashboard version
 
