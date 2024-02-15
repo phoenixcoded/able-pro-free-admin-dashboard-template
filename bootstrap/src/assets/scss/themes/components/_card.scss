@@ -1,5 +1,5 @@
 // ============================
-//     Card css start
+//    15. Card css start
 // ============================
 
 .card {
@@ -111,12 +111,6 @@
       box-shadow: none;
     }
   }
-
-  // @each $color, $value in $theme-colors {
-  //     &.bg-#{$color} {
-  //         box-shadow: 0 9px 9px -1px transparentize($value, 0.7);
-  //     }
-  // }
 }
 
 @include media-breakpoint-down(sm) {
@@ -134,4 +128,6 @@
   }
 }
 
-// Card css end
+// ============================
+//    15. Card css end
+// ============================

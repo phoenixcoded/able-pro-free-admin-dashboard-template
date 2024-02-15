@@ -6,5 +6,5 @@
   "tabWidth": 2,
   "useTabs": false,
   "htmlWhitespaceSensitivity": "strict",
-  "bracketSameLine": true
+  "bracketSameLine": false
 }

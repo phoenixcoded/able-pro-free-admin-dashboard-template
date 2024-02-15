@@ -1,5 +1,5 @@
 // ============================
-//     Button css start
+//    13. Button css start
 // ============================
 
 .btn {
@@ -7,6 +7,9 @@
 
   i {
     font-size: 18px;
+    &.ph-duotone{
+      vertical-align: text-bottom;
+    }
   }
 
   svg {
@@ -66,6 +69,7 @@
   }
 }
 @each $color, $value in $theme-colors {
+  // light color start
   .btn-light-#{$color} {
     background: shift-color($value, $soft-bg-level);
     color: $value;
@@ -116,7 +120,8 @@
       }
     }
   }
-
+  // light color end
+  // link color start
   .btn-link-#{$color} {
     background: transparent;
     color: $value;
@@ -154,6 +159,46 @@
       border-color: shift-color($value, $soft-bg-level);
     }
   }
+  // link color end
+  // link hover color start
+  .btn-link-hover-#{$color} {
+    background: transparent;
+    color: var(--bs-secondary);
+    border-color: transparent;
+    .material-icons-two-tone {
+      background-color: var(--bs-secondary);
+    }
+    &:hover {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &.focus,
+    &:focus {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+
+  .btn-check:active,
+  .btn-check:checked {
+    + .btn-link-hover-#{$color} {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+  // link hover color end
 }
 
 @each $color, $value in $social-colors {
@@ -201,3 +246,7 @@
     color: var(--bs-secondary);
   }
 }
+
+// ============================
+//    13. Button css end
+// ============================

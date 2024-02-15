@@ -1,5 +1,5 @@
 // ============================
-//     Form css start
+//   19. Form css start
 // ============================
 
 .form-group {
@@ -10,19 +10,23 @@
     font-weight: 500;
   }
 }
+
 select.form-control,
 .form-control {
   &:hover {
     background-color: $gray-100;
   }
+
   &[readonly] {
     opacity: 0.6;
   }
 }
+
 .input-group-text svg {
   width: 18px;
   height: 18px;
 }
+
 .form-control-color-picker {
   height: 43px;
   padding: 0.5rem;
@@ -30,38 +34,43 @@ select.form-control,
 
 select.form-control {
   appearance: none;
-  background: #{$input-bg} url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
-    no-repeat right 0.75rem center/18px 25px;
+  background: #{$input-bg} url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 0.75rem center/18px 25px;
 
   &[data-multiselectsplitter-firstselect-selector],
   &[data-multiselectsplitter-secondselect-selector] {
     background: none;
   }
 }
+
 .form-floating {
-  > label {
+  >label {
     top: 1px;
   }
-  > .form-control:focus,
-  > .form-control:not(:placeholder-shown),
-  > .form-select {
-    ~ label {
+
+  >.form-control:focus,
+  >.form-control:not(:placeholder-shown),
+  >.form-select {
+    ~label {
       color: $gray-600;
     }
   }
-  > .form-control:focus {
-    ~ label {
+
+  >.form-control:focus {
+    ~label {
       color: $component-active-bg;
     }
   }
-  > input {
+
+  >input {
     color: $body-color;
   }
 }
+
 .bootstrap-select -select {
-  > .dropdown-toggle.btn-light,
-  > .dropdown-toggle.btn-secondary,
-  > .dropdown-toggle.btn-default {
+
+  >.dropdown-toggle.btn-light,
+  >.dropdown-toggle.btn-secondary,
+  >.dropdown-toggle.btn-default {
     border-color: $input-border-color !important;
     box-shadow: none;
     background: $input-bg !important;
@@ -72,30 +81,38 @@ select.form-control {
     }
   }
 }
+
 .form-search {
   position: relative;
+
   i {
     position: absolute;
     top: 14px;
     left: 15px;
     font-size: 20px;
   }
+
   .form-control {
     padding-left: 50px;
   }
 }
+
 .form-check {
   label {
     cursor: pointer;
+
     input {
       cursor: pointer;
     }
-    .form-check-input {
-      //float: left;
-    }
   }
 }
-@each $color, $value in $theme-colors {
+
+.form-check-input.f-12 {
+  margin-left: -2.9em;
+}
+
+@each $color,
+$value in $theme-colors {
   .form-check {
     .form-check-input {
       &.input-#{$color} {
@@ -111,15 +128,11 @@ select.form-control {
           background-color: shift-color($value, $soft-bg-level);
 
           &[type='checkbox'] {
-            background-image: escape-svg(
-              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$value}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>")
-            );
+            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$value}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"));
           }
 
           &[type='radio'] {
-            background-image: escape-svg(
-              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$value}'/></svg>")
-            );
+            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$value}'/></svg>"));
           }
         }
       }
@@ -127,6 +140,7 @@ select.form-control {
       &.input-#{$color},
       &.input-light-#{$color} {
         &:focus {
+
           &[type='checkbox'],
           &[type='radio'] {
             box-shadow: 0 0 0 0.2rem rgba($value, 0.25);
@@ -139,21 +153,19 @@ select.form-control {
     &.form-switch {
       .form-check-input.input-light-#{$color} {
         &:checked {
-          background-image: escape-svg(
-            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$value}'/></svg>")
-          );
+          background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$value}'/></svg>"));
         }
       }
     }
   }
 }
 
-.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
-.input-group > .input-group-append:not(:last-child) > .btn,
-.input-group > .input-group-append:not(:last-child) > .input-group-text,
-.input-group > .input-group-prepend > .btn,
-.input-group > .input-group-prepend > .input-group-text {
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child),
+.input-group>.input-group-append:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.input-group-text,
+.input-group>.input-group-prepend>.btn,
+.input-group>.input-group-prepend>.input-group-text {
   border-right: none;
 }
 
@@ -165,13 +177,13 @@ select.form-control {
     margin-bottom: 1rem;
   }
 
-  .form-label-group > input,
-  .form-label-group > label {
+  .form-label-group>input,
+  .form-label-group>label {
     height: 3.125rem;
     padding: 0.75rem;
   }
 
-  .form-label-group > label {
+  .form-label-group>label {
     position: absolute;
     top: 0;
     left: 0;
@@ -211,14 +223,14 @@ select.form-control {
     padding-bottom: 0.25rem;
   }
 
-  .form-label-group input:not(:-moz-placeholder-shown) ~ label {
+  .form-label-group input:not(:-moz-placeholder-shown)~label {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     font-size: 12px;
     color: #777;
   }
 
-  .form-label-group input:not(:placeholder-shown) ~ label {
+  .form-label-group input:not(:placeholder-shown)~label {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     font-size: 12px;
@@ -230,7 +242,7 @@ select.form-control {
 // Date picker start
 
 .datepicker {
-  width: 265px;
+  width: 275px;
   padding: 10px;
 
   &.dropdown-menu {
@@ -285,7 +297,7 @@ select.form-control {
   }
 
   tbody {
-    tr > td {
+    tr>td {
       &.day {
         color: $body-color;
 
@@ -356,7 +368,8 @@ select.form-control {
   }
 
   tfoot {
-    tr > th {
+    tr>th {
+
       &.clear,
       &.today {
         font-weight: 500;
@@ -385,7 +398,7 @@ select.form-control {
   }
 
   table td {
-    > a {
+    >a {
       border: 0;
 
       i {
@@ -396,6 +409,7 @@ select.form-control {
 }
 
 .bootstrap-timepicker-widget {
+
   .bootstrap-timepicker-hour,
   .bootstrap-timepicker-meridian,
   .bootstrap-timepicker-minute,
@@ -403,7 +417,7 @@ select.form-control {
     color: $headings-color;
   }
 
-  table td > a {
+  table td>a {
     &:hover {
       background: $body-bg;
     }
@@ -419,7 +433,8 @@ select.form-control {
   --tag-remove-bg: #{transparentize($danger, 0.7)};
   --tag-remove-btn-bg--hover: #{$danger};
 
-  @each $color, $value in $theme-colors {
+  @each $color,
+  $value in $theme-colors {
     &.tagify__tag--#{$color} {
       --tag-bg: #{transparentize($value, 0.8)};
 
@@ -444,7 +459,8 @@ select.form-control {
       background: $body-bg;
     }
 
-    @each $color, $value in $theme-colors {
+    @each $color,
+    $value in $theme-colors {
       &.bootstrap-switch-#{$color} {
         color: #fff;
         background: $value;
@@ -457,7 +473,7 @@ select.form-control {
 // bootstrap-select start
 
 .bootstrap-select {
-  > .dropdown-toggle.bs-placeholder.btn[class*='btn-']:not(.btn-light) {
+  >.dropdown-toggle.bs-placeholder.btn[class*='btn-']:not(.btn-light) {
     color: #fff;
   }
 }
@@ -506,6 +522,7 @@ select.form-control {
   position: sticky;
   z-index: 1020;
   background: var(--bs-card-bg);
+  border-radius: var(--bs-card-border-radius);
 }
 
 // typeahead end
@@ -544,7 +561,8 @@ select.form-control {
   }
 
   // State colors
-  @each $color, $value in $theme-colors {
+  @each $color,
+  $value in $theme-colors {
     &.dropzone-#{$color} {
       border-color: $value;
     }
@@ -568,6 +586,7 @@ select.form-control {
   }
 
   .dropzone-panel {
+
     .dropzone-remove-all,
     .dropzone-upload {
       display: none;
@@ -712,6 +731,7 @@ select.form-control {
     h3 {
       margin-top: 0;
     }
+
   }
 
   header.ck-content {
@@ -722,7 +742,7 @@ select.form-control {
         margin-top: 0;
       }
 
-      & + h3 {
+      &+h3 {
         margin-top: 0;
 
         font: {
@@ -762,6 +782,22 @@ select.form-control {
       }
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    .ck-content {
+      padding: 1rem;
+    }
+
+    .demo-row {
+      flex-direction: column;
+
+      .demo-row__half {
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
 }
 
 // switch v1 start
@@ -780,9 +816,7 @@ select.form-control {
       height: 20px;
       width: 35px;
       margin-left: -2.9em;
-      background-image: escape-svg(
-        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='#{$form-switch-color}'/%3e%3c/svg%3e")
-      );
+      background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='#{$form-switch-color}'/%3e%3c/svg%3e"));
       transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
       //box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 
@@ -796,18 +830,15 @@ select.form-control {
       }
 
       &:checked {
-        background-image: escape-svg(
-          url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='%23ffffff'/%3e%3c/svg%3e")
-        );
+        background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='%23ffffff'/%3e%3c/svg%3e"));
       }
     }
 
-    @each $color, $value in $theme-colors {
+    @each $color,
+    $value in $theme-colors {
       .form-check-input.input-light-#{$color} {
         &:checked {
-          background-image: escape-svg(
-            url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='#{$value}'/%3e%3c/svg%3e")
-          );
+          background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='#{$value}'/%3e%3c/svg%3e"));
         }
       }
     }
@@ -836,7 +867,7 @@ select.form-control {
   }
 
   .custom-control-input {
-    &:checked ~ .custom-control-label::after {
+    &:checked~.custom-control-label::after {
       transform: translateX(0.95rem);
     }
   }
@@ -888,6 +919,7 @@ $choices-icon-cross-inverse: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEi
   }
 
   &.is-disabled {
+
     .#{$choices-selector}__inner,
     .#{$choices-selector}__input {
       background-color: $choices-bg-color-disabled;
@@ -1129,6 +1161,7 @@ $choices-icon-cross-inverse: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEi
   }
 
   .#{$choices-selector}__list {
+    padding: 10px 15px;
     position: relative;
     max-height: 300px;
     overflow: auto;
@@ -1251,7 +1284,7 @@ $choices-icon-cross-inverse: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEi
 .typeahead {
   position: relative;
 
-  & > ul {
+  &>ul {
     background-color: #ffffff;
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1269,8 +1302,8 @@ $choices-icon-cross-inverse: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEi
     top: 100%;
     z-index: 1000;
 
-    > li {
-      > a {
+    >li {
+      >a {
         clear: both;
         color: #333;
         cursor: default;
@@ -1281,15 +1314,17 @@ $choices-icon-cross-inverse: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEi
         white-space: nowrap;
       }
 
-      &.active > a,
-      > a:hover {
-        background-color: #3f9bfa;
-        color: #ffffff;
+      &.active>a:hover,
+      &.active>a,
+      >a:hover {
+        background-color: var(--bs-primary);
+        color: #fff !important;
         text-decoration: none;
       }
     }
   }
 }
+
 .validate-me {
   .error {
     border-color: $danger;
@@ -1303,9 +1338,53 @@ $choices-icon-cross-inverse: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEi
 .flatpickr-input[readonly] {
   background: $input-bg;
 }
+
+.noUi-target {
+  @include media-breakpoint-down(sm) {
+    margin: 0 15px;
+  }
+}
+
 .noUi-connect {
   background: var(--bs-primary);
 }
+
+.editor-statusbar {
+  padding-bottom: 0;
+}
+
+.editor-toolbar.fullscreen,
+.CodeMirror-fullscreen {
+  z-index: 1099;
+}
+
+.flatpickr-calendar {
+  @include media-breakpoint-down(sm) {
+    width: 270px;
+  }
+}
+
+.form-wizard {
+  .nav-pills {
+    .nav-link {
+      color: var(--bs-body-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    .nav-link.active,
+    .show>.nav-link {
+      color: #fff;
+    }
+  }
+}
+
 // ============================
-// Form css end
+//   19. Form css end
 // ============================

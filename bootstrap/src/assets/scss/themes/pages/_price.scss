@@ -1,0 +1,126 @@
+// ==========================
+//       Price css start
+// ==========================
+.nav-price {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  padding: 10px;
+
+  &.nav-pills {
+    .nav-link {
+      padding: 16px 20px;
+      color: var(--bs-body-color);
+    }
+
+    .nav-link.active,
+    .show>.nav-link {
+      color: var(--bs-body-color);
+      background-color: var(--bs-card-bg);
+      box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
+    }
+  }
+}
+
+.price-card {
+  .price-head {
+    border-radius: var(--bs-border-radius);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .price-price {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+
+    span {
+      margin-top: 8px;
+      display: block;
+      font-weight: 400;
+      font-size: 0.875rem;
+    }
+  }
+
+  .product-list {
+    text-align: center;
+
+    li {
+      padding: 5px 0;
+      border: none;
+      position: relative;
+
+      &:not(.enable) {
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &.price-popular {
+    .price-head {
+      background: rgba(var(--bs-primary-rgb),.1);
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.product-check-list {
+  text-align: left;
+
+  li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    opacity: 0.5;
+
+    &::before {
+      content: "\ea5e";
+      font-family: tabler-icons !important;
+      position: absolute;
+      left: 0;
+      top: 8px;
+      opacity: 0.5;
+    }
+
+    &.enable {
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+        color: $success;
+      }
+    }
+  }
+}
+
+.price-check {
+  overflow: hidden;
+  position: relative;
+  .form-check-label{
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .form-check-input,
+  .form-check-label .row{
+    position: relative;
+    z-index: 8;
+  }
+  .form-check {
+    .form-check-input {
+      &:checked{
+        + .form-check-label{
+          &::after{
+            background: rgba(var(--bs-primary-rgb),.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Price css end

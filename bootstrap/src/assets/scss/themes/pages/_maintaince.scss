@@ -1,0 +1,71 @@
+/**  =====================
+      Maintaince css start
+==========================  **/
+
+.maintenance-block {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.error-card {
+  box-shadow: none;
+  text-align: center;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+
+  .error-image-block {
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+  }
+}
+
+.construction-card {
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.construction-card-1 {
+  background: url("../images/pages/img-cunstruct-1-bg.png");
+  min-height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  .construction-card-bottom {
+    background: url("../images/pages/img-cunstruct-1-bottom.svg");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+.soon-card {
+  border: none;
+  background: transparent;
+
+  .timer-block {
+    .avtar {
+      margin: 5px 0;
+      position: relative;
+      overflow: hidden;
+      flex-direction: column;
+      border: 1px solid $border-color;
+      padding-bottom: 25px;
+      padding-top: 25px;
+    }
+  }
+}
+
+.soon-card-1 {
+  background: url("../images/authentication/img-auth-bg.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  justify-content: center;
+}
+
+/**====== Maintaince css end ======**/
