@@ -35,7 +35,7 @@ Welcome to Able Pro, the ultimate free Angular Dashboard Template powered by the
 - Modern UI design
 - Angular Material component
 - Fully Responsive, all modern browser supported
-- Easy to use code structure
+- Simple code structure
 - Flexible & High-Performance code
 - Easy Documentation Guide
 
