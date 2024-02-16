@@ -17,7 +17,7 @@ on:
 jobs:
   #if_merged:
   #  if: github.event.pull_request.merged == true
-  React-Deploy:
+  Angular-Deploy:
     name: 🎉 Angular Deploy
     runs-on: ubuntu-latest
 
