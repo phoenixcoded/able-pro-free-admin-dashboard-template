@@ -86,7 +86,6 @@ git clone https://github.com/codedthemes/able-pro-free-admin-dashboard-template.
 ## Author
 
 Able-pro is developed by Team [Phoenixcoded](https://themeforest.net/user/phoenixcoded).
-Able-pro is managed by Team [CodedThemes](https://codedthemes.com).
 
 
 ## Issues
@@ -122,7 +121,6 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 
 - [Website](https://ableproadmin.com/)
 - [Phoenixcoded](https://themeforest.net/user/phoenixcoded)
-- [CodedThemes](https://codedthemes.com)
 - [Dribbble](https://dribbble.com/codedthemes)
 - [Facebook](https://www.facebook.com/codedthemes)
 - [Twitter](https://twitter.com/codedthemes)
