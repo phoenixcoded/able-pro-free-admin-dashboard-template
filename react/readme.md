@@ -126,11 +126,13 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 
 ## Able Pro is Available in Following Technologies
 
-- [Bootstrap 5](https://ableproadmin.com/)
-- [React MUI (Material-UI)](https://ableproadmin.com/react/)
-- [CodeIgniter](https://ableproadmin.com/codeigniter/default/public/)
-- [Asp.net](https://able-pro.azurewebsites.net/)
-- [Angular](https://ableproadmin.com/angular/default/)
+- [Bootstrap 5](https://themeforest.net/item/able-pro-bootstrap-admin-dashboard-template/50170229)
+- [React MUI (Material-UI)](https://themeforest.net/item/able-pro-react-nextjs-admin-dashboard/50613770)
+- CodeIgniter
+- Asp.net
+- [Angular](https://themeforest.net/item/able-pro-angular-dashboard-template/50607360)
+- VueJs
+- [NextJS](https://themeforest.net/item/able-pro-react-nextjs-admin-dashboard/50613770)
 
 ## More Free React Admin Templates
 
