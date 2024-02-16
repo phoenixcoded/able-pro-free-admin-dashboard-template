@@ -149,7 +149,6 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 
 - [Website](https://ableproadmin.com/react)
 - [Phoenixcoded](https://themeforest.net/user/phoenixcoded)
-- [CodedThemes](https://codedthemes.com)
 - [Dribbble](https://dribbble.com/codedthemes)
 - [Facebook](https://www.facebook.com/codedthemes)
 - [Twitter](https://twitter.com/codedthemes)
