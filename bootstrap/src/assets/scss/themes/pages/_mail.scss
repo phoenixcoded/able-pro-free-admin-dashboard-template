@@ -1,0 +1,357 @@
+/**  =====================
+      mail css start
+==========================  **/
+.mail-wrapper {
+  display: flex;
+
+  .mail-menulist {
+    width: 300px;
+    margin-right: var(--bs-gutter-x);
+
+    .scroll-block {
+      height: calc(100vh - 270px);
+    }
+
+    .list-group-item-action {
+      padding: 14px 16px;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      color: var(--bs-body-color);
+      border: none;
+      border-radius: var(--bs-border-radius);
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+
+      .avtar {
+        width: 22px;
+        height: 22px;
+        color: var(--bs-body-color);
+        background: rgba(var(--bs-black-rgb), 0.1);
+      }
+
+      i {
+        font-size: 22px;
+        margin-right: 8px;
+        opacity: 0.6;
+      }
+
+      .material-icons-two-tone {
+        font-size: 22px;
+        margin-right: 8px;
+        opacity: 0.6;
+
+        &:not([class*='text-']) {
+          background-color: var(--bs-body-color);
+        }
+      }
+
+      +.list-group-item.active {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .mail-content {
+    flex: 1 1 auto;
+    min-width: 1%;
+
+    .card {
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        margin-bottom: 0;
+
+        .card-body {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .scroll-block {
+    height: calc(100vh - 290px);
+  }
+
+  .mail-offcanvas {
+    --bs-offcanvas-width: 301px;
+
+    &.show {
+      .collapse:not(.show) {
+        display: block;
+      }
+
+      .mail-menulist {
+        margin-right: 0;
+
+        .scroll-block {
+          height: calc(100vh - 185px);
+        }
+      }
+    }
+  }
+
+  .img-user {
+    width: 40px;
+  }
+
+  .mail-table {
+    border-collapse: separate;
+    width: calc(100% - 10px);
+    margin: 0 5px;
+
+    tr {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--bs-border-color);
+      border-radius: var(--bs-border-radius);
+      margin: 10px 0;
+
+      &.unread {
+        font-weight: 500;
+      }
+
+      &:not(.unread) {
+        background: var(--bs-body-bg);
+      }
+
+      td {
+        height: 64px;
+        display: inline-flex;
+        align-items: center;
+
+        h5 {
+          font-weight: 500;
+        }
+
+        &:nth-child(1) {
+          width: 130px;
+        }
+
+        &:nth-child(2) {
+          width: 180px;
+
+          .text-truncate {
+            width: 105px;
+          }
+        }
+
+        &:nth-child(4) {
+          width: 65px;
+        }
+
+        &:nth-child(5) {
+          width: 150px;
+        }
+
+        &:nth-child(3) {
+          flex: 1 1 auto;
+          min-width: 0;
+          overflow: hidden;
+          position: relative;
+
+          .text-truncate {
+            position: absolute;
+            width: calc(100% - 1.4rem);
+            top: 0;
+            transform: translatey(-50%);
+            left: 0;
+          }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.mini-mail-list {
+    .img-user {
+      width: 30px;
+    }
+
+    .mail-table td {
+      height: 45px;
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+
+      .avtar {
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+
+        i.f-18 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  tr {
+    &:hover {
+      .mail-option {
+        .mail-buttons {
+          opacity: 1;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.empty-mail {
+  .simplebar-content {
+    height: 100%;
+  }
+}
+
+.mail-option {
+  position: relative;
+  text-align: right;
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 0.1rem;
+  }
+
+  .mail-buttons {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    padding: 6px;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.8);
+    transition: all 0.15s ease-in-out;
+    transform-origin: right;
+    background: var(--bs-card-bg);
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.12);
+  }
+}
+
+.pc-icon-checkbox {
+  position: relative;
+  padding: 0;
+
+  .pc-icon-uncheck {
+    display: inline-block;
+    opacity: 0.35;
+  }
+
+  .pc-icon-check {
+    display: none;
+  }
+
+  .form-check-input {
+    position: absolute;
+    z-index: 9;
+    margin-left: 0;
+    left: 3px;
+    top: 2px;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 20px;
+
+    &:checked {
+      ~.pc-icon-uncheck {
+        display: none;
+      }
+
+      ~.pc-icon-check {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.compose_mail_modal {
+  &.show.modal-pos-down {
+    .modal-dialog {
+      margin: 20px;
+      align-items: flex-end;
+      height: calc(100% - 40px);
+      --bs-modal-width: calc(100% - 40px);
+
+      .modal-body {
+        overflow: auto;
+        height: calc(100vh - 205px);
+      }
+
+      .ql-container {
+        height: calc(100vh - 480px) !important;
+      }
+    }
+  }
+}
+
+.mail-details {
+  .indent-text {
+    text-align: justify;
+  }
+
+  hr {
+    opacity: 0.04;
+  }
+}
+
+[data-pc-preset*='preset-'] {
+  .mail-wrapper {
+    .mail-menulist {
+      .list-group-item {
+        &.active {
+          background: rgba(var(--pc-sidebar-color-rgb), 0.1);
+
+          .avtar {
+            color: var(--bs-secondary);
+            background: rgba(var(--bs-secondary-rgb), 0.1);
+          }
+
+          .material-icons-two-tone {
+            background-color: var(--bs-secondary);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .mail-wrapper {
+    .mail-table {
+      tr {
+        flex-wrap: wrap;
+
+        td {
+          height: auto;
+
+          &:nth-child(5) {
+            margin-right: auto;
+            flex: 1 1 auto;
+            min-width: 0;
+          }
+
+          &:nth-child(3),
+          &:nth-child(5) {
+            margin-left: 55px;
+          }
+
+          &:nth-child(4) {
+            order: 6;
+          }
+
+          &:nth-child(3) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mail css end

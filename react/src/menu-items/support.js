@@ -25,7 +25,7 @@ const support = {
       id: 'documentation',
       title: 'Documentation',
       type: 'item',
-      url: 'https://codedthemes.gitbook.io/able-pro-react/',
+      url: 'https://phoenixcoded.gitbook.io/able-pro/v/react/',
       icon: icons.documentation,
       external: true,
       target: true

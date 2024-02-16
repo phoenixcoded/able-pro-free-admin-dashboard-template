@@ -1,7 +1,33 @@
 // ============================
-//     Widget css start
+//    10. Widget css start
 // ============================
 
+.dropbox-card {
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: '';
+    background-image: url('../images/widget/img-dropbox-bg.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.5;
+    background-position: bottom right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  > * {
+    position: relative;
+    z-index: 5;
+  }
+  .avtar {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+}
 .available-balance-card {
   overflow: hidden;
   position: relative;
@@ -117,10 +143,16 @@
       th {
         &:first-child {
           padding-left: 25px;
+          @include media-breakpoint-down(sm) {
+            padding-left: 20px;
+          }
         }
 
         &:last-child {
           padding-right: 25px;
+          @include media-breakpoint-down(sm) {
+            padding-right: 20px;
+          }
         }
       }
     }
@@ -252,6 +284,11 @@
         display: flex;
         align-items: center;
       }
+
     }
   }
 }
+
+// ============================
+//    10. Widget css end
+// ============================

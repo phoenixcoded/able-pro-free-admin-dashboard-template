@@ -25,17 +25,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
-      - name: Install Node.js 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-
-      - name: 🔨 Build Project
-        run: |
-          cd bootstrap
-          npm install  
-          gulp build-prod
-
       - name: 📂 Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:

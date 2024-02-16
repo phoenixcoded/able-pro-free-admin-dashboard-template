@@ -51,8 +51,10 @@ File: style.css
 @import 'node_modules/bootstrap/scss/placeholders';
 @import 'node_modules/bootstrap/scss/helpers';
 
+
 @import 'node_modules/bootstrap/scss/utilities';
 @import 'node_modules/bootstrap/scss/utilities/api';
+
 
 // main framework
 @import 'themes/generic';
@@ -80,4 +82,4 @@ File: style.css
 
 // pages
 @import 'themes/pages/authentication';
-@import 'themes/pages/icon-lauouts';
+@import 'themes/pages/icon-pages';

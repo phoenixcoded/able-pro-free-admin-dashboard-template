@@ -1,10 +1,10 @@
 // Angular import
 import { Component, Input } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 // Project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
 import { LayoutService } from 'src/app/@theme/services/layout.service';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-menu-item',

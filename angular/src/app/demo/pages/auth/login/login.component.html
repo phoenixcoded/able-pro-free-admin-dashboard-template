@@ -12,24 +12,14 @@
               <img src="assets/images/logo-dark.svg" alt="logo" />
             </a>
             <div class="login-with">
-              <button mat-stroked-button class="m-t-10 text-muted">
-                <div class="flex">
-                  <img src="assets/images/authentication/facebook.svg" alt="facebook" />
-                  <span class="mat-body p-l-10">Sign In with Facebook</span>
-                </div>
-              </button>
-              <button mat-stroked-button class="m-t-10 text-muted">
-                <div class="flex">
-                  <img src="assets/images/authentication/twitter.svg" alt="facebook" />
-                  <span class="mat-body p-l-10">Sign In with Twitter</span>
-                </div>
-              </button>
-              <button mat-stroked-button class="m-t-10 text-muted">
-                <div class="flex">
-                  <img src="assets/images/authentication/google.svg" alt="facebook" />
-                  <span class="mat-body p-l-10">Sign In with Google</span>
-                </div>
-              </button>
+              @for (list of loginType; track list) {
+                <button mat-stroked-button class="m-t-10 text-muted">
+                  <div class="flex">
+                    <img src="{{ list.image }}" alt="{{ list.alt }}" />
+                    <span class="mat-body p-l-10">{{ list.title }}</span>
+                  </div>
+                </button>
+              }
             </div>
           </div>
           <div class="separator">
@@ -40,7 +30,9 @@
             <label for="name" class="f-w-500">Enter Your Email</label>
             <mat-form-field appearance="outline" class="w-100 m-t-5">
               <input matInput [formControl]="email" required [(ngModel)]="Email" />
-              <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+              @if (email.invalid) {
+                <mat-error>{{ getErrorMessage() }}</mat-error>
+              }
             </mat-form-field>
             <label for="name" class="f-w-500">Enter your password</label>
             <mat-form-field appearance="outline" class="w-100 m-t-5">
