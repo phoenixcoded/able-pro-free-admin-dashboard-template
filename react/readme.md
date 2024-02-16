@@ -143,7 +143,6 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/able-pr
 ## More Premium React Admin Templates
 
 - [By Phoenixcoded](https://themeforest.net/collections/7774628-reactjs-dashboard-template)
-- [By CodedThemes](https://codedthemes.com/item/category/templates/react-admin-templates/)
 
 ## Follow us
 
