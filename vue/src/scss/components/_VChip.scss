@@ -1,0 +1,12 @@
+.v-chip {
+  &.v-chip--variant-tonal {
+    &.combined {
+      border: 1px solid rgba(var(--v-theme-secondary), 0.5);
+      @each $color, $value in $theme-colors {
+        &.text-#{$color} {
+          border: 1px solid rgba(#{$value}, 0.5);
+        }
+      }
+    }
+  }
+}

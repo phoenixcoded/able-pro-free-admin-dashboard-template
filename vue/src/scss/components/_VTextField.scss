@@ -1,0 +1,45 @@
+.v-text-field input {
+  font-size: 0.875rem;
+}
+
+.v-field__outline {
+  color: rgb(var(--v-theme-inputBorder));
+  --v-field-border-opacity: 1;
+}
+.inputWithbg {
+  .v-field--variant-outlined {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+}
+
+.v-select {
+  .v-field {
+    font-size: 0.875rem;
+    .v-field__input {
+      > input {
+        height: 90%;
+      }
+    }
+  }
+}
+
+.pwdInput {
+  position: relative;
+  .v-input__append {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .v-field__append-inner {
+    right: -10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.v-autocomplete__selection {
+  height: 1.8rem;
+  font-size: 0.75rem;
+}

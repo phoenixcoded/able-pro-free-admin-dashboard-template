@@ -1,0 +1,51 @@
+//
+// Light Buttons
+//
+
+.v-btn:not(.v-tab) {
+  &.bg-lightprimary {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: $white !important;
+    }
+  }
+  &.bg-lightsecondary {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: $white !important;
+    }
+  }
+}
+
+.v-btn {
+  text-transform: capitalize;
+  letter-spacing: $btn-letter-spacing;
+  font-weight: 400;
+}
+.v-btn--icon.v-btn--density-default {
+  width: calc(var(--v-btn-height) + 6px);
+  height: calc(var(--v-btn-height) + 6px);
+}
+
+.v-btn-group .v-btn {
+  height: inherit !important;
+}
+
+.v-btn-group {
+  border-color: rgba(var(--v-border-color), 1);
+  border-radius: 8px;
+}
+
+.v-btn-group--divided .v-btn:not(:last-child) {
+  border-inline-end-color: rgba(var(--v-border-color), 1);
+}
+
+@each $color, $value in $theme-colors {
+  .#{$color}-dashed {
+    border: 1px dashed rgb(#{$value});
+  }
+}

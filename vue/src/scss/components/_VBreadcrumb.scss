@@ -1,0 +1,15 @@
+.v-breadcrumbs-item--link {
+  color: rgb(var(--v-theme-darkText));
+}
+.v-breadcrumbs {
+  .v-breadcrumbs-item--disabled {
+    --v-disabled-opacity: 1;
+    color: rgb(var(--v-theme-lightText));
+    .v-breadcrumbs-item--link {
+      color: rgb(var(--v-theme-lightText));
+    }
+  }
+  .v-breadcrumbs-divider {
+    color: rgb(var(--v-theme-lightText));
+  }
+}
