@@ -1,0 +1,117 @@
+html {
+  .bg-success,
+  .bg-info,
+  .bg-darkinfo,
+  .bg-warning {
+    color: white !important;
+  }
+}
+
+.pc-icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+.v-row + .v-row {
+  margin-top: 0px;
+}
+
+.v-divider {
+  opacity: 1;
+  border-color: rgb(var(--v-theme-borderLight));
+}
+
+.v-table > .v-table__wrapper > table > thead > tr > th {
+  color: inherit;
+}
+
+.link-hover {
+  text-decoration: unset;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.v-selection-control {
+  flex: unset;
+}
+
+.no-spacer {
+  .v-list-item__spacer {
+    display: none !important;
+  }
+}
+
+@keyframes progress-circular-rotate {
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+header {
+  &.v-toolbar--border {
+    border-color: rgb(var(--v-theme-borderLight));
+  }
+}
+
+.v-toolbar {
+  &.v-app-bar {
+    background-color: rgba(var(--v-theme-containerBg), 0.8);
+    backdrop-filter: blur(8px);
+  }
+}
+
+.v-sheet--border {
+  border: 1px solid rgba(var(--v-theme-borderLight), 0.8);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+// table css
+.v-table {
+  &.v-table--hover {
+    > .v-table__wrapper {
+      > table {
+        > tbody {
+          > tr {
+            &:hover {
+              td {
+                background: rgb(var(--v-theme-containerBg));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// accordion page css
+.v-expansion-panel {
+  border: 1px solid rgb(var(--v-theme-borderLight));
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+  .v-expansion-panel-text__wrapper {
+    border-top: 1px solid rgb(var(--v-theme-borderLight));
+    padding: 16px 24px;
+  }
+  &.v-expansion-panel--active {
+    .v-expansion-panel-title--active {
+      .v-expansion-panel-title__overlay {
+        background-color: rgb(var(--v-theme-containerBg));
+      }
+    }
+  }
+}
+.v-expansion-panel--active {
+  > .v-expansion-panel-title {
+    min-height: unset;
+  }
+}
+.v-expansion-panel--disabled .v-expansion-panel-title {
+  color: rgba(var(--v-theme-on-surface), 0.15);
+}

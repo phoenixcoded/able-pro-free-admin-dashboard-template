@@ -1,0 +1,66 @@
+.app-header {
+  .v-btn {
+    &.v-btn--variant-text {
+      color: rgb(var(--v-theme-lightText));
+    }
+  }
+}
+
+.profileBtn {
+  width: 40px;
+  height: 40px !important;
+  margin: 0 0 0 10px !important;
+  padding: 0 6px;
+  .v-avatar {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.notification-dropdown {
+  .v-list {
+    .v-list-item {
+      border: 1px solid rgb(var(--v-theme-borderLight));
+      &.v-list-item--variant-text {
+        .v-list-item__overlay {
+          background-color: rgb(var(--v-theme-primary));
+        }
+        &:hover,
+        &.v-list-item--active {
+          border: 1px solid rgb(var(--v-theme-primary));
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .profileBtn {
+    min-width: 42px;
+    margin: 0 !important;
+    .v-avatar {
+      width: 32px;
+      height: 32px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .notification-dropdown {
+    width: 332px !important;
+    .v-list-item__content {
+      .d-inline-flex {
+        .text-caption {
+          min-width: 50px;
+        }
+      }
+    }
+  }
+}

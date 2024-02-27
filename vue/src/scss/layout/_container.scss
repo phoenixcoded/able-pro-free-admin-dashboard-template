@@ -1,0 +1,142 @@
+html {
+  overflow-y: auto;
+}
+@media (min-width: 1540px) {
+  .v-container:not(.v-container--fluid) {
+    max-width: 1500px;
+  }
+}
+
+.spacer {
+  padding: 100px 0;
+  @media (max-width: 1264px) {
+    padding: 72px 0;
+  }
+}
+@media (max-width: 800px) {
+  .spacer {
+    padding: 50px 0;
+  }
+}
+.page-wrapper {
+  background: rgb(var(--v-theme-containerBg));
+}
+.verticalLayout {
+  .page-wrapper {
+    --v-layout-left: 0 !important;
+    @media (min-width: 1280px) {
+      --v-layout-left: 279px !important;
+    }
+  }
+  .v-application__wrap {
+    > header {
+      left: 0px !important;
+      width: calc(100% - 0px) !important;
+      @media (min-width: 1280px) {
+        left: 279px !important;
+        width: calc(100% - 279px) !important;
+      }
+    }
+  }
+  &.mini-sidebar {
+    .page-wrapper {
+      --v-layout-left: 90px !important;
+    }
+    .v-application__wrap {
+      > header {
+        left: 90px !important;
+        width: calc(100% - 90px) !important;
+      }
+    }
+  }
+}
+.page-wrapper {
+  .v-container {
+    &:first-child {
+      min-height: calc(100vh - 139px);
+    }
+    padding: 16px;
+    @media (max-width: 1550px) {
+      max-width: 100%;
+    }
+    @media (min-width: 1024px) {
+      padding-inline: 48px;
+    }
+    @media (min-width: 768px) {
+      padding-inline: 40px;
+    }
+  }
+}
+.maxWidth {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+$sizes: (
+  'display-1': 44px,
+  'display-2': 40px,
+  'display-3': 30px,
+  'h1': 36px,
+  'h2': 30px,
+  'h3': 21px,
+  'h4': 18px,
+  'h5': 16px,
+  'h6': 14px,
+  'text-8': 8px,
+  'text-10': 10px,
+  'text-13': 13px,
+  'text-18': 18px,
+  'text-20': 20px,
+  'text-24': 24px,
+  'body-text-1': 10px
+);
+
+@each $pixel, $size in $sizes {
+  .#{$pixel} {
+    font-size: $size;
+    line-height: $size + 10;
+  }
+}
+
+.fixed-width {
+  max-width: 1300px;
+}
+
+// font family
+
+body {
+  font-family: $body-font-family;
+  font-feature-settings: 'salt';
+  .Roboto {
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  .Poppins {
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  .Inter {
+    font-family: 'Inter', sans-serif !important;
+  }
+
+  .Inter-var {
+    font-family: Inter var !important;
+  }
+
+  .Public {
+    font-family: 'Public sans', sans-serif !important;
+  }
+}
+
+@keyframes slideY {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}

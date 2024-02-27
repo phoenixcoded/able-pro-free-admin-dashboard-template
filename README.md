@@ -45,6 +45,22 @@ Able Pro is a free Material admin dashboard template built with different techno
 | -                                                      | ✓ 7+ Conceptual Apps                                        |
 | -                                                      | ✓ Front Pages                                               |
 
+## Able-pro Vue
+
+| [Able-pro Free](https://ableproadmin.com/vue/free) | [Able-Pro Pro Version](https://1.envato.market/B0JAPW)                                                   |
+| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **7** Demo pages                                          | **100+** pages                                                                                            |
+| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
+| -                                                         | ✓ Preset Dark/Light Color  🌓                                                                                          |
+| -                                                         | ✓ Vuetify Components                                                                                  |
+| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
+| -                                                         | ✓ 10+ color Presets                                                                                       |
+| -                                                         | ✓ Vertical/Horizontal etc...Layouts                                                           |
+| -                                                         | ✓ Advance Components                                                                                      |
+| -                                                         | ✓ Form Variants                                                                                           |
+| -                                                         | ✓ Table Variants                                                                                          |
+| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
+| -                                                         | ✓ Front Pages                                                                                             |
 
 ## Able-pro Bootstrap
 
@@ -68,11 +84,13 @@ Able Pro is a free Material admin dashboard template built with different techno
 - [Bootstrap](https://ableproadmin.com/bootstrap/free/)
 - [React](https://ableproadmin.com/react/free/)
 - [Angular](https://ableproadmin.com/angular/free/)
+- [Vue](https://ableproadmin.com/vue/free/)
 
 ## Premium Able-pro versions
 - [Bootstrap](https://ableproadmin.com/bootstrap/default)
 - [React](https://ableproadmin.com/react)
 - [Angular](https://ableproadmin.com/angular/default)
+- [Vue](https://ableproadmin.com/vue)
 
 ## Buy Now
 - [Premium version](https://links.codedthemes.com/fCkWk)
