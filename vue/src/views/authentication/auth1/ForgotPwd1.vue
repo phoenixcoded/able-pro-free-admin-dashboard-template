@@ -14,7 +14,7 @@ import AuthForgotPwd from '../authForms/AuthForgotPwd.vue';
         <div class="d-flex align-center justify-center" style="min-height: calc(100vh - 148px)">
           <v-row justify="center">
             <v-col cols="12" lg="12">
-              <v-card elevation="0" variant="outlined" rounded="lg" class="loginBox withbg">
+              <v-card elevation="0" variant="outlined" rounded="lg" class="loginBox bg-surface">
                 <v-card-text class="pa-sm-10 pa-4">
                   <div class="d-flex justify-space-between align-center">
                     <h3 class="text-h3 text-center mb-0">Forgot Password</h3>

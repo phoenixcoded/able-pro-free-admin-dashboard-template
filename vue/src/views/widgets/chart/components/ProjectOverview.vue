@@ -160,7 +160,7 @@ const areaChart1 = {
 };
 </script>
 <template>
-  <v-card variant="outlined" class="withbg" rounded="lg">
+  <v-card variant="outlined" class="bg-surface" rounded="lg">
     <v-card-text>
       <div class="d-flex justify-space-between align-center">
         <h5 class="text-h5 mb-0">Project overview</h5>

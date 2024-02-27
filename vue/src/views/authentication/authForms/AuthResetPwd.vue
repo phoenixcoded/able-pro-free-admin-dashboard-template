@@ -43,7 +43,7 @@ function validate() {
         :type="show1 ? 'text' : 'password'"
         class="pwdInput mt-2 mb-4"
       >
-        <template v-slot:append>
+        <template v-slot:append-inner>
           <v-btn color="secondary" aria-label="icon" icon rounded variant="text">
             <SvgSprite name="custom-eye-invisible" style="width: 20px; height: 20px" v-if="show1 == false" @click="show1 = !show1" />
             <SvgSprite name="custom-eye" style="width: 20px; height: 20px" v-if="show1 == true" @click="show1 = !show1" />

@@ -8,7 +8,7 @@ const props = defineProps({
   <!-- -------------------------------------------------------------------- -->
   <!-- Card with Header & Footer -->
   <!-- -------------------------------------------------------------------- -->
-  <v-card variant="outlined" elevation="0" class="withbg" rounded="lg">
+  <v-card variant="outlined" elevation="0" class="bg-surface" rounded="lg">
     <v-card-item>
       <div class="d-flex justify-space-between align-center">
         <v-card-title class="text-h6">{{ props.title }}</v-card-title>

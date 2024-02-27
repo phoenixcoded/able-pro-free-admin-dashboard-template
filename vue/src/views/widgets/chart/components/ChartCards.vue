@@ -199,7 +199,7 @@ const barChart4 = {
   <v-row class="mb-0">
     <!-- chart 1 -->
     <v-col cols="12" md="6" lg="3">
-      <v-card variant="outlined" elevation="0" class="withbg" rounded="lg">
+      <v-card variant="outlined" elevation="0" class="bg-surface" rounded="lg">
         <v-card-text>
           <v-list class="pt-0" aria-busy="true" aria-label="chart content">
             <v-list-item class="pa-0">
@@ -252,7 +252,7 @@ const barChart4 = {
 
     <!-- chart 2 -->
     <v-col cols="12" md="6" lg="3">
-      <v-card variant="outlined" elevation="0" class="withbg overflow-hidden" rounded="lg">
+      <v-card variant="outlined" elevation="0" class="bg-surface overflow-hidden" rounded="lg">
         <v-card-text>
           <v-list class="pt-0" aria-busy="true" aria-label="chart content">
             <v-list-item class="pa-0">
@@ -305,7 +305,7 @@ const barChart4 = {
 
     <!-- chart 3 -->
     <v-col cols="12" md="6" lg="3">
-      <v-card variant="outlined" elevation="0" class="withbg" rounded="lg">
+      <v-card variant="outlined" elevation="0" class="bg-surface" rounded="lg">
         <v-card-text>
           <v-list class="pt-0" aria-busy="true" aria-label="chart content">
             <v-list-item class="pa-0">
@@ -358,7 +358,7 @@ const barChart4 = {
 
     <!-- chart 4 -->
     <v-col cols="12" md="6" lg="3">
-      <v-card variant="outlined" elevation="0" class="withbg" rounded="lg">
+      <v-card variant="outlined" elevation="0" class="bg-surface" rounded="lg">
         <v-card-text>
           <v-list class="pt-0" aria-busy="true" aria-label="chart content">
             <v-list-item class="pa-0">

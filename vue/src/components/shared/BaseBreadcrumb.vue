@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import SvgSprite from '@/components/shared/SvgSprite.vue';
+
+type Breadcrumb = {
+  title: string;
+  disabled: boolean;
+  href: string;
+};
+
 const props = defineProps({
   title: String,
-  /* eslint-disable @typescript-eslint/no-explicit-any */
-  breadcrumbs: Array as any,
+  breadcrumbs: Array as () => Breadcrumb[],
   icon: String
 });
 </script>

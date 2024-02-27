@@ -4,7 +4,7 @@ import Banner from '@/assets/images/analytics/welcome-banner.png';
 </script>
 
 <template>
-  <v-card class="welcomeBanner text-white overflow-hidden" elevation="0" rounded="lg">
+  <v-card class="welcomeBanner text-surface overflow-hidden" elevation="0" rounded="lg">
     <v-card-text class="py-5 px-md-12 px-6">
       <v-row>
         <v-col cols="12" xl="6" md="7" sm="10">

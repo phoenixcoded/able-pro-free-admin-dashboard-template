@@ -20,7 +20,7 @@ import googleImg from '@/assets/images/icons/google.svg';
         <div class="d-flex align-center justify-center" style="min-height: calc(100vh - 148px)">
           <v-row justify="center">
             <v-col cols="12" md="12">
-              <v-card elevation="0" variant="outlined" rounded="lg" class="loginBox withbg">
+              <v-card elevation="0" variant="outlined" rounded="lg" class="loginBox bg-surface">
                 <v-card-text class="pa-sm-10 pa-6">
                   <div class="text-center">
                     <Logo class="mb-3" />

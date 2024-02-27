@@ -17,15 +17,6 @@
 .v-card {
   width: 100%;
   overflow: visible;
-  &.withbg {
-    background-color: rgb(var(--v-theme-background));
-  }
-  &.w-auto {
-    width: auto !important;
-  }
-  &.overflow-hidden {
-    overflow: hidden;
-  }
   .v-card-title {
     &.text-h6 {
       font-weight: 600;
@@ -51,11 +42,4 @@
 
 .v-card-subtitle {
   font-size: 0.75rem;
-}
-
-.title-card {
-  .v-card-text {
-    background-color: rgb(var(--v-theme-background));
-    border: 1px solid rgba(var(--v-theme-borderLight), 1);
-  }
 }

@@ -4,7 +4,7 @@ import SvgSprite from '@/components/shared/SvgSprite.vue';
 const menulist = ref(['Today', 'Weekly', 'Monthly']);
 </script>
 <template>
-  <v-card variant="outlined" class="withbg" rounded="lg">
+  <v-card variant="outlined" class="bg-surface" rounded="lg">
     <v-card-item>
       <v-list rounded="lg" class="py-0" aria-busy="true" aria-label="user content">
         <v-list-item class="px-0">

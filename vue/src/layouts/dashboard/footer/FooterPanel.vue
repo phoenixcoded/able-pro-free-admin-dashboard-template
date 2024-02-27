@@ -4,7 +4,7 @@ import { shallowRef } from 'vue';
 const footerLink = shallowRef([
   {
     title: 'Home',
-    link: '/'
+    link: 'https://ableproadmin.com/vue/'
   },
   {
     title: 'Documentation',
