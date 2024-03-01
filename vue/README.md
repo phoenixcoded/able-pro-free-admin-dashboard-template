@@ -7,7 +7,7 @@ Able Pro is a free vue vuetify admin dashboard template built with Vue. It is de
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like the Able Pro :star: :star: :star:
 
-![IMG_8566.jpg](https://ableproadmin.com/adv-banner/adv-able-pro-redefined-github-react.png)
+![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-VUE-REPO+-+Able+pro+admin.jpg)
 
 Looking for even more features? Check out Able Pro's Vue [premium version](https://1.envato.market/B0JAPW), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
