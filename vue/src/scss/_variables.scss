@@ -1,0 +1,141 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'vuetify/lib/styles/tools/functions' as *;
+
+// This will false all colors which is not necessory for theme
+$color-pack: false;
+
+// Global font size and border radius
+$font-size-root: 1rem;
+$border-radius-root: 8px;
+$body-font-family: Inter var !default;
+$heading-font-family: $body-font-family !default;
+$btn-font-weight: 400 !default;
+$btn-letter-spacing: 0 !default;
+
+// Global Radius as per breakeven point
+$rounded: () !default;
+$rounded: map-deep-merge(
+  (
+    0: 0,
+    'sm': $border-radius-root * 0.5,
+    null: $border-radius-root,
+    'md': $border-radius-root * 1,
+    'lg': $border-radius-root * 1.5,
+    'xl': $border-radius-root * 6,
+    'pill': 9999px,
+    'circle': 50%,
+    'shaped': $border-radius-root * 6 0
+  ),
+  $rounded
+);
+// Global Typography
+$typography: () !default;
+$typography: map-deep-merge(
+  (
+    'h1': (
+      'size': 2.375rem,
+      'weight': 600,
+      'line-height': 1.21,
+      'font-family': inherit
+    ),
+    'h2': (
+      'size': 1.875rem,
+      'weight': 600,
+      'line-height': 1.27,
+      'font-family': inherit
+    ),
+    'h3': (
+      'size': 1.5rem,
+      'weight': 600,
+      'line-height': 1.33,
+      'font-family': inherit
+    ),
+    'h4': (
+      'size': 1.25rem,
+      'weight': 600,
+      'line-height': 1.4,
+      'font-family': inherit
+    ),
+    'h5': (
+      'size': 1rem,
+      'weight': 600,
+      'line-height': 1.5,
+      'font-family': inherit
+    ),
+    'h6': (
+      'size': 0.875rem,
+      'weight': 400,
+      'line-height': 1.57,
+      'font-family': inherit
+    ),
+    'subtitle-1': (
+      'size': 0.875rem,
+      'weight': 600,
+      'line-height': 1.57,
+      'font-family': inherit
+    ),
+    'subtitle-2': (
+      'size': 0.75rem,
+      'weight': 500,
+      'line-height': 1.66,
+      'font-family': inherit
+    ),
+    'body-1': (
+      'size': 0.875rem,
+      'weight': 400,
+      'letter-spacing': 0,
+      'line-height': 1.57,
+      'font-family': inherit
+    ),
+    'body-2': (
+      'size': 0.75rem,
+      'weight': 400,
+      'line-height': 1.66,
+      'font-family': inherit
+    ),
+    'button': (
+      'size': 0.875rem,
+      'weight': 500,
+      'font-family': inherit,
+      'text-transform': capitalize
+    ),
+    'caption': (
+      'size': 0.75rem,
+      'weight': 400,
+      'letter-spacing': 0,
+      'font-family': inherit
+    ),
+    'overline': (
+      'size': 0.75rem,
+      'weight': 400,
+      'font-family': inherit,
+      'line-height': 1.67,
+      'letter-spacing': 0,
+      'text-transform': uppercase
+    )
+  ),
+  $typography
+);
+
+// Custom Variables
+// colors
+$white: #fff !default;
+
+// cards
+$card-item-spacer-xy: 24px !default;
+$card-text-spacer: 24px !default;
+$card-title-size: 16px !default;
+
+// Global Shadow
+$box-shadow: 0px 8px 24px rgba(19, 25, 32, 0.08);
+
+$theme-colors: (
+  primary: var(--v-theme-primary),
+  secondary: var(--v-theme-secondary),
+  success: var(--v-theme-success),
+  info: var(--v-theme-info),
+  warning: var(--v-theme-warning),
+  error: var(--v-theme-error)
+);

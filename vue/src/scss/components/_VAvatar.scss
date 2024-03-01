@@ -1,0 +1,14 @@
+.v-avatar.v-avatar--variant-outlined {
+  &.dashed {
+    border-style: dashed;
+  }
+}
+.v-avatar--variant-tonal {
+  &.with-border {
+    @each $color, $value in $theme-colors {
+      &.text-#{$color} {
+        border: 1px solid rgb(#{$value});
+      }
+    }
+  }
+}

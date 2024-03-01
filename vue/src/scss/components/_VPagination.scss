@@ -1,0 +1,11 @@
+.v-pagination {
+  .v-pagination__list {
+    justify-content: flex-start;
+    .v-btn--variant-outlined {
+      border: 1px solid rgb(var(--v-border-color));
+    }
+    .v-btn--icon {
+      --v-btn-size: 0.75rem;
+    }
+  }
+}
