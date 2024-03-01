@@ -19,7 +19,7 @@ interface ResponseBody {
 function fakeBackend() {
   const users = [{ id: 1, username: 'info@phoenixcoded.co', password: 'admin123', firstName: 'Phoenixcoded', lastName: '.com' }];
   const realFetch = window.fetch;
-  
+
   window.fetch = function (url: string, opts: { method: string; headers: { [key: string]: string }; body?: string }) {
     return new Promise<Response>((resolve, reject) => {
       // wrap in timeout to simulate server api call
