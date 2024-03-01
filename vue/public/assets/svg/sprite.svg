@@ -1509,4 +1509,8 @@
   <path d="M11.9 11.301h.1c1.15-.04 2.05-.97 2.06-2.13 0-1.18-.96-2.14-2.14-2.14-1.18 0-2.14.96-2.14 2.14.02 1.15.92 2.09 2.12 2.13ZM14.19 13.412c-1.21-.8-3.17-.8-4.39 0-.56.38-.89.92-.89 1.48 0 .57.32 1.09.89 1.47.61.4 1.4.61 2.19.61s1.59-.2 2.19-.61c.56-.38.89-.92.89-1.48.01-.57-.31-1.09-.88-1.47Z" fill="currentColor"></path>
 </symbol>
 
+<symbol xmlns="http://www.w3.org/2000/svg" id="custom-upgrade" viewBox="0 0 24 24" fill="none">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M17.44 14.62L20 12.06 17.44 9.5M9.76 12.06h10.17M11.76 20c-4.42 0-8-3-8-8s3.58-8 8-8"></path>
+</symbol>
+
 </svg>
