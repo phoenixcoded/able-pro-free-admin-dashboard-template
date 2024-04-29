@@ -82,4 +82,12 @@ body {
   .mat-badge-content {
     color: #ffffff !important;
   }
+
+  .mat-badge-after .mat-badge-content {
+    left: auto;
+  }
+
+  .mat-badge-above .mat-badge-content {
+    bottom: auto;
+  }
 }
