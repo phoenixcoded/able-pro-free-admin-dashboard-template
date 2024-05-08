@@ -15,24 +15,15 @@ function getColorStyle({ variant, color, theme }) {
   const shadows = getShadow(theme, buttonShadow);
 
   const commonShadow = {
-    '&::after': {
-      boxShadow: `0 0 5px 5px ${alpha(main, 0.9)}`
-    },
-    '&:active::after': {
-      boxShadow: `0 0 0 0 ${alpha(main, 0.9)}`
-    },
-    '&:focus-visible': {
-      outline: `2px solid ${dark}`,
-      outlineOffset: 2
-    }
+    '&::after': { boxShadow: `0 0 5px 5px ${alpha(main, 0.9)}` },
+    '&:active::after': { boxShadow: `0 0 0 0 ${alpha(main, 0.9)}` },
+    '&:focus-visible': { outline: `2px solid ${dark}`, outlineOffset: 2 }
   };
 
   switch (variant) {
     case 'contained':
       return {
-        ...(color === 'secondary' && {
-          backgroundColor: dark
-        }),
+        ...(color === 'secondary' && { backgroundColor: dark }),
         '&:hover': {
           backgroundColor: dark,
           ...(color === 'secondary' && {
@@ -54,11 +45,7 @@ function getColorStyle({ variant, color, theme }) {
     case 'outlined':
       return {
         borderColor: main,
-        '&:hover': {
-          color: dark,
-          backgroundColor: 'transparent',
-          borderColor: dark
-        },
+        '&:hover': { color: dark, backgroundColor: 'transparent', borderColor: dark },
         ...commonShadow
       };
     case 'dashed':
@@ -66,19 +53,13 @@ function getColorStyle({ variant, color, theme }) {
         color: main,
         borderColor: main,
         backgroundColor: lighter,
-        '&:hover': {
-          color: dark,
-          borderColor: dark
-        },
+        '&:hover': { color: dark, borderColor: dark },
         ...commonShadow
       };
     case 'text':
     default:
       return {
-        '&:hover': {
-          color: dark,
-          backgroundColor: lighter
-        },
+        '&:hover': { color: dark, backgroundColor: lighter },
         ...commonShadow
       };
   }
@@ -90,16 +71,8 @@ export default function Button(theme) {
   const primaryDashed = getColorStyle({ variant: 'dashed', color: 'primary', theme });
   const primaryShadow = getColorStyle({ variant: 'shadow', color: 'primary', theme });
 
-  const disabledStyle = {
-    '&.Mui-disabled': {
-      backgroundColor: theme.palette.secondary[200]
-    }
-  };
-  const iconStyle = {
-    '&>*:nth-of-type(1)': {
-      fontSize: 'inherit'
-    }
-  };
+  const disabledStyle = { '&.Mui-disabled': { backgroundColor: theme.palette.secondary[200] } };
+  const iconStyle = { '&>*:nth-of-type(1)': { fontSize: 'inherit' } };
 
   return {
     MuiButton: {

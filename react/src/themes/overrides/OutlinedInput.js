@@ -17,7 +17,8 @@ function getColor({ variant, theme }) {
     '&.Mui-focused': {
       boxShadow: shadows,
       '& .MuiOutlinedInput-notchedOutline': {
-        border: `1px solid ${light}`
+        border: '1px solid',
+        borderColor: light
       }
     }
   };
@@ -32,9 +33,7 @@ export default function OutlinedInput(theme) {
         input: {
           padding: 14
         },
-        notchedOutline: {
-          borderColor: theme.palette.secondary[400]
-        },
+        notchedOutline: { borderColor: theme.palette.secondary[400] },
         root: {
           '& svg': {
             color: theme.palette.secondary.main

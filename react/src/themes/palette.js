@@ -6,12 +6,12 @@ import ThemeOption from './theme';
 
 // ==============================|| DEFAULT THEME - PALETTE  ||============================== //
 
-const Palette = (mode) => {
-  const paletteColor = ThemeOption('light');
+export default function Palette(mode, presetColor) {
+  const paletteColor = ThemeOption(presetColor, mode);
 
   return createTheme({
     palette: {
-      mode,
+      mode: mode,
       common: {
         black: '#000',
         white: '#fff'
@@ -32,6 +32,4 @@ const Palette = (mode) => {
       }
     }
   });
-};
-
-export default Palette;
+}

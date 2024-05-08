@@ -11,21 +11,21 @@ Able Pro is a free Material UI admin dashboard template built with React. It is 
 
 Looking for even more features? Check out Able Pro's React [premium version](https://1.envato.market/OrJ5nn), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-| [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://1.envato.market/OrJ5nn)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Dark/Light  🌓                                                                                          |
-| -                                                         | ✓ Material-UI Components                                                                                  |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ LTR/RTL Layouts                                                                                         |
-| -                                                         | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://1.envato.market/OrJ5nn)      |
+| ---------------------------------------------------- | :---------------------------------------------------------- |
+| **7** Demo pages                                     | **100+** pages                                              |
+| -                                                    | ✓ Modern UserInterface & Easy Developer Experience          |
+| -                                                    | ✓ Dark/Light 🌓                                             |
+| -                                                    | ✓ Material-UI Components                                    |
+| -                                                    | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
+| -                                                    | ✓ 10+ color Presets                                         |
+| -                                                    | ✓ LTR/RTL Layouts                                           |
+| -                                                    | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts             |
+| -                                                    | ✓ Advance Components                                        |
+| -                                                    | ✓ Form Variants                                             |
+| -                                                    | ✓ Table Variants                                            |
+| -                                                    | ✓ 7+ Conceptual Apps                                        |
+| -                                                    | ✓ Front Pages                                               |
 
 ## About Able-pro React Admin Dashboard Template?
 
@@ -114,7 +114,6 @@ yarn start
 
 Able-pro is developed by Team [Phoenixcoded](https://themeforest.net/user/phoenixcoded).
 Able-pro is managed by Team [CodedThemes](https://codedthemes.com).
-
 
 ## Issues
 
