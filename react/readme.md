@@ -97,8 +97,9 @@ yarn start
 ## Technology Stack
 
 - React 18
+- VITE
 - TypeScript
-- React Toolkit
+- Redux Toolkit
 - CRA
 - React Hook
 - React Router
