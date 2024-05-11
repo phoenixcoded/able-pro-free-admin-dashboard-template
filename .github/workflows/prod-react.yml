@@ -23,18 +23,18 @@ jobs:
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Install Node.js 18
-        uses: actions/setup-node@v3
+      - name: Install Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - name: 🔨 Build Project
         run: |
           cd react
-          npm install --legacy-peer-deps 
-          npm run build
+          yarn install
+          yarn run build
 
       - name: 📂 Deploy to Server
         uses: easingthemes/ssh-deploy@main
