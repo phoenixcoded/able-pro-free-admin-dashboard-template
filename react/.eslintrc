@@ -47,7 +47,7 @@
     "react/display-name": "off",
     "react/jsx-filename-extension": "off",
     "no-param-reassign": "off",
-    "react/prop-types": 1,
+    "react/prop-types": "off",
     "react/require-default-props": "off",
     "react/no-array-index-key": "off",
     "react/jsx-props-no-spreading": "off",
