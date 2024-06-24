@@ -7,11 +7,9 @@
 @import './layout/topbar';
 
 @import './components/VAlert';
-@import './components/VAvatar';
 @import './components/VList';
 @import './components/VButtons';
 @import './components/VCard';
-@import './components/VChip';
 @import './components/VBadge';
 @import './components/VBreadcrumb';
 @import './components/VPagination';
@@ -26,4 +24,4 @@
 @import './pages/dashboards';
 @import './pages/authentication';
 
-@import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
+@import 'vue3-perfect-scrollbar/style.css';
