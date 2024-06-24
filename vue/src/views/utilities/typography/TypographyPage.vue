@@ -18,7 +18,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
         <v-col cols="12">
           <UiParentCard title="Basic">
             <h1 class="text-h1 mb-1">Inter</h1>
-            <h5 class="text-h5">Font Family</h5>
+            <h5 class="text-h5 mb-2">Font Family</h5>
             <v-breadcrumbs :items="['Regular', 'Medium', 'Bold']" class="text-h6 text-lightText mb-0 pa-0 flex-wrap"></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -27,37 +27,37 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             <h1 class="text-h1 mb-2">H1 Heading</h1>
             <v-breadcrumbs
               :items="['Size: 38px', 'Weight: Bold', 'Line Height: 46px']"
-              class="text-h6 text-lightText pa-0 flex-wrap"
+              class="text-h6 text-lightText pa-0 flex-wrap mb-3"
             ></v-breadcrumbs>
             <v-divider></v-divider>
             <h2 class="text-h2 mb-2 mt-3">H2 Heading</h2>
             <v-breadcrumbs
               :items="['Size: 30px', 'Weight: Bold', 'Line Height: 38px']"
-              class="text-h6 text-lightText pa-0 flex-wrap"
+              class="text-h6 text-lightText pa-0 flex-wrap mb-3"
             ></v-breadcrumbs>
             <v-divider></v-divider>
             <h3 class="text-h3 mb-2 mt-3">H3 Heading</h3>
             <v-breadcrumbs
               :items="['Size: 24px', 'Weight: Regular & Bold', 'Line Height: 32px']"
-              class="text-h6 text-lightText pa-0 flex-wrap"
+              class="text-h6 text-lightText pa-0 flex-wrap mb-3"
             ></v-breadcrumbs>
             <v-divider></v-divider>
             <h4 class="text-h4 mb-2 mt-3">H4 Heading</h4>
             <v-breadcrumbs
               :items="['Size: 20px', 'Weight: Bold', 'Line Height: 28px']"
-              class="text-h6 text-lightText pa-0 flex-wrap"
+              class="text-h6 text-lightText pa-0 flex-wrap mb-3"
             ></v-breadcrumbs>
             <v-divider></v-divider>
             <h5 class="text-h5 mb-2 mt-3">H5 Heading</h5>
             <v-breadcrumbs
               :items="['Size: 16px', 'Weight: Regular & Medium & Bold', 'Line Height: 24px']"
-              class="text-h6 text-lightText pa-0 flex-wrap"
+              class="text-h6 text-lightText pa-0 flex-wrap mb-3"
             ></v-breadcrumbs>
             <v-divider></v-divider>
             <h6 class="text-h6 mb-2 mt-3">H6 Heading / Subheading</h6>
             <v-breadcrumbs
               :items="['Size: 14px', 'Weight: Regular', 'Line Height: 22px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap "
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -68,7 +68,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 14px', 'Weight: Regular', 'Line Height: 22px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -79,7 +79,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 12px', 'Weight: Regular', 'Line Height: 20px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -90,7 +90,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 14px', 'Weight: Medium', 'Line Height: 22px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -101,7 +101,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 12px', 'Weight: Medium', 'Line Height: 20px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -112,7 +112,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 12px', 'Weight: Regular', 'Line Height: 20px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -126,11 +126,11 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <p class="text-center text-caption">
+            <p class="text-center text-caption mt-3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <p class="text-right mb-0 text-caption">
+            <p class="text-right mb-0 text-caption mt-3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -187,7 +187,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 14px', 'Weight: Regular', 'Line Height: 20px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>
@@ -201,7 +201,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             </p>
             <v-breadcrumbs
               :items="['Size: 14px', 'Weight: Italic Bold', 'Line Height: 22px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap mt-3"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>

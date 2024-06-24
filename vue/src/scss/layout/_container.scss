@@ -21,35 +21,6 @@ html {
 .page-wrapper {
   background: rgb(var(--v-theme-containerBg));
 }
-.verticalLayout {
-  .page-wrapper {
-    --v-layout-left: 0 !important;
-    @media (min-width: 1280px) {
-      --v-layout-left: 279px !important;
-    }
-  }
-  .v-application__wrap {
-    > header {
-      left: 0px !important;
-      width: calc(100% - 0px) !important;
-      @media (min-width: 1280px) {
-        left: 279px !important;
-        width: calc(100% - 279px) !important;
-      }
-    }
-  }
-  &.mini-sidebar {
-    .page-wrapper {
-      --v-layout-left: 90px !important;
-    }
-    .v-application__wrap {
-      > header {
-        left: 90px !important;
-        width: calc(100% - 90px) !important;
-      }
-    }
-  }
-}
 .page-wrapper {
   .v-container {
     &:first-child {
