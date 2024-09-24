@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // material-ui
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
@@ -44,7 +44,7 @@ export default function AssignUsers() {
   return (
     <MainCard>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Stack direction="row" alignItems="center" justifyContent="space-between">
             <Stack direction="row" alignItems="center" spacing={2}>
               <Avatar variant="rounded">
@@ -80,7 +80,7 @@ export default function AssignUsers() {
             </Menu>
           </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={3}>
             <Box sx={{ width: 186 }}>
               <Tooltip
@@ -107,8 +107,8 @@ export default function AssignUsers() {
                     }
                   }}
                   max={4}
-                  componentsProps={{
-                    additionalAvatar: {
+                  slotProps={{
+                    surplus: {
                       onMouseEnter: () => {
                         setShow(true);
                       },

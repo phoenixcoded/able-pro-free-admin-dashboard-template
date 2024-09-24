@@ -5,7 +5,7 @@ import { useLocation, Link } from 'react-router-dom';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
 
@@ -116,13 +116,7 @@ export default function Breadcrumbs({
       </Typography>
     );
     breadcrumbContent = (
-      <MainCard
-        border={card}
-        sx={card === false ? { mb: 3, bgcolor: 'transparent', ...sx } : { mb: 3, ...sx }}
-        {...others}
-        content={card}
-        boxShadow={false}
-      >
+      <MainCard border={card} sx={card === false ? { mb: 3, bgcolor: 'transparent', ...sx } : { mb: 3, ...sx }} {...others} content={card}>
         <Grid
           container
           direction={rightAlign ? 'row' : 'column'}
@@ -130,7 +124,7 @@ export default function Breadcrumbs({
           alignItems={rightAlign ? 'center' : 'flex-start'}
           spacing={0.5}
         >
-          <Grid item>
+          <Grid>
             <MuiBreadcrumbs aria-label="breadcrumb" maxItems={maxItems || 8} separator={separatorIcon}>
               <Typography
                 component={Link}
@@ -147,7 +141,7 @@ export default function Breadcrumbs({
             </MuiBreadcrumbs>
           </Grid>
           {title && titleBottom && (
-            <Grid item sx={{ mt: card === false ? 0 : 1 }}>
+            <Grid sx={{ mt: card === false ? 0 : 1 }}>
               <Typography variant="h2" sx={{ fontWeight: 700 }}>
                 {main.title}
               </Typography>
@@ -220,7 +214,6 @@ export default function Breadcrumbs({
           sx={card === false ? { mb: 3, bgcolor: 'transparent', ...sx } : { mb: 3, ...sx }}
           {...others}
           content={card}
-          boxShadow={false}
         >
           <Grid
             container
@@ -230,15 +223,15 @@ export default function Breadcrumbs({
             spacing={0.5}
           >
             {title && !titleBottom && (
-              <Grid item>
+              <Grid>
                 <Typography variant="h2" sx={{ fontWeight: 700 }}>
                   {custom ? heading : item?.title}
                 </Typography>
               </Grid>
             )}
-            <Grid item>{tempContent}</Grid>
+            <Grid>{tempContent}</Grid>
             {title && titleBottom && (
-              <Grid item sx={{ mt: card === false ? 0 : 1 }}>
+              <Grid sx={{ mt: card === false ? 0 : 1 }}>
                 <Typography variant="h2" sx={{ fontWeight: 700 }}>
                   {custom ? heading : item?.title}
                 </Typography>

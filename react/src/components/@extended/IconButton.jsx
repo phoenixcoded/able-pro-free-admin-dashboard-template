@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
 // material-ui
-import { alpha, styled, useTheme } from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import MuiIconButton from '@mui/material/IconButton';
 
 // project-imports
@@ -136,10 +136,8 @@ const IconButtonStyle = styled(MuiIconButton, { shouldForwardProp: (prop) => pro
 // ==============================|| ICON BUTTON - EXTENDED ||============================== //
 
 function IconButton({ variant = 'text', shape = 'square', children, color = 'primary', ...others }, ref) {
-  const theme = useTheme();
-
   return (
-    <IconButtonStyle ref={ref} variant={variant} shape={shape} theme={theme} color={color} {...others}>
+    <IconButtonStyle ref={ref} variant={variant} shape={shape} color={color} {...others}>
       {children}
     </IconButtonStyle>
   );

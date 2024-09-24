@@ -1,6 +1,6 @@
 // material-ui
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
@@ -25,7 +25,7 @@ export default function ComponentTypography() {
       />
       <ComponentWrapper>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={6}>
+          <Grid size={{ xs: 12, lg: 6 }}>
             <Stack spacing={3}>
               <MainCard title="Basic" codehighlight="true">
                 <Stack spacing={0.75} sx={{ mt: -1.5 }}>
@@ -155,7 +155,7 @@ export default function ComponentTypography() {
               </MainCard>
             </Stack>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid size={{ xs: 12, lg: 6 }}>
             <Stack spacing={3}>
               <MainCard title="Alignment">
                 <>

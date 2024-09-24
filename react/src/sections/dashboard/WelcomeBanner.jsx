@@ -1,7 +1,7 @@
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -41,7 +41,7 @@ export default function WelcomeBanner() {
       }}
     >
       <Grid container>
-        <Grid item md={6} sm={6} xs={12}>
+        <Grid size={{ md: 6, sm: 6, xs: 12 }}>
           <Stack spacing={2} sx={{ padding: 3 }}>
             <Typography variant="h2" color={theme.palette.background.paper}>
               Explore Redesigned Able Pro
@@ -67,7 +67,7 @@ export default function WelcomeBanner() {
             </Box>
           </Stack>
         </Grid>
-        <Grid item sm={6} xs={12} sx={{ display: { xs: 'none', sm: 'initial' } }}>
+        <Grid sx={{ display: { xs: 'none', sm: 'initial' } }} size={{ sm: 6, xs: 12 }}>
           <Stack sx={{ position: 'relative', pr: { sm: 3, md: 8 }, zIndex: 2 }} justifyContent="center" alignItems="flex-end">
             <img src={WelcomeImage} alt="Welcome" width="200px" />
           </Stack>

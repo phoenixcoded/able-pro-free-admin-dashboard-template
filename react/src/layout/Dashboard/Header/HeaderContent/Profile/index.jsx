@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import CardContent from '@mui/material/CardContent';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import Stack from '@mui/material/Stack';
@@ -135,7 +135,7 @@ export default function ProfilePage() {
                 <MainCard sx={{ border: 'none' }} content={false}>
                   <CardContent sx={{ px: 2.5, pt: 3 }}>
                     <Grid container justifyContent="space-between" alignItems="center">
-                      <Grid item>
+                      <Grid>
                         <Stack direction="row" spacing={1.25} alignItems="center">
                           <Avatar alt="profile user" src={avatar1} />
                           <Stack>
@@ -146,7 +146,7 @@ export default function ProfilePage() {
                           </Stack>
                         </Stack>
                       </Grid>
-                      <Grid item>
+                      <Grid>
                         <Tooltip title="Logout">
                           <IconButton size="large" color="error" sx={{ p: 1 }} onClick={handleLogout}>
                             <Logout variant="Bulk" />

@@ -27,6 +27,7 @@ function MainCard(
     secondary,
     sx = {},
     title,
+    shadow,
     codeHighlight = false,
     modal = false,
     ...others
@@ -45,6 +46,7 @@ function MainCard(
         border: border ? '1px solid' : 'none',
         borderRadius: 1.5,
         borderColor: theme.palette.divider,
+        boxShadow: shadow ? shadow : 'none',
         ...(codeHighlight && {
           '& pre': {
             m: 0,

@@ -7,23 +7,35 @@ import { DRAWER_WIDTH } from 'config';
 
 // ==============================|| HEADER - APP BAR STYLED ||============================== //
 
-const AppBarStyled = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
+const AppBarStyled = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'open' })(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
+
   transition: theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen
   }),
-  ...(!open && {
-    width: `100%`
-  }),
-  ...(open && {
-    marginLeft: DRAWER_WIDTH,
-    width: `calc(100% - ${DRAWER_WIDTH}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  })
+
+  variants: [
+    {
+      props: ({ open }) => !open,
+
+      style: {
+        width: `100%`
+      }
+    },
+    {
+      props: ({ open }) => open,
+
+      style: {
+        marginLeft: DRAWER_WIDTH,
+        width: `calc(100% - ${DRAWER_WIDTH}px)`,
+        transition: theme.transitions.create(['width', 'margin'], {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.enteringScreen
+        })
+      }
+    }
+  ]
 }));
 
 export default AppBarStyled;

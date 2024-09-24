@@ -1,6 +1,6 @@
 // material-ui
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import List from '@mui/material/List';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -23,7 +23,7 @@ export default function ProjectRelease() {
   return (
     <MainCard title="Project - Able Pro    ">
       <Grid container spacing={1.5}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Stack spacing={1}>
             <Stack direction="row" alignItems="center" justifyContent="space-between">
               <Typography>Release v1.2.0</Typography>
@@ -32,7 +32,7 @@ export default function ProjectRelease() {
             <LinearProgress variant="determinate" value={72} />
           </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <List>
             <ListItemButton sx={{ flexWrap: 'wrap', rowGap: 1 }}>
               <ListItemIcon>
@@ -69,7 +69,7 @@ export default function ProjectRelease() {
             </ListItemButton>
           </List>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Button fullWidth variant="contained" startIcon={<Add />}>
             Add task
           </Button>

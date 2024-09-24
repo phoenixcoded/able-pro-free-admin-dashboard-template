@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -137,34 +137,30 @@ export default function ProjectOverview() {
           <ListItemButton onClick={handleClose}>Monthly</ListItemButton>
         </Menu>
       </Stack>
-      <Grid container spacing={3} sx={{ mt: 1 }}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Grid container spacing={1} alignItems="flex-end">
-            <Grid item xs={6}>
-              <Stack spacing={0.25}>
-                <Typography color="text.secondary">Total Tasks</Typography>
-                <Typography variant="h5">34,686</Typography>
-              </Stack>
-            </Grid>
-            <Grid item xs={6}>
-              <TaskStatusChart color={theme.palette.primary.main} data={[5, 25, 3, 10, 4, 50, 0]} />
-            </Grid>
+      <Grid container spacing={3} sx={{ mt: 1, pt: 3 }}>
+        <Grid container spacing={1} size={{ xs: 12, sm: 6, md: 4 }} alignItems="flex-end">
+          <Grid size={6}>
+            <Stack spacing={0.25}>
+              <Typography color="text.secondary">Total Tasks</Typography>
+              <Typography variant="h5">34,686</Typography>
+            </Stack>
+          </Grid>
+          <Grid size={6}>
+            <TaskStatusChart color={theme.palette.primary.main} data={[5, 25, 3, 10, 4, 50, 0]} />
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Grid container spacing={1}>
-            <Grid item xs={6}>
-              <Stack spacing={0.25}>
-                <Typography color="text.secondary">Pending Tasks</Typography>
-                <Typography variant="h5">3,6786</Typography>
-              </Stack>
-            </Grid>
-            <Grid item xs={6}>
-              <TaskStatusChart color={theme.palette.error.main} data={[0, 50, 4, 10, 3, 25, 5]} />
-            </Grid>
+        <Grid container spacing={1} size={{ xs: 12, sm: 6, md: 4 }}>
+          <Grid size={6}>
+            <Stack spacing={0.25}>
+              <Typography color="text.secondary">Pending Tasks</Typography>
+              <Typography variant="h5">3,6786</Typography>
+            </Stack>
+          </Grid>
+          <Grid size={6}>
+            <TaskStatusChart color={theme.palette.error.main} data={[0, 50, 4, 10, 3, 25, 5]} />
           </Grid>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Button fullWidth variant="contained" startIcon={<Add />} size="large">
             Add project
           </Button>

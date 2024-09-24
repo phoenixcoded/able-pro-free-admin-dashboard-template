@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 // material-ui
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -32,7 +32,7 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
   return (
     <MainCard>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Stack direction="row" alignItems="center" justifyContent="space-between">
             <Stack direction="row" alignItems="center" spacing={2}>
               <Avatar variant="rounded" color={color}>
@@ -74,14 +74,12 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
             </Menu>
           </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <MainCard content={false} border={false} sx={{ bgcolor: 'background.default' }}>
             <Box sx={{ p: 3, pb: 1.25 }}>
               <Grid container spacing={3}>
-                <Grid item xs={7}>
-                  {children}
-                </Grid>
-                <Grid item xs={5}>
+                <Grid size={7}>{children}</Grid>
+                <Grid size={5}>
                   <Stack spacing={1}>
                     <Typography variant="h5">{count}</Typography>
                     {percentage}

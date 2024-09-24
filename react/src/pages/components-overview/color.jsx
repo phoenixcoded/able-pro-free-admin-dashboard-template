@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -31,21 +31,17 @@ function ColorBox({ bgcolor, title, data, dark, main }) {
           }}
         >
           {title && (
-            <Grid container justifyContent="space-around" alignItems="center">
-              <Grid item>
-                {data && (
-                  <Stack spacing={0.75} alignItems="center">
-                    <Typography variant="subtitle2">{data.label}</Typography>
-                    <Typography variant="subtitle1">{data.color}</Typography>
-                  </Stack>
-                )}
-              </Grid>
-              <Grid item>
-                <Typography variant="subtitle1" color="inherit">
-                  {title}
-                </Typography>
-              </Grid>
-            </Grid>
+            <Stack direction="row" width="100%" justifyContent="space-around" alignItems="center">
+              {data && (
+                <Stack spacing={0.75} alignItems="center">
+                  <Typography variant="subtitle2">{data.label}</Typography>
+                  <Typography variant="subtitle1">{data.color}</Typography>
+                </Stack>
+              )}
+              <Typography variant="subtitle1" color="inherit">
+                {title}
+              </Typography>
+            </Stack>
           )}
         </Box>
       </Card>
@@ -67,7 +63,7 @@ export default function ComponentColor() {
       />
       <ComponentWrapper>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <MainCard title="Primary Color">
               <Stack>
                 <ColorBox
@@ -112,7 +108,7 @@ export default function ComponentColor() {
               </Stack>
             </MainCard>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <MainCard title="Secondary Color">
               <Stack>
                 <ColorBox
@@ -174,7 +170,7 @@ export default function ComponentColor() {
             </MainCard>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <MainCard title="Success Color">
               <Stack>
                 <ColorBox
@@ -204,7 +200,7 @@ export default function ComponentColor() {
               </Stack>
             </MainCard>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <MainCard title="Error Color">
               <Stack>
                 <ColorBox
@@ -220,7 +216,7 @@ export default function ComponentColor() {
               </Stack>
             </MainCard>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <MainCard title="Warning Color">
               <Stack>
                 <ColorBox

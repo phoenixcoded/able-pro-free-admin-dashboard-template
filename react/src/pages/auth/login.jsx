@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 // material-ui
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -23,34 +23,28 @@ export default function Login() {
   return (
     <AuthWrapper>
       <Grid container spacing={3}>
-        <Grid item xs={12} sx={{ textAlign: 'center' }}>
+        <Grid sx={{ textAlign: 'center' }} size={12}>
           <Logo />
         </Grid>
-        <Grid item xs={12}>
-          <Grid container spacing={1}>
-            <Grid item xs={12}>
-              <AuthSocButton>
-                <img src={imgFacebook} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Facebook
-              </AuthSocButton>
-            </Grid>
-            <Grid item xs={12}>
-              <AuthSocButton>
-                <img src={imgTwitter} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Twitter
-              </AuthSocButton>
-            </Grid>
-            <Grid item xs={12}>
-              <AuthSocButton>
-                <img src={imgGoogle} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Google
-              </AuthSocButton>
-            </Grid>
-          </Grid>
+        <Grid size={12}>
+          <Stack spacing={1} alignItems="center">
+            <AuthSocButton>
+              <img src={imgFacebook} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Facebook
+            </AuthSocButton>
+            <AuthSocButton>
+              <img src={imgTwitter} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Twitter
+            </AuthSocButton>
+            <AuthSocButton>
+              <img src={imgGoogle} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Google
+            </AuthSocButton>
+          </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <AuthDivider>
             <Typography variant="body1">OR</Typography>
           </AuthDivider>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Stack direction="row" justifyContent="space-between" alignItems="baseline" sx={{ mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h3">Login</Typography>
             <Typography component={Link} to={'/auth/register'} variant="body1" sx={{ textDecoration: 'none' }} color="primary">
@@ -58,7 +52,7 @@ export default function Login() {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <AuthLogin forgot="/auth/forgot-password" />
         </Grid>
       </Grid>

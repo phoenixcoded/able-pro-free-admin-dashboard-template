@@ -1,8 +1,5 @@
 import PropTypes from 'prop-types';
 
-// material-ui
-import { useTheme } from '@mui/material/styles';
-
 // project-imports
 import DrawerHeaderStyled from './DrawerHeaderStyled';
 
@@ -12,11 +9,8 @@ import { HEADER_HEIGHT } from 'config';
 // ==============================|| DRAWER HEADER ||============================== //
 
 export default function DrawerHeader({ open }) {
-  const theme = useTheme();
-
   return (
     <DrawerHeaderStyled
-      theme={theme}
       open={open}
       sx={{
         minHeight: HEADER_HEIGHT,

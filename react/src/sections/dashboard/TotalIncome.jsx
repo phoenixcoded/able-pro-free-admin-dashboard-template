@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -112,7 +112,7 @@ export default function TotalIncome() {
   return (
     <MainCard>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
             <Typography variant="h5">Total Income</Typography>
             <IconButton
@@ -140,10 +140,10 @@ export default function TotalIncome() {
             </Menu>
           </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <ApexDonutChart />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <MainCard content={false} border="false" sx={{ bgcolor: 'background.default' }}>
             <Stack alignItems="flex-start" sx={{ p: 2 }} spacing={0.5}>
               <Stack direction="row" alignItems="center" spacing={1}>
@@ -164,7 +164,7 @@ export default function TotalIncome() {
             </Stack>
           </MainCard>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <MainCard content={false} border="false" sx={{ bgcolor: 'background.default' }}>
             <Stack alignItems="flex-start" sx={{ p: 2 }} spacing={0.5}>
               <Stack direction="row" alignItems="center" spacing={1}>
@@ -184,7 +184,7 @@ export default function TotalIncome() {
             </Stack>
           </MainCard>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <MainCard content={false} border="false" sx={{ bgcolor: 'background.default' }}>
             <Stack alignItems="flex-start" sx={{ p: 2 }} spacing={0.5}>
               <Stack direction="row" alignItems="center" spacing={1}>
@@ -204,7 +204,7 @@ export default function TotalIncome() {
             </Stack>
           </MainCard>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <MainCard content={false} border="false" sx={{ bgcolor: 'background.default' }}>
             <Stack alignItems="flex-start" sx={{ p: 2 }} spacing={0.5}>
               <Stack direction="row" alignItems="center" spacing={1}>

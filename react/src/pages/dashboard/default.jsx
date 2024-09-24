@@ -1,6 +1,6 @@
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -27,12 +27,17 @@ export default function DashboardDefault() {
 
   return (
     <Grid container rowSpacing={4.5} columnSpacing={2.75}>
-      <Grid item xs={12}>
+      <Grid size={12}>
         <WelcomeBanner />
       </Grid>
-
       {/* row 1 */}
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid
+        size={{
+          xs: 12,
+          sm: 6,
+          lg: 3
+        }}
+      >
         <EcommerceDataCard
           title="All Earnings"
           count="$3000"
@@ -46,7 +51,13 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.primary.main} />
         </EcommerceDataCard>
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid
+        size={{
+          xs: 12,
+          sm: 6,
+          lg: 3
+        }}
+      >
         <EcommerceDataCard
           title="Page Views"
           count="290+"
@@ -61,7 +72,13 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.warning.dark} />
         </EcommerceDataCard>
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid
+        size={{
+          xs: 12,
+          sm: 6,
+          lg: 3
+        }}
+      >
         <EcommerceDataCard
           title="Total task"
           count="1,568"
@@ -76,7 +93,13 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.success.darker} />
         </EcommerceDataCard>
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid
+        size={{
+          xs: 12,
+          sm: 6,
+          lg: 3
+        }}
+      >
         <EcommerceDataCard
           title="Download"
           count="$200"
@@ -91,30 +114,46 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.error.dark} />
         </EcommerceDataCard>
       </Grid>
-
       {/* row 2 */}
-      <Grid item xs={12} md={8} lg={9}>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <RepeatCustomerRate />
-          </Grid>
-          <Grid item xs={12}>
-            <ProjectOverview />
-          </Grid>
-        </Grid>
+      <Grid
+        size={{
+          xs: 12,
+          md: 8,
+          lg: 9
+        }}
+      >
+        <Stack spacing={3}>
+          <RepeatCustomerRate />
+          <ProjectOverview />
+        </Stack>
       </Grid>
-      <Grid item xs={12} md={4} lg={3}>
+      <Grid
+        size={{
+          xs: 12,
+          md: 4,
+          lg: 3
+        }}
+      >
         <Stack spacing={3}>
           <ProjectRelease />
           <AssignUsers />
         </Stack>
       </Grid>
-
       {/* row 3 */}
-      <Grid item xs={12} md={6}>
+      <Grid
+        size={{
+          xs: 12,
+          md: 6
+        }}
+      >
         <Transactions />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid
+        size={{
+          xs: 12,
+          md: 6
+        }}
+      >
         <TotalIncome />
       </Grid>
     </Grid>
