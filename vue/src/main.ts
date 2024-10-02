@@ -5,7 +5,7 @@ import { router } from './router';
 import vuetify from './plugins/vuetify';
 
 import '@/scss/style.scss';
-import PerfectScrollbar from 'vue3-perfect-scrollbar';
+import { PerfectScrollbarPlugin } from 'vue3-perfect-scrollbar';
 import VueApexCharts from 'vue3-apexcharts';
 import VueTablerIcons from 'vue-tabler-icons';
 
@@ -38,7 +38,7 @@ const app = createApp(App);
 fakeBackend();
 
 app.use(router);
-app.use(PerfectScrollbar);
+app.use(PerfectScrollbarPlugin);
 app.component('SvgSprite', SvgSprite);
 app.use(createPinia());
 app.use(VueTablerIcons);

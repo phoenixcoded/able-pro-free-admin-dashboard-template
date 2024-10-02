@@ -18,8 +18,9 @@ const sidebarMenu = shallowRef(sidebarItems);
     left
     v-model="customizer.Sidebar_drawer"
     elevation="0"
-    rail-width="60"
+    rail-width="90"
     mobile-breakpoint="lg"
+    width="279"
     app
     class="leftSidebar"
     :rail="customizer.mini_sidebar"

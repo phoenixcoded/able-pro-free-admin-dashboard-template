@@ -32,8 +32,8 @@ const menulist = ref(['Today', 'Weekly', 'Monthly']);
         </v-list-item>
         <v-list-item class="px-0 pb-0 pt-4">
           <div class="d-flex justify-space-between">
-            <div class="d-flex align-center justify-center flex-wrap groupingAvatar flex-row-reverse">
-              <v-avatar size="35" variant="tonal" color="primary" class="ml-n2">
+            <div class="d-flex align-center justify-center flex-wrap flex-row-reverse">
+              <v-avatar size="35" variant="tonal" color="primary" class="ml-n2 cursor-pointer">
                 +2
                 <v-tooltip activator="parent" location="top" aria-label="tooltip">
                   <div class="d-flex align-center justify-center flex-wrap flex-row-reverse">
@@ -46,13 +46,13 @@ const menulist = ref(['Today', 'Weekly', 'Monthly']);
                   </div>
                 </v-tooltip>
               </v-avatar>
-              <v-avatar size="35" variant="outlined" color="surface" class="ml-n2">
+              <v-avatar size="35" variant="outlined" color="surface" class="ml-n2 cursor-pointer">
                 <img src="@/assets/images/users/avatar-3.png" width="35" alt="vector" />
               </v-avatar>
-              <v-avatar size="35" variant="outlined" color="surface" class="ml-n2">
+              <v-avatar size="35" variant="outlined" color="surface" class="ml-n2 cursor-pointer">
                 <img src="@/assets/images/users/avatar-2.png" width="35" alt="vector" />
               </v-avatar>
-              <v-avatar size="35" variant="outlined" color="surface">
+              <v-avatar size="35" variant="outlined" class="cursor-pointer" color="surface">
                 <img src="@/assets/images/users/avatar-1.png" width="35" alt="vector" />
               </v-avatar>
             </div>

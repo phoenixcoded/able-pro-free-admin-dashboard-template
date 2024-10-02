@@ -2,18 +2,9 @@
 .leftSidebar {
   border: 0px;
   box-shadow: none !important;
-  width: 279px !important;
   @media (min-width: 1279px) {
     background-color: rgb(var(--v-theme-containerBg));
     border-right: 1px dashed rgba(var(--v-theme-inputBorder));
-  }
-  &.v-navigation-drawer--rail {
-    width: 90px !important;
-    box-shadow: var(--v-card-shadow) !important;
-    border-right: none;
-    &.v-navigation-drawer--is-hovering {
-      width: 279px !important;
-    }
   }
   .logo {
     padding-left: 7px;

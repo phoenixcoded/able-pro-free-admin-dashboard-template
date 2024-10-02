@@ -43,9 +43,3 @@
 .v-btn-group--divided .v-btn:not(:last-child) {
   border-inline-end-color: rgba(var(--v-border-color), 1);
 }
-
-@each $color, $value in $theme-colors {
-  .#{$color}-dashed {
-    border: 1px dashed rgb(#{$value});
-  }
-}
