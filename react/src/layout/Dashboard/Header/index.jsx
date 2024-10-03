@@ -12,8 +12,6 @@ import AppBarStyled from './AppBarStyled';
 import HeaderContent from './HeaderContent';
 import IconButton from 'components/@extended/IconButton';
 
-import { DRAWER_WIDTH } from 'config';
-
 // assets
 import { HambergerMenu } from 'iconsax-react';
 
@@ -59,8 +57,7 @@ export default function Header({ open, handleDrawerToggle }) {
     sx: {
       bgcolor: alpha(theme.palette.background.default, 0.8),
       backdropFilter: 'blur(8px)',
-      zIndex: 1200,
-      width: open ? `calc(100% - ${DRAWER_WIDTH}px)` : '100%'
+      zIndex: 1200
     }
   };
 

@@ -12,6 +12,14 @@
   gap: 8px;
 }
 
+.apexcharts-tooltip-title {
+  margin-bottom: 0;
+}
+
+.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active, .apexcharts-canvas .apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 0px;
+}
+
 html[dir='rtl'] .apexcharts-tooltip .apexcharts-tooltip-marker {
   margin-left: 10px;
   margin-right: 0px;

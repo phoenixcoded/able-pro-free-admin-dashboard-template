@@ -9,8 +9,18 @@ import Typography from '@mui/material/Typography';
 
 export default function Footer() {
   return (
-    <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ p: '24px 16px 0px', mt: 'auto' }}>
-      <Typography variant="caption">&copy; Able Pro ♥ crafted by Team Phoenixcoded</Typography>
+    <Stack
+      direction="row"
+      justifyContent={{ xs: 'center', sm: 'space-between' }}
+      alignItems="center"
+      sx={{ p: '24px 16px 0px', mt: 'auto', flexWrap: { xs: 'wrap', sm: 'unset' }, gap: 0.5 }}
+    >
+      <Typography variant="caption">
+        &copy; Able Pro ♥ crafted by Team{' '}
+        <Link component={RouterLink} to="https://phoenixcoded.authordesk.app/" target="_blank" variant="caption" color="text.primary">
+          Phoenixcoded
+        </Link>
+      </Typography>
       <Stack spacing={1.5} direction="row" justifyContent="space-between" alignItems="center">
         <Link component={RouterLink} to="https://ableproadmin.com/react" target="_blank" variant="caption" color="text.primary">
           Home

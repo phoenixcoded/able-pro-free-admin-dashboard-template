@@ -44,6 +44,9 @@ export default function EcommerceDataChart({ color, height }) {
       fixed: {
         enabled: false
       },
+      marker: {
+        show: false
+      },
       x: {
         show: false
       }

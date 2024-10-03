@@ -175,7 +175,7 @@ export default function ComponentShadow() {
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.warning.contrastText}
+                    color={theme.palette.common.white}
                     bgcolor="warning.main"
                     shadow={theme.customShadows.warningButton}
                     label="warning"

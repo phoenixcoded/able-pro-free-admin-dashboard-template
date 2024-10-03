@@ -13,7 +13,7 @@ import { Code1, Link1 } from 'iconsax-react';
 
 export default function ComponentHeader({ title, caption, directory, link }) {
   return (
-    <Box sx={{ pl: { xs: 1.5, sm: 3, xl: 8 } }}>
+    <Box>
       <Stack spacing={1.25}>
         <Typography variant="h2" sx={{ fontWeight: 700 }}>
           {title}

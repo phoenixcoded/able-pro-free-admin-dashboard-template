@@ -41,7 +41,7 @@ export default function WelcomeBanner() {
       }}
     >
       <Grid container>
-        <Grid size={{ md: 6, sm: 6, xs: 12 }}>
+        <Grid size={{ xs: 12, sm: 6, md: 6 }}>
           <Stack spacing={2} sx={{ padding: 3 }}>
             <Typography variant="h2" color={theme.palette.background.paper}>
               Explore Redesigned Able Pro
@@ -67,7 +67,7 @@ export default function WelcomeBanner() {
             </Box>
           </Stack>
         </Grid>
-        <Grid sx={{ display: { xs: 'none', sm: 'initial' } }} size={{ sm: 6, xs: 12 }}>
+        <Grid sx={{ display: { xs: 'none', sm: 'initial' } }} size={{ xs: 12, sm: 6 }}>
           <Stack sx={{ position: 'relative', pr: { sm: 3, md: 8 }, zIndex: 2 }} justifyContent="center" alignItems="flex-end">
             <img src={WelcomeImage} alt="Welcome" width="200px" />
           </Stack>

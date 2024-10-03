@@ -31,13 +31,7 @@ export default function DashboardDefault() {
         <WelcomeBanner />
       </Grid>
       {/* row 1 */}
-      <Grid
-        size={{
-          xs: 12,
-          sm: 6,
-          lg: 3
-        }}
-      >
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <EcommerceDataCard
           title="All Earnings"
           count="$3000"
@@ -51,13 +45,7 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.primary.main} />
         </EcommerceDataCard>
       </Grid>
-      <Grid
-        size={{
-          xs: 12,
-          sm: 6,
-          lg: 3
-        }}
-      >
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <EcommerceDataCard
           title="Page Views"
           count="290+"
@@ -72,13 +60,7 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.warning.dark} />
         </EcommerceDataCard>
       </Grid>
-      <Grid
-        size={{
-          xs: 12,
-          sm: 6,
-          lg: 3
-        }}
-      >
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <EcommerceDataCard
           title="Total task"
           count="1,568"
@@ -93,13 +75,7 @@ export default function DashboardDefault() {
           <EcommerceDataChart color={theme.palette.success.darker} />
         </EcommerceDataCard>
       </Grid>
-      <Grid
-        size={{
-          xs: 12,
-          sm: 6,
-          lg: 3
-        }}
-      >
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <EcommerceDataCard
           title="Download"
           count="$200"
@@ -115,45 +91,27 @@ export default function DashboardDefault() {
         </EcommerceDataCard>
       </Grid>
       {/* row 2 */}
-      <Grid
-        size={{
-          xs: 12,
-          md: 8,
-          lg: 9
-        }}
-      >
-        <Stack spacing={3}>
-          <RepeatCustomerRate />
-          <ProjectOverview />
-        </Stack>
+      <Grid size={{ xs: 12, md: 8, lg: 9 }}>
+        <Grid container columns={12} spacing={3}>
+          <Grid size={12}>
+            <RepeatCustomerRate />
+          </Grid>
+          <Grid size={12}>
+            <ProjectOverview />
+          </Grid>
+        </Grid>
       </Grid>
-      <Grid
-        size={{
-          xs: 12,
-          md: 4,
-          lg: 3
-        }}
-      >
-        <Stack spacing={3}>
+      <Grid size={{ xs: 12, md: 4, lg: 3 }}>
+        <Stack gap={3}>
           <ProjectRelease />
           <AssignUsers />
         </Stack>
       </Grid>
       {/* row 3 */}
-      <Grid
-        size={{
-          xs: 12,
-          md: 6
-        }}
-      >
+      <Grid size={{ xs: 12, md: 6 }}>
         <Transactions />
       </Grid>
-      <Grid
-        size={{
-          xs: 12,
-          md: 6
-        }}
-      >
+      <Grid size={{ xs: 12, md: 6 }}>
         <TotalIncome />
       </Grid>
     </Grid>

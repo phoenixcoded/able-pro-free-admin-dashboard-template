@@ -140,7 +140,7 @@ export default function ProjectOverview() {
       <Grid container spacing={3} sx={{ mt: 1, pt: 3 }}>
         <Grid container spacing={1} size={{ xs: 12, sm: 6, md: 4 }} alignItems="flex-end">
           <Grid size={6}>
-            <Stack spacing={0.25}>
+            <Stack gap={0.25}>
               <Typography color="text.secondary">Total Tasks</Typography>
               <Typography variant="h5">34,686</Typography>
             </Stack>
@@ -151,7 +151,7 @@ export default function ProjectOverview() {
         </Grid>
         <Grid container spacing={1} size={{ xs: 12, sm: 6, md: 4 }}>
           <Grid size={6}>
-            <Stack spacing={0.25}>
+            <Stack gap={0.25}>
               <Typography color="text.secondary">Pending Tasks</Typography>
               <Typography variant="h5">3,6786</Typography>
             </Stack>

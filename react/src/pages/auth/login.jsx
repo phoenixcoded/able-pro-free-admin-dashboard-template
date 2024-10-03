@@ -27,7 +27,7 @@ export default function Login() {
           <Logo />
         </Grid>
         <Grid size={12}>
-          <Stack spacing={1} alignItems="center">
+          <Stack gap={1} alignItems="center">
             <AuthSocButton>
               <img src={imgFacebook} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Facebook
             </AuthSocButton>
