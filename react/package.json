@@ -1,6 +1,6 @@
 {
   "name": "able-pro-react-free-admin-dashboard",
-  "version": "1.3.0",
+  "version": "2.5.0",
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^3.0.0",

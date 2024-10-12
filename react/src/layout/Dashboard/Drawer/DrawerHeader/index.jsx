@@ -14,7 +14,7 @@ export default function DrawerHeader({ open }) {
       open={open}
       sx={{
         minHeight: HEADER_HEIGHT,
-        width: 'inherit',
+        width: 'initial',
         paddingTop: '8px',
         paddingBottom: '8px',
         paddingLeft: open ? '24px' : 0
