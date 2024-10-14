@@ -12,6 +12,7 @@ import DrawerHeader from './DrawerHeader';
 import DrawerContent from './DrawerContent';
 import MiniDrawerStyled from './MiniDrawerStyled';
 
+import { useSelector } from 'store';
 import { DRAWER_WIDTH } from 'config';
 
 // ==============================|| MAIN LAYOUT - DRAWER ||============================== //
@@ -19,6 +20,7 @@ import { DRAWER_WIDTH } from 'config';
 export default function MainDrawer({ open, handleDrawerToggle, window }) {
   const theme = useTheme();
   const downLG = useMediaQuery(theme.breakpoints.down('lg'));
+  const { drawerOpen } = useSelector((state) => state.menu);
 
   // responsive drawer container
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -42,7 +44,7 @@ export default function MainDrawer({ open, handleDrawerToggle, window }) {
           onClose={handleDrawerToggle}
           ModalProps={{ keepMounted: true }}
           sx={{
-            display: { xs: 'block', lg: 'none' },
+            display: { xs: drawerOpen ? 'block' : 'none', lg: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: DRAWER_WIDTH,
