@@ -9,7 +9,6 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Paper from '@mui/material/Paper';
@@ -27,12 +26,14 @@ import Transitions from 'components/@extended/Transitions';
 import { Gift, MessageText1, Notification, Setting2 } from 'iconsax-react';
 
 const actionSX = {
-  mt: '6px',
+  mt: 1,
   ml: 1,
   top: 'auto',
   right: 'auto',
   alignSelf: 'flex-start',
-  transform: 'none'
+  transform: 'none',
+  position: 'relative',
+  overflow: 'inherit'
 };
 
 // ==============================|| HEADER CONTENT - NOTIFICATION ||============================== //
@@ -111,120 +112,96 @@ export default function NotificationPage() {
                         p: 1.5,
                         my: 1.5,
                         border: `1px solid ${theme.palette.divider}`,
-                        '&:hover': { bgcolor: 'primary.lighter', borderColor: theme.palette.primary.light },
-                        '& .MuiListItemSecondaryAction-root': { ...actionSX, position: 'relative' },
-                        '& .MuiListItem-root': { p: 0 }
+                        '&:hover': { bgcolor: 'primary.lighter', borderColor: theme.palette.primary.light }
                       }
                     }}
                   >
                     <ListItemButton>
-                      <ListItem
-                        secondaryAction={
-                          <Typography variant="caption" noWrap>
-                            3:00 AM
+                      <ListItemAvatar>
+                        <Avatar type="filled">
+                          <Gift size={20} variant="Bold" />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={
+                          <Typography variant="h6">
+                            It&apos;s{' '}
+                            <Typography component="span" variant="subtitle1">
+                              Cristina danny&apos;s
+                            </Typography>{' '}
+                            birthday today.
                           </Typography>
                         }
-                      >
-                        <ListItemAvatar>
-                          <Avatar type="filled">
-                            <Gift size={20} variant="Bold" />
-                          </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary={
-                            <Typography variant="h6">
-                              It&apos;s{' '}
-                              <Typography component="span" variant="subtitle1">
-                                Cristina danny&apos;s
-                              </Typography>{' '}
-                              birthday today.
-                            </Typography>
-                          }
-                          secondary="2 min ago"
-                        />
-                      </ListItem>
+                        secondary="2 min ago"
+                      />
+                      <Typography sx={actionSX} variant="caption" noWrap>
+                        3:00 AM
+                      </Typography>
+                    </ListItemButton>
+                    <ListItemButton>
+                      <ListItemAvatar>
+                        <Avatar type="outlined">
+                          <MessageText1 size={20} variant="Bold" />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={
+                          <Typography variant="h6">
+                            <Typography component="span" variant="subtitle1">
+                              Aida Burg
+                            </Typography>{' '}
+                            commented your post.
+                          </Typography>
+                        }
+                        secondary="5 August"
+                      />
+                      <Typography sx={actionSX} variant="caption" noWrap>
+                        6:00 PM
+                      </Typography>
+                    </ListItemButton>
+                    <ListItemButton>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <Setting2 size={20} variant="Bold" />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={
+                          <Typography variant="h6">
+                            Your Profile is Complete &nbsp;
+                            <Typography component="span" variant="subtitle1">
+                              60%
+                            </Typography>{' '}
+                          </Typography>
+                        }
+                        secondary="7 hours ago"
+                      />
+                      <Typography sx={actionSX} variant="caption" noWrap>
+                        2:45 PM
+                      </Typography>
                     </ListItemButton>
 
                     <ListItemButton>
-                      <ListItem
-                        secondaryAction={
-                          <Typography variant="caption" noWrap>
-                            6:00 PM
+                      <ListItemAvatar>
+                        <Avatar type="combined">C</Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={
+                          <Typography variant="h6">
+                            <Typography component="span" variant="subtitle1">
+                              Cristina Danny
+                            </Typography>{' '}
+                            invited to join{' '}
+                            <Typography component="span" variant="subtitle1">
+                              Meeting.
+                            </Typography>
                           </Typography>
                         }
-                      >
-                        <ListItemAvatar>
-                          <Avatar type="outlined">
-                            <MessageText1 size={20} variant="Bold" />
-                          </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary={
-                            <Typography variant="h6">
-                              <Typography component="span" variant="subtitle1">
-                                Aida Burg
-                              </Typography>{' '}
-                              commented your post.
-                            </Typography>
-                          }
-                          secondary="5 August"
-                        />
-                      </ListItem>
-                    </ListItemButton>
-
-                    <ListItemButton>
-                      <ListItem
-                        secondaryAction={
-                          <Typography variant="caption" noWrap>
-                            2:45 PM
-                          </Typography>
-                        }
-                      >
-                        <ListItemAvatar>
-                          <Avatar>
-                            <Setting2 size={20} variant="Bold" />
-                          </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary={
-                            <Typography variant="h6">
-                              Your Profile is Complete &nbsp;
-                              <Typography component="span" variant="subtitle1">
-                                60%
-                              </Typography>{' '}
-                            </Typography>
-                          }
-                          secondary="7 hours ago"
-                        />
-                      </ListItem>
-                    </ListItemButton>
-
-                    <ListItemButton>
-                      <ListItem
-                        secondaryAction={
-                          <Typography variant="caption" noWrap>
-                            9:10 PM
-                          </Typography>
-                        }
-                      >
-                        <ListItemAvatar>
-                          <Avatar type="combined">C</Avatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary={
-                            <Typography variant="h6">
-                              <Typography component="span" variant="subtitle1">
-                                Cristina Danny
-                              </Typography>{' '}
-                              invited to join{' '}
-                              <Typography component="span" variant="subtitle1">
-                                Meeting.
-                              </Typography>
-                            </Typography>
-                          }
-                          secondary="Daily scrum meeting time"
-                        />
-                      </ListItem>
+                        secondary="Daily scrum meeting time"
+                      />
+                      <Typography sx={actionSX} variant="caption" noWrap>
+                        9:10 PM
+                      </Typography>
                     </ListItemButton>
                   </List>
                   <Stack direction="row" justifyContent="center">
