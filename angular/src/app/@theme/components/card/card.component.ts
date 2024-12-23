@@ -1,5 +1,5 @@
 // angular import
-import { Component, ContentChild, ElementRef, TemplateRef, contentChild, input } from '@angular/core';
+import { Component, ContentChild, ElementRef, TemplateRef, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 

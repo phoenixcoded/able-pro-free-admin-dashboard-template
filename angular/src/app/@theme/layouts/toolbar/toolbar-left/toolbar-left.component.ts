@@ -14,7 +14,6 @@ import { SharedModule } from 'src/app/demo/shared/shared.module';
 export class NavLeftComponent {
   private layoutService = inject(LayoutService);
 
-
   // public method
   toggleMenu() {
     this.layoutService.toggleSideDrawer();

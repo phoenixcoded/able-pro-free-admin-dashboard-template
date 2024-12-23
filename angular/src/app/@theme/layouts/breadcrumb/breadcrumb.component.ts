@@ -66,7 +66,6 @@ export class BreadcrumbComponent {
         ];
       }
       if ((navItem.type === 'group' || navItem.type === 'collapse') && 'children' in navItem) {
-        // eslint-disable-next-line
         const breadcrumbList = this.filterNavigation(navItem.children!, activeLink);
         if (breadcrumbList.length > 0) {
           breadcrumbList.unshift({
