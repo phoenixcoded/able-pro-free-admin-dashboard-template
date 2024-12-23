@@ -1,6 +1,8 @@
 // Angular import
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 // Project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
@@ -8,18 +10,16 @@ import { LayoutService } from 'src/app/@theme/services/layout.service';
 
 @Component({
   selector: 'app-menu-item',
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.scss']
 })
 export class MenuItemComponent {
+  private layoutService = inject(LayoutService);
+  private sanitizer = inject(DomSanitizer);
+
   // public props
   @Input() item!: NavigationItem;
-
-  // Constructor
-  constructor(
-    private layoutService: LayoutService,
-    private sanitizer: DomSanitizer
-  ) {}
 
   // public method
   toggleMenu(event: MouseEvent) {

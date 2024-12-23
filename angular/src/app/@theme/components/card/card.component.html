@@ -1,20 +1,20 @@
-<mat-card [ngClass]="cardClass">
-  @if (showHeader) {
-    <mat-card-header class="card-header justify-content-between align-item-center" [ngClass]="headerClass">
+<mat-card [ngClass]="cardClass()">
+  @if (showHeader()) {
+    <mat-card-header class="card-header justify-content-between align-item-center" [ngClass]="headerClass()">
       <h5>
-        {{ cardTitle }}
+        {{ cardTitle() }}
         <ng-container *ngTemplateOutlet="headerTitleTemplate"></ng-container>
       </h5>
       <ng-container *ngTemplateOutlet="headerOptionsTemplate"></ng-container>
     </mat-card-header>
   }
-  @if (showContent) {
-    <mat-card-content [style.padding.px]="padding">
+  @if (showContent()) {
+    <mat-card-content [style.padding.px]="padding()">
       <ng-content></ng-content>
     </mat-card-content>
   }
   @if (actionTemplate) {
-    <mat-card-actions [ngClass]="actionClass">
+    <mat-card-actions [ngClass]="actionClass()">
       <ng-container *ngTemplateOutlet="actionTemplate"></ng-container>
     </mat-card-actions>
   }

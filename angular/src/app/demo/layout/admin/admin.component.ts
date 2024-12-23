@@ -1,5 +1,5 @@
 // Angular import
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, inject, viewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDrawer, MatDrawerMode } from '@angular/material/sidenav';
 
@@ -7,24 +7,28 @@ import { MatDrawer, MatDrawerMode } from '@angular/material/sidenav';
 import { menus } from 'src/app/demo/data/menu';
 import { LayoutService } from 'src/app/@theme/services/layout.service';
 import { environment } from 'src/environments/environment';
+import { FooterComponent } from 'src/app/@theme/layouts/footer/footer.component';
+import { BreadcrumbComponent } from 'src/app/@theme/layouts/breadcrumb/breadcrumb.component';
+import { SharedModule } from '../../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { NavBarComponent } from 'src/app/@theme/layouts/toolbar/toolbar.component';
+import { VerticalMenuComponent } from 'src/app/@theme/layouts/menu/vertical-menu';
 
 @Component({
   selector: 'app-admin',
+  imports: [FooterComponent, BreadcrumbComponent, SharedModule, RouterModule, NavBarComponent, VerticalMenuComponent],
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  private breakpointObserver = inject(BreakpointObserver);
+  private layoutService = inject(LayoutService);
+
   // public props
-  @ViewChild('sidebar') sidebar!: MatDrawer;
+  sidebar = viewChild<MatDrawer>('sidebar');
   menus = menus;
   modeValue: MatDrawerMode = 'side';
   currentApplicationVersion = environment.appVersion;
-
-  // Constructor
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private layoutService: LayoutService
-  ) {}
 
   // life cycle event
   ngOnInit() {
@@ -37,7 +41,7 @@ export class AdminComponent implements OnInit {
     });
 
     this.layoutService.layoutState.subscribe(() => {
-      this.sidebar.toggle();
+      this.sidebar()?.toggle();
     });
   }
 }

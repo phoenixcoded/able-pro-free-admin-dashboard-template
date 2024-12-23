@@ -6,7 +6,6 @@ import { SharedModule } from 'src/app/demo/shared/shared.module';
 
 @Component({
   selector: 'app-color',
-  standalone: true,
   imports: [SharedModule],
   templateUrl: './color.component.html',
   styleUrls: ['./color.component.scss']

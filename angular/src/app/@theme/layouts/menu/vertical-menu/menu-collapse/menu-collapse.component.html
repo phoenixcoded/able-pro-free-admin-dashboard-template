@@ -11,9 +11,6 @@
   </a>
   <ul class="coded-submenu" [routerLinkActive]="['active']" [ngClass]="item.classes!">
     @for (item of item.children; track item) {
-      @if (item.type === 'group') {
-        <app-menu-group-vertical [item]="item"></app-menu-group-vertical>
-      }
       @if (item.type === 'collapse') {
         <app-menu-collapse [item]="item"></app-menu-collapse>
       }

@@ -1,7 +1,7 @@
 <li class="nav-item coded-menu-caption">
-  <label for="group-title">{{ item.title }}</label>
+  <label for="group-title">{{ item().title }}</label>
 </li>
-@for (item of item.children; track item) {
+@for (item of item().children; track item) {
   @if (item.type === 'group') {
     <app-menu-group-vertical [item]="item"></app-menu-group-vertical>
   }

@@ -1,11 +1,10 @@
 // angular import
-import { Component, ContentChild, ElementRef, Input, TemplateRef } from '@angular/core';
+import { Component, ContentChild, ElementRef, TemplateRef, contentChild, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-card',
-  standalone: true,
   imports: [CommonModule, MatCardModule],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
@@ -16,37 +15,37 @@ export class CardComponent {
   /**
    * Class to be applied at card level
    */
-  @Input() cardClass!: string;
+  readonly cardClass = input<string>();
 
   /**
    * To hide header from card
    */
-  @Input() showHeader = true;
+  readonly showHeader = input(true);
 
   /**
    * To hide content from card
    */
-  @Input() showContent = true;
+  readonly showContent = input(true);
 
   /**
    * Class to be applied on card header
    */
-  @Input() headerClass!: string;
+  readonly headerClass = input<string>();
 
   /**
    * Class to be applied on action section of mat card
    */
-  @Input() actionClass!: string;
+  readonly actionClass = input<string>();
 
   /**
    * Title of card. It will be visible at left side of card header
    */
-  @Input() cardTitle!: string;
+  readonly cardTitle = input<string>();
 
   /**
    * padding around card content. default in px
    */
-  @Input() padding = 24; // set default to 24 px
+  readonly padding = input(24); // set default to 24 px
 
   /**
    * Template reference of header actions on right side
