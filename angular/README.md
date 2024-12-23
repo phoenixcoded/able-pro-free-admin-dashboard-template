@@ -11,7 +11,7 @@ Able Pro is a free Material admin dashboard template built with Angular. It is d
 
 Looking for even more features? Check out Able Pro's Angular [premium version](https://1.envato.market/zNkqj6), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-| [Able-pro Free](https://ableproadmin.com/angular/free) | [Able-Pro Pro Version](https://1.envato.market/zNkqj6) |
+| [Able-pro Free](https://ableproadmin.com/angular/free) | [Able-Pro Pro Version](https://1.envato.market/zNkqj6)      |
 | ------------------------------------------------------ | :---------------------------------------------------------- |
 | **7** Demo pages                                       | **100+** pages                                              |
 | -                                                      | ✓ Modern UserInterface & Easy Developer Experience          |
@@ -26,7 +26,6 @@ Looking for even more features? Check out Able Pro's Angular [premium version](h
 | -                                                      | ✓ Table Variants                                            |
 | -                                                      | ✓ 7+ Conceptual Apps                                        |
 | -                                                      | ✓ Front Pages                                               |
-
 
 ## About Able-pro Angular Admin Dashboard Template?
 
@@ -97,16 +96,17 @@ yarn start
 
 ## Technology Stack
 
-- Angular 17
+- Angular 19.x.x
 - Angular Material
 - TypeScript
 - JWT (i.e. Pro version)
+- Role Base Authentication (i.e. Pro version)
 - Apex Charts
 - npm package installer
 
 ## Author
 
-Able-pro is developed by Team [Phoenixcoded](https://themeforest.net/user/phoenixcoded).
+Able-pro is developed by Team [Phoenixcoded](https://phoenixcoded.net/).
 
 ## Issues
 

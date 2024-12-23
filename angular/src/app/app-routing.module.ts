@@ -21,11 +21,11 @@ const routes: Routes = [
       },
       {
         path: 'component',
-        loadChildren: () => import('./demo/pages/ui-component/ui-component.module').then((m) => m.UiComponentModule)
+        loadChildren: () => import('./demo/pages/components/component.module').then((m) => m.ComponentModule)
       },
       {
         path: 'sample-page',
-        loadComponent: () => import('./demo/pages/sample-page/sample-page.component')
+        loadComponent: () => import('./demo/pages/other/sample-page/sample-page.component')
       }
     ]
   },
