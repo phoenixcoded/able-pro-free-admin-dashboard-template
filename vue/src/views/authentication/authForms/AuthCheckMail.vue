@@ -10,7 +10,7 @@ const router = useRouter();
 function validate() {
   logform.value.validate();
   if (logform.value) {
-    router.push('/auth/login1');
+    router.push('/login1');
   }
 }
 </script>

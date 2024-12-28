@@ -11,20 +11,20 @@ Able Pro is a free vue vuetify admin dashboard template built with Vue. It is de
 
 Looking for even more features? Check out Able Pro's Vue [premium version](https://1.envato.market/B0JAPW), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-| [Able-pro Free](https://ableproadmin.com/vue/free) | [Able-Pro Pro Version](https://1.envato.market/B0JAPW)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Preset Dark/Light Color  🌓                                                                                          |
-| -                                                         | ✓ Vuetify Components                                                                                  |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ Vertical/Horizontal etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/vue/free) | [Able-Pro Pro Version](https://1.envato.market/B0JAPW)      |
+| -------------------------------------------------- | :---------------------------------------------------------- |
+| **7** Demo pages                                   | **100+** pages                                              |
+| -                                                  | ✓ Modern UserInterface & Easy Developer Experience          |
+| -                                                  | ✓ Preset Dark/Light Color 🌓                                |
+| -                                                  | ✓ Vuetify Components                                        |
+| -                                                  | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
+| -                                                  | ✓ 10+ color Presets                                         |
+| -                                                  | ✓ Vertical/Horizontal etc...Layouts                         |
+| -                                                  | ✓ Advance Components                                        |
+| -                                                  | ✓ Form Variants                                             |
+| -                                                  | ✓ Table Variants                                            |
+| -                                                  | ✓ 7+ Conceptual Apps                                        |
+| -                                                  | ✓ Front Pages                                               |
 
 ## About Able-pro Vue Admin Dashboard Template?
 
@@ -111,7 +111,6 @@ npm run dev
 
 Able-pro is developed by Team [Phoenixcoded](https://themeforest.net/user/phoenixcoded).
 Able-pro is managed by Team [CodedThemes](https://codedthemes.com).
-
 
 ## Issues
 

@@ -95,6 +95,7 @@ const profiledata2 = ref([
               base-color="secondary"
               rounded="md"
               :value="item.title"
+              class="mb-1"
             >
               <template v-slot:prepend>
                 <div class="mr-4">
@@ -124,6 +125,7 @@ const profiledata2 = ref([
               base-color="secondary"
               rounded="md"
               :value="item.title"
+              class="mb-1"
             >
               <template v-slot:prepend>
                 <div class="mr-4">

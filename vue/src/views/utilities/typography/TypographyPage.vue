@@ -57,7 +57,7 @@ const link = ref({ filelink: 'https://vuetifyjs.com/en/styles/text-and-typograph
             <h6 class="text-h6 mb-2 mt-3">H6 Heading / Subheading</h6>
             <v-breadcrumbs
               :items="['Size: 14px', 'Weight: Regular', 'Line Height: 22px']"
-              class="text-h6 text-lightText mb-0 pa-0 flex-wrap "
+              class="text-h6 text-lightText mb-0 pa-0 flex-wrap"
             ></v-breadcrumbs>
           </UiParentCard>
         </v-col>

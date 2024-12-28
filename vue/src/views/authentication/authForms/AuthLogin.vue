@@ -9,23 +9,39 @@ const valid = ref(false);
 const show1 = ref(false);
 const password = ref('admin123');
 const username = ref('info@phoenixcoded.co');
+// Password validation rules
 const passwordRules = ref([
   (v: string) => !!v || 'Password is required',
-  (v: string) => (v && v.length <= 10) || 'Password must be less than 10 characters'
+  (v: string) => v === v.trim() || 'Password cannot start or end with spaces',
+  (v: string) => v.length <= 10 || 'Password must be less than 10 characters'
 ]);
-const emailRules = ref([(v: string) => !!v || 'E-mail is required', (v: string) => /.+@.+\..+/.test(v) || 'E-mail must be valid']);
+// Email validation rules
+const emailRules = ref([
+  (v: string) => !!v.trim() || 'E-mail is required',
+  (v: string) => {
+    const trimmedEmail = v.trim();
+    return !/\s/.test(trimmedEmail) || 'E-mail must not contain spaces';
+  },
+  (v: string) => /.+@.+\..+/.test(v.trim()) || 'E-mail must be valid'
+]);
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 function validate(values: any, { setErrors }: any) {
+  // Trim the username before validation
+  const trimmedUsername = username.value.trim();
+
+  // Update the username with trimmed value
+  username.value = trimmedUsername;
+
   const authStore = useAuthStore();
-  return authStore.login(username.value, password.value).catch((error) => setErrors({ apiError: error }));
+  return authStore.login(trimmedUsername, password.value).catch((error) => setErrors({ apiError: error }));
 }
 </script>
 
 <template>
   <div class="d-flex justify-space-between align-center mt-4">
     <h3 class="text-h3 text-center mb-0">Login</h3>
-    <router-link to="/auth/register1" class="text-primary text-decoration-none">Don't Have an account?</router-link>
+    <router-link to="/register1" class="text-primary text-decoration-none">Don't Have an account?</router-link>
   </div>
   <Form @submit="validate" class="mt-7 loginForm" v-slot="{ errors, isSubmitting }">
     <div class="mb-6">
@@ -76,7 +92,7 @@ function validate(values: any, { setErrors }: any) {
         hide-details
       ></v-checkbox>
       <div class="ml-auto">
-        <router-link to="/auth/forgot-pwd1" class="text-darkText link-hover">Forgot Password?</router-link>
+        <router-link to="/forgot-pwd1" class="text-darkText link-hover">Forgot Password?</router-link>
       </div>
     </div>
     <v-btn

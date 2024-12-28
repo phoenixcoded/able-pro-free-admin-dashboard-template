@@ -18,7 +18,7 @@ import AuthForgotPwd from '../authForms/AuthForgotPwd.vue';
                 <v-card-text class="pa-sm-10 pa-4">
                   <div class="d-flex justify-space-between align-center">
                     <h3 class="text-h3 text-center mb-0">Forgot Password</h3>
-                    <router-link to="/auth/login1" class="text-primary text-decoration-none">Back to Login</router-link>
+                    <router-link to="/login1" class="text-primary text-decoration-none">Back to Login</router-link>
                   </div>
 
                   <!---Forgot pwd Form-->

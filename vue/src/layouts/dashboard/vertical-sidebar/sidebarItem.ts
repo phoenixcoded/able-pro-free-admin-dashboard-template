@@ -42,12 +42,12 @@ const sidebarItem: menu[] = [
   {
     title: 'Login',
     icon: 'custom-shield',
-    to: '/auth/login1'
+    to: '/login1'
   },
   {
     title: 'Register',
     icon: 'custom-register',
-    to: '/auth/register1'
+    to: '/register1'
   },
   { header: 'Others' },
   {

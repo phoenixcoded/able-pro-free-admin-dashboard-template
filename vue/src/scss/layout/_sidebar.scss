@@ -83,6 +83,7 @@
   .v-list-item {
     border-radius: 8px;
     padding-inline-start: calc(20px + var(--indent-padding) / 2) !important;
+    margin-bottom: 2px;
     .v-list-item__prepend {
       margin-inline-end: 13px;
     }

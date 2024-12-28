@@ -14,13 +14,13 @@ import SvgSprite from '@/components/shared/SvgSprite.vue';
         </v-badge>
       </v-btn>
     </template>
-    <v-sheet rounded="md" width="420" class="notification-dropdown pa-6">
-      <div class="d-flex align-center justify-space-between pb-4">
+    <v-sheet rounded="md" width="420" class="notification-dropdown py-6">
+      <div class="d-flex align-center justify-space-between pb-4 px-6">
         <h5 class="text-h5 mb-0">Notifications</h5>
         <a href="#" class="text-primary link-hover text-h6"> Mark all read </a>
       </div>
       <perfect-scrollbar style="height: calc(100vh - 300px); max-height: 430px">
-        <v-list class="py-0" lines="two" aria-label="notification list" aria-busy="true">
+        <v-list class="py-0 px-6" lines="two" aria-label="notification list" aria-busy="true">
           <v-list-item value="1" color="secondary" class="no-spacer py-5 mb-3 px-3" rounded="md">
             <template v-slot:prepend>
               <v-avatar size="40" variant="flat" color="primary" class="mr-3 py-2">
