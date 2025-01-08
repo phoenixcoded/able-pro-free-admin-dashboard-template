@@ -1,3 +1,7 @@
+**Note:** *This README file is maintained to ensure the product structure aligns with the Pro version, making migration to Pro seamless when you choose to upgrade. This alignment aims to provide a smoother experience during the upgrade, especially regarding directory structure. You may notice these files and folders appearing throughout the project where they are part of the Pro version. While this might feel slightly inconvenient, it is intended to simplify your migration process and provide assistance. If these files are unnecessary for your use case, you can easily remove them.*
+
+Please continue reading below to explore the features of the Pro version:
+
 # Able Pro Admin Panel - Unlock Premium Features with the Pro Version
 
 Elevate your project with the Pro Version of the <b>Able Pro Admin Panel!</b> Built to cater to modern web applications, the Pro version is loaded with advanced features, intuitive design elements, and dynamic tools that ensure seamless functionality.
