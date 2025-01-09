@@ -1,5 +1,5 @@
 // angular import
-import { Component, ViewChild } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // project import
@@ -7,61 +7,25 @@ import { SharedModule } from 'src/app/demo/shared/shared.module';
 import { ChartDB } from 'src/app/fake-data/chartDB';
 
 // third party
-import { NgApexchartsModule } from 'ng-apexcharts';
-import {
-  ApexAxisChartSeries,
-  ApexNonAxisChartSeries,
-  ApexChart,
-  ChartComponent,
-  ApexDataLabels,
-  ApexPlotOptions,
-  ApexYAxis,
-  ApexTitleSubtitle,
-  ApexXAxis,
-  ApexFill,
-  ApexTooltip,
-  ApexStroke,
-  ApexGrid,
-  ApexLegend,
-  ApexResponsive
-} from 'ng-apexcharts';
-
-export type ChartOptions = {
-  series: ApexAxisChartSeries | ApexNonAxisChartSeries;
-  chart: ApexChart | undefined;
-  dataLabels: ApexDataLabels;
-  plotOptions: ApexPlotOptions;
-  yaxis: ApexYAxis;
-  xaxis: ApexXAxis;
-  fill: ApexFill;
-  title: ApexTitleSubtitle;
-  tooltip: ApexTooltip;
-  colors: string[];
-  stroke: ApexStroke;
-  grid: ApexGrid;
-  labels: string[];
-  responsive: ApexResponsive[];
-  legend: ApexLegend;
-};
+import { ApexOptions, ChartComponent, NgApexchartsModule } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
   imports: [CommonModule, SharedModule, NgApexchartsModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export default class DashboardComponent {
   // public props
-  @ViewChild('chart') chart!: ChartComponent;
-  earningChart: Partial<ChartOptions>;
-  pageViewChart: Partial<ChartOptions>;
-  totalTaskChart: Partial<ChartOptions>;
-  downloadChart: Partial<ChartOptions>;
-  monthlyRevenueChart: Partial<ChartOptions>;
-  totalTasksChart: Partial<ChartOptions>;
-  pendingTasksChart: Partial<ChartOptions>;
-  totalIncomeChart: Partial<ChartOptions>;
+  chart = viewChild<ChartComponent>('chart');
+  earningChart: Partial<ApexOptions>;
+  pageViewChart: Partial<ApexOptions>;
+  totalTaskChart: Partial<ApexOptions>;
+  downloadChart: Partial<ApexOptions>;
+  monthlyRevenueChart: Partial<ApexOptions>;
+  totalTasksChart: Partial<ApexOptions>;
+  pendingTasksChart: Partial<ApexOptions>;
+  totalIncomeChart: Partial<ApexOptions>;
 
   // eslint-disable-next-line
   chartDB: any;

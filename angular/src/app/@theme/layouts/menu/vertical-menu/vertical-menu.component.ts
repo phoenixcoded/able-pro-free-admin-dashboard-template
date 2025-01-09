@@ -1,24 +1,26 @@
 // Angular import
-import { Component, Input } from '@angular/core';
-import { Location, LocationStrategy } from '@angular/common';
+import { Component, inject, input } from '@angular/core';
+import { CommonModule, Location, LocationStrategy } from '@angular/common';
 
 // project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
+import { SharedModule } from 'src/app/demo/shared/shared.module';
+import { MenuItemComponent } from './menu-item/menu-item.component';
+import { MenuCollapseComponent } from './menu-collapse/menu-collapse.component';
+import { MenuGroupVerticalComponent } from './menu-group/menu-group.component';
 
 @Component({
   selector: 'app-vertical-menu',
+  imports: [SharedModule, MenuItemComponent, MenuCollapseComponent, MenuGroupVerticalComponent, CommonModule],
   templateUrl: './vertical-menu.component.html',
   styleUrls: ['./vertical-menu.component.scss']
 })
 export class VerticalMenuComponent {
-  // public props
-  @Input() menus!: NavigationItem[];
+  private location = inject(Location);
+  private locationStrategy = inject(LocationStrategy);
 
-  // Constructor
-  constructor(
-    private location: Location,
-    private locationStrategy: LocationStrategy
-  ) {}
+  // public props
+  menus = input.required<NavigationItem[]>();
 
   // public method
   fireOutClick() {

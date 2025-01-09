@@ -1,4 +1,4 @@
-<ng-scrollbar style="height: calc(100vh - 88px)" visibility="hover">
+<ng-scrollbar style="height: calc(100vh - 88px)" visibility="hover" orientation="vertical">
   <app-card [showHeader]="false" cardClass="user-card" [padding]="20">
     <div class="flex align-items-center">
       <div class="flex-shrink-0">
@@ -29,7 +29,7 @@
   </app-card>
   <div class="navbar-content">
     <ul class="nav coded-inner-navbar" (click)="fireOutClick()" aria-hidden="true">
-      @for (item of menus; track item) {
+      @for (item of menus(); track item) {
         @if (item.type === 'group') {
           <app-menu-group-vertical [item]="item"></app-menu-group-vertical>
         }

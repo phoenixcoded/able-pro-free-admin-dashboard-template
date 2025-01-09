@@ -1,11 +1,11 @@
 // Angular Import
-import { Component, Input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Event } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 // project import
 import { NavigationItem } from '../../types/navigation';
-import { SharedModule } from 'src/app/demo/shared/shared.module';
+
 import { menus } from 'src/app/demo/data/menu';
 
 interface titleType {
@@ -18,25 +18,24 @@ interface titleType {
 
 @Component({
   selector: 'app-breadcrumb',
-  standalone: true,
-  imports: [RouterModule, SharedModule],
+  imports: [RouterModule],
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
 export class BreadcrumbComponent {
+  private route = inject(Router);
+  private titleService = inject(Title);
+
   // public props
-  @Input() Component = false;
-  @Input() dashboard = true;
+  Component = input(false);
+  dashboard = input(true);
 
   navigations: NavigationItem[];
   breadcrumbList: Array<string> = [];
   navigationList!: titleType[];
 
   // constructor
-  constructor(
-    private route: Router,
-    private titleService: Title
-  ) {
+  constructor() {
     this.navigations = menus;
     this.setBreadcrumb();
   }
@@ -67,7 +66,6 @@ export class BreadcrumbComponent {
         ];
       }
       if ((navItem.type === 'group' || navItem.type === 'collapse') && 'children' in navItem) {
-        // eslint-disable-next-line
         const breadcrumbList = this.filterNavigation(navItem.children!, activeLink);
         if (breadcrumbList.length > 0) {
           breadcrumbList.unshift({

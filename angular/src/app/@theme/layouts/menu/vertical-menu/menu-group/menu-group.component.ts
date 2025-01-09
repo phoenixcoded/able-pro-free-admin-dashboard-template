@@ -1,26 +1,26 @@
 // Angular import
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, inject, input } from '@angular/core';
 import { Location, LocationStrategy } from '@angular/common';
 
 // project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
+import { MenuItemComponent } from '../menu-item/menu-item.component';
+import { MenuCollapseComponent } from '../menu-collapse/menu-collapse.component';
 
 @Component({
   selector: 'app-menu-group-vertical',
+  imports: [MenuItemComponent, MenuCollapseComponent],
   templateUrl: './menu-group.component.html',
   styleUrls: ['./menu-group.component.scss']
 })
 export class MenuGroupVerticalComponent implements OnInit {
+  private location = inject(Location);
+  private locationStrategy = inject(LocationStrategy);
+
   // public props
 
   // All Version in Group Name
-  @Input() item!: NavigationItem;
-
-  // Constructor
-  constructor(
-    private location: Location,
-    private locationStrategy: LocationStrategy
-  ) {}
+  item = input.required<NavigationItem>();
 
   // Life cycle events
   ngOnInit() {

@@ -8,7 +8,6 @@ import { SharedModule } from 'src/app/demo/shared/shared.module';
 
 @Component({
   selector: 'app-register',
-  standalone: true,
   imports: [SharedModule, RouterModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss', '../authentication.scss']

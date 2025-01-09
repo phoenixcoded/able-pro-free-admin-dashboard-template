@@ -1,23 +1,17 @@
 // Angular import
 import { Component, Input } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 // project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
+import { MenuItemComponent } from '../menu-item/menu-item.component';
 
 @Component({
   selector: 'app-menu-collapse',
+  imports: [MenuItemComponent, RouterModule, CommonModule],
   templateUrl: './menu-collapse.component.html',
-  styleUrls: ['./menu-collapse.component.scss'],
-  animations: [
-    trigger('slideInOut', [
-      transition(':enter', [
-        style({ transform: 'translateY(-100%)', display: 'block' }),
-        animate('250ms ease-in', style({ transform: 'translateY(0%)' }))
-      ]),
-      transition(':leave', [animate('250ms ease-in', style({ transform: 'translateY(-100%)' }))])
-    ])
-  ]
+  styleUrls: ['./menu-collapse.component.scss']
 })
 export class MenuCollapseComponent {
   // public props
