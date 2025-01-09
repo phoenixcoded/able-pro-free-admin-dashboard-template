@@ -2,9 +2,9 @@
 import { ref, computed, shallowRef } from 'vue';
 import SvgSprite from '@/components/shared/SvgSprite.vue';
 import { useTheme } from 'vuetify';
-import { getPrimary, getDarkText } from '../../../forms/charts/apex-chart/UpdateColors';
 
 const theme = useTheme();
+const primaryColor = theme.current.value.colors.primary;
 const warningColor = theme.current.value.colors.warning;
 const successColor = theme.current.value.colors.success;
 
@@ -13,25 +13,25 @@ const menulist = ref(['Today', 'Weekly', 'Monthly']);
 const overviewList = shallowRef([
   {
     color: 'primary',
-    name: 'Item01',
+    name: 'Total Income',
     subcontent: '$23,876',
     price: '$76,343'
   },
   {
     color: 'primary200',
-    name: 'Item02',
+    name: 'Views',
     subcontent: '$23,876',
     price: '$76,343'
   },
   {
     color: 'warning',
-    name: 'Item03',
+    name: 'Total Rent',
     subcontent: '$23,876',
     price: '$76,343'
   },
   {
     color: 'success',
-    name: 'Item04',
+    name: 'Download',
     subcontent: '$23,876',
     price: '$76,343'
   }
@@ -44,10 +44,10 @@ const chartOptions = computed(() => {
       height: 300,
       width: 300,
       fontFamily: `inherit`,
-      foreColor: getDarkText.value
+      foreColor: 'rgba(var(--v-theme-darkText), var(--v-high-opacity))'
     },
     labels: ['Total income', 'Total rent', 'Download', 'Views'],
-    colors: [getPrimary.value, warningColor, successColor, getPrimary.value],
+    colors: [primaryColor, warningColor, successColor, primaryColor],
     dataLabels: {
       enabled: false
     },
@@ -124,7 +124,7 @@ const pieChart = {
         </v-menu>
       </div>
     </v-card-text>
-    <v-card-item class="pt-0">
+    <v-card-item class="pt-0 chart-visible">
       <div class="apexchart-center">
         <apexchart type="donut" height="300" :options="chartOptions" :series="pieChart.series"> </apexchart>
       </div>
@@ -138,7 +138,7 @@ const pieChart = {
             <h6 class="text-subtitle-1 mb-0">
               {{ item.subcontent }}
               <span class="text-lightText text-caption" style="font-weight: 600">
-                <SvgSprite name="custom-rise-outline" style="width: 14px; height: 14px" />
+                <SvgSprite name="custom-rise-outline" style="width: 14px; height: 14px; vertical-align: text-top" />
                 {{ item.price }}
               </span>
             </h6>
@@ -148,3 +148,10 @@ const pieChart = {
     </v-card-item>
   </v-card>
 </template>
+<style lang="scss">
+.chart-visible {
+  .v-card-item__content {
+    overflow: visible;
+  }
+}
+</style>

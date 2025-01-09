@@ -4,7 +4,6 @@ import SvgSprite from '@/components/shared/SvgSprite.vue';
 import { useTheme } from 'vuetify';
 
 const theme = useTheme();
-import { getPrimary } from '../../../forms/charts/apex-chart/UpdateColors';
 const warningColor = theme.current.value.colors.warning;
 const successColor = theme.current.value.colors.success;
 const errorColor = theme.current.value.colors.error;
@@ -30,7 +29,7 @@ const chartOptions1 = computed(() => {
         columnWidth: '80%'
       }
     },
-    colors: getPrimary.value,
+    colors: ['rgba(var(--v-theme-primary), var(--v-medium-opacity))'],
     stroke: {
       curve: 'smooth',
       width: 0
@@ -66,7 +65,7 @@ const chartOptions2 = computed(() => {
         columnWidth: '80%'
       }
     },
-    colors: warningColor,
+    colors: [warningColor],
     stroke: {
       curve: 'smooth',
       width: 0
@@ -102,7 +101,7 @@ const chartOptions3 = computed(() => {
         columnWidth: '80%'
       }
     },
-    colors: successColor,
+    colors: [successColor],
     stroke: {
       curve: 'smooth',
       width: 0
@@ -138,7 +137,7 @@ const chartOptions4 = computed(() => {
         columnWidth: '80%'
       }
     },
-    colors: errorColor,
+    colors: [errorColor],
     stroke: {
       curve: 'smooth',
       width: 0

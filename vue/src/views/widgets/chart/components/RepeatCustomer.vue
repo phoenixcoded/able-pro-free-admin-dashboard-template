@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useTheme } from 'vuetify';
 import SvgSprite from '@/components/shared/SvgSprite.vue';
-import { getPrimary, getLightBorder, getLightText } from '../../../forms/charts/apex-chart/UpdateColors';
+
+const theme = useTheme();
+const primaryColor = theme.current.value.colors.primary;
 
 const menulist = ref(['Today', 'Weekly', 'Monthly']);
 
@@ -11,10 +14,10 @@ const chartOptions = computed(() => {
       type: 'area',
       height: 260,
       fontFamily: `inherit`,
-      foreColor: getLightText.value,
+      foreColor: 'rgba(var(--v-theme-lightText), var(--v-high-opacity))',
       toolbar: false
     },
-    colors: [getPrimary.value],
+    colors: [primaryColor],
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     dataLabels: {
       enabled: false
@@ -34,7 +37,7 @@ const chartOptions = computed(() => {
       }
     },
     grid: {
-      borderColor: getLightBorder.value,
+      borderColor: 'rgba(var(--v-theme-borderLight), var(--v-high-opacity))',
       strokeDashArray: 4
     },
     xaxis: {
