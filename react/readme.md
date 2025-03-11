@@ -99,15 +99,15 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
 ## Technology Stack
 
 - React 18
+- Next 15
 - VITE
 - TypeScript
 - Redux Toolkit
 - CRA
 - React Hook
-- React Router
+- React Router v7
 - Auth0, JWT, Firebase, Amazon Cognito (i.e. Pro version)
 - Formik
-- Reacti18
 - Apex Charts
 - Axios
 - TanStack Table

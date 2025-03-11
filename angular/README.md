@@ -80,7 +80,7 @@ Looking for even more features? Check out Able Pro's Angular [premium version](h
 | -                                                      | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
 | -                                                      | ✓ 10+ color Presets                                         |
 | -                                                      | ✓ LTR/RTL Layouts                                           |
-| -                                                      | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts             |
+| -                                                      | ✓ Vertical/Horizontal/Compact etc...Layouts             |
 | -                                                      | ✓ Advance Components                                        |
 | -                                                      | ✓ Form Variants                                             |
 | -                                                      | ✓ Table Variants                                            |
@@ -103,7 +103,7 @@ Looking for even more features? Check out Able Pro's Angular [premium version](h
 - JWT (i.e. Pro version)
 - Role Base Authentication (i.e. Pro version)
 - Apex Charts
-- npm package installer
+- npm / yarn package installer
 
 ## Able Pro Figma UI Kit
 <div>

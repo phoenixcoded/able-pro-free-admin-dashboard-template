@@ -102,7 +102,7 @@ Looking for even more features? Check out Able Pro's Vue [premium version](https
 - TypeScript
 - Vuetify
 - Vue Router
-- Auth0, JWT (i.e. Pro version)
+- JWT (i.e. Pro version)
 - Vee validate
 - Vue-i18n
 - Apex Charts
