@@ -7,7 +7,7 @@ on:
     branches:
       - master
     paths:
-      - 'react/**'
+      - "react/**"
   #pull_request:
   #  types:
   #    - closed
@@ -33,7 +33,9 @@ jobs:
       - name: 🔨 Build Project
         run: |
           cd react
-          yarn install
+          corepack enable
+          yarn set version 4.7.0 
+          yarn 
           yarn run build
 
       - name: 📂 Deploy to Server
