@@ -24,7 +24,7 @@ Able Pro is a free Material UI admin dashboard template built with React. It is 
 - 💰[Save more with Big Bundle](#save-more-with-big-bundle)💰
 - [Issues?](#issues)
 - [License](#license)
-- [Contributor](#contributor)   
+- [Contributor](#contributor)
 - [Follow us](#follow-us)
 
 ## Getting Started
@@ -49,13 +49,12 @@ yarn start
 
 ## Download
 
-- Able Pro Free 
-    - [Live Preview](https://ableproadmin.com/react/free) 
-    - [Download](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template)
+- Able Pro Free
+  - [Live Preview](https://ableproadmin.com/react/free)
+  - [Download](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template)
 - Able Pro
-    - [Live Preview](https://ableproadmin.com/react/) 
-    - [Download](https://1.envato.market/OrJ5nn)
-
+  - [Live Preview](https://ableproadmin.com/react/)
+  - [Download](https://1.envato.market/OrJ5nn)
 
 ## Why Able pro?
 
@@ -69,31 +68,31 @@ Welcome to Able Pro, the ultimate free React Dashboard Template powered by the M
 - Easy Documentation Guide
 
 ## What's included in Premium Version?
+
 Looking for even more features? Check out Able Pro's React [premium version](https://1.envato.market/OrJ5nn), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-
 | [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://1.envato.market/OrJ5nn)      |
-| ------------------------------------------------------ | :---------------------------------------------------------- |
-| **7** Demo pages                                       | **100+** pages                                              |
-| -                                                      | ✓ Modern UserInterface & Easy Developer Experience          |
-| -                                                      | ✓ Dark/Light 🌓                                             |
-| -                                                      | ✓ Material-UI Components                                        |
-| -                                                      | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
-| -                                                      | ✓ 10+ color Presets                                          |
-| -                                                      | ✓ LTR/RTL Layouts                                           |
-| -                                                      | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts             |
-| -                                                      | ✓ Advance Components                                        |
-| -                                                      | ✓ Form Variants                                             |
-| -                                                      | ✓ Table Variants                                            |
-| -                                                      | ✓ 7+ Conceptual Apps                                        |
-| -                                                      | ✓ Front Pages                                               |
-
+| ---------------------------------------------------- | :---------------------------------------------------------- |
+| **7** Demo pages                                     | **100+** pages                                              |
+| -                                                    | ✓ Modern UserInterface & Easy Developer Experience          |
+| -                                                    | ✓ Dark/Light 🌓                                             |
+| -                                                    | ✓ Material-UI Components                                    |
+| -                                                    | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
+| -                                                    | ✓ 10+ color Presets                                         |
+| -                                                    | ✓ LTR/RTL Layouts                                           |
+| -                                                    | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts             |
+| -                                                    | ✓ Advance Components                                        |
+| -                                                    | ✓ Form Variants                                             |
+| -                                                    | ✓ Table Variants                                            |
+| -                                                    | ✓ 7+ Conceptual Apps                                        |
+| -                                                    | ✓ Front Pages                                               |
 
 ## Documentation
 
 [Able-pro documentation](https://phoenixcoded.gitbook.io/able-pro/react) helps you with installation, deployment, and troubleshooting.
 
 ## Browser support
+
 <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" height="45" >
 
 ## Technology Stack
@@ -114,6 +113,7 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
 - npm/yarn package installer
 
 ## Able Pro Figma UI Kit
+
 <div>
   <a href="https://codedthemes.com/item/able-pro-free-figma-ui-kit/">
     <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Free_Able_Pro.png" width="450" alt="Figma Free">
@@ -123,23 +123,27 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
   </a>
 </div>
 
-## Other Technologies 
-| Technology | Free | Pro |
-|-----------|------|------|
+## Other Technologies
+
+| Technology                                                                                                                        | Free                                                                               | Pro                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Bootstrap.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/baeyGk) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/XYAZnb) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/B0JAPW) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/tailwind.png" width="25" height="25"></p> | - | [**Pro**](https://1.envato.market/XmNK1X) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Nextjs.png" width="25" height="25"></p> | - | [**Pro**](https://1.envato.market/jrEAbP) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Laravel%2BVue.png" height="25"></p> | - | [**Pro**](https://1.envato.market/6e0Arm) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p>   | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/XYAZnb) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p>       | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/B0JAPW) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/tailwind.png" width="25" height="25"></p>  | -                                                                                  | [**Pro**](https://1.envato.market/XmNK1X) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Nextjs.png" width="25" height="25"></p>    | -                                                                                  | [**Pro**](https://1.envato.market/jrEAbP) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Laravel%2BVue.png" height="25"></p>        | -                                                                                  | [**Pro**](https://1.envato.market/6e0Arm) |
 
 ## More products from PhoenixCoded
+
 <a href="https://1.envato.market/EKD9M4">
   <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Light+Able+with+name.png" alt="Light Able" height="45">
 </a>
 
 ## Save more with Big Bundle
-[![able-pro-bundle](https://org-public-assets.s3.us-west-2.amazonaws.com/logos/able-pro-bundle.png)](https://1.envato.market/zNkqj6)              
+
+[![able-pro-bundle](https://org-public-assets.s3.us-west-2.amazonaws.com/logos/able-pro-bundle.png)](https://1.envato.market/zNkqj6)
+
 ## Issues
 
 To report a bug, please submit an [issue](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template/issues) on Github. We will respond as soon as possible to resolve the issue.
@@ -151,9 +155,11 @@ To report a bug, please submit an [issue](https://github.com/phoenixcoded/able-p
 ## Contributor
 
 **PhoenixCoded Team**
+
 - https://github.com/phoenixcoded
 
 **Brijesh Dobariya**
+
 - https://x.com/dobaria_brijesh
 
 ## Follow us

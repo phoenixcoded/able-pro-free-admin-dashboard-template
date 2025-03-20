@@ -1,14 +1,15 @@
 // material-ui
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid2';
+import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 // project-imports
 import MainCard from 'components/MainCard';
-import ComponentHeader from 'components/cards/ComponentHeader';
+import { GRID_COMMON_SPACING } from 'config';
+
 import ComponentWrapper from 'sections/components-overview/ComponentWrapper';
 import ComponentSkeleton from 'sections/components-overview/ComponentSkeleton';
 
@@ -17,18 +18,12 @@ import ComponentSkeleton from 'sections/components-overview/ComponentSkeleton';
 export default function ComponentTypography() {
   return (
     <ComponentSkeleton>
-      <ComponentHeader
-        title="Typography"
-        caption="Use typography to present your design and content as clearly and efficiently as possible."
-        directory="src/pages/components-overview/typography"
-        link="https://mui.com/material-ui/react-typography/"
-      />
       <ComponentWrapper>
-        <Grid container spacing={3}>
-          <Grid item xs={12} lg={6}>
-            <Stack spacing={3}>
-              <MainCard title="Basic" codehighlight="true">
-                <Stack spacing={0.75} sx={{ mt: -1.5 }}>
+        <Grid container spacing={GRID_COMMON_SPACING}>
+          <Grid size={{ xs: 12, lg: 6 }}>
+            <Stack sx={{ gap: GRID_COMMON_SPACING }}>
+              <MainCard title="Basic">
+                <Stack sx={{ gap: 0.75, mt: -1.5 }}>
                   <Typography variant="h1">Inter</Typography>
                   <Typography variant="h5">Font Family</Typography>
                   <Breadcrumbs aria-label="breadcrumb">
@@ -39,7 +34,7 @@ export default function ComponentTypography() {
                 </Stack>
               </MainCard>
               <MainCard title="Heading">
-                <Stack spacing={2}>
+                <Stack sx={{ gap: 2 }}>
                   <Typography variant="h1">H1 Heading</Typography>
                   <Breadcrumbs aria-label="breadcrumb">
                     <Typography variant="h6">Size: 38px</Typography>
@@ -141,7 +136,7 @@ export default function ComponentTypography() {
                 </>
               </MainCard>
               <MainCard title="Caption">
-                <Stack spacing={1}>
+                <Stack sx={{ gap: 1 }}>
                   <Typography variant="caption">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
@@ -155,19 +150,19 @@ export default function ComponentTypography() {
               </MainCard>
             </Stack>
           </Grid>
-          <Grid item xs={12} lg={6}>
-            <Stack spacing={3}>
+          <Grid size={{ xs: 12, lg: 6 }}>
+            <Stack sx={{ gap: GRID_COMMON_SPACING }}>
               <MainCard title="Alignment">
                 <>
                   <Typography variant="body2" gutterBottom>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </Typography>
-                  <Typography variant="body2" textAlign="center" gutterBottom>
+                  <Typography variant="body2" gutterBottom sx={{ textAlign: 'center' }}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </Typography>
-                  <Typography variant="body2" textAlign="right">
+                  <Typography variant="body2" sx={{ textAlign: 'right' }}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </Typography>
@@ -191,7 +186,7 @@ export default function ComponentTypography() {
                 </>
               </MainCard>
               <MainCard title="Overline">
-                <Stack spacing={1.5}>
+                <Stack sx={{ gap: 1.5 }}>
                   <Typography variant="overline">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
@@ -204,7 +199,7 @@ export default function ComponentTypography() {
                 </Stack>
               </MainCard>
               <MainCard title="Link">
-                <Stack spacing={1.5}>
+                <Stack sx={{ gap: 1.5 }}>
                   <Link href="#">#able-pro</Link>
                   <Breadcrumbs aria-label="breadcrumb">
                     <Typography variant="h6">Size: 12px</Typography>
@@ -215,10 +210,10 @@ export default function ComponentTypography() {
               </MainCard>
               <MainCard title="Colors">
                 <>
-                  <Typography variant="h6" color="text.primary" gutterBottom>
+                  <Typography variant="h6" gutterBottom sx={{ color: 'text.primary' }}>
                     This is textPrimary text color.
                   </Typography>
-                  <Typography variant="h6" color="text.secondary" gutterBottom>
+                  <Typography variant="h6" gutterBottom sx={{ color: 'text.secondary' }}>
                     This is textSecondary text color.
                   </Typography>
                   <Typography variant="h6" color="primary" gutterBottom>

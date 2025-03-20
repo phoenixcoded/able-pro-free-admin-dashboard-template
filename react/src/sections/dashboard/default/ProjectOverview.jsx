@@ -3,20 +3,20 @@ import { useEffect, useState } from 'react';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid2';
+import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ListItemButton from '@mui/material/ListItemButton';
 
 // third-party
 import ReactApexChart from 'react-apexcharts';
 
 // project-imports
-import MainCard from 'components/MainCard';
 import IconButton from 'components/@extended/IconButton';
 import MoreIcon from 'components/@extended/MoreIcon';
+import MainCard from 'components/MainCard';
 
 // assets
 import { Add } from 'iconsax-react';
@@ -35,12 +35,6 @@ function TaskStatusChart({ color, data }) {
       stacked: true,
       sparkline: {
         enabled: true
-      },
-      offsetX: -20
-    },
-    plotOptions: {
-      bar: {
-        borderRadius: 0
       }
     },
     dataLabels: {
@@ -63,11 +57,6 @@ function TaskStatusChart({ color, data }) {
       }
     },
     stroke: { curve: 'smooth', width: 2 },
-    tooltip: {
-      x: {
-        show: false
-      }
-    },
     grid: {
       show: false
     }
@@ -110,7 +99,7 @@ export default function ProjectOverview() {
 
   return (
     <MainCard>
-      <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
+      <Stack direction="row" sx={{ gap: 1, alignItems: 'center', justifyContent: 'space-between' }}>
         <Typography variant="h5">Project overview</Typography>
         <IconButton
           color="secondary"
@@ -138,33 +127,33 @@ export default function ProjectOverview() {
         </Menu>
       </Stack>
       <Grid container spacing={3} sx={{ mt: 1 }}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Grid container spacing={1} alignItems="flex-end">
-            <Grid item xs={6}>
-              <Stack spacing={0.25}>
-                <Typography color="text.secondary">Total Tasks</Typography>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <Grid container spacing={1} sx={{ alignItems: 'flex-end' }}>
+            <Grid size={6}>
+              <Stack sx={{ gap: 0.25 }}>
+                <Typography sx={{ color: 'text.secondary' }}>Total Tasks</Typography>
                 <Typography variant="h5">34,686</Typography>
               </Stack>
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={6}>
               <TaskStatusChart color={theme.palette.primary.main} data={[5, 25, 3, 10, 4, 50, 0]} />
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <Grid container spacing={1}>
-            <Grid item xs={6}>
-              <Stack spacing={0.25}>
-                <Typography color="text.secondary">Pending Tasks</Typography>
+            <Grid size={6}>
+              <Stack sx={{ gap: 0.25 }}>
+                <Typography sx={{ color: 'text.secondary' }}>Pending Tasks</Typography>
                 <Typography variant="h5">3,6786</Typography>
               </Stack>
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={6}>
               <TaskStatusChart color={theme.palette.error.main} data={[0, 50, 4, 10, 3, 25, 5]} />
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Button fullWidth variant="contained" startIcon={<Add />} size="large">
             Add project
           </Button>

@@ -17,7 +17,7 @@ const pages = {
       title: 'Login',
       icon: icons.authentication,
       type: 'item',
-      url: '/auth/login',
+      url: '/login',
       target: true
     },
     {
@@ -25,7 +25,7 @@ const pages = {
       title: 'Register',
       type: 'item',
       icon: icons.register,
-      url: '/auth/register',
+      url: '/register',
       target: true
     }
   ]

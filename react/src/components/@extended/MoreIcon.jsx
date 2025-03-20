@@ -1,3 +1,5 @@
+// ==============================|| MORE ICON ||============================== //
+
 export default function MoreIcon() {
   return (
     <svg

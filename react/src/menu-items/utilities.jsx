@@ -21,25 +21,22 @@ const components = {
       id: 'typography',
       title: 'Typography',
       type: 'item',
-      url: '/components-overview/typography',
-      icon: icons.typography,
-      breadcrumbs: false
+      url: '/typography',
+      icon: icons.typography
     },
     {
       id: 'color',
       title: 'Color',
       type: 'item',
-      url: '/components-overview/color',
-      icon: icons.color,
-      breadcrumbs: false
+      url: '/color',
+      icon: icons.color
     },
     {
       id: 'shadows',
       title: 'Shadows',
       type: 'item',
-      url: '/components-overview/shadows',
-      icon: icons.shadow,
-      breadcrumbs: false
+      url: '/shadows',
+      icon: icons.shadow
     }
   ]
 };

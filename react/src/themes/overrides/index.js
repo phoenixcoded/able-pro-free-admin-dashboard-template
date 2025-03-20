@@ -1,5 +1,5 @@
 // third-party
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 
 // project-imports
 import Body from './Body';
@@ -31,7 +31,7 @@ export default function ComponentsOverrides(theme) {
   return merge(
     Body(),
     Button(theme),
-    ButtonBase(),
+    ButtonBase(theme),
     ButtonGroup(),
     CardContent(),
     Checkbox(theme),

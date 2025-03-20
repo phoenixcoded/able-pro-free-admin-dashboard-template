@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 
 // project-imports
-import { DRAWER_WIDTH } from 'config';
+import { DRAWER_WIDTH, MINI_DRAWER_WIDTH } from 'config';
 
 // ==============================|| HEADER - APP BAR STYLED ||============================== //
 
@@ -14,7 +14,7 @@ const AppBarStyled = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'ope
     duration: theme.transitions.duration.leavingScreen
   }),
   ...(!open && {
-    width: `100%`
+    width: `calc(100% - ${MINI_DRAWER_WIDTH})`
   }),
   ...(open && {
     marginLeft: DRAWER_WIDTH,

@@ -1,10 +1,11 @@
-// ==============================|| THEME CONSTANT  ||============================== //
+// ==============================|| THEME CONSTANT ||============================== //
 
 export const APP_DEFAULT_PATH = '/dashboard';
 export const HORIZONTAL_MAX_ITEM = 6; // Pro Version
 export const DRAWER_WIDTH = 280;
 export const MINI_DRAWER_WIDTH = 0; // Pro Version
 export const HEADER_HEIGHT = 74;
+export const GRID_COMMON_SPACING = { xs: 2, md: 2.5 };
 
 // basename: only at build time to set, and Don't add '/' at end off BASENAME for breadcrumbs, also Don't put only '/' use blank('') instead,
 // like '/react/default'
@@ -14,6 +15,7 @@ export const APP_BASE_NAME = '/react/free';
 
 const config = {
   fontFamily: `Inter var`, // Pro Version
+  i18n: 'en', // Pro Version
   menuOrientation: 'vertical', // Pro Version
   menuCaption: true, // Pro Version
   miniDrawer: false, // Pro Version

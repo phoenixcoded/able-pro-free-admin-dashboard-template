@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
 // material-ui
-import { alpha, styled, useTheme } from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import MuiIconButton from '@mui/material/IconButton';
 
 // project-imports
@@ -11,7 +11,7 @@ import getShadow from 'utils/getShadow';
 
 function getColorStyle({ variant, theme, color }) {
   const colors = getColors(theme, color);
-  const { lighter, light, dark, main, contrastText } = colors;
+  const { lighter, light, dark, darker, main, contrastText } = colors;
 
   const buttonShadow = `${color}Button`;
   const shadows = getShadow(theme, buttonShadow);
@@ -37,6 +37,7 @@ function getColorStyle({ variant, theme, color }) {
         '&:hover': {
           backgroundColor: dark
         },
+        ...(color === 'secondary'),
         ...commonShadow
       };
     case 'light':
@@ -73,17 +74,15 @@ function getColorStyle({ variant, theme, color }) {
         backgroundColor: lighter,
         '&:hover': {
           color: dark,
-          borderColor: dark
+          borderColor: dark,
+          backgroundColor: alpha(lighter, 0.2)
         },
         ...commonShadow
       };
     case 'text':
     default:
       return {
-        '&:hover': {
-          color: dark,
-          backgroundColor: lighter
-        },
+        '&:hover': { color: dark, backgroundColor: lighter },
         ...commonShadow
       };
   }
@@ -136,10 +135,8 @@ const IconButtonStyle = styled(MuiIconButton, { shouldForwardProp: (prop) => pro
 // ==============================|| ICON BUTTON - EXTENDED ||============================== //
 
 function IconButton({ variant = 'text', shape = 'square', children, color = 'primary', ...others }, ref) {
-  const theme = useTheme();
-
   return (
-    <IconButtonStyle ref={ref} variant={variant} shape={shape} theme={theme} color={color} {...others}>
+    <IconButtonStyle ref={ref} variant={variant} shape={shape} color={color} {...others}>
       {children}
     </IconButtonStyle>
   );

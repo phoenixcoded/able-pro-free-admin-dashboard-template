@@ -1,16 +1,16 @@
 import { lazy } from 'react';
 
-// project-imports
-import MainLayout from 'layout/Dashboard/index';
-import CommonLayout from 'layout/CommonLayout/index';
+// project imports
 import Loadable from 'components/Loadable';
+import DashboardLayout from 'layout/Dashboard';
 
-// render - dashboard
+// render- Dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/default')));
 
-// pages routing
-const AuthLogin = Loadable(lazy(() => import('pages/auth/login')));
-const AuthRegister = Loadable(lazy(() => import('pages/auth/register')));
+// render - color
+const Color = Loadable(lazy(() => import('pages/component-overview/color')));
+const Typography = Loadable(lazy(() => import('pages/component-overview/typography')));
+const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
 
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
@@ -19,38 +19,36 @@ const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')))
 
 const MainRoutes = {
   path: '/',
+  element: <DashboardLayout />,
   children: [
     {
       path: '/',
-      element: <MainLayout />,
+      element: <DashboardDefault />
+    },
+    {
+      path: '/',
       children: [
-        {
-          path: '/',
-          element: <DashboardDefault />
-        },
         {
           path: 'dashboard',
           element: <DashboardDefault />
-        },
-        {
-          path: 'sample-page',
-          element: <SamplePage />
         }
       ]
     },
     {
-      path: '/auth',
-      element: <CommonLayout />,
-      children: [
-        {
-          path: 'login',
-          element: <AuthLogin />
-        },
-        {
-          path: 'register',
-          element: <AuthRegister />
-        }
-      ]
+      path: 'typography',
+      element: <Typography />
+    },
+    {
+      path: 'color',
+      element: <Color />
+    },
+    {
+      path: 'shadows',
+      element: <Shadow />
+    },
+    {
+      path: 'sample-page',
+      element: <SamplePage />
     }
   ]
 };

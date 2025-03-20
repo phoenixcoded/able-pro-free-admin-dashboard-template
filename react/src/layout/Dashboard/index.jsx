@@ -1,69 +1,73 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
+import Box from '@mui/material/Box';
 
 // project-imports
 import Drawer from './Drawer';
 import Header from './Header';
 import Footer from './Footer';
 import Breadcrumbs from 'components/@extended/Breadcrumbs';
+import Loader from 'components/Loader';
 
-import navigation from 'menu-items';
-import { dispatch, useSelector } from 'store';
-import { openDrawer } from 'store/reducers/menu';
+import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
+
+// assets
+import { ShoppingCart } from 'iconsax-react';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
-export default function MainLayout() {
-  const theme = useTheme();
-  const matchDownLG = useMediaQuery(theme.breakpoints.down('xl'));
-  const { drawerOpen } = useSelector((state) => state.menu);
+let value = window.location.search;
 
-  // drawer toggler
-  const [open, setOpen] = useState(drawerOpen);
-  const handleDrawerToggle = () => {
-    setOpen(!open);
-    dispatch(openDrawer({ drawerOpen: !open }));
-  };
+const url = 'https://1.envato.market/zNkqj6';
+
+export default function MainLayout() {
+  const { menuMasterLoading } = useGetMenuMaster();
+  const downXL = useMediaQuery((theme) => theme.breakpoints.down('xl'));
 
   // set media wise responsive drawer
   useEffect(() => {
-    setOpen(!matchDownLG);
-    dispatch(openDrawer({ drawerOpen: !matchDownLG }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [matchDownLG]);
+    handlerDrawerOpen(!downXL);
+  }, [downXL]);
 
-  useEffect(() => {
-    if (open !== drawerOpen) setOpen(drawerOpen);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [drawerOpen]);
+  if (menuMasterLoading) return <Loader />;
 
   return (
     <Box sx={{ display: 'flex', width: '100%' }}>
-      <Header open={open} handleDrawerToggle={handleDrawerToggle} />
-      <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />
+      <Header />
+      <Drawer />
 
-      <Box component="main" sx={{ width: `calc(100% - ${DRAWER_WIDTH}px)`, flexGrow: 1, p: { xs: 2, sm: 3 } }}>
-        <Toolbar sx={{ mt: 'inherit' }} />
-        <Container
+      <Box component="main" sx={{ width: `calc(100% - ${DRAWER_WIDTH}px)`, flexGrow: 1, p: { xs: 1, sm: 3 } }}>
+        <Toolbar sx={{ mt: 'inherit', mb: 'inherit' }} />
+        <Box
           sx={{
+            ...{ px: { xs: 0, sm: 3 } },
             position: 'relative',
-            minHeight: 'calc(100vh - 110px)',
+            minHeight: 'calc(100vh - 124px)',
             display: 'flex',
             flexDirection: 'column'
           }}
         >
-          <Breadcrumbs navigation={navigation} title />
+          <Breadcrumbs />
           <Outlet />
           <Footer />
-        </Container>
+        </Box>
+        <Link style={{ textDecoration: 'none' }} href={url} target="_blank">
+          <Button
+            variant="contained"
+            color="error"
+            startIcon={<ShoppingCart />}
+            sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
+          >
+            Buy Now
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

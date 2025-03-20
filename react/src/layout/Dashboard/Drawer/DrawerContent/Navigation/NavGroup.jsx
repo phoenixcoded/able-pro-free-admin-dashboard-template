@@ -1,29 +1,29 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { matchPath, useLocation } from 'react-router';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
+
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 // project-imports
 import NavItem from './NavItem';
 
-import { dispatch, useSelector } from 'store';
-import { activeID } from 'store/reducers/menu';
+import { useGetMenuMaster } from 'api/menu';
 
 // ==============================|| NAVIGATION - GROUP ||============================== //
 
-export default function NavGroup({ item, lastItem, remItems, lastItemId }) {
-  const theme = useTheme();
+export default function NavGroup({ item, lastItem, remItems, lastItemId, setSelectedID }) {
   const { pathname } = useLocation();
 
-  const { drawerOpen } = useSelector((state) => state.menu);
+  const { menuMaster } = useGetMenuMaster();
+  const drawerOpen = menuMaster.isDashboardDrawerOpened;
 
-  const downLG = useMediaQuery(theme.breakpoints.down('lg'));
+  const downLG = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentItem, setCurrentItem] = useState(item);
@@ -49,19 +49,21 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId }) {
       if (ele.children?.length) {
         checkOpenForParent(ele.children, currentItem.id);
       }
-      if (ele.url === pathname) {
-        dispatch(activeID(id));
+
+      if (ele.url && !!matchPath({ path: ele?.link ? ele.link : ele.url, end: true }, pathname)) {
+        setSelectedID(id);
       }
     });
   };
   const checkSelectedOnload = (data) => {
     const childrens = data.children ? data.children : [];
     childrens.forEach((itemCheck) => {
-      if (itemCheck.children?.length) {
+      if (itemCheck?.children?.length) {
         checkOpenForParent(itemCheck.children, currentItem.id);
       }
-      if (itemCheck.url === pathname) {
-        dispatch(activeID(currentItem.id));
+
+      if (itemCheck.url && !!matchPath({ path: itemCheck?.link ? itemCheck.link : itemCheck.url, end: true }, pathname)) {
+        setSelectedID(currentItem.id);
       }
     });
   };
@@ -72,10 +74,15 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, currentItem]);
 
-  const navCollapse = item.children?.map((menuItem) => {
+  const handleClick = (event) => {
+    if (!openMini) {
+      setAnchorEl(event?.currentTarget);
+    }
+  };
+
+  const navCollapse = item.children?.map((menuItem, index) => {
     switch (menuItem.type) {
       case 'collapse':
-        // Pro version
         return (
           <Typography key={menuItem.id} variant="h6" color="error" align="center">
             Pro Version
@@ -85,7 +92,7 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId }) {
         return <NavItem key={menuItem.id} item={menuItem} level={1} />;
       default:
         return (
-          <Typography key={menuItem.id} variant="h6" color="error" align="center">
+          <Typography key={index} variant="h6" color="error" align="center">
             Fix - Group Collapse or Items
           </Typography>
         );
@@ -96,19 +103,32 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId }) {
     <>
       <List
         subheader={
-          item.title &&
-          drawerOpen && (
-            <Box sx={{ pl: 3, mb: 1.5 }}>
-              <Typography variant="h5" color="secondary.dark" sx={{ textTransform: 'uppercase', fontSize: '0.688rem' }}>
-                {item.title}
-              </Typography>
-              {item.caption && (
-                <Typography variant="caption" color="secondary">
-                  {item.caption}
-                </Typography>
-              )}
-            </Box>
-          )
+          <>
+            {item.title ? (
+              drawerOpen && (
+                <Box sx={{ pl: 3, mb: 1.5 }}>
+                  <Typography
+                    variant="h5"
+                    sx={(theme) => ({
+                      textTransform: 'uppercase',
+                      fontSize: '0.688rem',
+                      color: 'secondary.dark',
+                      ...theme.applyStyles('dark', { color: 'text.secondary' })
+                    })}
+                  >
+                    {item.title}
+                  </Typography>
+                  {item.caption && (
+                    <Typography variant="caption" color="secondary">
+                      {item.caption}
+                    </Typography>
+                  )}
+                </Box>
+              )
+            ) : (
+              <Divider sx={{ my: 0.5 }} />
+            )}
+          </>
         }
         sx={{ mt: drawerOpen && item.title ? 1.5 : 0, py: 0, zIndex: 0 }}
       >
@@ -119,11 +139,14 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId }) {
 }
 
 NavGroup.propTypes = {
-  item: PropTypes.object,
-  lastItem: PropTypes.bool,
+  item: PropTypes.any,
+  lastItem: PropTypes.number,
   remItems: PropTypes.array,
   lastItemId: PropTypes.string,
-  children: PropTypes.node,
-  title: PropTypes.string,
-  caption: PropTypes.string
+  selectedID: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
+  setSelectedID: PropTypes.oneOfType([PropTypes.any, PropTypes.func]),
+  setSelectedItems: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
+  selectedItems: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
+  setSelectedLevel: PropTypes.func,
+  selectedLevel: PropTypes.number
 };

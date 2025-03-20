@@ -58,8 +58,7 @@ export default function EcommerceDataChart({ color, height }) {
   useEffect(() => {
     setOptions((prevState) => ({
       ...prevState,
-      colors: [color],
-      theme: { mode: 'light' }
+      colors: [color]
     }));
   }, [color, mode, primary, secondary, line, theme]);
 

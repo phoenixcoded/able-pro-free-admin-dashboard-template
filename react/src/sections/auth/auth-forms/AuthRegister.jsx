@@ -2,26 +2,25 @@ import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 // material-ui
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
-import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Link';
-import InputLabel from '@mui/material/InputLabel';
-import Typography from '@mui/material/Typography';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
 import FormHelperText from '@mui/material/FormHelperText';
+import Grid from '@mui/material/Grid2';
+import InputAdornment from '@mui/material/InputAdornment';
+import InputLabel from '@mui/material/InputLabel';
+import Link from '@mui/material/Link';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 // third-party
-import * as Yup from 'yup';
 import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 // project-imports
 import IconButton from 'components/@extended/IconButton';
 import AnimateButton from 'components/@extended/AnimateButton';
-
 import { strengthColor, strengthIndicator } from 'utils/password-strength';
 
 // assets
@@ -64,14 +63,17 @@ export default function AuthRegister() {
           firstname: Yup.string().max(255).required('First Name is required'),
           lastname: Yup.string().max(255).required('Last Name is required'),
           email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-          password: Yup.string().max(255).required('Password is required')
+          password: Yup.string()
+            .required('Password is required')
+            .test('no-leading-trailing-whitespace', 'Password can not start or end with spaces', (value) => value === value.trim())
+            .max(10, 'Password must be less than 10 characters')
         })}
       >
-        {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-          <form noValidate onSubmit={handleSubmit}>
+        {({ errors, handleBlur, handleChange, touched, values }) => (
+          <form noValidate>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <Stack spacing={1}>
+              <Grid size={{ xs: 12, md: 6 }}>
+                <Stack sx={{ gap: 1 }}>
                   <InputLabel htmlFor="firstname-signup">First Name*</InputLabel>
                   <OutlinedInput
                     id="firstname-login"
@@ -85,14 +87,9 @@ export default function AuthRegister() {
                     error={Boolean(touched.firstname && errors.firstname)}
                   />
                 </Stack>
-                {touched.firstname && errors.firstname && (
-                  <FormHelperText error id="helper-text-firstname-signup">
-                    {errors.firstname}
-                  </FormHelperText>
-                )}
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Stack spacing={1}>
+              <Grid size={{ xs: 12, md: 6 }}>
+                <Stack sx={{ gap: 1 }}>
                   <InputLabel htmlFor="lastname-signup">Last Name*</InputLabel>
                   <OutlinedInput
                     fullWidth
@@ -107,14 +104,9 @@ export default function AuthRegister() {
                     inputProps={{}}
                   />
                 </Stack>
-                {touched.lastname && errors.lastname && (
-                  <FormHelperText error id="helper-text-lastname-signup">
-                    {errors.lastname}
-                  </FormHelperText>
-                )}
               </Grid>
-              <Grid item xs={12}>
-                <Stack spacing={1}>
+              <Grid size={12}>
+                <Stack sx={{ gap: 1 }}>
                   <InputLabel htmlFor="company-signup">Company</InputLabel>
                   <OutlinedInput
                     fullWidth
@@ -134,8 +126,8 @@ export default function AuthRegister() {
                   </FormHelperText>
                 )}
               </Grid>
-              <Grid item xs={12}>
-                <Stack spacing={1}>
+              <Grid size={12}>
+                <Stack sx={{ gap: 1 }}>
                   <InputLabel htmlFor="email-signup">Email Address*</InputLabel>
                   <OutlinedInput
                     fullWidth
@@ -150,14 +142,9 @@ export default function AuthRegister() {
                     inputProps={{}}
                   />
                 </Stack>
-                {touched.email && errors.email && (
-                  <FormHelperText error id="helper-text-email-signup">
-                    {errors.email}
-                  </FormHelperText>
-                )}
               </Grid>
-              <Grid item xs={12}>
-                <Stack spacing={1}>
+              <Grid size={12}>
+                <Stack sx={{ gap: 1 }}>
                   <InputLabel htmlFor="password-signup">Password</InputLabel>
                   <OutlinedInput
                     fullWidth
@@ -188,25 +175,20 @@ export default function AuthRegister() {
                     inputProps={{}}
                   />
                 </Stack>
-                {touched.password && errors.password && (
-                  <FormHelperText error id="helper-text-password-signup">
-                    {errors.password}
-                  </FormHelperText>
-                )}
                 <FormControl fullWidth sx={{ mt: 2 }}>
-                  <Grid container spacing={2} alignItems="center">
-                    <Grid item>
+                  <Grid container spacing={2} sx={{ alignItems: 'center' }}>
+                    <Grid>
                       <Box sx={{ bgcolor: level?.color, width: 85, height: 8, borderRadius: '7px' }} />
                     </Grid>
-                    <Grid item>
-                      <Typography variant="subtitle1" fontSize="0.75rem">
+                    <Grid>
+                      <Typography variant="subtitle1" sx={{ fontSize: '0.75rem' }}>
                         {level?.label}
                       </Typography>
                     </Grid>
                   </Grid>
                 </FormControl>
               </Grid>
-              <Grid item xs={12}>
+              <Grid size={12}>
                 <Typography variant="body2">
                   By Signing up, you agree to our &nbsp;
                   <Link variant="subtitle2" component={RouterLink} to="#">
@@ -219,13 +201,13 @@ export default function AuthRegister() {
                 </Typography>
               </Grid>
               {errors.submit && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                   <FormHelperText error>{errors.submit}</FormHelperText>
                 </Grid>
               )}
-              <Grid item xs={12}>
+              <Grid size={12}>
                 <AnimateButton>
-                  <Button disableElevation disabled={isSubmitting} fullWidth size="large" type="submit" variant="contained" color="primary">
+                  <Button fullWidth size="large" type="submit" variant="contained" color="primary">
                     Create Account
                   </Button>
                 </AnimateButton>

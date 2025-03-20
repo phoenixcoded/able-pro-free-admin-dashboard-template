@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+
 // material-ui
-import { alpha, styled } from '@mui/material/styles';
+import { alpha, styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 // third-party
-import SimpleBar from 'simplebar-react';
 import { BrowserView, MobileView } from 'react-device-detect';
+import SimpleBar from 'simplebar-react';
 
 // root style
 const RootStyle = styled(BrowserView)({
@@ -18,7 +19,7 @@ const RootStyle = styled(BrowserView)({
 const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
   maxHeight: '100%',
   '& .simplebar-scrollbar': {
-    '&:before': { background: alpha(theme.palette.secondary.main, 0.25) },
+    '&:before': { backgroundColor: alpha(theme.palette.secondary.main, 0.25) },
     '&.simplebar-visible:before': { opacity: 1 }
   },
   '& .simplebar-track.simplebar-vertical': { width: 10 },
@@ -29,10 +30,12 @@ const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
 // ==============================|| SIMPLE SCROLL BAR  ||============================== //
 
 export default function SimpleBarScroll({ children, sx, ...other }) {
+  const theme = useTheme();
+
   return (
     <>
       <RootStyle>
-        <SimpleBarStyle clickOnTrack={false} sx={sx} {...other}>
+        <SimpleBarStyle clickOnTrack={false} sx={sx} data-simplebar-direction="ltr" {...other}>
           {children}
         </SimpleBarStyle>
       </RootStyle>
