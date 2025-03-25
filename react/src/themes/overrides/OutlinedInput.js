@@ -33,7 +33,10 @@ export default function OutlinedInput(theme) {
         input: {
           padding: 14
         },
-        notchedOutline: { borderColor: theme.palette.secondary[400] },
+        notchedOutline: {
+          borderColor: theme.palette.secondary[400],
+          ...theme.applyStyles('dark', { borderColor: theme.palette.secondary[200] })
+        },
         root: {
           '& svg': {
             color: theme.palette.secondary.main

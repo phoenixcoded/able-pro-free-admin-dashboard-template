@@ -6,17 +6,14 @@ import Box from '@mui/material/Box';
 
 const ComponentWrapper = styled(Box)(({ theme }) => ({
   paddingLeft: theme.spacing(8),
-  paddingTop: theme.spacing(3),
-  marginBottom: theme.spacing(3),
+  paddingTop: theme.spacing(2.5),
+  marginBottom: theme.spacing(2.5),
   [theme.breakpoints.down('xl')]: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(2.5),
     paddingRight: 0
   },
   [theme.breakpoints.down('md')]: {
     padding: theme.spacing(2)
-  },
-  [theme.breakpoints.down('sm')]: {
-    padding: theme.spacing(1.5)
   }
 }));
 

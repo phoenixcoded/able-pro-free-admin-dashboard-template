@@ -60,20 +60,7 @@ export default function RepeatCustomerChart() {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         labels: {
           style: {
-            colors: [
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary,
-              secondary
-            ]
+            colors: secondary
           }
         },
         axisBorder: {
@@ -108,5 +95,5 @@ export default function RepeatCustomerChart() {
     }
   ]);
 
-  return <ReactApexChart options={options} series={series} type="area" height={260} />;
+  return <ReactApexChart options={options} series={series} type="area" height={284} />;
 }

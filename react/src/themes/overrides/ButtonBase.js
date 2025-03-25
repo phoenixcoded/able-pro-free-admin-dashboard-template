@@ -1,6 +1,6 @@
 // ==============================|| OVERRIDES - BUTTON BASE ||============================== //
 
-export default function ButtonBase() {
+export default function ButtonBase(theme) {
   return {
     MuiButtonBase: {
       defaultProps: {
@@ -9,8 +9,18 @@ export default function ButtonBase() {
       styleOverrides: {
         root: {
           '&.MuiButtonBase-root:disabled': {
-            cursor: 'not-allowed',
-            pointerEvents: 'auto'
+            cursor: 'default',
+            pointerEvents: 'none',
+            '&:hover': {
+              borderColor: theme.palette.secondary.light,
+              color: theme.palette.secondary.light
+            },
+            '&:focus-visible': {
+              outline: 'none'
+            },
+            '&:after': {
+              boxShadow: 'none'
+            }
           }
         }
       }

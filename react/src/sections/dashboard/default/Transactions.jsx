@@ -2,24 +2,24 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 // material-ui
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import List from '@mui/material/List';
-import Tabs from '@mui/material/Tabs';
-import Menu from '@mui/material/Menu';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Typography from '@mui/material/Typography';
-import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Menu from '@mui/material/Menu';
+import Stack from '@mui/material/Stack';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 // project-imports
-import MainCard from 'components/MainCard';
 import Avatar from 'components/@extended/Avatar';
 import IconButton from 'components/@extended/IconButton';
 import MoreIcon from 'components/@extended/MoreIcon';
+import MainCard from 'components/MainCard';
 
 // assets
 import { ArrowDown, ArrowSwapHorizontal, ArrowUp } from 'iconsax-react';
@@ -41,7 +41,7 @@ function a11yProps(index) {
   };
 }
 
-// ==============================|| DATA WIDGET - TYRANSACTIONS ||============================== //
+// ==============================|| DATA WIDGET - TRANSACTIONS ||============================== //
 
 export default function Transactions() {
   const [value, setValue] = useState(0);
@@ -65,7 +65,7 @@ export default function Transactions() {
   return (
     <MainCard content={false}>
       <Box sx={{ p: 3, pb: 1 }}>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
+        <Stack direction="row" sx={{ gap: 1, alignItems: 'center', justifyContent: 'space-between' }}>
           <Typography variant="h5">Transactions</Typography>
           <IconButton
             color="secondary"
@@ -105,7 +105,7 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">$210,000</Typography>
                   <Typography color="error" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowDown style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
@@ -126,7 +126,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Apple Inc.</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     #ABLE-PRO-T00232
                   </Typography>
                 }
@@ -135,9 +135,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">-10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 30.6%
                   </Typography>
                 </Stack>
@@ -156,7 +156,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Spotify Music</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     #ABLE-PRO-T00233
                   </Typography>
                 }
@@ -165,9 +165,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">-26</Typography>
-                  <Typography color="warning.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'warning.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowSwapHorizontal size={14} /> 5%
                   </Typography>
                 </Stack>
@@ -181,7 +181,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Medium</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     06:30 pm
                   </Typography>
                 }
@@ -190,9 +190,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">+2,10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
                   </Typography>
                 </Stack>
@@ -211,7 +211,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Uber</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     08:40 pm
                   </Typography>
                 }
@@ -220,9 +220,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">+2,10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
                   </Typography>
                 </Stack>
@@ -236,7 +236,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Ola Cabs</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     07:40 pm
                   </Typography>
                 }
@@ -249,9 +249,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">+2,10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
                   </Typography>
                 </Stack>
@@ -270,7 +270,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Uber</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     08:40 pm
                   </Typography>
                 }
@@ -279,9 +279,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">+2,10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
                   </Typography>
                 </Stack>
@@ -295,7 +295,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Ola Cabs</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     07:40 pm
                   </Typography>
                 }
@@ -304,7 +304,7 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">$210,000</Typography>
                   <Typography color="error" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowDown style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
@@ -325,7 +325,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Apple Inc.</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     #ABLE-PRO-T00232
                   </Typography>
                 }
@@ -334,9 +334,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">-10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 30.6%
                   </Typography>
                 </Stack>
@@ -355,7 +355,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Spotify Music</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     #ABLE-PRO-T00233
                   </Typography>
                 }
@@ -364,9 +364,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">-26</Typography>
-                  <Typography color="warning.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'warning.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowSwapHorizontal size={14} /> 5%
                   </Typography>
                 </Stack>
@@ -380,7 +380,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Medium</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     06:30 pm
                   </Typography>
                 }
@@ -393,9 +393,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">-10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 30.6%
                   </Typography>
                 </Stack>
@@ -414,7 +414,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Spotify Music</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     #ABLE-PRO-T00233
                   </Typography>
                 }
@@ -423,9 +423,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">-26</Typography>
-                  <Typography color="warning.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'warning.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowSwapHorizontal size={14} /> 5%
                   </Typography>
                 </Stack>
@@ -439,7 +439,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Medium</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     06:30 pm
                   </Typography>
                 }
@@ -448,9 +448,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">+2,10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
                   </Typography>
                 </Stack>
@@ -469,7 +469,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Uber</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     08:40 pm
                   </Typography>
                 }
@@ -478,7 +478,7 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">$210,000</Typography>
                   <Typography color="error" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowDown style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
@@ -499,7 +499,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Apple Inc.</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     #ABLE-PRO-T00232
                   </Typography>
                 }
@@ -508,9 +508,9 @@ export default function Transactions() {
             <ListItem
               divider
               secondaryAction={
-                <Stack spacing={0.25} alignItems="flex-end">
+                <Stack sx={{ gap: 0.25, alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1">+2,10,000</Typography>
-                  <Typography color="success.main" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Typography sx={{ color: 'success.main', display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <ArrowUp style={{ transform: 'rotate(45deg)' }} size={14} /> 10.6%
                   </Typography>
                 </Stack>
@@ -524,7 +524,7 @@ export default function Transactions() {
               <ListItemText
                 primary={<Typography variant="subtitle1">Ola Cabs</Typography>}
                 secondary={
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                     07:40 pm
                   </Typography>
                 }
@@ -532,7 +532,8 @@ export default function Transactions() {
             </ListItem>
           </List>
         </TabPanel>
-        <Stack direction="row" alignItems="center" spacing={1.25} sx={{ p: 3 }}>
+
+        <Stack direction="row" sx={{ gap: 1.25, alignItems: 'center', p: 3 }}>
           <Button variant="outlined" fullWidth color="secondary">
             Transaction History
           </Button>

@@ -3,15 +3,15 @@ import { useState } from 'react';
 // material-ui
 import Chip from '@mui/material/Chip';
 import Menu from '@mui/material/Menu';
+import ListItemButton from '@mui/material/ListItemButton';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import ListItemButton from '@mui/material/ListItemButton';
 
 // project-imports
 import RepeatCustomerChart from './RepeatCustomerChart';
-import MainCard from 'components/MainCard';
 import IconButton from 'components/@extended/IconButton';
 import MoreIcon from 'components/@extended/MoreIcon';
+import MainCard from 'components/MainCard';
 
 // ==============================|| CHART - REPEAT CUSTOMER RATE ||============================== //
 
@@ -30,7 +30,7 @@ export default function RepeatCustomerRate() {
 
   return (
     <MainCard>
-      <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
+      <Stack direction="row" sx={{ gap: 1, alignItems: 'center', justifyContent: 'space-between' }}>
         <Typography variant="h5">Repeat customer rate</Typography>
         <IconButton
           color="secondary"
@@ -66,7 +66,7 @@ export default function RepeatCustomerRate() {
           <ListItemButton onClick={handleClose}>Monthly</ListItemButton>
         </Menu>
       </Stack>
-      <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={0.5} sx={{ mt: 1 }}>
+      <Stack direction="row" sx={{ gap: 0.5, alignItems: 'center', justifyContent: 'flex-end', mt: 1 }}>
         <Typography variant="subtitle1">5.44%</Typography>
         <Chip color="success" variant="filled" label="+2.6%" size="small" sx={{ bgcolor: 'success.main', borderRadius: 1 }} />
       </Stack>

@@ -9,7 +9,7 @@ import getShadow from 'utils/getShadow';
 
 function getColorStyle({ variant, color, theme }) {
   const colors = getColors(theme, color);
-  const { lighter, main, dark, darker } = colors;
+  const { lighter, light, main, dark, darker, contrastText } = colors;
 
   const buttonShadow = `${color}Button`;
   const shadows = getShadow(theme, buttonShadow);
@@ -23,43 +23,50 @@ function getColorStyle({ variant, color, theme }) {
   switch (variant) {
     case 'contained':
       return {
-        ...(color === 'secondary' && { backgroundColor: dark }),
+        ...(color === 'secondary' && { backgroundColor: dark, ...theme.applyStyles('dark', { backgroundColor: light }) }),
         '&:hover': {
           backgroundColor: dark,
-          ...(color === 'secondary' && {
-            backgroundColor: darker
-          })
+          ...theme.applyStyles('dark', { backgroundColor: lighter }),
+          ...(color === 'secondary' && { backgroundColor: darker, ...theme.applyStyles('dark', { backgroundColor: lighter }) })
         },
         ...commonShadow
       };
     case 'shadow':
       return {
-        backgroundColor: main,
+        color: contrastText,
+        backgroundColor: dark,
+        ...theme.applyStyles('dark', { backgroundColor: light }),
         boxShadow: shadows,
-        '&:hover': {
-          boxShadow: 'none',
-          backgroundColor: dark
-        },
+        '&:hover': { boxShadow: 'none', backgroundColor: darker, ...theme.applyStyles('dark', { backgroundColor: lighter }) },
         ...commonShadow
       };
     case 'outlined':
       return {
         borderColor: main,
-        '&:hover': { color: dark, backgroundColor: 'transparent', borderColor: dark },
+        '&:hover': {
+          color: dark,
+          backgroundColor: 'transparent',
+          borderColor: dark
+        },
         ...commonShadow
       };
     case 'dashed':
       return {
         color: main,
         borderColor: main,
+        ...theme.applyStyles('dark', { color: darker, borderColor: darker }),
         backgroundColor: lighter,
-        '&:hover': { color: dark, borderColor: dark },
+        '&:hover': { color: dark, ...theme.applyStyles('dark', { color: contrastText }), borderColor: dark },
         ...commonShadow
       };
     case 'text':
     default:
       return {
-        '&:hover': { color: dark, backgroundColor: lighter },
+        '&:hover': {
+          color: dark,
+          backgroundColor: lighter,
+          ...theme.applyStyles('dark', { color: darker, backgroundColor: lighter + 30 })
+        },
         ...commonShadow
       };
   }
@@ -190,6 +197,16 @@ export default function Button(theme) {
           '& svg': {
             width: 20,
             height: 20
+          }
+        },
+        loading: {
+          pointerEvents: 'none !important',
+          '& svg': {
+            width: 'inherit',
+            height: 'inherit'
+          },
+          '&.MuiButton-loadingPositionCenter': {
+            color: 'transparent !important'
           }
         }
       }

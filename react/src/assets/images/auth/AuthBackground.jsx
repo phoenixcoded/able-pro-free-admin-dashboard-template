@@ -1,15 +1,12 @@
 // material-ui
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 // ==============================|| AUTH BLUR BACK SVG ||============================== //
 
-export default function AuthBackground() {
-  const theme = useTheme();
-
+const AuthBackground = () => {
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         position: 'absolute',
         filter: 'blur(140px)',
         zIndex: -1,
@@ -27,34 +24,39 @@ export default function AuthBackground() {
           position: 'absolute',
           top: 0,
           right: 0,
-          opacity: 1
+          opacity: 1,
+          ...theme.applyStyles('dark', { opacity: 0.6 })
         }
-      }}
+      })}
     >
       <Box
-        sx={{
+        sx={(theme) => ({
           width: 250,
           height: 250,
           borderRadius: '50%',
-          bgcolor: theme.palette.success.lighter,
+          bgcolor: 'success.lighter',
           ml: 20,
           position: 'absolute',
           bottom: 180,
-          opacity: 1
-        }}
+          opacity: 1,
+          ...theme.applyStyles('dark', { opacity: 0.8 })
+        })}
       />
       <Box
-        sx={{
+        sx={(theme) => ({
           width: 200,
           height: 200,
           borderRadius: '50%',
-          bgcolor: theme.palette.error.light,
+          bgcolor: 'error.light',
           position: 'absolute',
           bottom: 0,
           left: -50,
-          opacity: 1
-        }}
+          opacity: 1,
+          ...theme.applyStyles('dark', { opacity: 0.8 })
+        })}
       />
     </Box>
   );
-}
+};
+
+export default AuthBackground;

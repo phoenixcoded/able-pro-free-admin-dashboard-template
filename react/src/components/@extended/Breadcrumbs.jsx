@@ -4,10 +4,10 @@ import { useLocation, Link } from 'react-router-dom';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid2';
+import Typography from '@mui/material/Typography';
 
 // project-imports
 import MainCard from 'components/MainCard';
@@ -101,15 +101,14 @@ export default function Breadcrumbs({
   let ItemIcon;
 
   // collapse item
-  if (!custom && main && main.type === 'collapse' && main.breadcrumbs === true) {
+  if (main && main.type === 'collapse' && !main.breadcrumbs) {
     CollapseIcon = main.icon ? main.icon : Buildings2;
     mainContent = (
       <Typography
-        component={Link}
-        to={document.location.pathname}
+        {...(main.url && { component: Link, to: main.url })}
         variant="body1"
         sx={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
-        color={window.location.pathname === main.url ? 'text.secondary' : 'text.primary'}
+        color={window.location.pathname === main.url ? 'text.primary' : 'text.secondary'}
       >
         {icons && <CollapseIcon style={iconSX} />}
         {main.title}
@@ -118,7 +117,7 @@ export default function Breadcrumbs({
     breadcrumbContent = (
       <MainCard
         border={card}
-        sx={card === false ? { mb: 3, bgcolor: 'transparent', ...sx } : { mb: 3, ...sx }}
+        sx={card === false ? { mb: 3, bgcolor: 'transparent', borderRadius: 0, overflow: 'visible', ...sx } : { mb: 3, ...sx }}
         {...others}
         content={card}
         boxShadow={false}
@@ -130,7 +129,7 @@ export default function Breadcrumbs({
           alignItems={rightAlign ? 'center' : 'flex-start'}
           spacing={0.5}
         >
-          <Grid item>
+          <Grid>
             <MuiBreadcrumbs aria-label="breadcrumb" maxItems={maxItems || 8} separator={separatorIcon}>
               <Typography
                 component={Link}
@@ -141,13 +140,13 @@ export default function Breadcrumbs({
               >
                 {icons && <Home3 style={iconSX} />}
                 {icon && !icons && <Home3 variant="Bold" style={{ ...iconSX, marginRight: 0 }} />}
-                {(!icon || icons) && 'Home'}
+                {(!icon || icons) && 'home'}
               </Typography>
               {mainContent}
             </MuiBreadcrumbs>
           </Grid>
           {title && titleBottom && (
-            <Grid item sx={{ mt: card === false ? 0 : 1 }}>
+            <Grid sx={{ mt: card === false ? 0 : 1 }}>
               <Typography variant="h2" sx={{ fontWeight: 700 }}>
                 {main.title}
               </Typography>
@@ -165,7 +164,7 @@ export default function Breadcrumbs({
 
     ItemIcon = item?.icon ? item.icon : Buildings2;
     itemContent = (
-      <Typography variant="body1" color="text.secondary" sx={{ display: 'flex', alignItems: 'center' }}>
+      <Typography variant="body1" color="text.primary" sx={{ display: 'flex', fontWeight: 500, alignItems: 'center' }}>
         {icons && <ItemIcon style={iconSX} />}
         {itemTitle}
       </Typography>
@@ -200,8 +199,8 @@ export default function Breadcrumbs({
                 key={index}
                 {...(link.to && { component: Link, to: link.to })}
                 variant="body1"
-                sx={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
-                color={link.to ? 'text.primary' : 'text.secondary'}
+                sx={{ textDecoration: 'none', fontWeight: 500, ...(link.to && { fontWeight: 400, cursor: 'pointer' }) }}
+                color={link.to ? 'text.secondary' : 'text.primary'}
               >
                 {link.icon && <CollapseIcon style={iconSX} />}
                 {link.title}
@@ -217,7 +216,7 @@ export default function Breadcrumbs({
       breadcrumbContent = (
         <MainCard
           border={card}
-          sx={card === false ? { mb: 3, bgcolor: 'transparent', ...sx } : { mb: 3, ...sx }}
+          sx={card === false ? { mb: 3, bgcolor: 'transparent', borderRadius: 0, overflow: 'visible', ...sx } : { mb: 3, ...sx }}
           {...others}
           content={card}
           boxShadow={false}
@@ -230,15 +229,15 @@ export default function Breadcrumbs({
             spacing={0.5}
           >
             {title && !titleBottom && (
-              <Grid item>
+              <Grid>
                 <Typography variant="h2" sx={{ fontWeight: 700 }}>
                   {custom ? heading : item?.title}
                 </Typography>
               </Grid>
             )}
-            <Grid item>{tempContent}</Grid>
+            <Grid>{tempContent}</Grid>
             {title && titleBottom && (
-              <Grid item sx={{ mt: card === false ? 0 : 1 }}>
+              <Grid sx={{ mt: card === false ? 0 : 1 }}>
                 <Typography variant="h2" sx={{ fontWeight: 700 }}>
                   {custom ? heading : item?.title}
                 </Typography>

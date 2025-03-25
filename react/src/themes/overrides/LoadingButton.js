@@ -14,6 +14,9 @@ export default function LoadingButton() {
           '&.MuiLoadingButton-loading': {
             opacity: 0.6,
             textShadow: 'none',
+            '& .MuiLoadingButton-loadingIndicatorCenter ~ .MuiLoadingButton-label': {
+              opacity: 0
+            },
             '& .MuiLoadingButton-loadingIndicatorStart': {
               left: 12
             },

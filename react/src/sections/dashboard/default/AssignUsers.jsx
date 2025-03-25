@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
 // material-ui
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import AvatarGroup from '@mui/material/AvatarGroup';
+import Grid from '@mui/material/Grid2';
+import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
-import AvatarGroup from '@mui/material/AvatarGroup';
-import ListItemButton from '@mui/material/ListItemButton';
+import Box from '@mui/material/Box';
 
 // project-imports
-import MainCard from 'components/MainCard';
 import Avatar from 'components/@extended/Avatar';
 import IconButton from 'components/@extended/IconButton';
 import MoreIcon from 'components/@extended/MoreIcon';
+import MainCard from 'components/MainCard';
 
 // assets
 import { Add, Profile } from 'iconsax-react';
@@ -44,9 +44,9 @@ export default function AssignUsers() {
   return (
     <MainCard>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Stack direction="row" alignItems="center" justifyContent="space-between">
-            <Stack direction="row" alignItems="center" spacing={2}>
+        <Grid size={12}>
+          <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
+            <Stack direction="row" sx={{ gap: 2, alignItems: 'center' }}>
               <Avatar variant="rounded">
                 <Profile variant="Bold" />
               </Avatar>
@@ -80,8 +80,8 @@ export default function AssignUsers() {
             </Menu>
           </Stack>
         </Grid>
-        <Grid item xs={12}>
-          <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={3}>
+        <Grid size={12}>
+          <Stack direction="row" sx={{ gap: 3, alignItems: 'center', justifyContent: 'space-between' }}>
             <Box sx={{ width: 186 }}>
               <Tooltip
                 open={show}
@@ -107,8 +107,8 @@ export default function AssignUsers() {
                     }
                   }}
                   max={4}
-                  componentsProps={{
-                    additionalAvatar: {
+                  slotProps={{
+                    surplus: {
                       onMouseEnter: () => {
                         setShow(true);
                       },

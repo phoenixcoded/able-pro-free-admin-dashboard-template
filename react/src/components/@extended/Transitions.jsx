@@ -3,11 +3,11 @@ import { forwardRef } from 'react';
 
 // material-ui
 import Collapse from '@mui/material/Collapse';
-import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
 import Grow from '@mui/material/Grow';
 import Slide from '@mui/material/Slide';
 import Zoom from '@mui/material/Zoom';
+import Box from '@mui/material/Box';
 
 // ==============================|| TRANSITIONS ||============================== //
 
@@ -108,12 +108,6 @@ function Transitions({ children, position = 'top-left', type = 'grow', direction
 }
 
 export default forwardRef(Transitions);
-
-// ==============================|| POPUP / DIALOG - TRANSITIONS ||============================== //
-
-export const PopupTransition = forwardRef(function Transition(props, ref) {
-  return <Zoom ref={ref} timeout={200} {...props} />;
-});
 
 Transitions.propTypes = {
   children: PropTypes.node,

@@ -1,14 +1,14 @@
 // material-ui
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
-import List from '@mui/material/List';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
+import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid2';
 import LinearProgress from '@mui/material/LinearProgress';
+import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 // project-imports
 import MainCard from 'components/MainCard';
@@ -23,16 +23,16 @@ export default function ProjectRelease() {
   return (
     <MainCard title="Project - Able Pro    ">
       <Grid container spacing={1.5}>
-        <Grid item xs={12}>
-          <Stack spacing={1}>
-            <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Grid size={12}>
+          <Stack sx={{ gap: 1 }}>
+            <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
               <Typography>Release v1.2.0</Typography>
               <Typography>72%</Typography>
             </Stack>
             <LinearProgress variant="determinate" value={72} />
           </Stack>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <List>
             <ListItemButton sx={{ flexWrap: 'wrap', rowGap: 1 }}>
               <ListItemIcon>
@@ -69,7 +69,7 @@ export default function ProjectRelease() {
             </ListItemButton>
           </List>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Button fullWidth variant="contained" startIcon={<Add />}>
             Add task
           </Button>
