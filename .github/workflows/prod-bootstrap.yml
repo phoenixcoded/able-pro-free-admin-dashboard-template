@@ -23,15 +23,15 @@ jobs:
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 📂 Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           # ARGS: "-rltgoDzvO --delete"
-          SOURCE: "bootstrap/dist/"
-          REMOTE_HOST: 192.34.62.123
-          REMOTE_USER: ableproadmin
-          TARGET: public_html/bootstrap/free
+          REMOTE_HOST: 82.25.126.213
+          REMOTE_USER: u965251139
+          REMOTE_PORT: "65002"
+          TARGET: domains/ableproadmin.com/public_html/bootstrap/free
           EXCLUDE: "/bootstrap/node_modules/"
