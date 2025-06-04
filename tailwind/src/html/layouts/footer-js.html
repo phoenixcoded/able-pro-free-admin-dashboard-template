@@ -1,0 +1,44 @@
+<!-- Required Js -->
+<script src="../assets/js/plugins/simplebar.min.js"></script>
+<script src="../assets/js/plugins/popper.min.js"></script>
+<script src="../assets/js/icon/custom-font.js"></script>
+<script src="../assets/js/plugins/feather.min.js"></script>
+<script src="../assets/js/component.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/script.js"></script>
+<div class="floting-button fixed bottom-[50px] right-[30px] z-[1030]">
+  <a href="https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882" class="btn btn-danger buynowlinks animate-[btn-floating_2s_infinite] max-sm:p-[13px] max-sm:rounded-full inline-flex items-center gap-2" data-pc-toggle="tooltip" data-pc-title="Buy Now" target="_blank">
+    <i class="ph-duotone ph-shopping-cart text-lg leading-none"></i>
+    <span class="hidden sm:inline-block">Buy Now</span>
+  </a>
+</div>
+
+@@if (pc_dark_layout != ""){
+<script>
+  layout_change('@@pc_dark_layout');
+</script>
+} @@if (pc_theme_contrast != '') {
+<script>
+  layout_theme_contrast_change('@@pc_theme_contrast');
+</script>
+} @@if (pc_box_container != '') {
+<script>
+  change_box_container('@@pc_box_container');
+</script>
+} @@if (pc_caption_show != '') {
+<script>
+  layout_caption_change('@@pc_caption_show');
+</script>
+} @@if (pc_rtl_layout != '') {
+<script>
+  layout_rtl_change('@@pc_rtl_layout');
+</script>
+} @@if (pc_preset_theme != ""){
+<script>
+  preset_change('@@pc_preset_theme');
+</script>
+} @@if (pc_theme_layout != ""){
+<script>
+  main_layout_change('@@pc_theme_layout');
+</script>
+}

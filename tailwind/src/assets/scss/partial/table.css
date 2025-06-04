@@ -1,0 +1,226 @@
+@layer{
+  /* Table Responsive */
+  .table-responsive {
+    @apply overflow-x-auto;
+  }
+
+  /* Table */
+  .table {
+    @apply w-full border-theme-border dark:border-themedark-border mb-4 align-top;
+  }
+
+  .table > :not(caption) > * > * {
+    @apply p-[.7rem_.75rem] whitespace-nowrap;
+  }
+
+  .table thead {
+    @apply align-bottom bg-[rgba(248,249,250,0.5)] dark:bg-[#46484c];
+  }
+
+  .table thead th {
+    @apply p-[.9rem_.75rem] text-[13px] align-middle uppercase ltr:!text-left rtl:!text-right border-y border-y-theme-border dark:border-y-themedark-border text-theme-headings dark:text-themedark-headings;
+  }
+
+  .table:not(:last-child) > :last-child > * {
+    @apply border-t border-t-theme-border dark:border-t-themedark-border;
+  }
+
+  .table td, .table th {
+    @apply !align-middle border-b-0 border-t border-t-theme-border dark:border-t-themedark-border;
+  }
+
+  .table.table-hover tbody tr {
+    @apply hover:!bg-[rgba(0,0,0,.04)];
+  }
+
+  .table.table-striped tbody tr {
+    @apply odd:bg-secondary-300/10;
+  }
+
+  .table.table-dark {
+    @apply bg-themedark-cardbg text-white;
+  }
+
+  .table.table-dark tbody tr td {
+    @apply border-b-themedark-border;
+  }
+
+  .table.table-xl th, .table.table-xl td {
+    @apply p-[1.25rem_.8rem];
+  }
+
+  .table.table-lg th, .table.table-lg td {
+    @apply p-[.9rem_.8rem];
+  }
+
+  .table.table-sm th, .table.table-sm td {
+    @apply p-[.6rem_.8rem];
+  }
+
+  .table.table-xs th, .table.table-xs td {
+    @apply p-[.4rem_.8rem];
+  }
+
+  .table.table-bordered th, .table.table-bordered td {
+    @apply border border-theme-border dark:border-themedark-border;
+  }
+
+  .table.table-borderless th, .table.table-borderless td {
+    @apply !border-0;
+  }
+
+  /* DataTable Styles */
+  .datatable-table > thead > tr > th {
+    @apply ltr:text-left rtl:text-right !border-b-0;
+  }
+
+  .datatable-top {
+    @apply flex max-sm:flex-col max-sm:items-start items-center justify-between after:hidden;
+  }
+
+  .datatable-sorter {
+    @apply ltr:pr-4 rtl:pl-4 ltr:before:right-[3px] rtl:before:!left-[3px] rtl:before:!right-auto ltr:after:right-[3px] rtl:after:!left-[3px] rtl:after:!right-auto;
+  }
+
+
+  .datatable-sorter:before {
+    @apply border-t-theme-bodycolor dark:border-t-themedark-bodycolor;
+  }
+
+  .datatable-sorter:after {
+    @apply border-b-theme-bodycolor dark:border-b-themedark-bodycolor;
+  }
+  .datatable-wrapper .datatable-container {
+    @apply overflow-x-auto !border-b-0;
+  }
+
+  .datatable-dropdown {
+    @apply mb-1;
+  }
+
+  .datatable-dropdown label {
+    @apply flex items-center whitespace-nowrap w-[230px];
+  }
+
+  .datatable-dropdown select {
+    @apply ltr:ml-0 ltr:mr-2 rtl:mr-0 rtl:ml-2;
+  }
+
+  .datatable-pagination a, .datatable-pagination button {
+    &:focus, &:hover {
+      @apply text-theme-headings dark:text-themedark-headings bg-theme-bodybg dark:bg-themedark-bodybg;
+    }
+  }
+
+  .datatable-pagination .datatable-active a, .datatable-pagination .datatable-active button {
+    @apply text-theme-headings dark:text-themedark-headings bg-theme-bodybg dark:bg-themedark-bodybg;
+  }
+
+  .datatable-pagination .datatable-active a:focus, .datatable-pagination .datatable-active button:focus,
+  .datatable-pagination .datatable-active a:hover, .datatable-pagination .datatable-active button:hover {
+    @apply text-theme-headings dark:text-themedark-headings bg-theme-bodybg dark:bg-themedark-bodybg;
+  }
+  .datatable-pagination a:hover, .datatable-pagination button:hover,
+  .datatable-pagination .datatable-active a, .datatable-pagination .datatable-active a:focus, .datatable-pagination .datatable-active a:hover, .datatable-pagination .datatable-active button, .datatable-pagination .datatable-active button:focus, .datatable-pagination .datatable-active button:hover{
+    @apply !bg-theme-bodybg dark:!bg-themedark-bodybg;
+  }
+
+  .dt-container > div.row.justify-content-between {
+    @apply flex items-center justify-between flex-col md:flex-row max-md:text-center max-md:*:mx-auto max-md:*:mb-2;
+  }
+
+  .dt-container > div.row.mt-2 {
+    @apply !my-2;
+  }
+
+  .dt-container div.dt-search input {
+    @apply ltr:mr-1 rtl:mr-1;
+  }
+
+  .dt-container div.dt-length select {
+    @apply w-20;
+  }
+
+  table.dataTable thead > tr > th {
+    @apply ltr:text-left rtl:text-right ltr:pr-8 rtl:!pl-8 rtl:!pr-[.75rem];
+  }
+
+  table.dataTable thead > tr > th .dt-column-order {
+    @apply ltr:!right-3 rtl:!left-3 rtl:!right-auto;
+  }
+
+  .dt-search {
+    @apply mb-2;
+  }
+
+  .dt-buttons {
+    @apply mb-1;
+  }
+
+  .dt-buttons ~ .dt-search {
+    @apply mb-4;
+  }
+
+  .dt-container div.dt-paging ul.pagination, .dt-paging .pagination {
+    @apply flex my-2 *:*:inline-block *:*:px-3 *:*:py-1.5 *:first:rounded-l-lg *:last:rounded-r-lg *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10;
+  }
+
+  .dt-container div.dt-paging ul.pagination .active > .page-link, .dt-container div.dt-paging ul.pagination .page-link.active {
+    @apply bg-primary-500 text-white border-primary-500;
+  }
+
+  .dt-scroll-body {
+    @apply !border-b-0;
+  }
+
+  /* Floating Parent */
+  .dtfh-floatingparent.dtfh-floatingparent-head {
+    @apply !top-header-height bg-theme-cardbg dark:bg-themedark-cardbg;
+  }
+
+  .dtfh-floatingparent.dtfh-floatingparent-foot {
+    @apply bg-theme-cardbg dark:bg-themedark-cardbg;
+  }
+  .dtfh-floatingparent.dtfh-floatingparent-head,
+  .dtfh-floatingparent.dtfh-floatingparent-foot{
+    @apply max-lg:!hidden;
+  }
+  table.dataTable tbody tr > .dtfc-fixed-start,
+  table.dataTable tbody tr > .dtfc-fixed-end,
+  table.dataTable thead tr > .dtfc-fixed-start,
+  table.dataTable thead tr > .dtfc-fixed-end,
+  table.dataTable tfoot tr > .dtfc-fixed-start,
+  table.dataTable tfoot tr > .dtfc-fixed-end {
+    @apply !bg-theme-cardbg dark:!bg-themedark-cardbg;
+  }
+
+  /* Table Card */
+  .table-card .card-body, .table-body.card-body {
+    @apply px-0 pt-0;
+  }
+
+  .datatable-top, .datatable-bottom {
+    @apply px-5 sm:px-[25px];
+  }
+
+  .table > thead > tr > th {
+    @apply !border-t-0;
+  }
+
+  .table tr td, .table tr th {
+    @apply ltr:first:pl-5 ltr:first:sm:pl-[25px] ltr:last:pr-5 ltr:last:sm:pr-[25px] rtl:first:pr-5 rtl:first:sm:pr-[25px] rtl:last:pl-5 rtl:last:sm:pl-[25px];
+  }
+  table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, table.dataTable tfoot td,
+  tfoot {
+    @apply ltr:!text-left rtl:!text-right;
+  }
+  .datatable-search{
+    @apply ltr:ml-auto rtl:mr-auto;
+  }
+  .dt-layout-cell.dt-start{
+    @apply !my-1 rtl:float-right;
+  }
+  .dt-layout-cell.dt-end{
+    @apply !my-1 rtl:float-left;
+  }
+}

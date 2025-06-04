@@ -1,0 +1,323 @@
+@layer{
+  /* Form Control */
+  .form-control, .datatable-input {
+    @apply border rounded-lg block text-base py-[.8rem] px-3 w-full placeholder:text-[#bec8d0] disabled:bg-secondary-200/10 disabled:pointer-events-none focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 border-theme-inputborder dark:border-themedark-inputborder bg-theme-inputbg dark:bg-themedark-inputbg;
+  }
+
+  /* File Input */
+  .form-control[type="file"]::file-selector-button {
+      @apply py-[.8rem] px-3 -my-[.8rem] -mx-3 me-3 bg-secondary-300/10 cursor-pointer border-0 border-r border-theme-inputborder dark:border-themedark-inputborder shadow-none outline-none;
+  }
+
+  /* Error Style */
+  .form-control.error {
+    @apply border-danger-500;
+  }
+
+  /* Form Control Plaintext */
+  .form-control-plaintext {
+    @apply rounded-lg block text-base py-[.8rem] px-3 w-full focus:outline-none placeholder:text-[#bec8d0] disabled:pointer-events-none bg-transparent dark:bg-transparent;
+  }
+
+  /* Form Control Large */
+  .form-control-lg {
+    @apply py-[.775rem] px-[.85rem] text-[1.09375rem] rounded-[10px];
+  }
+
+  /* Form Control Small */
+  .form-control-sm {
+    @apply py-[.375rem] px-[.7rem] text-[.765625rem] rounded-md;
+  }
+
+  /* Form Select */
+  .form-select, .datatable-selector { 
+    @apply appearance-none bg-[length:16px_12px] ltr:bg-[right_1rem_center] rtl:bg-[left_1rem_center] bg-no-repeat [background-image:var(--select-bg)] dark:[background-image:var(--select-bg-dark)] border rounded-lg block text-base py-2.5 ltr:pl-4 ltr:pr-8 rtl:pr-4 rtl:pl-8 w-full focus:outline-none focus:shadow-[0_0_0_1px_#ccc] focus:shadow-primary-500 focus:border-primary-500 border-theme-inputborder dark:border-themedark-inputborder bg-theme-inputbg dark:bg-themedark-inputbg;
+  }
+
+  
+  /* Select Error */
+  .form-select.error {
+    @apply border-danger-500;
+  }
+
+  /* Select Multiple/Size */
+  .form-select[multiple], .form-select[size]:not([size="1"]), [multiple].datatable-selector, [size].datatable-selector:not([size="1"]) {
+    @apply bg-none pr-3;
+  }
+
+  /* Select Large */
+  .form-select-lg {
+    @apply py-[.775rem] ltr:pl-[.85rem] ltr:pr-8 rtl:pr-[.85rem] rtl:pl-8 text-[1.09375rem] rounded-[10px];
+  }
+
+  /* Select Small */
+  .form-select-sm {
+    @apply py-[.375rem] ltr:pl-[.7rem] ltr:pr-8 rtl:pr-[.7rem] rtl:pl-8 text-[.765625rem] rounded-[6px];
+  }
+
+  /* Form Control Color */
+  .form-control-color {
+    @apply w-12 p-[.8rem] h-[calc(1.5em_+_1.6rem_+_2px)];
+  }
+
+  .form-control-color::-moz-color-swatch,
+  .form-control-color::-webkit-color-swatch {
+    @apply !border-0 !rounded;
+  }
+
+  /* Input Group Text */
+  .input-group-text {
+    @apply flex items-center p-[.8rem_.75rem] text-base border border-theme-inputborder dark:border-themedark-inputborder;
+  }
+
+  /* Input Group */
+  .input-group {
+    @apply relative flex flex-wrap items-stretch w-full *:rounded-none *:ltr:first:rounded-l *:ltr:last:rounded-r *:ltr:-ml-px *:ltr:first:ml-0 *:rtl:-mr-px *:rtl:first:mr-0 *:rtl:first:rounded-r *:rtl:last:rounded-l;
+  }
+
+  .input-group .form-control, .input-group .form-select {
+    @apply relative flex-auto w-[1%] min-w-0;
+  }
+
+    /* Datepicker Cell */
+  .datepicker-controls .btn:focus, .datepicker-controls .btn:hover,
+  .datepicker-controls .btn,
+  .datepicker-picker{
+    @apply !text-theme-bodycolor dark:!text-themedark-bodycolor !bg-theme-cardbg dark:!bg-themedark-cardbg;
+  }
+  .datepicker-cell:not(.disabled):hover,
+  .datepicker-cell.focused:not(.selected),  
+  .datepicker-cell.selected {
+    @apply !bg-primary-500 hover:!bg-primary-500;
+  }
+
+  .datepicker-cell.today.focused:not(.selected) {
+    @apply !bg-success-500 hover:!bg-success-500;
+  }
+  .datepicker-cell.disabled{
+    @apply !text-theme-bodycolor dark:!text-themedark-bodycolor;
+  }
+  .datepicker-cell.next:not(.disabled), .datepicker-cell.prev:not(.disabled){
+    @apply hover:!bg-primary-500 hover:!text-white;
+  }
+  .datepicker-view .week {
+    @apply !text-primary-500;
+  }
+  
+
+  /* Form Label */
+  .form-label {
+    @apply mb-2 inline-block text-theme-headings dark:text-themedark-headings;
+  }
+
+  /* Column Form Label */
+  .col-form-label {
+    @apply py-[calc(.8rem_+_1px)];
+  }
+
+  .col-form-label-sm {
+    @apply py-[calc(.375rem_+_1px)];
+  }
+
+  .col-form-label-lg {
+    @apply py-[calc(.775rem_+_1px)];
+  }
+
+  /* Form Check Input */
+  .form-check-input {
+    @apply w-[1.25em] h-[1.25em] align-top appearance-none transition-all bg-contain bg-center bg-no-repeat border border-theme-inputborder dark:border-themedark-inputborder checked:!bg-primary-500 checked:border-primary-500 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .form-check-input[disabled], .form-check-input:disabled ~ .form-check-label {
+    @apply opacity-50 cursor-default;
+  }
+
+  .form-check-input.error {
+    @apply border-danger-500;
+  }
+
+  /* Checkbox and Radio Types */
+  .form-check-input[type="checkbox"] {
+    
+    @apply rounded checked:[background-image:var(--checkbox-bg)];
+  }
+
+  .form-check-input[type="radio"] {
+    @apply rounded-full checked:[background-image:var(--radio-bg)];
+  }
+
+  /* Form Check Switch */
+  .form-check.form-switch {
+    @apply flex items-center gap-2 mb-1;
+  }
+
+  .form-check.form-switch .form-check-input {
+    @apply w-[2em] rounded-full [background-image:var(--switch-bg)] bg-left checked:bg-right checked:[background-image:var(--switch-active-bg)];
+  }
+
+  /* Form Range */
+  .form-range {
+    @apply w-full h-2 rounded-md appearance-none bg-theme-bodybg dark:bg-themedark-bodybg;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    @apply !bg-primary-500 h-4 w-4 rounded-full cursor-pointer appearance-none;
+  }
+
+  .form-range:focus::-webkit-slider-thumb {
+    @apply opacity-90;
+  }
+
+/* NoUiSlider */
+  .pc-toggle-noUiSlider {
+    @apply h-[50px];
+  }
+
+  .pc-toggle-noUiSlider.off .noUi-handle {
+    @apply bg-danger-500 border-danger-500 shadow-none;
+  }
+
+  .noUi-target {
+    @apply !bg-theme-bodybg dark:!bg-themedark-bodybg dark:!border-0 dark:!shadow-none;
+  }
+
+  .noUi-handle {
+    @apply shadow-none !bg-theme-bodybg dark:!bg-themedark-bodybg;
+  }
+
+  /* CodeMirror and Editor Toolbar */
+  .CodeMirror, .editor-toolbar {
+    @apply text-theme-bodycolor dark:text-themedark-bodycolor bg-theme-cardbg dark:bg-themedark-cardbg border-theme-border dark:border-themedark-border;
+  }
+
+  .CodeMirror a {
+    @apply !text-theme-bodycolor dark:!text-themedark-bodycolor border-0;
+  }
+
+  .CodeMirror a.active, .CodeMirror a:hover {
+    @apply !text-theme-bodycolor dark:!text-themedark-bodycolor bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(0,0,0,0.2)];
+  }
+
+  .CodeMirror i.separator {
+    @apply border-r-transparent border-l-theme-border dark:border-l-themedark-border;
+  }
+
+  .noUi-connect {
+    @apply !bg-primary-500;
+  }
+
+  /* Switch Handle */
+  .switch-handle {
+    @apply bg-theme-cardbg dark:bg-themedark-cardbg;
+  }
+  .code-input::-webkit-inner-spin-button,
+  .code-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .code-input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  /* Typeahead */
+  .typeahead {
+    @apply relative;
+  }
+
+  .typeahead > ul {
+    @apply absolute top-full float-left left-0 m-[2px_0_0] p-[5px_-1px] min-w-[170px] shadow-[0,6px,12px,rgba(0,0,0,.17)] rounded border border-theme-border dark:border-themedark-border bg-theme-cardbg dark:bg-themedark-cardbg;
+  }
+
+  .typeahead > ul > li > a {
+    @apply block leading-normal p-[3px_20px] whitespace-nowrap;
+  }
+
+  .typeahead > ul > li.active > a, .typeahead > ul > li.active > a:hover, .typeahead > ul > li > a:hover {
+    @apply text-white !bg-primary-500 no-underline;
+  }
+
+  /* Inline CKEditor */
+  #cke5-inline-demo .ck-content {
+    @apply mb-4 p-4 sm:p-10 bg-theme-cardbg dark:bg-themedark-cardbg border border-theme-border dark:border-themedark-border;
+  }
+
+  #cke5-inline-demo .ck-content .image-inline {
+    @apply float-right ml-[var(--ck-image-style-spacing)] max-w-[50%];
+  }
+
+  #cke5-inline-demo header.ck-content {
+    @apply text-center;
+  }
+
+  #cke5-inline-demo header.ck-content h2 + h3 {
+    @apply font-semibold;
+  }
+
+  .demo-row {
+    @apply w-full flex flex-col sm:flex-row;
+  }
+
+  .demo-row .demo-row__half {
+    @apply w-full sm:w-2/4 px-0 ltr:first:sm:pr-2 ltr:last:sm:pl-2 rtl:first:sm:pl-2 rtl:last:sm:pr-2;
+  }
+
+  /* Dropzone */
+  .dropzone {
+    @apply mb-5 min-h-[auto] p-5 cursor-pointer rounded border border-2 border-dashed !border-theme-inputborder dark:!border-themedark-inputborder !bg-theme-inputbg dark:!bg-themedark-inputbg;
+  }
+
+  /* Uppy Dashboard */
+  .uppy-Dashboard{
+    @apply !z-[1010] relative;
+  }
+  .uppy-Dashboard--modal {
+    @apply !z-[1030];
+  }
+
+  .uppy-Dashboard-overlay {
+    @apply !z-[1030];
+  }
+
+  .uppy-Dashboard-inner {
+    @apply !z-[1031];
+  }
+
+  /* Error Message */
+  .error-message {
+    @apply text-danger-500;
+  }
+
+  /* Datepicker */
+  .datepicker-picker {
+    @apply !bg-theme-cardbg dark:!bg-themedark-cardbg;
+  }
+
+  .datepicker-controls .btn {
+    @apply bg-transparent;
+  }
+
+  .datepicker-cell.disabled {
+    @apply text-theme-bodycolor/50 dark:text-themedark-bodycolor/50;
+  }
+
+  .datepicker-cell.focused:not(.selected), .datepicker-cell:not(.disabled):hover {
+    @apply !bg-primary-500 text-white;
+  }
+    .datepicker-cell.highlighted:not(.selected):not(.range):not(.today):not(.disabled):hover,.datepicker-cell.highlighted:not(.selected):not(.range):not(.today).focused,.datepicker-cell.highlighted:not(.selected):not(.range):not(.today){
+      @apply bg-[rgba(0,0,0,0.1)];
+    }
+    .datepicker-footer{
+      @apply bg-transparent;
+    }
+  .ql-container.ql-snow, .ql-toolbar.ql-snow {
+    @apply border-theme-inputborder dark:border-themedark-inputborder;
+  }
+  .ql-snow .ql-picker.ql-expanded .ql-picker-label,
+  .ql-snow .ql-picker {
+    @apply !text-theme-bodycolor dark:!text-themedark-bodycolor;
+  }
+
+  .ql-snow .ql-stroke {
+    @apply !stroke-theme-bodycolor dark:!stroke-themedark-bodycolor;
+  }
+}

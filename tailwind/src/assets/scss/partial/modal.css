@@ -1,0 +1,280 @@
+@layer{
+.modal-content {
+  @apply w-full m-2 overflow-hidden flex flex-col rounded-lg border border-theme-border dark:border-themedark-border bg-theme-cardbg dark:bg-themedark-cardbg shadow-[0_0_15px_-3px_rgb(0,0,0,0.1)];
+}
+
+.modal-header {
+  @apply p-5 flex items-center justify-between border-b border-theme-border dark:border-themedark-border;
+}
+
+.modal-body {
+  @apply p-5 flex-auto;
+}
+
+.modal-footer {
+  @apply p-5 flex items-center justify-end border-t border-theme-border dark:border-themedark-border;
+}
+
+.modal-dialog {
+  @apply max-w-[500px] z-[1030] mx-auto my-10 relative inset-x-0 top-0 flex items-start opacity-0 -translate-y-20 duration-300 transition-all ease-in-out;
+}
+.modal-dialog.modal-lg { @apply max-w-[800px]; }
+.modal-dialog.modal-sm { @apply max-w-[300px]; }
+
+.modal-dialog.modal-fullscreen {
+  @apply w-full max-w-none h-full m-0;
+}
+.modal-dialog.modal-fullscreen .modal-content {
+  @apply h-full rounded-none;
+}
+.modal-dialog.modal-fullscreen .modal-body {
+  @apply overflow-y-auto;
+}
+
+/* Responsive fullscreen variants */
+.modal-dialog.modal-fullscreen-xl-down {
+  @apply max-xl:w-full max-xl:max-w-none max-xl:h-full max-xl:m-0;
+}
+.modal-dialog.modal-fullscreen-xl-down .modal-content {
+  @apply max-xl:h-full max-xl:rounded-none;
+}
+.modal-dialog.modal-fullscreen-xl-down .modal-body {
+  @apply max-xl:overflow-y-auto;
+}
+
+.modal-dialog.modal-fullscreen-lg-down {
+  @apply max-lg:w-full max-lg:max-w-none max-lg:h-full max-lg:m-0;
+}
+.modal-dialog.modal-fullscreen-lg-down .modal-content {
+  @apply max-lg:h-full max-lg:rounded-none;
+}
+.modal-dialog.modal-fullscreen-lg-down .modal-body {
+  @apply max-lg:overflow-y-auto;
+}
+
+.modal-dialog.modal-fullscreen-md-down {
+  @apply max-md:w-full max-md:max-w-none max-md:h-full max-md:m-0;
+}
+.modal-dialog.modal-fullscreen-md-down .modal-content {
+  @apply max-md:h-full max-md:rounded-none;
+}
+.modal-dialog.modal-fullscreen-md-down .modal-body {
+  @apply max-md:overflow-y-auto;
+}
+
+.modal-dialog.modal-fullscreen-sm-down {
+  @apply max-sm:w-full max-sm:max-w-none max-sm:h-full max-sm:m-0;
+}
+.modal-dialog.modal-fullscreen-sm-down .modal-content {
+  @apply max-sm:h-full max-sm:rounded-none;
+}
+.modal-dialog.modal-fullscreen-sm-down .modal-body {
+  @apply max-sm:overflow-y-auto;
+}
+
+.modal-dialog-centered {
+  @apply flex items-center min-h-[calc(100%_-_5rem)];
+}
+
+.modal {
+  @apply hidden z-[1030] fixed top-0 inset-x-0 h-full overflow-x-hidden overflow-y-auto;
+}
+.modal.show {
+  @apply block;
+}
+.modal.animate .modal-dialog {
+  @apply transform-none translate-none opacity-100;
+}
+
+/* All animation effect classes */
+@layer components {
+  .anim-fade-in-scale .modal-dialog {
+    @apply scale-75 translate-y-0 opacity-0 duration-300;
+  }
+  .anim-fade-in-scale.animate .modal-dialog {
+    @apply transform-none opacity-100 scale-100;
+  }
+
+  .anim-slide-in-right .modal-dialog {
+    @apply translate-x-1/4 translate-y-0 opacity-0 transition-[all_0.3s_cubic-bezier(0.25,0.5,0.5,0.9)] duration-300;
+  }
+  .anim-slide-in-right.animate .modal-dialog {
+    @apply transform-none opacity-100;
+  }
+
+  .anim-slide-in-bottom .modal-dialog {
+    @apply translate-y-1/4 opacity-0 duration-300;
+  }
+  .anim-slide-in-bottom.animate .modal-dialog {
+    @apply transform-none opacity-100;
+  }
+
+  .anim-newspaper .modal-dialog {
+    @apply scale-0 translate-y-0 rotate-[720deg] opacity-0 duration-500;
+  }
+  .anim-newspaper.animate .modal-dialog {
+    @apply transform-none opacity-100;
+  }
+
+  .anim-fall {
+    perspective: 1300px;
+  }
+  .anim-fall .modal-dialog {
+    transform: translateZ(600px) rotateX(20deg) translateY(0);
+    @apply opacity-0 duration-500;
+  }
+  .anim-fall.animate .modal-dialog {
+    transform: translateZ(0px) rotateX(0deg) translateY(0);
+    @apply opacity-100;
+  }
+
+  .anim-side-fall {
+    perspective: 1300px;
+  }
+  .anim-side-fall .modal-dialog {
+    transform: translate(30%) translateZ(600px) rotate(10deg);
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-side-fall.animate .modal-dialog {
+    transform: translate(0%) translateZ(0) rotate(0deg);
+    @apply opacity-100;
+  }
+
+  .anim-sticky-up .modal-dialog.modal-dialog-centered {
+    @apply items-start mt-0 opacity-0 duration-300;
+  }
+  .anim-sticky-up .modal-dialog.modal-dialog-centered .modal-content {
+    @apply mt-0 rounded-t-none;
+  }
+  .anim-sticky-up.animate .modal-dialog {
+    @apply opacity-100;
+  }
+
+  .anim-3d-flip-horizontal {
+    perspective: 1300px;
+  }
+  .anim-3d-flip-horizontal .modal-dialog {
+    transform: rotateY(-70deg) translateY(0);
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-3d-flip-horizontal.animate .modal-dialog {
+    transform: rotateY(0deg) translateY(0);
+    @apply opacity-100;
+  }
+
+  .anim-3d-flip-vertical {
+    perspective: 1300px;
+  }
+  .anim-3d-flip-vertical .modal-dialog {
+    transform: rotateX(-70deg) translateY(0);
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-3d-flip-vertical.animate .modal-dialog {
+    transform: rotateX(0deg) translateY(0);
+    @apply opacity-100;
+  }
+
+  .anim-3d-sign {
+    perspective: 1300px;
+  }
+  .anim-3d-sign .modal-dialog {
+    transform: rotateX(-60deg) translateY(0);
+    transform-style: preserve-3d;
+    transform-origin: 50% 0;
+    @apply opacity-0 duration-300;
+  }
+  .anim-3d-sign.animate .modal-dialog {
+    transform: rotateX(0deg) translateY(0);
+    @apply opacity-100;
+  }
+
+  .anim-super-scaled {
+    perspective: 1300px;
+  }
+  .anim-super-scaled .modal-dialog {
+    transform: scale(2) translateY(0);
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-super-scaled.animate .modal-dialog {
+    transform: scale(1) translateY(0);
+    @apply opacity-100;
+  }
+
+  .anim-just-me {
+    @apply bg-theme-cardbg dark:bg-themedark-cardbg;
+  }
+  .anim-just-me .modal-dialog {
+    transform: scale(0.8) translateY(0);
+    @apply opacity-0 duration-300;
+  }
+  .anim-just-me .modal-dialog .modal-content {
+    @apply border-0 shadow-none;
+  }
+  .anim-just-me.animate .modal-dialog {
+    transform: scale(1) translateY(0);
+    @apply opacity-100;
+  }
+
+  .anim-3d-slit {
+    perspective: 1300px;
+  }
+  .anim-3d-slit .modal-dialog {
+    transform: translateZ(-3000px) rotateY(90deg) translateY(0);
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-3d-slit.animate .modal-dialog {
+    @apply opacity-100 animate-[slit_1.2s_ease-in-out_forwards];
+  }
+
+  .anim-3d-rotate-bottom {
+    perspective: 1300px;
+  }
+  .anim-3d-rotate-bottom .modal-dialog {
+    transform: translateY(100%) rotateX(90deg);
+    transform-origin: 0 100%;
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-3d-rotate-bottom.animate .modal-dialog {
+    transform: translateY(0%) rotateX(0deg);
+    @apply opacity-100;
+  }
+
+  .anim-3d-rotate-InLeft {
+    perspective: 1300px;
+  }
+  .anim-3d-rotate-InLeft .modal-dialog {
+    transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+    transform-origin: 0 100%;
+    transform-style: preserve-3d;
+    @apply opacity-0 duration-300;
+  }
+  .anim-3d-rotate-InLeft.animate .modal-dialog {
+    transform: translateZ(0px) translateX(0%) rotateY(0deg);
+    @apply opacity-100;
+  }
+
+  .anim-blur {
+    @apply backdrop-blur-xl;
+  }
+  .anim-blur .modal-dialog {
+    @apply scale-75 translate-y-0 opacity-0 duration-300;
+  }
+  .anim-blur.animate .modal-dialog {
+    @apply transform-none opacity-100;
+  }
+}
+
+.modal-open {
+  @apply overflow-hidden;
+}
+
+.introjs-tooltip {
+  @apply bg-theme-cardbg dark:bg-themedark-cardbg;
+}
+}

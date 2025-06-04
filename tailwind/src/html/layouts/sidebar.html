@@ -1,0 +1,69 @@
+<!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header flex items-center py-4 px-6 h-header-height">
+      <a href="../dashboard/index.html" class="b-brand flex items-center gap-3">
+        <!-- ========   Change your logo from here   ============ -->
+        <img src="../assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo" />
+        <span class="badge bg-success-500/10 text-success-500 rounded-full theme-version">@@pc_theme_version</span>
+      </a>
+    </div>
+    <div class="navbar-content h-[calc(100vh_-_74px)] py-2.5">
+      <div class="card pc-user-card mx-[15px] mb-[15px] bg-theme-sidebaruserbg dark:bg-themedark-sidebaruserbg">
+        <div class="card-body !p-5">
+          <div class="flex items-center">
+            <img class="shrink-0 w-[45px] h-[45px] rounded-full" src="../assets/images/user/avatar-1.jpg" alt="user-image" />
+            <div class="ml-4 mr-2 grow">
+              <h6 class="mb-0" data-i18n="Jonh Smith">Jonh Smith</h6>
+              <small data-i18n="Administrator">Administrator</small>
+            </div>
+            <a class="shrink-0 btn btn-icon inline-flex btn-link-secondary" data-pc-toggle="collapse" href="#pc_sidebar_userlink">
+              <svg class="pc-icon w-[22px] h-[22px]">
+                <use xlink:href="#custom-sort-outline"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="hidden pc-user-links" id="pc_sidebar_userlink">
+            <div class="pt-3 *:flex *:items-center *:py-2 *:gap-2.5 *:hover:text-primary-500">
+              <a href="#!">
+                <i class="text-lg leading-none ti ti-user"></i>
+                <span data-i18n="My Account">My Account</span>
+              </a> 
+              <a href="#!">
+                <i class="text-lg leading-none ti ti-settings"></i>
+                <span data-i18n="Settings">Settings</span>
+              </a>
+              <a href="#!">
+                <i class="text-lg leading-none ti ti-lock"></i>
+                <span data-i18n="Lock Screen">Lock Screen</span>
+              </a>
+              <a href="#!">
+                <i class="text-lg leading-none ti ti-power"></i>
+                <span data-i18n="Logout">Logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="pc-navbar">
+        @@include('./menu-list.html')
+      </ul>
+      <div class="card pc-user-card bg-theme-sidebaruserbg dark:bg-themedark-sidebaruserbg m-4">
+        <div class="card-body text-center">
+          <img src="../assets/images/application/img-coupon.png" alt="img" class="img-fluid w-2/4 mx-auto">
+          <h5 class="mb-0 mt-1">Able Pro</h5>
+          <p class="mb-4">Checkout pro features</p>
+          <a href="https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882" target="_blank" class="btn btn-warning">
+            <div class="flex items-center">
+              <svg class="pc-icon me-2 w-[22px] h-[22px]">
+                <use xlink:href="#custom-logout-1-outline"></use>
+              </svg>
+              Upgrade to Pro
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end -->
