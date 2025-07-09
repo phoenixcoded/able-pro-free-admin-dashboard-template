@@ -1,5 +1,5 @@
-// type
-import { Home3, HomeTrendUp } from 'iconsax-react';
+// assets
+import { Home3, HomeTrendUp } from 'iconsax-reactjs';
 
 // icons
 const icons = {

@@ -3,8 +3,6 @@ import { Outlet } from 'react-router-dom';
 
 // material-ui
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 
@@ -18,14 +16,7 @@ import Loader from 'components/Loader';
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
 
-// assets
-import { ShoppingCart } from 'iconsax-react';
-
 // ==============================|| MAIN LAYOUT ||============================== //
-
-let value = window.location.search;
-
-const url = 'https://1.envato.market/zNkqj6';
 
 export default function MainLayout() {
   const { menuMasterLoading } = useGetMenuMaster();
@@ -58,16 +49,6 @@ export default function MainLayout() {
           <Outlet />
           <Footer />
         </Box>
-        <Link style={{ textDecoration: 'none' }} href={url} target="_blank">
-          <Button
-            variant="contained"
-            color="error"
-            startIcon={<ShoppingCart />}
-            sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
-          >
-            Buy Now
-          </Button>
-        </Link>
       </Box>
     </Box>
   );

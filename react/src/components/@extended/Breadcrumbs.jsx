@@ -6,7 +6,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 // project-imports
@@ -14,7 +14,7 @@ import MainCard from 'components/MainCard';
 import navigation from 'menu-items';
 
 // assets
-import { ArrowRight2, Buildings2, Home3 } from 'iconsax-react';
+import { ArrowRight2, Buildings2, Home3 } from 'iconsax-reactjs';
 
 // ==============================|| BREADCRUMBS ||============================== //
 

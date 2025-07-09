@@ -1,6 +1,7 @@
+// material-ui
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -20,7 +21,7 @@ export default function WelcomeBanner() {
       border={false}
       sx={{
         color: 'background.paper',
-        bgcolor: 'primary.main',
+        bgcolor: 'primary.darker',
         '&:after': {
           content: '""',
           background: `url("${cardBack}") 100% 100% / cover no-repeat`,

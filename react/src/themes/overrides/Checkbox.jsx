@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import getColors from 'utils/getColors';
 
 // assets
-import { Stop, TickSquare, MinusSquare } from 'iconsax-react';
+import { Stop, TickSquare, MinusSquare } from 'iconsax-reactjs';
 
 // ==============================|| RADIO - COLORS ||============================== //
 
@@ -15,7 +15,6 @@ function getColorStyle({ color, theme }) {
   return {
     '&:hover': {
       backgroundColor: color === 'secondary' ? lighter : lighter + 50,
-      ...theme.applyStyles('dark', { backgroundColor: color === 'secondary' ? lighter + 50 : lighter + 20 }),
       '& .icon': { borderColor: main }
     },
     '&.Mui-focusVisible': {

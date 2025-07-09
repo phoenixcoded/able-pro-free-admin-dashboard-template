@@ -1,5 +1,5 @@
 // assets
-import { DocumentCode2, I24Support } from 'iconsax-react';
+import { DocumentCode2, I24Support } from 'iconsax-reactjs';
 
 // icons
 const icons = {
@@ -25,7 +25,7 @@ const support = {
       id: 'documentation',
       title: 'Documentation',
       type: 'item',
-      url: 'https://phoenixcoded.gitbook.io/able-pro/v/react/',
+      url: 'https://phoenixcoded.gitbook.io/able-pro',
       icon: icons.documentation,
       external: true,
       target: true

@@ -1,4 +1,4 @@
-// project import
+// project-imports
 import dashboard from './dashboard';
 import pages from './pages';
 import utilities from './utilities';

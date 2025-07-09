@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 
 // material-ui
 import Card from '@mui/material/Card';
@@ -12,28 +12,26 @@ const headerSX = { p: 2.5, '& .MuiCardHeader-action': { m: '0px auto', alignSelf
 
 // ==============================|| CUSTOM - MAIN CARD ||============================== //
 
-const MainCard = forwardRef(function MainCard(
-  {
-    border = true,
-    boxShadow = true,
-    children,
-    subheader,
-    content = true,
-    contentSX = {},
-    darkTitle,
-    divider = true,
-    elevation,
-    secondary,
-    shadow,
-    sx = {},
-    title,
-    codeHighlight = false,
-    codeString,
-    modal = false,
-    ...others
-  },
-  ref
-) {
+export default function MainCard({
+  border = true,
+  boxShadow,
+  children,
+  subheader,
+  content = true,
+  contentSX = {},
+  darkTitle,
+  divider = true,
+  elevation,
+  secondary,
+  shadow,
+  sx = {},
+  title,
+  codeHighlight = false,
+  codeString,
+  modal = false,
+  ref,
+  ...others
+}) {
   const { themeContrast } = false;
 
   return (
@@ -41,27 +39,36 @@ const MainCard = forwardRef(function MainCard(
       elevation={elevation || 0}
       ref={ref}
       {...others}
-      sx={[
-        (theme) => ({
+      sx={(theme) => {
+        const style = {
           position: 'relative',
-          border: border ? '1px solid' : 'none',
           borderRadius: 1.5,
-          borderColor: theme.palette.divider,
+          ...(border && { border: `1px solid ${theme.palette.divider}` }),
           ...(((themeContrast && boxShadow) || shadow) && { boxShadow: shadow ? shadow : theme.customShadows.z1 }),
           ...(codeHighlight && {
-            '& pre': { m: 0, p: '12px !important', fontFamily: theme.typography.fontFamily, fontSize: '0.75rem' }
+            '& pre': {
+              m: 0,
+              p: '12px !important',
+              fontFamily: theme.typography.fontFamily,
+              fontSize: '0.75rem'
+            }
           }),
           ...(modal && {
-            position: 'absolute',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: { xs: `calc( 100% - 50px)`, sm: 'auto' },
-            '& .MuiCardContent-root': { overflowY: 'auto', minHeight: 'auto', maxHeight: `calc(100vh - 200px)` }
+            width: { xs: `calc(100% - 50px)`, sm: 'auto' },
+            '& .MuiCardContent-root': {
+              overflowY: 'auto',
+              minHeight: 'auto',
+              maxHeight: `calc(100vh - 200px)`
+            }
           })
-        }),
-        sx
-      ]}
+        };
+
+        const userSx = typeof sx === 'function' ? sx(theme) : sx;
+        return { ...style, ...userSx };
+      }}
     >
       {/* card header and action */}
       {!darkTitle && title && (
@@ -77,6 +84,25 @@ const MainCard = forwardRef(function MainCard(
       {!content && children}
     </Card>
   );
-});
+}
 
-export default MainCard;
+MainCard.propTypes = {
+  border: PropTypes.bool,
+  boxShadow: PropTypes.bool,
+  children: PropTypes.node,
+  subheader: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  content: PropTypes.bool,
+  contentSX: PropTypes.object,
+  darkTitle: PropTypes.bool,
+  divider: PropTypes.bool,
+  elevation: PropTypes.number,
+  secondary: PropTypes.any,
+  shadow: PropTypes.string,
+  sx: PropTypes.object,
+  title: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  codeHighlight: PropTypes.bool,
+  codeString: PropTypes.string,
+  modal: PropTypes.bool,
+  ref: PropTypes.object,
+  others: PropTypes.any
+};
