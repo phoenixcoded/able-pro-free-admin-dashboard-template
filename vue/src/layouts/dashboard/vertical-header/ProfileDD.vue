@@ -56,14 +56,14 @@ const profiledata2 = ref([
   <!-- ---------------------------------------------- -->
   <div>
     <div class="d-flex align-center pa-5">
-      <v-avatar size="40" class="mr-2">
+      <v-avatar size="40" class="me-2">
         <img src="@/assets/images/users/avatar-6.png" width="40" alt="profile" />
       </v-avatar>
       <div>
         <h6 class="text-subtitle-1 mb-0">JWT User</h6>
         <p class="text-caption text-lightText mb-0">UI/UX Designer</p>
       </div>
-      <div class="ml-auto">
+      <div class="ms-auto">
         <v-btn variant="text" aria-label="logout" color="error" rounded="sm" icon size="large" @click="authStore.logout()">
           <SvgSprite name="custom-logout-1" />
         </v-btn>
@@ -92,22 +92,21 @@ const profiledata2 = ref([
               v-for="(item, index) in profiledata1"
               :key="index"
               color="primary"
-              base-color="secondary"
+              :base-color="'secondary'"
               rounded="md"
               :value="item.title"
-              class="mb-1"
             >
               <template v-slot:prepend>
-                <div class="mr-4">
+                <div class="me-4">
                   <SvgSprite :name="item.icon || ''" style="width: 18px; height: 18px" />
                 </div>
               </template>
 
               <v-list-item-title class="text-h6">{{ item.title }}</v-list-item-title>
             </v-list-item>
-            <v-list-item @click="authStore.logout()" color="primary" base-color="secondary" rounded="md">
+            <v-list-item color="primary" :base-color="'secondary'" rounded="md">
               <template v-slot:prepend>
-                <div class="mr-4">
+                <div class="me-4">
                   <SvgSprite name="custom-logout-1" style="width: 18px; height: 18px" />
                 </div>
               </template>
@@ -125,10 +124,9 @@ const profiledata2 = ref([
               base-color="secondary"
               rounded="md"
               :value="item.title"
-              class="mb-1"
             >
               <template v-slot:prepend>
-                <div class="mr-4">
+                <div class="me-4">
                   <SvgSprite :name="item.icon || ''" style="width: 18px; height: 18px" />
                 </div>
               </template>

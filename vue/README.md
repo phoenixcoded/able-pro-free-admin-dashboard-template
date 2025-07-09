@@ -104,7 +104,7 @@ Looking for even more features? Check out Able Pro's Vue [premium version](https
 - Vue Router
 - JWT (i.e. Pro version)
 - Vee validate
-- Vue-i18n
+- Vue-i18n (i.e. Pro version)
 - Apex Charts
 - Axios
 - Vue3 easy datatable
