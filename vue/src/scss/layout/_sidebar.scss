@@ -177,6 +177,17 @@
     }
   }
 }
+@media (min-width: 1280px) {
+  .verticalLayout:not(.component-wrapper) {
+    &.mini-sidebar {
+      .v-list-item {
+        .v-list-item__content {
+          min-width: 0px;
+        }
+      }
+    }
+  }
+}
 @media only screen and (min-width: 1170px) {
   .mini-sidebar {
     .logo {
