@@ -66,12 +66,11 @@ export default function NotificationPage() {
         aria-haspopup="true"
         onClick={handleToggle}
         size="large"
-        sx={(theme) => ({
+        sx={{
           p: 1,
           color: 'secondary.main',
-          bgcolor: open ? 'secondary.200' : 'secondary.100',
-          ...theme.applyStyles('dark', { bgcolor: open ? 'background.paper' : 'background.default' })
-        })}
+          bgcolor: open ? 'secondary.200' : 'secondary.100'
+        }}
       >
         <Badge badgeContent={read} color="success" sx={{ '& .MuiBadge-badge': { top: 2, right: 4 } }}>
           <Notification variant="Bold" />

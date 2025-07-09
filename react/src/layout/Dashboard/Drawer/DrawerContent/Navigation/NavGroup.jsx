@@ -103,12 +103,11 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId, setSele
                 <Box sx={{ pl: 3, mb: 1.5 }}>
                   <Typography
                     variant="h5"
-                    sx={(theme) => ({
+                    sx={{
                       textTransform: 'uppercase',
                       fontSize: '0.688rem',
-                      color: 'secondary.dark',
-                      ...theme.applyStyles('dark', { color: 'text.secondary' })
-                    })}
+                      color: 'secondary.dark'
+                    }}
                   >
                     {item.title}
                   </Typography>

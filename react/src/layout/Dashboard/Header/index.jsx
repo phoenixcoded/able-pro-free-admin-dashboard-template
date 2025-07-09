@@ -38,14 +38,12 @@ export default function Header() {
         color="secondary"
         variant="light"
         size="large"
-        sx={(theme) => ({
+        sx={{
           color: 'secondary.main',
-          ...(drawerOpen
-            ? { bgcolor: 'secondary.100', ...theme.applyStyles('dark', { bgcolor: 'background.default' }) }
-            : { bgcolor: 'secondary.200', ...theme.applyStyles('dark', { bgcolor: 'background.paper' }) }),
+          ...(drawerOpen ? { bgcolor: 'secondary.100' } : { bgcolor: 'secondary.200' }),
           ml: { xs: 0, lg: -2 },
           p: 1
-        })}
+        }}
       >
         <HamburgerMenu />
       </IconButton>

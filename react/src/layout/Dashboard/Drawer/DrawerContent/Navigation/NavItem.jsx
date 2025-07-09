@@ -59,7 +59,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
           target={itemTarget}
           disabled={item.disabled}
           selected={isSelected}
-          sx={(theme) => ({
+          sx={{
             zIndex: 1201,
             pl: level === 2 ? 3.25 : drawerOpen ? (level <= 3 ? (level * 20) / 8 : (level * 20 + (level - 3) * 10) / 8) : 1.5,
             py: !drawerOpen && level === 1 ? 1.25 : 1,
@@ -72,7 +72,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
                 mx: 1.25,
                 my: 0.5,
                 borderRadius: 1,
-                '&:hover': { bgcolor: 'secondary.200', ...theme.applyStyles('dark', { bgcolor: 'divider' }) }
+                '&:hover': { bgcolor: 'secondary.200' }
               }),
             ...(!drawerOpen && {
               px: 2.75,
@@ -80,12 +80,12 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
               '&:hover': { bgcolor: 'transparent' },
               '&.Mui-selected': { '&:hover': { bgcolor: 'transparent' }, bgcolor: 'transparent' }
             })
-          })}
+          }}
           onClick={() => itemHandler()}
         >
           {itemIcon && (
             <ListItemIcon
-              sx={(theme) => ({
+              sx={{
                 minWidth: 38,
                 color: 'secondary.main',
                 ...(isSelected && { color: iconSelectedColor }),
@@ -101,10 +101,9 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
                 ...(!drawerOpen &&
                   isSelected && {
                     bgcolor: 'primary.lighter',
-                    '&:hover': { bgcolor: 'primary.lighter' },
-                    ...theme.applyStyles('dark', { bgcolor: 'divider', '&:hover': { bgcolor: 'divider' } })
+                    '&:hover': { bgcolor: 'primary.lighter' }
                   })
-              })}
+              }}
             >
               {itemIcon}
             </ListItemIcon>
@@ -125,12 +124,11 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
               primary={
                 <Typography
                   variant="h6"
-                  sx={(theme) => ({
+                  sx={{
                     color: 'secondary.main',
-                    ...theme.applyStyles('dark', { color: 'secondary.400' }),
                     ...(isSelected && { color: iconSelectedColor }),
                     fontWeight: isSelected ? 500 : 400
-                  })}
+                  }}
                 >
                   {item.title}
                 </Typography>
@@ -179,8 +177,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
                   height: 20,
                   p: 0.25,
                   borderColor: isSelected ? 'primary.light' : 'secondary.light',
-                  '&:hover': { borderColor: isSelected ? 'primary.main' : 'secondary.main' },
-                  ...theme.applyStyles('dark', { color: isSelected ? 'primary.main' : 'secondary.400' })
+                  '&:hover': { borderColor: isSelected ? 'primary.main' : 'secondary.main' }
                 })}
               >
                 <ActionIcon size={12} style={{ marginLeft: 1 }} />

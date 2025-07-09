@@ -43,7 +43,7 @@ export default [
       }
     },
 
-       rules: {
+    rules: {
       'react/jsx-filename-extension': 'off',
       'no-param-reassign': 'off',
       'react/prop-types': 'off',
@@ -87,7 +87,8 @@ export default [
           singleQuote: true,
           trailingComma: 'none',
           tabWidth: 2,
-          useTabs: false
+          useTabs: false,
+          endOfLine: 'lf'
         }
       ]
     }

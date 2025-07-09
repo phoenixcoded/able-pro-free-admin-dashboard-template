@@ -56,12 +56,11 @@ export default function MobileSection() {
           color="secondary"
           variant="light"
           size="large"
-          sx={(theme) => ({
+          sx={{
             p: 1,
             color: 'secondary.main',
-            bgcolor: open ? 'secondary.200' : 'secondary.100',
-            ...theme.applyStyles('dark', { bgcolor: open ? 'background.paper' : 'background.default' })
-          })}
+            bgcolor: open ? 'secondary.200' : 'secondary.100'
+          }}
         >
           <MoreSquare variant="Bulk" style={{ transform: 'rotate(90deg)' }} />
         </IconButton>

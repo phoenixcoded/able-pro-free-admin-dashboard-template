@@ -90,7 +90,7 @@ export default function ProfilePage() {
         sx={(theme) => ({
           p: 0.25,
           borderRadius: 1,
-          '&:hover': { bgcolor: 'secondary.lighter', ...theme.applyStyles('dark', { bgcolor: 'secondary.light' }) },
+          '&:hover': { bgcolor: 'secondary.lighter' },
           '&:focus-visible': {
             outline: `2px solid ${theme.palette.secondary.dark}`,
             outlineOffset: 2

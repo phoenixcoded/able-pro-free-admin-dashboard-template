@@ -15,7 +15,6 @@ function getColorStyle({ theme, color, type }) {
     case 'filled':
       return {
         color: contrastText,
-        ...theme.applyStyles('dark', { ...(color === 'secondary' && { color: lighter }) }),
         backgroundColor: main
       };
     case 'outlined':
@@ -35,8 +34,7 @@ function getColorStyle({ theme, color, type }) {
     default:
       return {
         color: main,
-        backgroundColor: alpha(lighter, 0.8),
-        ...theme.applyStyles('dark', { backgroundColor: alpha(lighter, 0.25) })
+        backgroundColor: alpha(lighter, 0.8)
       };
   }
 }

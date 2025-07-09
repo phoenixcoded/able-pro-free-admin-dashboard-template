@@ -15,7 +15,6 @@ function getColorStyle({ color, theme }) {
   return {
     '&:hover': {
       backgroundColor: color === 'secondary' ? lighter : lighter + 50,
-      ...theme.applyStyles('dark', { backgroundColor: color === 'secondary' ? lighter + 50 : lighter + 20 }),
       '& .icon': { borderColor: main }
     },
     '&.Mui-focusVisible': {

@@ -55,10 +55,7 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'wallet-button',
-                sx: { p: 1.25, minWidth: 150 }
-              }}
+              slotProps={{ list: { 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } } }}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'right'
