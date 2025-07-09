@@ -1,6 +1,6 @@
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -18,7 +18,7 @@ import Transactions from 'sections/dashboard/default/Transactions';
 import AssignUsers from 'sections/dashboard/default/AssignUsers';
 
 // assets
-import { ArrowDown, ArrowUp, Book, Calendar, CloudChange, Wallet3 } from 'iconsax-react';
+import { ArrowDown, ArrowUp, Book, Calendar, CloudChange, Wallet3 } from 'iconsax-reactjs';
 
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 

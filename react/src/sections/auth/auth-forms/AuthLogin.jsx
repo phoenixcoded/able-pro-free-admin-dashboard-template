@@ -6,8 +6,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import Link from '@mui/material/Link';
@@ -24,7 +23,7 @@ import AnimateButton from 'components/@extended/AnimateButton';
 import IconButton from 'components/@extended/IconButton';
 
 // assets
-import { Eye, EyeSlash } from 'iconsax-react';
+import { Eye, EyeSlash } from 'iconsax-reactjs';
 
 // ============================|| JWT - LOGIN ||============================ //
 

@@ -15,7 +15,7 @@ import IconButton from 'components/@extended/IconButton';
 import Transitions from 'components/@extended/Transitions';
 
 // assets
-import { MoreSquare } from 'iconsax-react';
+import { MoreSquare } from 'iconsax-reactjs';
 
 // ==============================|| HEADER CONTENT - MOBILE ||============================== //
 

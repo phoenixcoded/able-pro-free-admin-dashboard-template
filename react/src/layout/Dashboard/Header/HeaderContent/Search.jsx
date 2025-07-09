@@ -5,7 +5,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 
 // assets
-import { SearchNormal1 } from 'iconsax-react';
+import { SearchNormal1 } from 'iconsax-reactjs';
 
 // ==============================|| HEADER CONTENT - SEARCH ||============================== //
 
@@ -21,7 +21,7 @@ export default function Search() {
             </InputAdornment>
           }
           aria-describedby="header-search-text"
-          inputProps={{ 'aria-label': 'weight' }}
+          slotProps={{ input: { 'aria-label': 'weight' } }}
           placeholder="Ctrl + K"
           sx={{ '& .MuiOutlinedInput-input': { p: 1.5 } }}
         />

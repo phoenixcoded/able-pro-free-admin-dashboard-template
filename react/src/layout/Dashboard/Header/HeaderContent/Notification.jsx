@@ -25,7 +25,7 @@ import MainCard from 'components/MainCard';
 import SimpleBar from 'components/third-party/SimpleBar';
 
 // assets
-import { Gift, MessageText1, Notification, Setting2 } from 'iconsax-react';
+import { Gift, MessageText1, Notification, Setting2 } from 'iconsax-reactjs';
 
 const actionSX = {
   mt: '6px',

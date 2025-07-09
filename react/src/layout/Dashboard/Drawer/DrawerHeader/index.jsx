@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
-// material-ui
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 // project-imports
 import DrawerHeaderStyled from './DrawerHeaderStyled';
-
 import Logo from 'components/logo';
-import { DRAWER_WIDTH, HEADER_HEIGHT } from 'config';
+import { HEADER_HEIGHT } from 'config';
 
 // ==============================|| DRAWER HEADER ||============================== //
 

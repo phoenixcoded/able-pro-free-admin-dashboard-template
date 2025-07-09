@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -17,7 +18,6 @@ import ComponentSkeleton from 'sections/components-overview/ComponentSkeleton';
 // ===============================|| COLOR BOX ||=============================== //
 
 function ColorBox({ bgcolor, title, data, dark, main }) {
-  const theme = useTheme();
   return (
     <>
       <Card sx={{ '&.MuiPaper-root': { borderRadius: '0px' } }}>
@@ -59,7 +59,6 @@ function ColorBox({ bgcolor, title, data, dark, main }) {
 
 export default function ComponentColor() {
   const theme = useTheme();
-  const mode = theme.palette.mode;
 
   return (
     <ComponentSkeleton>

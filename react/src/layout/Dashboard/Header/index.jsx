@@ -15,7 +15,7 @@ import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH, MINI_DRAWER_WIDTH } from 'config';
 
 // assets
-import { HambergerMenu } from 'iconsax-react';
+import { HamburgerMenu } from 'iconsax-reactjs';
 
 // ==============================|| MAIN LAYOUT - HEADER ||============================== //
 
@@ -47,7 +47,7 @@ export default function Header() {
           p: 1
         })}
       >
-        <HambergerMenu />
+        <HamburgerMenu />
       </IconButton>
       {headerContent}
     </Toolbar>

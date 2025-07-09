@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
@@ -19,7 +19,7 @@ import MoreIcon from 'components/@extended/MoreIcon';
 import MainCard from 'components/MainCard';
 
 // assets
-import { Add } from 'iconsax-react';
+import { Add } from 'iconsax-reactjs';
 
 // ==============================|| CHART ||============================== //
 
@@ -117,7 +117,7 @@ export default function ProjectOverview() {
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
-          MenuListProps={{ 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } }}
+          slotProps={{ list: { 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } } }}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
           transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         >

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import getColors from 'utils/getColors';
 
 // assets
-import { Stop, TickSquare, MinusSquare } from 'iconsax-react';
+import { Stop, TickSquare, MinusSquare } from 'iconsax-reactjs';
 
 // ==============================|| RADIO - COLORS ||============================== //
 

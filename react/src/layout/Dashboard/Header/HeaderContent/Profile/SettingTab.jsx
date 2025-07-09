@@ -6,7 +6,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
 // assets
-import { Clipboard, I24Support, Lock1, Messages1, Profile } from 'iconsax-react';
+import { Clipboard, I24Support, Lock1, Messages1, Profile } from 'iconsax-reactjs';
 
 // ==============================|| HEADER PROFILE - SETTING TAB ||============================== //
 

@@ -22,7 +22,7 @@ import MoreIcon from 'components/@extended/MoreIcon';
 import MainCard from 'components/MainCard';
 
 // assets
-import { ArrowDown, ArrowSwapHorizontal, ArrowUp } from 'iconsax-react';
+import { ArrowDown, ArrowSwapHorizontal, ArrowUp } from 'iconsax-reactjs';
 
 // ==============================|| TAB PANEL ||============================== //
 
@@ -82,7 +82,7 @@ export default function Transactions() {
             anchorEl={anchorEl}
             open={open}
             onClose={handleClose}
-            MenuListProps={{ 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } }}
+            slotProps={{ list: { 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } } }}
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >

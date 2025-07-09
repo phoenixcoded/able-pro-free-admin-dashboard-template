@@ -157,13 +157,13 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
             return (
               <IconButton
                 key={index}
-                {...(action.type === 'function' && {
+                {...(action.type === NavActionType.FUNCTION && {
                   onClick: (event) => {
                     event.stopPropagation();
                     callAction();
                   }
                 })}
-                {...(action.type === 'link' && {
+                {...(action.type === NavActionType.LINK && {
                   component: Link,
                   to: action.url,
                   target: action.target ? '_blank' : '_self'

@@ -1,5 +1,5 @@
 // assets
-import { Book1, Security, SecurityUser } from 'iconsax-react';
+import { Book1, Security, SecurityUser } from 'iconsax-reactjs';
 
 // icons
 const icons = { page: Book1, authentication: Security, register: SecurityUser };

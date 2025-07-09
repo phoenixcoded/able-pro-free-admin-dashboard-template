@@ -74,12 +74,6 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId, setSele
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, currentItem]);
 
-  const handleClick = (event) => {
-    if (!openMini) {
-      setAnchorEl(event?.currentTarget);
-    }
-  };
-
   const navCollapse = item.children?.map((menuItem, index) => {
     switch (menuItem.type) {
       case 'collapse':
@@ -143,10 +137,10 @@ NavGroup.propTypes = {
   lastItem: PropTypes.number,
   remItems: PropTypes.array,
   lastItemId: PropTypes.string,
-  selectedID: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
+  selectedID: PropTypes.oneOfType([PropTypes.string, PropTypes.any]),
   setSelectedID: PropTypes.oneOfType([PropTypes.any, PropTypes.func]),
-  setSelectedItems: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
-  selectedItems: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
-  setSelectedLevel: PropTypes.func,
+  setSelectedItems: PropTypes.oneOfType([PropTypes.string, PropTypes.any]),
+  selectedItems: PropTypes.oneOfType([PropTypes.string, PropTypes.any]),
+  setSelectedLevel: PropTypes.object,
   selectedLevel: PropTypes.number
 };

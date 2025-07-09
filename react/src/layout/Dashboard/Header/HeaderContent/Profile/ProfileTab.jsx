@@ -5,7 +5,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
 // assets
-import { Card, Edit2, Logout, Profile, Profile2User } from 'iconsax-react';
+import { Card, Edit2, Logout, Profile, Profile2User } from 'iconsax-reactjs';
+
+// ==============================|| HEADER CONTENT - PROFILE TAB ||============================== //
 
 export default function ProfileTab() {
   return (

@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import Link from '@mui/material/Link';
@@ -24,7 +24,7 @@ import AnimateButton from 'components/@extended/AnimateButton';
 import { strengthColor, strengthIndicator } from 'utils/password-strength';
 
 // assets
-import { Eye, EyeSlash } from 'iconsax-react';
+import { Eye, EyeSlash } from 'iconsax-reactjs';
 
 // ============================|| JWT - REGISTER ||============================ //
 
@@ -101,7 +101,6 @@ export default function AuthRegister() {
                     onBlur={handleBlur}
                     onChange={handleChange}
                     placeholder="Doe"
-                    inputProps={{}}
                   />
                 </Stack>
               </Grid>
@@ -117,7 +116,6 @@ export default function AuthRegister() {
                     onBlur={handleBlur}
                     onChange={handleChange}
                     placeholder="Demo Inc."
-                    inputProps={{}}
                   />
                 </Stack>
                 {touched.company && errors.company && (
@@ -139,7 +137,6 @@ export default function AuthRegister() {
                     onBlur={handleBlur}
                     onChange={handleChange}
                     placeholder="demo@company.com"
-                    inputProps={{}}
                   />
                 </Stack>
               </Grid>
@@ -172,7 +169,6 @@ export default function AuthRegister() {
                       </InputAdornment>
                     }
                     placeholder="******"
-                    inputProps={{}}
                   />
                 </Stack>
                 <FormControl fullWidth sx={{ mt: 2 }}>

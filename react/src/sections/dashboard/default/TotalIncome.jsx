@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
@@ -20,7 +20,7 @@ import MainCard from 'components/MainCard';
 import { GRID_COMMON_SPACING } from 'config';
 
 // assets
-import { ArrowUp } from 'iconsax-react';
+import { ArrowUp } from 'iconsax-reactjs';
 
 // chart options
 const pieChartOptions = {
@@ -55,7 +55,7 @@ function ApexDonutChart() {
 
   useEffect(() => {
     const primaryMain = theme.palette.primary.main;
-    const primaryLighter = theme.palette.primary[100];
+    const primaryLighter = theme.palette.error.main;
     const warning = theme.palette.warning.main;
     const success = theme.palette.success.main;
 
@@ -129,7 +129,7 @@ export default function TotalIncome() {
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
-              MenuListProps={{ 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } }}
+              slotProps={{ list: { 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } } }}
               anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
               transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             >
@@ -139,7 +139,7 @@ export default function TotalIncome() {
             </Menu>
           </Stack>
         </Grid>
-        <Grid size={12}>
+        <Grid size={12} sx={{ '.apexcharts-active': { color: 'common.white' } }}>
           <ApexDonutChart />
         </Grid>
         <Grid size={{ xs: 12, sm: 6 }}>

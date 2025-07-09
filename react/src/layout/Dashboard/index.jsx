@@ -19,11 +19,9 @@ import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
 
 // assets
-import { ShoppingCart } from 'iconsax-react';
+import { ShoppingCart } from 'iconsax-reactjs';
 
 // ==============================|| MAIN LAYOUT ||============================== //
-
-let value = window.location.search;
 
 const url = 'https://1.envato.market/zNkqj6';
 
