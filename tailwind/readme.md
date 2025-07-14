@@ -1,13 +1,12 @@
-# Able Pro Free Vue Vuetify Dashboard Template 
-
+# Able-pro Free Tailwind Admin Template 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
 
-Able Pro is a free vue vuetify admin dashboard template built with Vue. It is designed to offer an exceptional User Experience, with a wide range of customizable and feature-rich pages. Able Pro serves as a comprehensive Dashboard Template, boasting a user-friendly and responsive design that adapts seamlessly to retina screens as well as laptops.
+Looking to streamline your admin dashboard and create a seamless user experience? Look no further than Able Pro, the Dashboard Template built using the Tailwind design framework. This template is not only highly customizable, but it also boasts a feature-rich suite of pages that can be tailored to your specific needs. With an easy-to-use, intuitive interface and responsive design optimized for both retina screens and laptops, Able Pro is the ideal solution for any web developer or business owner looking to take their online presence to the next level. And the best part? Able Pro is completely free for everyone, with an MIT license that ensures you have the freedom to use, modify, and distribute it as you see fit.
 
 ✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine
 
-![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/Able_pro_github_free_vue_repo.jpg)
+![IMG_8566.jpg](https://ableproadmin.com/adv-banner/adv-able-pro-git-bootstrap-repo.png)
 
 ## Table of contents
 
@@ -29,7 +28,7 @@ Able Pro is a free vue vuetify admin dashboard template built with Vue. It is de
 
 ## Getting Started
 
-1. Clone from Github
+Clone from Github
 
 ```
 git clone https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template.git
@@ -38,46 +37,46 @@ git clone https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template
 2. Install packages
 
 ```
-npm
+npm install
 ```
 
 3. Run project
 
 ```
-npm run dev
+gulp
 ```
+
 
 ## Download
 
 - Able Pro Free 
-    - [Live Preview](https://ableproadmin.com/vue/free) 
+    - [Live Preview](https://ableproadmin.com/tailwind/free/) 
     - [Download](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template)
 - Able Pro
-    - [Live Preview](https://ableproadmin.com/vue/) 
-    - [Download](https://1.envato.market/B0JAPW)
+    - [Live Preview](https://ableproadmin.com/tailwind) 
+    - [Download](https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882?s_rank=3)
+
 
 ## Why Able pro?
 
-Welcome to Able Pro, the ultimate free Vue Dashboard Template powered by the Vuetify components library. With its modern design interface and flexible developer experience, Able Pro is the perfect solution for creating stunning and feature-rich admin dashboards. Whether you're a beginner or an experienced developer, this template offers a seamless and intuitive workflow, allowing you to easily customize and build beautiful user interfaces. Experience the power of Able Pro and elevate your web application to new heights.
+Able Pro is the ultimate Tailwind Admin & Dashboard Template, providing you with a fully responsive solution for all your needs. Whether you're building an admin panel, eCommerce app, project management system, crypto admin interface, CRM, or SASS-based interface, this template has everything you need. With gulp-based build tools and support for SCSS variables-based modes and RTL languages, Able Pro offers maximum flexibility and customization options. So why wait? Get started today and build the dynamic web app you've always wanted with Able Pro.
 
 - Modern UI design
-- Vuetify UI component
+- Tailwind components
 - Fully Responsive, all modern browser supported
 - Easy to use code structure
 - Flexible & High-Performance code
-- Easy Documentation Guide
+- Easy [Documentation](https://phoenixcoded.gitbook.io/able-pro/tailwind-html/) Guide
 
 ## What's included in Premium Version?
-Looking for even more features? Check out Able Pro's Vue [premium version](https://1.envato.market/B0JAPW), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
+Looking for even more options? Check out Able Pro's [premium version](https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882?s_rank=3), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-
-
-| [Able-pro Free](https://ableproadmin.com/vue/free) | [Able-Pro Pro Version](https://1.envato.market/B0JAPW)      |
+| [Able-pro Free](https://ableproadmin.com/tailwind/free/) | [Able-Pro Pro Version](https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882?s_rank=3)      |
 | ------------------------------------------------------ | :---------------------------------------------------------- |
 | **7** Demo pages                                       | **100+** pages                                              |
 | -                                                      | ✓ Modern UserInterface & Easy Developer Experience          |
-| -                                                      | ✓ Preset Dark/Light Color 🌓                                             |
-| -                                                      | ✓ Vuetify Components                                        |
+| -                                                      | ✓ Dark/Light 🌓                                             |
+| -                                                      | ✓ no jQuery                                       |
 | -                                                      | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
 | -                                                      | ✓ 10+ color Presets                                          |
 | -                                                      | ✓ LTR/RTL Layouts                                           |
@@ -91,24 +90,16 @@ Looking for even more features? Check out Able Pro's Vue [premium version](https
 
 ## Documentation
 
-[Able-pro documentation](https://phoenixcoded.gitbook.io/able-pro/vue/) helps you with installation, deployment, and troubleshooting.
+[Able-pro documentation](https://phoenixcoded.gitbook.io/able-pro/tailwind-html/) helps you with installation, deployment, and troubleshooting.
 
 ## Browser support
 <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" height="45" >
 
 ## Technology Stack
 
-- Vue 3
-- TypeScript
-- Vuetify
-- Vue Router
-- JWT (i.e. Pro version)
-- Vee validate
-- Vue-i18n (i.e. Pro version)
-- Apex Charts
-- Axios
-- Vue3 easy datatable
-- npm package installer
+- Tailwind
+- npm/yarn package installer
+- Gulp
 
 ## Able Pro Figma UI Kit
 <div>
@@ -123,9 +114,9 @@ Looking for even more features? Check out Able Pro's Vue [premium version](https
 ## Other Technologies 
 | Technology | Free | Pro |
 |-----------|------|------|
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Bootstrap.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/baeyGk) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/XYAZnb) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/React.png" width="25" height="25"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/OrJ5nn) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/XYAZnb) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/B0JAPW) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/tailwind.png" width="25" height="25"></p> | - | [**Pro**](https://1.envato.market/XmNK1X) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Nextjs.png" width="25" height="25"></p> | - | [**Pro**](https://1.envato.market/jrEAbP) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Laravel%2BVue.png" height="25"></p> | - | [**Pro**](https://1.envato.market/6e0Arm) |

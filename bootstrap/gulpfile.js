@@ -25,8 +25,8 @@ const theme_layout = 'vertical'; // [ vertical, horizontal, color-header, compac
 const dark_layout = 'false'; // [ false , true , default ]
 const rtl_layout = 'false'; // [ false , true ]
 const box_container = 'false'; // [ false , true ]
-const version = 'v2.6.0';
-const production_version = 'v2.6.0';
+const version = 'v2.7.0';
+const production_version = 'v2.7.0';
 
 if (rtl_layout == 'true') {
   var rtlflag = 'rtl';

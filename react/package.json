@@ -1,6 +1,6 @@
 {
   "name": "able-pro-react-free-admin-dashboard",
-  "version": "2.6.1",
+  "version": "2.1.0",
   "dependencies": {
     "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
