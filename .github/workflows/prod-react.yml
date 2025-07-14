@@ -34,7 +34,7 @@ jobs:
         run: |
           cd react
           corepack enable
-          yarn set version 4.7.0 
+          yarn set version 4.9.1 
           yarn 
           yarn run build
 
