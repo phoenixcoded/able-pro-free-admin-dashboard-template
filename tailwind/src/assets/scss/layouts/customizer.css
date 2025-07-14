@@ -1,0 +1,45 @@
+@layer {
+  .preset-btn.btn {
+    @apply flex items-center justify-center h-[60px] p-[5px] w-full border-2 border-theme-border dark:border-themedark-border;
+  }
+
+  .preset-btn.btn.active {
+    @apply border-primary-500;
+  }
+
+  .preset-btn.btn.btn-img {
+    @apply h-auto rounded-lg;
+  }
+
+  .preset-btn.btn.btn-img img {
+    @apply w-full;
+  }
+
+  .theme-color {
+    @apply relative flex gap-1;
+  }
+
+  .theme-color > a {
+    @apply relative w-10 h-10 rounded-xl inline-flex items-center justify-center overflow-hidden transition-all;
+  }
+
+  .theme-color > a::after {
+    @apply content-[""] absolute inset-[4px] rounded-lg bg-white/30 z-10 scale-0 transition-all;
+  }
+
+  .theme-color > a i {
+    @apply text-[20px] text-white opacity-70 transition-all;
+  }
+
+  .theme-color > a:hover i {
+    @apply opacity-100;
+  }
+
+  .theme-color > a.active::after {
+    @apply scale-100;
+  }
+
+  .theme-color > a.active i {
+    @apply opacity-100;
+  }
+}

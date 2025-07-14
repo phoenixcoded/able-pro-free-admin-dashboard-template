@@ -1,4 +1,4 @@
-# Able Pro Free Vue Vuetify Dashboard Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://ableproadmin.com&hashtags=bootstrap,webdev,developers,javascript)
+# Able Pro Free Vue Vuetify Dashboard Template 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
@@ -104,7 +104,7 @@ Looking for even more features? Check out Able Pro's Vue [premium version](https
 - Vue Router
 - JWT (i.e. Pro version)
 - Vee validate
-- Vue-i18n
+- Vue-i18n (i.e. Pro version)
 - Apex Charts
 - Axios
 - Vue3 easy datatable

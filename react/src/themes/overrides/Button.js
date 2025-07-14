@@ -9,7 +9,7 @@ import getShadow from 'utils/getShadow';
 
 function getColorStyle({ variant, color, theme }) {
   const colors = getColors(theme, color);
-  const { lighter, light, main, dark, darker, contrastText } = colors;
+  const { lighter, main, dark, darker, contrastText } = colors;
 
   const buttonShadow = `${color}Button`;
   const shadows = getShadow(theme, buttonShadow);
@@ -23,11 +23,10 @@ function getColorStyle({ variant, color, theme }) {
   switch (variant) {
     case 'contained':
       return {
-        ...(color === 'secondary' && { backgroundColor: dark, ...theme.applyStyles('dark', { backgroundColor: light }) }),
+        ...(color === 'secondary' && { backgroundColor: dark }),
         '&:hover': {
           backgroundColor: dark,
-          ...theme.applyStyles('dark', { backgroundColor: lighter }),
-          ...(color === 'secondary' && { backgroundColor: darker, ...theme.applyStyles('dark', { backgroundColor: lighter }) })
+          ...(color === 'secondary' && { backgroundColor: darker })
         },
         ...commonShadow
       };
@@ -35,9 +34,8 @@ function getColorStyle({ variant, color, theme }) {
       return {
         color: contrastText,
         backgroundColor: dark,
-        ...theme.applyStyles('dark', { backgroundColor: light }),
         boxShadow: shadows,
-        '&:hover': { boxShadow: 'none', backgroundColor: darker, ...theme.applyStyles('dark', { backgroundColor: lighter }) },
+        '&:hover': { boxShadow: 'none', backgroundColor: darker },
         ...commonShadow
       };
     case 'outlined':
@@ -54,9 +52,8 @@ function getColorStyle({ variant, color, theme }) {
       return {
         color: main,
         borderColor: main,
-        ...theme.applyStyles('dark', { color: darker, borderColor: darker }),
         backgroundColor: lighter,
-        '&:hover': { color: dark, ...theme.applyStyles('dark', { color: contrastText }), borderColor: dark },
+        '&:hover': { color: dark, borderColor: dark },
         ...commonShadow
       };
     case 'text':
@@ -64,8 +61,7 @@ function getColorStyle({ variant, color, theme }) {
       return {
         '&:hover': {
           color: dark,
-          backgroundColor: lighter,
-          ...theme.applyStyles('dark', { color: darker, backgroundColor: lighter + 30 })
+          backgroundColor: lighter
         },
         ...commonShadow
       };

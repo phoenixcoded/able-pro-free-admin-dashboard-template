@@ -1,4 +1,4 @@
-# Able-pro Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://ableproadmin.com&hashtags=bootstrap,webdev,developers,javascript)
+# Able-pro Free React Admin Template 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/blob/master/LICENSE)
@@ -97,7 +97,7 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
 
 ## Technology Stack
 
-- React 18
+- React 19
 - Next 15
 - VITE
 - TypeScript

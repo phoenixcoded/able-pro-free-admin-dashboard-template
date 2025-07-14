@@ -82,17 +82,37 @@ Able Pro is a free Material admin dashboard template built with different techno
 | -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
 | -                                                         | ✓ Front Pages                                                                                             |
 
+## Able-pro Tailwind
+
+| [Able-pro Free](https://ableproadmin.com/tailwind/free/) | [Able-pro Premium](https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882?s_rank=3)                                                   |
+| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **7** Demo pages                                          | **100+** pages                                                                                            |
+| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
+| -                                                         | ✓ Dark/Light/Auto Mode 🌓                                                                                 |
+| -                                                         | **✓ no jQuery**                                                                                               |
+| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
+| -                                                         | ✓ 10+ color Presets                                                                                       |
+| -                                                         | ✓ LTR/RTL Layouts                                                                                         |
+| -                                                         | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                                           |
+| -                                                         | ✓ Advance Components                                                                                      |
+| -                                                         | ✓ Form Variants                                                                                           |
+| -                                                         | ✓ Table Variants                                                                                          |
+| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
+| -                                                         | ✓ Front Pages                                                                                             |
+
 ## Free Able-pro versions
 - [Bootstrap](https://ableproadmin.com/bootstrap/free/)
 - [React](https://ableproadmin.com/react/free/)
 - [Angular](https://ableproadmin.com/angular/free/)
 - [Vue](https://ableproadmin.com/vue/free/)
+- [Tailwind](https://ableproadmin.com/tailwind/free/)
 
 ## Premium Able-pro versions
 - [Bootstrap](https://ableproadmin.com/bootstrap/default)
 - [React](https://ableproadmin.com/react)
 - [Angular](https://ableproadmin.com/angular/default)
 - [Vue](https://ableproadmin.com/vue)
+- [Tailwind](https://ableproadmin.com/tailwind)
 
 ## Buy Now
 - [Premium version](https://links.codedthemes.com/fCkWk)

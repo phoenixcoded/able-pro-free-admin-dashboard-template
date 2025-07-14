@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { forwardRef } from 'react';
 
 // material-ui
 import { alpha, styled } from '@mui/material/styles';
@@ -9,9 +8,11 @@ import MuiIconButton from '@mui/material/IconButton';
 import getColors from 'utils/getColors';
 import getShadow from 'utils/getShadow';
 
+// ==============================|| ICON BUTTON - COLOR STYLE ||============================== //
+
 function getColorStyle({ variant, theme, color }) {
   const colors = getColors(theme, color);
-  const { lighter, light, dark, darker, main, contrastText } = colors;
+  const { lighter, light, dark, main, contrastText } = colors;
 
   const buttonShadow = `${color}Button`;
   const shadows = getShadow(theme, buttonShadow);
@@ -134,7 +135,7 @@ const IconButtonStyle = styled(MuiIconButton, { shouldForwardProp: (prop) => pro
 
 // ==============================|| ICON BUTTON - EXTENDED ||============================== //
 
-function IconButton({ variant = 'text', shape = 'square', children, color = 'primary', ...others }, ref) {
+function IconButton({ variant = 'text', shape = 'square', children, color = 'primary', ref, ...others }) {
   return (
     <IconButtonStyle ref={ref} variant={variant} shape={shape} color={color} {...others}>
       {children}
@@ -144,7 +145,7 @@ function IconButton({ variant = 'text', shape = 'square', children, color = 'pri
 
 IconButton.displayName = 'IconButton';
 
-export default forwardRef(IconButton);
+export default IconButton;
 
 getColorStyle.propTypes = { variant: PropTypes.any, theme: PropTypes.any, color: PropTypes.any };
 
@@ -153,5 +154,6 @@ IconButton.propTypes = {
   shape: PropTypes.string,
   children: PropTypes.node,
   color: PropTypes.string,
+  ref: PropTypes.any,
   others: PropTypes.any
 };

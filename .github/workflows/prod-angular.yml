@@ -33,8 +33,8 @@ jobs:
       - name: 🔨 Build Project
         run: |
           cd angular
-          npm install --legacy-peer-deps
-          npm run build
+          yarn
+          yarn run build
 
       - name: 📂 Deploy to Server
         uses: easingthemes/ssh-deploy@main
@@ -42,7 +42,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           # ARGS: "-rltgoDzvO --delete"
           SOURCE: "angular/dist/"
-          REMOTE_HOST: 82.25.126.213
+          REMOTE_HOST: 145.79.3.173
           REMOTE_USER: u965251139
           REMOTE_PORT: "65002"
           TARGET: domains/ableproadmin.com/public_html/angular/free

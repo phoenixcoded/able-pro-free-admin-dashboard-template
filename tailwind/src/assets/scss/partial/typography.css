@@ -1,0 +1,51 @@
+@layer {
+
+  h1,.h1{
+    font-size: 38px;
+    font-weight: 700;
+  }
+  h2,.h2{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  h3,.h3{
+    font-size: 24px;
+    font-weight: 600;
+  }
+  h4,.h4{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  h5,.h5{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  h6,.h6{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    @apply text-theme-headings dark:text-themedark-headings;
+  }
+  body {
+    @apply text-base leading-normal text-theme-bodycolor dark:text-themedark-bodycolor bg-theme-bodybg dark:bg-themedark-bodybg leading-[1.5];
+    font-family: "Inter var", sans-serif;
+    font-feature-settings: "salt";
+  }
+  b, strong{
+    @apply font-semibold;
+  }
+  .text-muted{
+    @apply text-theme-secondarytextcolor dark:text-themedark-secondarytextcolor;
+  }
+  .material-icons-two-tone{
+    @apply bg-clip-text;
+    -webkit-text-fill-color: transparent;
+  }
+  hr {
+    @apply border-t border-theme-border dark:border-themedark-border;
+  }
+  .material-icons-two-tone:not([class*="bg-"]){
+    @apply bg-theme-bodycolor dark:bg-themedark-bodycolor;
+  }
+}

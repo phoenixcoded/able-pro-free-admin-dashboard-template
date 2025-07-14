@@ -1,0 +1,63 @@
+@layer{
+  @keyframes progress-bar-stripes {
+    0% {
+      background-position-x: 1rem;
+    }
+  }
+
+  @keyframes move-bg {
+    to {
+      background-position: 400% 0;
+    }
+  }
+
+  @keyframes loader-animate {
+    0% {
+      left: -35%;
+      right: 100%;
+    }
+    60% {
+      left: 100%;
+      right: -90%;
+    }
+    100% {
+      left: 100%;
+      right: -90%;
+    }
+  }
+
+  @keyframes hitZak {
+    0% {
+      left: 0;
+      transform: translateX(-1%);
+    }
+    100% {
+      left: 100%;
+      transform: translateX(-99%);
+    }
+  }
+
+  @keyframes btn-floating {
+    0% {
+      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.3);
+    }
+    70% {
+      box-shadow: 0 0 0 20px rgba(220, 38, 38, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    }
+  }
+
+  @keyframes slit {
+    50% {
+      transform: translateZ(-250px) rotateY(89deg);
+      opacity: 1;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateZ(0) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+}

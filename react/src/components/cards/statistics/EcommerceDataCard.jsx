@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 // material-ui
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
@@ -55,10 +55,7 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'wallet-button',
-                sx: { p: 1.25, minWidth: 150 }
-              }}
+              slotProps={{ list: { 'aria-labelledby': 'wallet-button', sx: { p: 1.25, minWidth: 150 } } }}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'right'

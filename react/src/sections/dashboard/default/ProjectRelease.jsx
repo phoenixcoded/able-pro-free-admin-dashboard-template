@@ -1,7 +1,7 @@
 // material-ui
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import LinearProgress from '@mui/material/LinearProgress';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -15,7 +15,7 @@ import MainCard from 'components/MainCard';
 import Dot from 'components/@extended/Dot';
 
 // assets
-import { Add, Link1 } from 'iconsax-react';
+import { Add, Link1 } from 'iconsax-reactjs';
 
 // =========================|| DATA WIDGET - ADD NEW TASK ||========================= //
 
