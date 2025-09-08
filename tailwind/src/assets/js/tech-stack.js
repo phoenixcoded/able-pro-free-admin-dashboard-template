@@ -21,13 +21,13 @@ function getQueryStringParameters() {
     // Check if the 'isp' parameter is present and equals '1'
     if (params.get('isp') === '1') {
       isp = '?isp=1'; // Mark as a single product
-      BuyNowLink = 'https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882'; // Single product link
+      BuyNowLink = 'https://codedthemes.com/item/able-pro-tailwind-css-admin-dashboard/'; // Single product link
     } else {
-      BuyNowLink = 'https://1.envato.market/zNkqj6'; // Default link for multiple products
+      BuyNowLink = 'https://codedthemes.com/item/able-pro-dashboard-templates/'; // Default link for multiple products
     }
   } catch (err) {
     // Fallback in case of any error
-    BuyNowLink = 'https://1.envato.market/zNkqj6';
+    BuyNowLink = 'https://codedthemes.com/item/able-pro-dashboard-templates/';
   }
 
   // Update the 'href' attribute for all elements with class 'btn-buy' once the DOM is fully loaded

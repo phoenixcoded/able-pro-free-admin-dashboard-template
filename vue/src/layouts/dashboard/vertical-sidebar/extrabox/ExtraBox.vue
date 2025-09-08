@@ -15,7 +15,7 @@ import avatarGroup from '@/assets/images/welcome-banner.png';
       </div>
     </div>
     <div class="mt-5">
-      <v-btn href="https://1.envato.market/B0JAPW" target="_blank" variant="flat" color="primary" class="primary-shadow rounded-md">
+      <v-btn href="https://codedthemes.com/item/able-pro-vuejs-admin-dashboard/" target="_blank" variant="flat" color="primary" class="primary-shadow rounded-md">
         <template v-slot:prepend>
           <SvgSprite name="custom-logout-1" style="width: 18px; height: 18px" />
         </template>

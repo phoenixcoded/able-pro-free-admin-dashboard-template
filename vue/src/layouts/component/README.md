@@ -42,4 +42,4 @@ This page (folder) is a sneak peek into the premium features available in <b>ver
 
 ## Get Started with the Pro Version!
 
-👉 [Explore the Pro version now](https://themeforest.net/item/able-pro-vuejs-admin-dashboard-template/50804253) - and supercharge your development experience!
+👉 [Explore the Pro version now](https://codedthemes.com/item/able-pro-vuejs-admin-dashboard) - and supercharge your development experience!

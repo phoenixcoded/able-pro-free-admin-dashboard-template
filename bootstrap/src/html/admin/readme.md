@@ -42,4 +42,4 @@ This page (folder) is a sneak peek into the premium features available in <b>ver
 
 ## Get Started with the Pro Version!
 
-👉 [Explore the Pro version now](https://1.envato.market/baeyGk) - and supercharge your development experience!
+👉 [Explore the Pro version now](https://codedthemes.com/item/able-pro-bootstrap-admin-template/) - and supercharge your development experience!

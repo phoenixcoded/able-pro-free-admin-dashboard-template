@@ -22,7 +22,7 @@ const footerLink = shallowRef([
       <v-col cols="6">
         <p class="text-caption mb-0">
           © Able Pro crafted with ♥ by Team
-          <a href="https://themeforest.net/user/phoenixcoded" class="text-darkText" target="_blank">Phoenixcoded</a>
+          <a href="https://www.phoenixcoded.net" class="text-darkText" target="_blank">Phoenixcoded</a>
         </p>
       </v-col>
       <v-col class="text-right" cols="6">

@@ -54,7 +54,7 @@ yarn start
   - [Download](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template)
 - Able Pro
   - [Live Preview](https://ableproadmin.com/react/)
-  - [Download](https://1.envato.market/OrJ5nn)
+  - [Download](https://codedthemes.com/item/able-pro-mui-react-admin-template/)
 
 ## Why Able pro?
 
@@ -69,9 +69,9 @@ Welcome to Able Pro, the ultimate free React Dashboard Template powered by the M
 
 ## What's included in Premium Version?
 
-Looking for even more features? Check out Able Pro's React [premium version](https://1.envato.market/OrJ5nn), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
+Looking for even more features? Check out Able Pro's React [premium version](https://codedthemes.com/item/able-pro-mui-react-admin-template/), which offers an even wider array of pages, features, and layouts than the free version, providing you with the ultimate in customization and control.
 
-| [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://1.envato.market/OrJ5nn)      |
+| [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://codedthemes.com/item/able-pro-mui-react-admin-template/)      |
 | ---------------------------------------------------- | :---------------------------------------------------------- |
 | **7** Demo pages                                     | **100+** pages                                              |
 | -                                                    | ✓ Modern UserInterface & Easy Developer Experience          |
@@ -127,9 +127,9 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
 
 | Technology                                                                                                                        | Free                                                                               | Pro                                       |
 | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Bootstrap.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/baeyGk) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p>   | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/XYAZnb) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p>       | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/B0JAPW) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Bootstrap.png" width="30" height="30"></p> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://codedthemes.com/item/able-pro-bootstrap-admin-template/) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p>   | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://codedthemes.com/item/able-pro-angular-admin-template/) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p>       | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://codedthemes.com/item/able-pro-vuejs-admin-dashboard/) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/tailwind.png" width="25" height="25"></p>  | -                                                                                  | [**Pro**](https://1.envato.market/XmNK1X) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Nextjs.png" width="25" height="25"></p>    | -                                                                                  | [**Pro**](https://1.envato.market/jrEAbP) |
 | <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Laravel%2BVue.png" height="25"></p>        | -                                                                                  | [**Pro**](https://1.envato.market/6e0Arm) |
@@ -142,7 +142,7 @@ Looking for even more features? Check out Able Pro's React [premium version](htt
 
 ## Save more with Big Bundle
 
-[![able-pro-bundle](https://org-public-assets.s3.us-west-2.amazonaws.com/logos/able-pro-bundle.png)](https://1.envato.market/zNkqj6)
+[![able-pro-bundle](https://org-public-assets.s3.us-west-2.amazonaws.com/logos/able-pro-bundle.png)](https://codedthemes.com/item/able-pro-dashboard-templates/)
 
 ## Issues
 
@@ -165,4 +165,4 @@ To report a bug, please submit an [issue](https://github.com/phoenixcoded/able-p
 ## Follow us
 
 - [Github](https://github.com/phoenixcoded)
-- [Phoenixcoded](https://themeforest.net/user/phoenixcoded)
+- [Phoenixcoded](https://www.phoenixcoded.net/)

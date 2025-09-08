@@ -13,94 +13,95 @@ Able Pro is a free Material admin dashboard template built with different techno
 
 ## Able-pro React
 
-| [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://1.envato.market/OrJ5nn)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Dark/Light  🌓                                                                                          |
-| -                                                         | **✓ Material-UI Components**                                                                                  |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ LTR/RTL Layouts                                                                                         |
-| -                                                         | ✓ Vertical/Horizontal/Tab etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/react/free) | [Able-Pro Pro Version](https://codedthemes.com/item/able-pro-mui-react-admin-template/) |
+| ---------------------------------------------------- | :-------------------------------------------------------------------------------------- |
+| **7** Demo pages                                     | **100+** pages                                                                          |
+| -                                                    | ✓ Modern UserInterface & Easy Developer Experience                                      |
+| -                                                    | ✓ Dark/Light 🌓                                                                         |
+| -                                                    | **✓ Material-UI Components**                                                            |
+| -                                                    | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                             |
+| -                                                    | ✓ 10+ color Presets                                                                     |
+| -                                                    | ✓ LTR/RTL Layouts                                                                       |
+| -                                                    | ✓ Vertical/Horizontal/Tab etc...Layouts                                                 |
+| -                                                    | ✓ Advance Components                                                                    |
+| -                                                    | ✓ Form Variants                                                                         |
+| -                                                    | ✓ Table Variants                                                                        |
+| -                                                    | ✓ 7+ Conceptual Apps                                                                    |
+| -                                                    | ✓ Front Pages                                                                           |
 
 ## Able-pro Angular
 
-| [Able-pro Free](https://ableproadmin.com/angular/free) | [Able-Pro Pro Version](https://1.envato.market/zNkqj6) |
-| ------------------------------------------------------ | :---------------------------------------------------------- |
-| **7** Demo pages                                       | **100+** pages                                              |
-| -                                                      | ✓ Modern UserInterface & Easy Developer Experience          |
-| -                                                      | ✓ Dark/Light 🌓                                             |
-| -                                                      | **✓ Material Components**                                       |
-| -                                                      | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX) |
-| -                                                      | ✓ 10+ color Presets                                         |
-| -                                                      | ✓ LTR/RTL Layouts                                           |
-| -                                                      | ✓ Vertical/Horizontal/Compact etc...Layouts             |
-| -                                                      | ✓ Advance Components                                        |
-| -                                                      | ✓ Form Variants                                             |
-| -                                                      | ✓ Table Variants                                            |
-| -                                                      | ✓ 7+ Conceptual Apps                                        |
-| -                                                      | ✓ Front Pages                                               |
+| [Able-pro Free](https://ableproadmin.com/angular/free) | [Able-Pro Pro Version](https://codedthemes.com/item/able-pro-angular-admin-template/) |
+| ------------------------------------------------------ | :------------------------------------------------------------------------------------ |
+| **7** Demo pages                                       | **100+** pages                                                                        |
+| -                                                      | ✓ Modern UserInterface & Easy Developer Experience                                    |
+| -                                                      | ✓ Dark/Light 🌓                                                                       |
+| -                                                      | **✓ Material Components**                                                             |
+| -                                                      | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                           |
+| -                                                      | ✓ 10+ color Presets                                                                   |
+| -                                                      | ✓ LTR/RTL Layouts                                                                     |
+| -                                                      | ✓ Vertical/Horizontal/Compact etc...Layouts                                           |
+| -                                                      | ✓ Advance Components                                                                  |
+| -                                                      | ✓ Form Variants                                                                       |
+| -                                                      | ✓ Table Variants                                                                      |
+| -                                                      | ✓ 7+ Conceptual Apps                                                                  |
+| -                                                      | ✓ Front Pages                                                                         |
 
 ## Able-pro Vue
 
-| [Able-pro Free](https://ableproadmin.com/vue/free) | [Able-Pro Pro Version](https://1.envato.market/B0JAPW)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Preset Dark/Light Color  🌓                                                                                          |
-| -                                                         | ✓ Vuetify Components                                                                                  |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ Vertical/Horizontal etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/vue/free) | [Able-Pro Pro Version](https://codedthemes.com/item/able-pro-vuejs-admin-dashboard/) |
+| -------------------------------------------------- | :----------------------------------------------------------------------------------- |
+| **7** Demo pages                                   | **100+** pages                                                                       |
+| -                                                  | ✓ Modern UserInterface & Easy Developer Experience                                   |
+| -                                                  | ✓ Preset Dark/Light Color 🌓                                                         |
+| -                                                  | ✓ Vuetify Components                                                                 |
+| -                                                  | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                          |
+| -                                                  | ✓ 10+ color Presets                                                                  |
+| -                                                  | ✓ Vertical/Horizontal etc...Layouts                                                  |
+| -                                                  | ✓ Advance Components                                                                 |
+| -                                                  | ✓ Form Variants                                                                      |
+| -                                                  | ✓ Table Variants                                                                     |
+| -                                                  | ✓ 7+ Conceptual Apps                                                                 |
+| -                                                  | ✓ Front Pages                                                                        |
 
 ## Able-pro Bootstrap
 
-| [Able-pro Free](https://ableproadmin.com/bootstrap/free/) | [Able-pro Premium](https://links.codedthemes.com/fCkWk)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Dark/Light/Auto Mode 🌓                                                                                 |
-| -                                                         | **✓ no jQuery**                                                                                               |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ LTR/RTL Layouts                                                                                         |
-| -                                                         | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/bootstrap/free/) | [Able-pro Premium](https://codedthemes.com/item/able-pro-bootstrap-admin-template/) |
+| --------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| **7** Demo pages                                          | **100+** pages                                                                      |
+| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                  |
+| -                                                         | ✓ Dark/Light/Auto Mode 🌓                                                           |
+| -                                                         | **✓ no jQuery**                                                                     |
+| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                         |
+| -                                                         | ✓ 10+ color Presets                                                                 |
+| -                                                         | ✓ LTR/RTL Layouts                                                                   |
+| -                                                         | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                     |
+| -                                                         | ✓ Advance Components                                                                |
+| -                                                         | ✓ Form Variants                                                                     |
+| -                                                         | ✓ Table Variants                                                                    |
+| -                                                         | ✓ 7+ Conceptual Apps                                                                |
+| -                                                         | ✓ Front Pages                                                                       |
 
 ## Able-pro Tailwind
 
-| [Able-pro Free](https://ableproadmin.com/tailwind/free/) | [Able-pro Premium](https://themeforest.net/item/able-pro-tailwind-css-admin-dashboard-template/54526882?s_rank=3)                                                   |
-| --------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                          | **100+** pages                                                                                            |
-| -                                                         | ✓ Modern UserInterface & Easy Developer Experience                                                        |
-| -                                                         | ✓ Dark/Light/Auto Mode 🌓                                                                                 |
-| -                                                         | **✓ no jQuery**                                                                                               |
-| -                                                         | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                                               |
-| -                                                         | ✓ 10+ color Presets                                                                                       |
-| -                                                         | ✓ LTR/RTL Layouts                                                                                         |
-| -                                                         | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                                           |
-| -                                                         | ✓ Advance Components                                                                                      |
-| -                                                         | ✓ Form Variants                                                                                           |
-| -                                                         | ✓ Table Variants                                                                                          |
-| -                                                         | ✓ 7+ Conceptual Apps                                                                                      |
-| -                                                         | ✓ Front Pages                                                                                             |
+| [Able-pro Free](https://ableproadmin.com/tailwind/free/) | [Able-pro Premium](https://codedthemes.com/item/able-pro-tailwind-css-admin-dashboard/) |
+| -------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
+| **7** Demo pages                                         | **100+** pages                                                                          |
+| -                                                        | ✓ Modern UserInterface & Easy Developer Experience                                      |
+| -                                                        | ✓ Dark/Light/Auto Mode 🌓                                                               |
+| -                                                        | **✓ no jQuery**                                                                         |
+| -                                                        | ✓ Design files [Figma](https://links.codedthemes.com/mQZrX)                             |
+| -                                                        | ✓ 10+ color Presets                                                                     |
+| -                                                        | ✓ LTR/RTL Layouts                                                                       |
+| -                                                        | ✓ Vertical/Horizontal/Compact/Tab etc...Layouts                                         |
+| -                                                        | ✓ Advance Components                                                                    |
+| -                                                        | ✓ Form Variants                                                                         |
+| -                                                        | ✓ Table Variants                                                                        |
+| -                                                        | ✓ 7+ Conceptual Apps                                                                    |
+| -                                                        | ✓ Front Pages                                                                           |
 
 ## Free Able-pro versions
+
 - [Bootstrap](https://ableproadmin.com/bootstrap/free/)
 - [React](https://ableproadmin.com/react/free/)
 - [Angular](https://ableproadmin.com/angular/free/)
@@ -108,6 +109,7 @@ Able Pro is a free Material admin dashboard template built with different techno
 - [Tailwind](https://ableproadmin.com/tailwind/free/)
 
 ## Premium Able-pro versions
+
 - [Bootstrap](https://ableproadmin.com/bootstrap/default)
 - [React](https://ableproadmin.com/react)
 - [Angular](https://ableproadmin.com/angular/default)
@@ -115,4 +117,5 @@ Able Pro is a free Material admin dashboard template built with different techno
 - [Tailwind](https://ableproadmin.com/tailwind)
 
 ## Buy Now
-- [Premium version](https://links.codedthemes.com/fCkWk)
+
+- [Premium version](https://codedthemes.com/item/able-pro-dashboard-templates)
