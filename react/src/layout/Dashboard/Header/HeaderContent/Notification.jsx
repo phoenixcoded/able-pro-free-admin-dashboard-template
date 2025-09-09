@@ -72,7 +72,7 @@ export default function NotificationPage() {
           bgcolor: open ? 'secondary.200' : 'secondary.100'
         }}
       >
-        <Badge badgeContent={read} color="success" sx={{ '& .MuiBadge-badge': { top: 2, right: 4 } }}>
+        <Badge badgeContent={read} color="success" slotProps={{ badge: { sx: { top: 2, right: 4 } } }}>
           <Notification variant="Bold" />
         </Badge>
       </IconButton>

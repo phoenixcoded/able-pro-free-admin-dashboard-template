@@ -117,7 +117,11 @@ export default function Breadcrumbs({
     breadcrumbContent = (
       <MainCard
         border={card}
-        sx={card === false ? { mb: 3, bgcolor: 'transparent', borderRadius: 0, overflow: 'visible', ...sx } : { mb: 3, ...sx }}
+        sx={
+          card === false
+            ? { mb: 3, bgcolor: 'transparent', borderRadius: 0, overflow: 'visible', boxShadow: 'none', ...sx }
+            : { mb: 3, ...sx }
+        }
         {...others}
         content={card}
         boxShadow={false}
@@ -216,7 +220,11 @@ export default function Breadcrumbs({
       breadcrumbContent = (
         <MainCard
           border={card}
-          sx={card === false ? { mb: 3, bgcolor: 'transparent', borderRadius: 0, overflow: 'visible', ...sx } : { mb: 3, ...sx }}
+          sx={
+            card === false
+              ? { mb: 3, bgcolor: 'transparent', borderRadius: 0, overflow: 'visible', boxShadow: 'none', ...sx }
+              : { mb: 3, ...sx }
+          }
           {...others}
           content={card}
           boxShadow={false}

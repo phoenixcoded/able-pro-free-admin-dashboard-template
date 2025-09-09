@@ -40,7 +40,7 @@ export default function Header() {
         size="large"
         sx={{
           color: 'secondary.main',
-          ...(drawerOpen ? { bgcolor: 'secondary.100' } : { bgcolor: 'secondary.200' }),
+          ...(drawerOpen ? { bgcolor: 'background.default' } : { bgcolor: 'secondary.200' }),
           ml: { xs: 0, lg: -2 },
           p: 1
         }}

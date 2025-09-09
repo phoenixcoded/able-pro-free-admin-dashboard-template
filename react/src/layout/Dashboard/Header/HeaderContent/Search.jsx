@@ -21,9 +21,8 @@ export default function Search() {
             </InputAdornment>
           }
           aria-describedby="header-search-text"
-          slotProps={{ input: { 'aria-label': 'weight' } }}
+          slotProps={{ input: { sx: { p: 1.5 }, 'aria-label': 'weight' } }}
           placeholder="Ctrl + K"
-          sx={{ '& .MuiOutlinedInput-input': { p: 1.5 } }}
         />
       </FormControl>
     </Box>

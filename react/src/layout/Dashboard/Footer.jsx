@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 export default function Footer() {
   return (
-    <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center', p: '24px 16px 0px', mt: 'auto' }}>
+    <Stack direction={{ sm: 'row' }} sx={{ gap: 1, justifyContent: 'space-between', alignItems: 'center', pt: 3, mt: 'auto' }}>
       <Typography variant="caption">&copy; Able Pro crafted with ♥ by Team Phoenixcoded</Typography>
       <Stack direction="row" sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: 'center' }}>
         <Link component={RouterLink} to="https://ableproadmin.com" target="_blank" variant="caption" color="text.primary">

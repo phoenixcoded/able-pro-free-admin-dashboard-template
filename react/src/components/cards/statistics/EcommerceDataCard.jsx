@@ -72,7 +72,7 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
           </Stack>
         </Grid>
         <Grid size={12}>
-          <MainCard content={false} border={false} sx={{ bgcolor: 'background.default' }}>
+          <MainCard content={false} border={false} sx={{ bgcolor: 'secondary.lighter', boxShadow: 'none' }}>
             <Box sx={{ p: 3, pb: 1.25 }}>
               <Grid container spacing={3}>
                 <Grid size={7}>{children}</Grid>
