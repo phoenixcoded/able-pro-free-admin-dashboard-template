@@ -3,6 +3,8 @@ import { Outlet } from 'react-router-dom';
 
 // material-ui
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 
@@ -15,6 +17,9 @@ import Loader from 'components/Loader';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
+
+// assets
+import { ShoppingCart } from 'iconsax-reactjs';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -48,6 +53,16 @@ export default function MainLayout() {
           <Breadcrumbs />
           <Outlet />
           <Footer />
+          <Link style={{ textDecoration: 'none' }} href="https://codedthemes.com/item/able-pro-mui-react-admin-template/" target="_blank">
+            <Button
+              variant="contained"
+              color="error"
+              startIcon={<ShoppingCart />}
+              sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
+            >
+              Buy Now
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>
