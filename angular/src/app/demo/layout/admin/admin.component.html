@@ -28,18 +28,18 @@
             <span class="version"> v{{ currentApplicationVersion }} </span>
           </a>
         </div>
-        <app-vertical-menu [menus]="menus"></app-vertical-menu>
+        <app-vertical-menu [menus]="menus" />
       </div>
     </nav>
   </mat-drawer>
-  <app-nav-bar></app-nav-bar>
+  <app-nav-bar />
   <div class="app-container">
-    <app-breadcrumb></app-breadcrumb>
+    <app-breadcrumb />
     <div class="main-body">
       <div class="page-wrapper">
-        <router-outlet></router-outlet>
+        <router-outlet />
       </div>
     </div>
   </div>
-  <app-footer></app-footer>
+  <app-footer />
 </mat-drawer-container>

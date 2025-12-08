@@ -28,16 +28,14 @@
     </div>
   </app-card>
   <div class="navbar-content">
-    <ul class="nav coded-inner-navbar" (click)="fireOutClick()" aria-hidden="true">
+    <ul class="nav coded-inner-navbar" (click)="fireOutClick()" (keydown)="fireOutClick()" tabindex="0">
       @for (item of menus(); track item) {
         @if (item.type === 'group') {
-          <app-menu-group-vertical [item]="item"></app-menu-group-vertical>
-        }
-        @if (item.type === 'collapse') {
-          <app-menu-collapse [item]="item"></app-menu-collapse>
-        }
-        @if (item.type === 'item') {
-          <app-menu-item [item]="item"></app-menu-item>
+          <app-menu-group-vertical [item]="item" />
+        } @else if (item.type === 'item') {
+          <app-menu-item [item]="item" />
+        } @else if (item.type === 'collapse') {
+          <app-menu-collapse [item]="item" />
         }
       }
     </ul>

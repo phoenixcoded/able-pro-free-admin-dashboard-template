@@ -40,7 +40,7 @@ export class AdminComponent implements OnInit {
       }
     });
 
-    this.layoutService.layoutState.subscribe(() => {
+    this.layoutService.dashBoardMenuState.subscribe(() => {
       this.sidebar()?.toggle();
     });
   }

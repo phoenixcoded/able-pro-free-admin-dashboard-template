@@ -1,21 +1,20 @@
 <li data-username="able-pro dashboard" class="nav-item coded-hasmenu" [routerLinkActive]="['active']">
-  <a [routerLinkActive]="['active']" class="nav-link" (click)="navCollapse($event)" aria-hidden="true">
-    @if (item.icon) {
+  <a [routerLinkActive]="['active']" class="nav-link" (click)="navCollapse($event)" (keydown)="navCollapse($event)" tabindex="0" role="button">
+    @if (item()!.icon) {
       <span class="coded-micon">
         <svg class="pc-icon">
-          <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item.icon }}"></use>
+          <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item()!.icon }}"></use>
         </svg>
       </span>
     }
-    <span class="coded-mtext">{{ item.title }} </span>
+    <span class="coded-mtext">{{ item()!.title }}</span>
   </a>
-  <ul class="coded-submenu" [routerLinkActive]="['active']" [ngClass]="item.classes!">
-    @for (item of item.children; track item) {
-      @if (item.type === 'collapse') {
-        <app-menu-collapse [item]="item"></app-menu-collapse>
-      }
-      @if (item.type === 'item') {
-        <app-menu-item [item]="item"></app-menu-item>
+  <ul class="coded-submenu" [routerLinkActive]="['active']" [ngClass]="item()!.classes!">
+    @for (items of item()!.children; track $index) {
+      @if (items.type === 'item') {
+        <app-menu-item [item]="items" />
+      } @else if (items.type === 'collapse') {
+        <app-menu-collapse [item]="items" />
       }
     }
   </ul>

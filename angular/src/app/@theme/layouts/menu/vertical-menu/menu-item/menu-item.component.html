@@ -1,35 +1,35 @@
-@if (item.url && !item.external) {
-  <li [ngClass]="item.classes!" [routerLinkActive]="['active']">
-    <a class="nav-link" [target]="item.target ? '_blank' : '_self'" [routerLink]="[item.url]" (click)="toggleMenu($event)">
-      @if (item.icon) {
+@if (item().url && !item().external) {
+  <li [ngClass]="item().classes!" [routerLinkActive]="['active']">
+    <a class="nav-link" [target]="item().target ? '_blank' : '_self'" [routerLink]="[item().url]" (click)="toggleMenu($event)">
+      @if (item().icon) {
         <span class="coded-micon">
           <svg class="pc-icon">
-            <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item.icon }}"></use>
+            <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item().icon }}"></use>
           </svg>
         </span>
       }
-      @if (item.icon) {
-        <span class="coded-mtext">{{ item.title }}</span>
+      @if (item().icon) {
+        <span class="coded-mtext">{{ item().title }}</span>
       } @else {
-        {{ item.title }}
+        {{ item().title }}
       }
     </a>
   </li>
 }
-@if (item.url && item.external) {
-  <li [ngClass]="item.classes!">
-    <a [target]="item.target ? '_blank' : '_self'" [href]="sanitizeURL(item.url)">
-      @if (item.icon) {
+@if (item().url && item().external) {
+  <li [ngClass]="item().classes!">
+    <a [target]="item().target ? '_blank' : '_self'" [href]="sanitizeURL(item().url)">
+      @if (item().icon) {
         <span class="coded-micon">
           <svg class="pc-icon">
-            <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item.icon }}"></use>
+            <use attr.xlink:href="assets/fonts/custom-icon.svg{{ item().icon }}"></use>
           </svg>
         </span>
       }
-      @if (item.icon) {
-        <span class="coded-mtext">{{ item.title }}</span>
+      @if (item().icon) {
+        <span class="coded-mtext">{{ item().title }}</span>
       } @else {
-        {{ item.title }}
+        {{ item().title }}
       }
     </a>
   </li>
