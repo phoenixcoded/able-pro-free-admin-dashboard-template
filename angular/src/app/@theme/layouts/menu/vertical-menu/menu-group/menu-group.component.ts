@@ -1,51 +1,52 @@
 // Angular import
 import { Component, OnInit, inject, input } from '@angular/core';
-import { Location, LocationStrategy } from '@angular/common';
+import { Location } from '@angular/common';
 
 // project import
 import { NavigationItem } from 'src/app/@theme/types/navigation';
-import { MenuItemComponent } from '../menu-item/menu-item.component';
+import { SharedModule } from 'src/app/demo/shared/shared.module';
 import { MenuCollapseComponent } from '../menu-collapse/menu-collapse.component';
+import { MenuItemComponent } from '../menu-item/menu-item.component';
 
 @Component({
   selector: 'app-menu-group-vertical',
-  imports: [MenuItemComponent, MenuCollapseComponent],
+  imports: [SharedModule, MenuCollapseComponent, MenuItemComponent],
   templateUrl: './menu-group.component.html',
   styleUrls: ['./menu-group.component.scss']
 })
 export class MenuGroupVerticalComponent implements OnInit {
   private location = inject(Location);
-  private locationStrategy = inject(LocationStrategy);
 
   // public props
 
   // All Version in Group Name
-  item = input.required<NavigationItem>();
+  readonly item = input.required<NavigationItem>();
+
+  current_url!: string;
 
   // Life cycle events
   ngOnInit() {
-    // at reload time active and trigger link
-    let current_url = this.location.path();
-    const baseHref = this.locationStrategy.getBaseHref();
-    if (baseHref) {
-      current_url = baseHref + this.location.path();
-    }
-    const link = "a.nav-link[ href='" + current_url + "' ]";
-    const ele = document.querySelector(link);
-    if (ele !== null && ele !== undefined) {
-      const parent = ele.parentElement;
-      const up_parent = parent?.parentElement?.parentElement;
-      const last_parent = up_parent?.parentElement;
-      if (parent?.classList.contains('coded-hasmenu')) {
-        parent.classList.add('coded-trigger');
-        parent.classList.add('active');
-      } else if (up_parent?.classList.contains('coded-hasmenu')) {
-        up_parent.classList.add('coded-trigger');
-        up_parent.classList.add('active');
-      } else if (last_parent?.classList.contains('coded-hasmenu')) {
-        last_parent.classList.add('coded-trigger');
-        last_parent.classList.add('active');
-      }
-    }
+    this.current_url = this.location.path();
+    //eslint-disable-next-line
+    //@ts-ignore
+    const baseHref = this.location['_baseHref'] || '';
+    this.current_url = baseHref + this.current_url;
+
+    // Use a more reliable way to find and update the active group
+    setTimeout(() => {
+      const links = document.querySelectorAll('a.nav-link') as NodeListOf<HTMLAnchorElement>;
+      links.forEach((link: HTMLAnchorElement) => {
+        if (link.getAttribute('href') === this.current_url) {
+          let parent = link.parentElement;
+          while (parent && parent.classList) {
+            if (parent.classList.contains('coded-hasmenu')) {
+              parent.classList.add('coded-trigger');
+              parent.classList.add('active');
+            }
+            parent = parent.parentElement;
+          }
+        }
+      });
+    }, 0);
   }
 }

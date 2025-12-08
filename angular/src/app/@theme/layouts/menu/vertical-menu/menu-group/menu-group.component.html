@@ -1,14 +1,10 @@
 <li class="nav-item coded-menu-caption">
-  <label for="group-title">{{ item().title }}</label>
+  <label [for]="item().title">{{ item().title }}</label>
 </li>
-@for (item of item().children; track item) {
-  @if (item.type === 'group') {
-    <app-menu-group-vertical [item]="item"></app-menu-group-vertical>
-  }
-  @if (item.type === 'collapse') {
-    <app-menu-collapse [item]="item"></app-menu-collapse>
-  }
-  @if (item.type === 'item') {
-    <app-menu-item [item]="item"></app-menu-item>
+@for (items of item().children; track $index) {
+  @if (items.type === 'collapse') {
+    <app-menu-collapse [item]="items" />
+  } @else if (items.type === 'item') {
+    <app-menu-item [item]="items" />
   }
 }

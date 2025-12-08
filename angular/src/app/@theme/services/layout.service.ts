@@ -1,5 +1,5 @@
 // angular import
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 // rxjs import
 import { Subject } from 'rxjs';
@@ -9,18 +9,12 @@ import { Subject } from 'rxjs';
 })
 export class LayoutService {
   // theme menu sidebar show and hide
-  layoutState = new Subject();
+  dashBoardMenuState = new Subject();
 
-  // theme component page  menu sidebar show and hide
-  componentState = new Subject();
-
-  drawerOpen = false;
-  componentDrawerOpen = false;
+  drawerOpen = signal(false);
 
   toggleSideDrawer() {
-    this.layoutState.next(!this.drawerOpen);
-  }
-  toggleMenuSide() {
-    this.componentState.next(!this.componentDrawerOpen);
+    this.dashBoardMenuState.next(!this.drawerOpen());
+    this.drawerOpen.update((value) => !value);
   }
 }
