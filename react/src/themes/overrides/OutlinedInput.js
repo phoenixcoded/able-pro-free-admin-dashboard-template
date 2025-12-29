@@ -34,11 +34,11 @@ export default function OutlinedInput(theme) {
           padding: 14
         },
         notchedOutline: {
-          borderColor: theme.palette.secondary[400]
+          borderColor: theme.vars.palette.secondary[400]
         },
         root: {
           '& svg': {
-            color: theme.palette.secondary.main
+            color: theme.vars.palette.secondary.main
           },
           ...getColor({ variant: 'primary', theme }),
           '&.Mui-error': {

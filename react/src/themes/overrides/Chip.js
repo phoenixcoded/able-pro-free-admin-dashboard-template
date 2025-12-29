@@ -1,5 +1,6 @@
 // project-imports
 import getColors from 'utils/getColors';
+import { withAlpha } from 'utils/colorUtils';
 
 // ==============================|| CHIP - COLORS ||============================== //
 
@@ -21,7 +22,7 @@ function getColorStyle({ color, theme }) {
 
   return {
     color: darker,
-    backgroundColor: lighter + 80,
+    backgroundColor: withAlpha(lighter, 0.5),
     borderColor: light,
     '& .MuiChip-deleteIcon': {
       color: main,
@@ -40,7 +41,7 @@ export default function Chip(theme) {
     MuiChip: {
       styleOverrides: {
         root: {
-          '& svg': {
+          '& .MuiChip-icon, & .MuiChip-deleteIcon': {
             width: 18,
             height: 18
           },

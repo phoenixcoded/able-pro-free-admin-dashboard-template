@@ -41,7 +41,7 @@ export default function DashboardDefault() {
             </Typography>
           }
         >
-          <EcommerceDataChart color={theme.palette.primary.main} />
+          <EcommerceDataChart color={theme.vars.palette.primary.main} />
         </EcommerceDataCard>
       </Grid>
       <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
@@ -56,7 +56,7 @@ export default function DashboardDefault() {
             </Typography>
           }
         >
-          <EcommerceDataChart color={theme.palette.warning.dark} />
+          <EcommerceDataChart color={theme.vars.palette.warning.dark} />
         </EcommerceDataCard>
       </Grid>
       <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
@@ -71,7 +71,7 @@ export default function DashboardDefault() {
             </Typography>
           }
         >
-          <EcommerceDataChart color={theme.palette.success.darker} />
+          <EcommerceDataChart color={theme.vars.palette.success.darker} />
         </EcommerceDataCard>
       </Grid>
       <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
@@ -86,7 +86,7 @@ export default function DashboardDefault() {
             </Typography>
           }
         >
-          <EcommerceDataChart color={theme.palette.error.dark} />
+          <EcommerceDataChart color={theme.vars.palette.error.dark} />
         </EcommerceDataCard>
       </Grid>
       {/* row 2 */}

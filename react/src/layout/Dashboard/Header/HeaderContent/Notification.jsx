@@ -87,7 +87,7 @@ export default function NotificationPage() {
       >
         {({ TransitionProps }) => (
           <Transitions type="grow" position={downMD ? 'top' : 'top-right'} in={open} {...TransitionProps}>
-            <Paper sx={(theme) => ({ boxShadow: theme.customShadows.z1, borderRadius: 1.5, width: { xs: 320, sm: 420 } })}>
+            <Paper sx={(theme) => ({ boxShadow: theme.vars.customShadows.z1, borderRadius: 1.5, width: { xs: 320, sm: 420 } })}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MainCard border={false} content={false}>
                   <CardContent>
@@ -104,7 +104,7 @@ export default function NotificationPage() {
                           '& .MuiListItemButton-root': {
                             p: 1.5,
                             my: 1.5,
-                            border: `1px solid ${theme.palette.divider}`,
+                            border: `1px solid ${theme.vars.palette.divider}`,
                             '&:hover': { bgcolor: 'primary.lighter', borderColor: 'primary.light' },
                             '& .MuiListItemSecondaryAction-root': { ...actionSX, position: 'relative' },
                             '&:hover .MuiAvatar-root': { bgcolor: 'primary.main', color: 'background.paper' }

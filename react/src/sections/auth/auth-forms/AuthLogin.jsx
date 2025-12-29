@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -27,7 +26,7 @@ import { Eye, EyeSlash } from 'iconsax-reactjs';
 
 // ============================|| JWT - LOGIN ||============================ //
 
-export default function AuthLogin({ forgot }) {
+export default function AuthLogin() {
   const [checked, setChecked] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
@@ -138,5 +137,3 @@ export default function AuthLogin({ forgot }) {
     </>
   );
 }
-
-AuthLogin.propTypes = { forgot: PropTypes.string };

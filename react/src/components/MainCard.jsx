@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Activity } from 'react';
 
 // material-ui
 import Card from '@mui/material/Card';
@@ -43,8 +44,8 @@ export default function MainCard({
         const style = {
           position: 'relative',
           borderRadius: 1.5,
-          ...(border && { border: `1px solid ${theme.palette.divider}` }),
-          ...((themeContrast || boxShadow || shadow) && { boxShadow: shadow ? shadow : theme.customShadows.z1 }),
+          ...(border && { border: `1px solid ${theme.vars.palette.divider}` }),
+          ...((themeContrast || boxShadow || shadow) && { boxShadow: shadow ? shadow : theme.vars.customShadows.z1 }),
           ...(codeHighlight && {
             '& pre': {
               m: 0,
@@ -71,17 +72,23 @@ export default function MainCard({
       }}
     >
       {/* card header and action */}
-      {!darkTitle && title && (
+      <Activity mode={!darkTitle && title ? 'visible' : 'hidden'}>
         <CardHeader sx={headerSX} title={title} action={secondary} subheader={subheader} slotProps={{ title: { variant: 'subtitle1' } }} />
-      )}
-      {darkTitle && title && <CardHeader sx={headerSX} title={<Typography variant="h4">{title}</Typography>} action={secondary} />}
+      </Activity>
+      <Activity mode={darkTitle && title ? 'visible' : 'hidden'}>
+        <CardHeader sx={headerSX} title={<Typography variant="h4">{title}</Typography>} action={secondary} />
+      </Activity>
 
       {/* content & header divider */}
-      {title && divider && <Divider />}
+      <Activity mode={title && divider ? 'visible' : 'hidden'}>
+        <Divider />
+      </Activity>
 
       {/* card content */}
-      {content && <CardContent sx={contentSX}>{children}</CardContent>}
-      {!content && children}
+      <Activity mode={content ? 'visible' : 'hidden'}>
+        <CardContent sx={contentSX}>{children}</CardContent>
+      </Activity>
+      <Activity mode={!content ? 'visible' : 'hidden'}>{children}</Activity>
     </Card>
   );
 }

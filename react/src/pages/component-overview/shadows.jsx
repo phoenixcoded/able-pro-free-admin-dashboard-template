@@ -134,10 +134,10 @@ export default function ComponentShadow() {
             <MainCard title="Custom Shadow">
               <Grid container spacing={3}>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox shadow={theme.customShadows.z1} label="z1" color="inherit" />
+                  <CustomShadowBox shadow={theme.vars.customShadows.z1} label="z1" color="inherit" />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox shadow={theme.customShadows.z2} label="z2" color="inherit" />
+                  <CustomShadowBox shadow={theme.vars.customShadows.z2} label="z2" color="inherit" />
                 </Grid>
               </Grid>
             </MainCard>
@@ -147,69 +147,73 @@ export default function ComponentShadow() {
               <Grid container spacing={3}>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.primary.contrastText}
+                    color={theme.vars.palette.primary.contrastText}
                     bgcolor="primary.main"
-                    shadow={theme.customShadows.primaryButton}
+                    shadow={theme.vars.customShadows.primaryButton}
                     label="primary"
                   />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.secondary.contrastText}
+                    color={theme.vars.palette.secondary.contrastText}
                     bgcolor="secondary.main"
-                    shadow={theme.customShadows.secondaryButton}
+                    shadow={theme.vars.customShadows.secondaryButton}
                     label="secondary"
                   />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.success.contrastText}
+                    color={theme.vars.palette.success.contrastText}
                     bgcolor="success.main"
-                    shadow={theme.customShadows.successButton}
+                    shadow={theme.vars.customShadows.successButton}
                     label="success"
                   />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.warning.contrastText}
+                    color={theme.vars.palette.warning.contrastText}
                     bgcolor="warning.main"
-                    shadow={theme.customShadows.warningButton}
+                    shadow={theme.vars.customShadows.warningButton}
                     label="warning"
                   />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.info.contrastText}
+                    color={theme.vars.palette.info.contrastText}
                     bgcolor="info.main"
-                    shadow={theme.customShadows.infoButton}
+                    shadow={theme.vars.customShadows.infoButton}
                     label="info"
                   />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
                   <CustomShadowBox
-                    color={theme.palette.error.contrastText}
+                    color={theme.vars.palette.error.contrastText}
                     bgcolor="error.main"
-                    shadow={theme.customShadows.errorButton}
+                    shadow={theme.vars.customShadows.errorButton}
                     label="error"
                   />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox color={theme.palette.primary.main} shadow={theme.customShadows.primary} label="primary" />
+                  <CustomShadowBox color={theme.vars.palette.primary.main} shadow={theme.vars.customShadows.primary} label="primary" />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox color={theme.palette.secondary.main} shadow={theme.customShadows.secondary} label="secondary" />
+                  <CustomShadowBox
+                    color={theme.vars.palette.secondary.main}
+                    shadow={theme.vars.customShadows.secondary}
+                    label="secondary"
+                  />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox color={theme.palette.success.main} shadow={theme.customShadows.success} label="success" />
+                  <CustomShadowBox color={theme.vars.palette.success.main} shadow={theme.vars.customShadows.success} label="success" />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox color={theme.palette.warning.main} shadow={theme.customShadows.warning} label="warning" />
+                  <CustomShadowBox color={theme.vars.palette.warning.main} shadow={theme.vars.customShadows.warning} label="warning" />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox color={theme.palette.info.main} shadow={theme.customShadows.info} label="info" />
+                  <CustomShadowBox color={theme.vars.palette.info.main} shadow={theme.vars.customShadows.info} label="info" />
                 </Grid>
                 <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }}>
-                  <CustomShadowBox color={theme.palette.error.main} shadow={theme.customShadows.error} label="error" />
+                  <CustomShadowBox color={theme.vars.palette.error.main} shadow={theme.vars.customShadows.error} label="error" />
                 </Grid>
               </Grid>
             </MainCard>

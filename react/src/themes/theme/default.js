@@ -1,6 +1,6 @@
 // ==============================|| PRESET THEME - DEFAULT ||============================== //
 
-export default function Default(mode) {
+export default function Default() {
   const contrastText = '#fff';
 
   let primaryColors = ['#E9F0FF', '#C8D9FF', '#A3C0FF', '#7EA6FF', '#6293FF', '#4680FF', '#3F78FF', '#376DFF', '#2F63FF', '#2050FF'];
