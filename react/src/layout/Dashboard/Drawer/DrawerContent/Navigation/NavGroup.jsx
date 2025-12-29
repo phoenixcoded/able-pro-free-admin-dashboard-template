@@ -94,40 +94,38 @@ export default function NavGroup({ item, lastItem, remItems, lastItemId, setSele
   });
 
   return (
-    <>
-      <List
-        subheader={
-          <>
-            {item.title ? (
-              drawerOpen && (
-                <Box sx={{ pl: 3, mb: 1.5 }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      textTransform: 'uppercase',
-                      fontSize: '0.688rem',
-                      color: 'secondary.dark'
-                    }}
-                  >
-                    {item.title}
+    <List
+      subheader={
+        <>
+          {item.title ? (
+            drawerOpen && (
+              <Box sx={{ pl: 3, mb: 1.5 }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    textTransform: 'uppercase',
+                    fontSize: '0.688rem',
+                    color: 'secondary.dark'
+                  }}
+                >
+                  {item.title}
+                </Typography>
+                {item.caption && (
+                  <Typography variant="caption" color="secondary">
+                    {item.caption}
                   </Typography>
-                  {item.caption && (
-                    <Typography variant="caption" color="secondary">
-                      {item.caption}
-                    </Typography>
-                  )}
-                </Box>
-              )
-            ) : (
-              <Divider sx={{ my: 0.5 }} />
-            )}
-          </>
-        }
-        sx={{ mt: drawerOpen && item.title ? 1.5 : 0, py: 0, zIndex: 0 }}
-      >
-        {navCollapse}
-      </List>
-    </>
+                )}
+              </Box>
+            )
+          ) : (
+            <Divider sx={{ my: 0.5 }} />
+          )}
+        </>
+      }
+      sx={{ mt: drawerOpen && item.title ? 1.5 : 0, py: 0, zIndex: 0 }}
+    >
+      {navCollapse}
+    </List>
   );
 }
 

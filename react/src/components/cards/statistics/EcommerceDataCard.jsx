@@ -30,7 +30,7 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
   };
 
   return (
-    <MainCard>
+    <MainCard sx={{ overflow: 'visible' }}>
       <Grid container spacing={2}>
         <Grid size={12}>
           <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
@@ -72,7 +72,7 @@ export default function EcommerceDataCard({ title, count, percentage, color, ico
           </Stack>
         </Grid>
         <Grid size={12}>
-          <MainCard content={false} border={false} sx={{ bgcolor: 'secondary.lighter', boxShadow: 'none' }}>
+          <MainCard content={false} border={false} sx={{ overflow: 'visible', bgcolor: 'secondary.lighter', boxShadow: 'none' }}>
             <Box sx={{ p: 3, pb: 1.25 }}>
               <Grid container spacing={3}>
                 <Grid size={7}>{children}</Grid>

@@ -6,14 +6,14 @@ export default function Tab(theme) {
       styleOverrides: {
         root: {
           minHeight: 46,
-          color: theme.palette.text.primary,
+          color: theme.vars.palette.text.primary,
           borderRadius: 4,
           '&:hover': {
-            color: theme.palette.primary.main
+            color: theme.vars.palette.primary.main
           },
           '&:focus-visible': {
             borderRadius: 4,
-            outline: `2px solid ${theme.palette.secondary.dark}`,
+            outline: `2px solid ${theme.vars.palette.secondary.dark}`,
             outlineOffset: -3
           },
           '& svg.MuiTab-iconWrapper': {

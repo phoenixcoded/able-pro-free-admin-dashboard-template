@@ -10,11 +10,11 @@ export default function ToggleButton(theme) {
             height: 18
           },
           '&.Mui-disabled': {
-            borderColor: theme.palette.divider,
-            color: theme.palette.text.disabled
+            borderColor: theme.vars.palette.divider,
+            color: theme.vars.palette.text.disabled
           },
           '&:focus-visible': {
-            outline: `2px solid ${theme.palette.secondary.dark}`,
+            outline: `2px solid ${theme.vars.palette.secondary.dark}`,
             outlineOffset: 2
           }
         }

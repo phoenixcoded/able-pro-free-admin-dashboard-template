@@ -1,35 +1,33 @@
-// material-ui
-import { alpha, createTheme } from '@mui/material/styles';
-
 // project-imports
 import ThemeOption from './theme';
+import { extendPaletteWithChannels, withAlpha } from 'utils/colorUtils';
 
 // ==============================|| DEFAULT THEME - PALETTE  ||============================== //
 
-export default function Palette(mode, presetColor) {
-  const paletteColor = ThemeOption(presetColor, mode);
+export function buildPalette(presetColor, contrast = false) {
+  const lightPaletteColor = ThemeOption(presetColor);
 
-  return createTheme({
-    palette: {
-      mode: mode,
-      common: {
-        black: '#000',
-        white: '#fff'
-      },
-      ...paletteColor,
+  const commonColor = { common: { black: '#000', white: '#fff' } };
+
+  const extendedLight = extendPaletteWithChannels(lightPaletteColor);
+  const extendedCommon = extendPaletteWithChannels(commonColor);
+
+  return {
+    light: {
+      mode: 'light',
+      ...extendedCommon,
+      ...extendedLight,
       text: {
-        primary: paletteColor.secondary[800],
-        secondary: paletteColor.secondary.main,
-        disabled: paletteColor.secondary[400]
+        primary: extendedLight.secondary[800],
+        secondary: extendedLight.secondary.main,
+        disabled: extendedLight.secondary[400]
       },
-      action: {
-        disabled: paletteColor.secondary.light
-      },
-      divider: alpha(paletteColor.secondary.light, 0.65),
+      action: { disabled: extendedLight.secondary.light },
+      divider: withAlpha(extendedLight.secondary.light, 0.65),
       background: {
-        paper: '#fff',
-        default: paletteColor.secondary.lighter
+        paper: commonColor.common.white,
+        default: contrast ? commonColor.common.white : extendedLight.secondary.lighter
       }
     }
-  });
+  };
 }

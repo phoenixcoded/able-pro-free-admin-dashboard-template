@@ -92,7 +92,7 @@ export default function ProfilePage() {
           borderRadius: 1,
           '&:hover': { bgcolor: 'secondary.lighter' },
           '&:focus-visible': {
-            outline: `2px solid ${theme.palette.secondary.dark}`,
+            outline: `2px solid ${theme.vars.palette.secondary.dark}`,
             outlineOffset: 2
           }
         })}
@@ -117,7 +117,7 @@ export default function ProfilePage() {
           <Transitions type="grow" position="top-right" in={open} {...TransitionProps}>
             <Paper
               sx={(theme) => ({
-                boxShadow: theme.customShadows.z1,
+                boxShadow: theme.vars.customShadows.z1,
                 width: 290,
                 minWidth: 240,
                 maxWidth: 290,

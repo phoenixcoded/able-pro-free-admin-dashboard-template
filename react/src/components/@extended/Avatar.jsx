@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 
 // material-ui
-import { alpha, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import MuiAvatar from '@mui/material/Avatar';
 
 // project-imports
 import getColors from 'utils/getColors';
+import { withAlpha } from 'utils/colorUtils';
 
 function getColorStyle({ theme, color, type }) {
   const colors = getColors(theme, color);
@@ -29,12 +30,12 @@ function getColorStyle({ theme, color, type }) {
         color: main,
         border: '1px solid',
         borderColor: light,
-        backgroundColor: alpha(lighter, 0.8)
+        backgroundColor: withAlpha(lighter, 0.8)
       };
     default:
       return {
         color: main,
-        backgroundColor: alpha(lighter, 0.8)
+        backgroundColor: withAlpha(lighter, 0.8)
       };
   }
 }
@@ -113,7 +114,7 @@ const AvatarStyle = styled(MuiAvatar, { shouldForwardProp: (prop) => prop !== 'c
     ...getSizeStyle(size),
     ...getColorStyle({ theme, color, type }),
     ...(size === 'badge' && {
-      borderColor: theme.palette.background.default
+      borderColor: theme.vars.palette.background.default
     })
   })
 );

@@ -1,3 +1,5 @@
+import { Activity } from 'react';
+
 // material-ui
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -19,7 +21,9 @@ export default function DrawerContent() {
     <>
       <SimpleBar sx={{ '& .simplebar-content': { display: 'flex', flexDirection: 'column' } }}>
         <Navigation />
-        {drawerOpen && !downLG && <NavCard />}
+        <Activity mode={drawerOpen && !downLG ? 'visible' : 'hidden'}>
+          <NavCard />
+        </Activity>
       </SimpleBar>
     </>
   );

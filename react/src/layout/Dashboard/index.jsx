@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 // material-ui
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
@@ -17,6 +18,7 @@ import Loader from 'components/Loader';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
+import { useBuyNowLink } from 'hooks/buyNowLink';
 
 // assets
 import { ShoppingCart } from 'iconsax-reactjs';
@@ -26,6 +28,8 @@ import { ShoppingCart } from 'iconsax-reactjs';
 export default function MainLayout() {
   const { menuMasterLoading } = useGetMenuMaster();
   const downXL = useMediaQuery((theme) => theme.breakpoints.down('xl'));
+
+  const { buyNowLink } = useBuyNowLink();
 
   // set media wise responsive drawer
   useEffect(() => {
@@ -41,7 +45,7 @@ export default function MainLayout() {
 
       <Box component="main" sx={{ width: `calc(100% - ${DRAWER_WIDTH}px)`, flexGrow: 1, p: { xs: 1, sm: 3 } }}>
         <Toolbar sx={{ mt: 'inherit', mb: 'inherit' }} />
-        <Box
+        <Container
           sx={{
             ...{ px: { xs: 0, sm: 3 } },
             position: 'relative',
@@ -53,17 +57,17 @@ export default function MainLayout() {
           <Breadcrumbs />
           <Outlet />
           <Footer />
-          <Link style={{ textDecoration: 'none' }} href="https://codedthemes.com/item/able-pro-mui-react-admin-template/" target="_blank">
-            <Button
-              variant="contained"
-              color="error"
-              startIcon={<ShoppingCart />}
-              sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
-            >
-              Buy Now
-            </Button>
-          </Link>
-        </Box>
+        </Container>
+        <Link style={{ textDecoration: 'none' }} href={buyNowLink} target="_blank">
+          <Button
+            variant="contained"
+            color="error"
+            startIcon={<ShoppingCart />}
+            sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
+          >
+            Buy Now
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

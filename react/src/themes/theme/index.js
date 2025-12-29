@@ -3,10 +3,10 @@ import Default from './default';
 
 // ==============================|| PRESET THEME - THEME SELECTOR ||============================== //
 
-const Theme = (presetColor, mode) => {
+const Theme = (presetColor) => {
   switch (presetColor) {
     default:
-      return Default(mode);
+      return Default();
   }
 };
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { Activity, useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 // material-ui
@@ -44,7 +44,7 @@ export default function Breadcrumbs({
     marginLeft: 0,
     width: '1rem',
     height: '1rem',
-    color: theme.palette.secondary.main
+    color: theme.vars.palette.secondary.main
   };
 
   let customLocation = location.pathname;
@@ -110,7 +110,9 @@ export default function Breadcrumbs({
         sx={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
         color={window.location.pathname === main.url ? 'text.primary' : 'text.secondary'}
       >
-        {icons && <CollapseIcon style={iconSX} />}
+        <Activity mode={icons ? 'visible' : 'hidden'}>
+          <CollapseIcon style={iconSX} />
+        </Activity>
         {main.title}
       </Typography>
     );
@@ -129,9 +131,8 @@ export default function Breadcrumbs({
         <Grid
           container
           direction={rightAlign ? 'row' : 'column'}
-          justifyContent={rightAlign ? 'space-between' : 'flex-start'}
-          alignItems={rightAlign ? 'center' : 'flex-start'}
           spacing={0.5}
+          sx={{ justifyContent: rightAlign ? 'space-between' : 'flex-start', alignItems: rightAlign ? 'center' : 'flex-start' }}
         >
           <Grid>
             <MuiBreadcrumbs aria-label="breadcrumb" maxItems={maxItems || 8} separator={separatorIcon}>
@@ -142,22 +143,28 @@ export default function Breadcrumbs({
                 sx={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
                 color="text.primary"
               >
-                {icons && <Home3 style={iconSX} />}
-                {icon && !icons && <Home3 variant="Bold" style={{ ...iconSX, marginRight: 0 }} />}
-                {(!icon || icons) && 'home'}
+                <Activity mode={icons ? 'visible' : 'hidden'}>
+                  <Home3 style={iconSX} />
+                </Activity>
+                <Activity mode={icon && !icons ? 'visible' : 'hidden'}>
+                  <Home3 variant="Bold" style={{ ...iconSX, marginRight: 0 }} />
+                </Activity>
+                <Activity mode={!icon || icons ? 'visible' : 'hidden'}>home</Activity>
               </Typography>
               {mainContent}
             </MuiBreadcrumbs>
           </Grid>
-          {title && titleBottom && (
+          <Activity mode={title && titleBottom ? 'visible' : 'hidden'}>
             <Grid sx={{ mt: card === false ? 0 : 1 }}>
               <Typography variant="h2" sx={{ fontWeight: 700 }}>
                 {main.title}
               </Typography>
             </Grid>
-          )}
+          </Activity>
         </Grid>
-        {card === false && divider !== false && <Divider sx={{ mt: 2 }} />}
+        <Activity mode={card === false && divider !== false ? 'visible' : 'hidden'}>
+          <Divider sx={{ mt: 2 }} />
+        </Activity>
       </MainCard>
     );
   }
@@ -169,7 +176,9 @@ export default function Breadcrumbs({
     ItemIcon = item?.icon ? item.icon : Buildings2;
     itemContent = (
       <Typography variant="body1" color="text.primary" sx={{ display: 'flex', fontWeight: 500, alignItems: 'center' }}>
-        {icons && <ItemIcon style={iconSX} />}
+        <Activity mode={icons ? 'visible' : 'hidden'}>
+          <ItemIcon style={iconSX} />
+        </Activity>
         {itemTitle}
       </Typography>
     );
@@ -183,9 +192,13 @@ export default function Breadcrumbs({
           variant="h6"
           sx={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
         >
-          {icons && <Home3 style={iconSX} />}
-          {icon && !icons && <Home3 variant="Bold" style={{ ...iconSX, marginRight: 0 }} />}
-          {(!icon || icons) && 'Home'}
+          <Activity mode={icons ? 'visible' : 'hidden'}>
+            <Home3 style={iconSX} />
+          </Activity>
+          <Activity mode={icon && !icons ? 'visible' : 'hidden'}>
+            <Home3 variant="Bold" style={{ ...iconSX, marginRight: 0 }} />
+          </Activity>
+          <Activity mode={!icon || icons ? 'visible' : 'hidden'}>home</Activity>
         </Typography>
         {mainContent}
         {itemContent}
@@ -206,7 +219,9 @@ export default function Breadcrumbs({
                 sx={{ textDecoration: 'none', fontWeight: 500, ...(link.to && { fontWeight: 400, cursor: 'pointer' }) }}
                 color={link.to ? 'text.secondary' : 'text.primary'}
               >
-                {link.icon && <CollapseIcon style={iconSX} />}
+                <Activity mode={link.icon ? 'visible' : 'hidden'}>
+                  <CollapseIcon style={iconSX} />
+                </Activity>
                 {link.title}
               </Typography>
             );
@@ -232,27 +247,28 @@ export default function Breadcrumbs({
           <Grid
             container
             direction={rightAlign ? 'row' : 'column'}
-            justifyContent={rightAlign ? 'space-between' : 'flex-start'}
-            alignItems={rightAlign ? 'center' : 'flex-start'}
             spacing={0.5}
+            sx={{ justifyContent: rightAlign ? 'space-between' : 'flex-start', alignItems: rightAlign ? 'center' : 'flex-start' }}
           >
-            {title && !titleBottom && (
+            <Activity mode={title && !titleBottom ? 'visible' : 'hidden'}>
               <Grid>
                 <Typography variant="h2" sx={{ fontWeight: 700 }}>
                   {custom ? heading : item?.title}
                 </Typography>
               </Grid>
-            )}
+            </Activity>
             <Grid>{tempContent}</Grid>
-            {title && titleBottom && (
+            <Activity mode={title && titleBottom ? 'visible' : 'hidden'}>
               <Grid sx={{ mt: card === false ? 0 : 1 }}>
                 <Typography variant="h2" sx={{ fontWeight: 700 }}>
                   {custom ? heading : item?.title}
                 </Typography>
               </Grid>
-            )}
+            </Activity>
           </Grid>
-          {card === false && divider !== false && <Divider sx={{ mt: 2 }} />}
+          <Activity mode={card === false && divider !== false ? 'visible' : 'hidden'}>
+            <Divider sx={{ mt: 2 }} />
+          </Activity>
         </MainCard>
       );
     }

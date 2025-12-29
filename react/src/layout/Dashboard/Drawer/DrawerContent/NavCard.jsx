@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 // project-imports
 import AnimateButton from 'components/@extended/AnimateButton';
 import MainCard from 'components/MainCard';
+import { useBuyNowLink } from 'hooks/buyNowLink';
 
 // assets
 import avatar from 'assets/images/users/customer-support-1.png';
@@ -15,10 +16,14 @@ import avatar from 'assets/images/users/customer-support-1.png';
 // ==============================|| DRAWER CONTENT - NAV CARD ||============================== //
 
 export default function NavCard() {
+  const { isPhoenix } = useBuyNowLink();
+
+  const SupportLink = isPhoenix ? 'https://phoenixcoded.authordesk.app/' : 'https://codedthemes.support-hub.io/';
+
   return (
     <MainCard sx={{ bgcolor: 'secondary.lighter', m: 3 }}>
       <Stack sx={{ gap: 2.5, alignItems: 'center' }}>
-        <CardMedia component="img" image={avatar} />
+        <CardMedia component="img" alt="drawer-nav" image={avatar} />
         <Stack sx={{ alignItems: 'center' }}>
           <Typography variant="h5">Need Support?</Typography>
           <Typography variant="h6" color="secondary">
@@ -26,7 +31,7 @@ export default function NavCard() {
           </Typography>
         </Stack>
         <AnimateButton>
-          <Button variant="shadow" size="small" component={Link} href="https://phoenixcoded.authordesk.app/" target="_blank">
+          <Button variant="shadow" size="small" component={Link} href={SupportLink} target="_blank">
             Get Support
           </Button>
         </AnimateButton>

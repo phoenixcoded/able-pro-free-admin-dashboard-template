@@ -16,7 +16,7 @@ export default function AuthWrapper({ children }) {
   return (
     <Box sx={{ minHeight: '100vh' }}>
       <AuthBackground />
-      <Grid container direction="column" sx={{ justifyContent: 'center', minHeight: '100vh' }}>
+      <Grid container sx={{ justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
         <Grid size={12}>
           <Grid
             size={12}

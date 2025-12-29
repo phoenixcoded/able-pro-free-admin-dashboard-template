@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 
 // material-ui
-import { alpha, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+
+// project import
+import { withAlpha } from 'utils/colorUtils';
 
 // third-party
 import { BrowserView, MobileView } from 'react-device-detect';
@@ -19,7 +22,7 @@ const RootStyle = styled(BrowserView)({
 const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
   maxHeight: '100%',
   '& .simplebar-scrollbar': {
-    '&:before': { backgroundColor: alpha(theme.palette.secondary.main, 0.25) },
+    '&:before': { backgroundColor: withAlpha(theme.vars.palette.secondary.main, 0.25) },
     '&.simplebar-visible:before': { opacity: 1 }
   },
   '& .simplebar-track.simplebar-vertical': { width: 10 },

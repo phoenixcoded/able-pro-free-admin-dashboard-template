@@ -6,7 +6,7 @@ export default function ListItemIcon(theme) {
       styleOverrides: {
         root: {
           minWidth: 28,
-          color: theme.palette.secondary.main
+          color: theme.vars.palette.secondary.main
         }
       }
     }
