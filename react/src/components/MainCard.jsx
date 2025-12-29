@@ -42,7 +42,7 @@ export default function MainCard({
       {...others}
       sx={(theme) => {
         const style = {
-          position: modal ? 'absolute' : 'relative',
+          position: 'relative',
           borderRadius: 1.5,
           ...(border && { border: `1px solid ${theme.vars.palette.divider}` }),
           ...((themeContrast || boxShadow || shadow) && { boxShadow: shadow ? shadow : theme.vars.customShadows.z1 }),

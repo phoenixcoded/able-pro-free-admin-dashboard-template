@@ -5,16 +5,9 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-// project-import
-import { useBuyNowLink } from 'hooks/buyNowLink';
-
 // ==============================|| MAIN LAYOUT - FOOTER ||============================== //
 
 export default function Footer() {
-  const { isPhoenix } = useBuyNowLink();
-
-  const SupportLink = isPhoenix ? 'https://phoenixcoded.authordesk.app/' : 'https://codedthemes.support-hub.io/';
-
   return (
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1, justifyContent: 'space-between', alignItems: 'center', pt: 3, mt: 'auto' }}>
       <Typography variant="caption">
@@ -31,7 +24,7 @@ export default function Footer() {
         <Link component={RouterLink} to="https://phoenixcoded.gitbook.io/able-pro" target="_blank" variant="caption" color="text.primary">
           Documentation
         </Link>
-        <Link component={RouterLink} to={SupportLink} target="_blank" variant="caption" color="text.primary">
+        <Link component={RouterLink} to='https://codedthemes.support-hub.io/' target="_blank" variant="caption" color="text.primary">
           Support
         </Link>
       </Stack>

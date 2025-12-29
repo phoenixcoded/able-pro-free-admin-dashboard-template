@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 
 // project-imports
 import MainCard from 'components/MainCard';
-import { useBuyNowLink } from 'hooks/buyNowLink';
 
 // assets
 import WelcomeImage from 'assets/images/analytics/welcome-banner.png';
@@ -17,8 +16,6 @@ import cardBack from 'assets/images/widget/img-dropbox-bg.svg';
 // ==============================|| ANALYTICS - WELCOME ||============================== //
 
 export default function WelcomeBanner() {
-  const { buyNowLink } = useBuyNowLink();
-
   return (
     <MainCard
       border={false}
@@ -49,7 +46,7 @@ export default function WelcomeBanner() {
               <Button
                 variant="outlined"
                 color="secondary"
-                href={buyNowLink}
+                href="https://codedthemes.com/item/able-pro-dashboard-templates/"
                 sx={{
                   color: 'background.paper',
                   borderColor: 'background.paper',
