@@ -17,64 +17,56 @@ import ReactApexChart from 'react-apexcharts';
 import IconButton from 'components/@extended/IconButton';
 import MoreIcon from 'components/@extended/MoreIcon';
 import MainCard from 'components/MainCard';
+import useConfig from 'hooks/useConfig';
 
 // assets
 import { Add } from 'iconsax-reactjs';
 
 // ==============================|| CHART ||============================== //
 
+// chart options
+const areaChartOptions = {
+  chart: {
+    id: 'project-overview-chart',
+    type: 'area',
+    background: 'transparent',
+    stacked: true,
+    sparkline: { enabled: true }
+  },
+  dataLabels: { enabled: false },
+  markers: { hover: { size: 5 } },
+  stroke: { curve: 'smooth', width: 2 },
+  grid: { show: false }
+};
+
 function TaskStatusChart({ color, data }) {
   const theme = useTheme();
-  const mode = theme.palette.mode;
-
-  // chart options
-  const areaChartOptions = {
-    chart: {
-      id: 'new-stack-chart',
-      type: 'area',
-      stacked: true,
-      sparkline: {
-        enabled: true
-      }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    markers: {
-      hover: {
-        size: 5
-      }
-    },
-
-    fill: {
-      type: 'gradient',
-      gradient: {
-        shadeIntensity: 1,
-        type: 'vertical',
-        inverseColors: false,
-        opacityFrom: 0.5,
-        opacityTo: 0
-      }
-    },
-    stroke: { curve: 'smooth', width: 2 },
-    grid: {
-      show: false
-    }
-  };
-  const { primary, secondary } = theme.palette.text;
-  const line = theme.palette.divider;
+  const {
+    state: { fontFamily }
+  } = useConfig();
 
   const [options, setOptions] = useState(areaChartOptions);
 
+  const backgroundPaper = theme.vars.palette.background.paper;
+
   useEffect(() => {
-    setOptions((prevState) => ({
-      ...prevState,
+    setOptions({
+      ...areaChartOptions,
+      chart: { ...areaChartOptions.chart, fontFamily: fontFamily },
       colors: [color],
-      theme: {
-        mode: 'light'
-      }
-    }));
-  }, [color, mode, primary, secondary, line, theme]);
+      fill: {
+        gradient: {
+          colorStops: [
+            [
+              { offset: 0, color: color, opacity: 0.2 },
+              { offset: 100, color: backgroundPaper, opacity: 0.1 }
+            ]
+          ]
+        }
+      },
+      theme: { mode: 'light' }
+    });
+  }, [fontFamily, backgroundPaper, color]);
 
   const [series] = useState([{ name: 'Orders', data }]);
 
@@ -136,7 +128,7 @@ export default function ProjectOverview() {
               </Stack>
             </Grid>
             <Grid size={6}>
-              <TaskStatusChart color={theme.palette.primary.main} data={[5, 25, 3, 10, 4, 50, 0]} />
+              <TaskStatusChart color={theme.vars.palette.primary.main} data={[5, 25, 3, 10, 4, 50, 0]} />
             </Grid>
           </Grid>
         </Grid>
@@ -145,11 +137,11 @@ export default function ProjectOverview() {
             <Grid size={6}>
               <Stack sx={{ gap: 0.25 }}>
                 <Typography sx={{ color: 'text.secondary' }}>Pending Tasks</Typography>
-                <Typography variant="h5">3,6786</Typography>
+                <Typography variant="h5">36,786</Typography>
               </Stack>
             </Grid>
             <Grid size={6}>
-              <TaskStatusChart color={theme.palette.error.main} data={[0, 50, 4, 10, 3, 25, 5]} />
+              <TaskStatusChart color={theme.vars.palette.error.main} data={[0, 50, 4, 10, 3, 25, 5]} />
             </Grid>
           </Grid>
         </Grid>

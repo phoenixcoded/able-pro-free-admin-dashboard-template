@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 
 // material-ui
-import { alpha, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import MuiIconButton from '@mui/material/IconButton';
 
 // project-imports
+import { withAlpha } from 'utils/colorUtils';
 import getColors from 'utils/getColors';
 import getShadow from 'utils/getShadow';
 
@@ -19,10 +20,10 @@ function getColorStyle({ variant, theme, color }) {
 
   const commonShadow = {
     '&::after': {
-      boxShadow: `0 0 6px 6px ${alpha(main, 0.9)}`
+      boxShadow: `0 0 6px 6px ${withAlpha(main, 0.9)}`
     },
     '&:active::after': {
-      boxShadow: `0 0 0 0 ${alpha(main, 0.9)}`
+      boxShadow: `0 0 0 0 ${withAlpha(main, 0.9)}`
     },
     '&:focus-visible': {
       outline: `2px solid ${dark}`,
@@ -76,7 +77,7 @@ function getColorStyle({ variant, theme, color }) {
         '&:hover': {
           color: dark,
           borderColor: dark,
-          backgroundColor: alpha(lighter, 0.2)
+          backgroundColor: withAlpha(lighter, 0.2)
         },
         ...commonShadow
       };
@@ -126,7 +127,7 @@ const IconButtonStyle = styled(MuiIconButton, { shouldForwardProp: (prop) => pro
     }),
     ...(variant !== 'text' && {
       '&.Mui-disabled': {
-        backgroundColor: theme.palette.secondary[200]
+        backgroundColor: theme.vars.palette.secondary[200]
       }
     }),
     ...getColorStyle({ variant, theme, color })

@@ -12,8 +12,8 @@ export default function ButtonBase(theme) {
             cursor: 'default',
             pointerEvents: 'none',
             '&:hover': {
-              borderColor: theme.palette.secondary.light,
-              color: theme.palette.secondary.light
+              borderColor: theme.vars.palette.secondary.light,
+              color: theme.vars.palette.secondary.light
             },
             '&:focus-visible': {
               outline: 'none'

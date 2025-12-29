@@ -6,20 +6,24 @@ import { createTheme, ThemeProvider, StyledEngineProvider } from '@mui/material/
 import CssBaseline from '@mui/material/CssBaseline';
 
 // project-imports
-import Palette from './palette';
+import { buildPalette } from './palette';
 import Typography from './typography';
-import CustomShadows from './shadows';
+import CustomShadows from './custom-shadows';
 import componentsOverride from './overrides';
 
 import { HEADER_HEIGHT } from 'config';
+import useConfig from 'hooks/useConfig';
 
 // ==============================|| DEFAULT THEME - MAIN  ||============================== //
 
 export default function ThemeCustomization({ children }) {
-  const theme = Palette('light', 'default');
+  const {
+    state: { presetColor, fontFamily }
+  } = useConfig();
 
-  const themeTypography = Typography(`Inter var`);
-  const themeCustomShadows = useMemo(() => CustomShadows(theme), [theme]);
+  const palette = useMemo(() => buildPalette(presetColor), [presetColor]);
+
+  const themeTypography = useMemo(() => Typography(fontFamily), [fontFamily]);
 
   const themeOptions = useMemo(
     () => ({
@@ -40,14 +44,22 @@ export default function ThemeCustomization({ children }) {
           paddingBottom: 8
         }
       },
-      palette: theme.palette,
       shape: {
         borderRadius: 8
       },
-      customShadows: themeCustomShadows,
-      typography: themeTypography
+      typography: themeTypography,
+      colorSchemes: {
+        light: {
+          palette: palette.light,
+          customShadows: CustomShadows(palette.light, 'light')
+        }
+      },
+      cssVariables: {
+        cssVarPrefix: '',
+        colorSchemeSelector: 'data-color-scheme'
+      }
     }),
-    [theme, themeTypography, themeCustomShadows]
+    [palette, themeTypography]
   );
 
   const themes = createTheme(themeOptions);
@@ -55,7 +67,7 @@ export default function ThemeCustomization({ children }) {
 
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={themes}>
+      <ThemeProvider disableTransitionOnChange theme={themes} modeStorageKey="theme-mode" defaultMode="light">
         <CssBaseline enableColorScheme />
         {children}
       </ThemeProvider>

@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 
 // material-ui
-import { alpha } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,6 +12,7 @@ import IconButton from 'components/@extended/IconButton';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH, MINI_DRAWER_WIDTH } from 'config';
+import { withAlpha } from 'utils/colorUtils';
 
 // assets
 import { HamburgerMenu } from 'iconsax-reactjs';
@@ -56,7 +56,7 @@ export default function Header() {
     position: 'fixed',
     elevation: 0,
     sx: (theme) => ({
-      bgcolor: alpha(theme.palette.background.default, 0.8),
+      bgcolor: withAlpha(theme.vars.palette.background.default, 0.8),
       backdropFilter: 'blur(8px)',
       zIndex: 1200,
       width: { xs: '100%', lg: drawerOpen ? `calc(100% - ${DRAWER_WIDTH}px)` : `calc(100% - ${MINI_DRAWER_WIDTH}px)` }

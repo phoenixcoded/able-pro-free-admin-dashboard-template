@@ -18,79 +18,56 @@ import IconButton from 'components/@extended/IconButton';
 import MoreIcon from 'components/@extended/MoreIcon';
 import MainCard from 'components/MainCard';
 import { GRID_COMMON_SPACING } from 'config';
+import useConfig from 'hooks/useConfig';
 
 // assets
-import { ArrowUp } from 'iconsax-reactjs';
+import { ArrowDown, ArrowUp } from 'iconsax-reactjs';
 
 // chart options
 const pieChartOptions = {
-  chart: {
-    type: 'donut',
-    height: 320
-  },
+  chart: { type: 'donut', background: 'transparent', height: 320 },
   labels: ['Total income', 'Total rent', 'Download', 'Views'],
-  legend: {
-    show: false
-  },
-  dataLabels: {
-    enabled: false
-  }
+  legend: { show: false },
+  dataLabels: { enabled: false }
 };
+
+const incomeCards = [
+  { id: 'item01', label: 'Total Income', value: 23876, change: 76343 },
+  { id: 'item02', label: 'Views', value: 23876, change: 76343, dotColor: 'error', isProfit: false },
+  { id: 'item03', label: 'Total Rent', value: 23876, change: 76343, dotColor: 'warning' },
+  { id: 'item04', label: 'Download', value: 23876, change: 76343, dotColor: 'success' }
+];
 
 // ==============================|| CHART ||============================== //
 
 function ApexDonutChart() {
   const theme = useTheme();
+  const {
+    state: { fontFamily }
+  } = useConfig();
+
   const downSM = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const mode = theme.palette.mode;
-
-  const { primary } = theme.palette.text;
-  const line = theme.palette.divider;
-  const grey200 = theme.palette.secondary[200];
-  const backColor = theme.palette.background.paper;
 
   const [series] = useState([31, 26, 23, 20]);
   const [options, setOptions] = useState(pieChartOptions);
 
+  const primaryMain = theme.vars.palette.primary.main;
+  const errorMain = theme.vars.palette.error.main;
+  const warningMain = theme.vars.palette.warning.main;
+  const successMain = theme.vars.palette.success.main;
+  const backgroundPaper = theme.vars.palette.background.paper;
+
   useEffect(() => {
-    const primaryMain = theme.palette.primary.main;
-    const primaryLighter = theme.palette.error.main;
-    const warning = theme.palette.warning.main;
-    const success = theme.palette.success.main;
+    setOptions({
+      ...pieChartOptions,
+      chart: { ...pieChartOptions.chart, fontFamily: fontFamily },
+      colors: [primaryMain, warningMain, successMain, errorMain],
+      stroke: { colors: [backgroundPaper] },
+      theme: { mode: 'light' }
+    });
+  }, [fontFamily, backgroundPaper, primaryMain, warningMain, successMain, errorMain]);
 
-    setOptions((prevState) => ({
-      ...prevState,
-      colors: [primaryMain, warning, success, primaryLighter],
-      xaxis: {
-        labels: {
-          style: { colors: primary }
-        }
-      },
-      yaxis: {
-        labels: {
-          style: {
-            colors: [primary]
-          }
-        }
-      },
-      grid: {
-        borderColor: line
-      },
-      stroke: {
-        colors: [backColor]
-      },
-      theme: {
-        mode: 'light'
-      }
-    }));
-  }, [mode, primary, line, grey200, backColor, theme]);
-
-  return (
-    <div id="chart">
-      <ReactApexChart options={options} series={series} type="donut" height={downSM ? 280 : 320} id="total-income-chart" />
-    </div>
-  );
+  return <ReactApexChart options={options} series={series} type="donut" height={downSM ? 280 : 320} />;
 }
 
 // ==============================|| CHART WIDGETS - TOTAL INCOME ||============================== //
@@ -142,83 +119,28 @@ export default function TotalIncome() {
         <Grid size={12} sx={{ '.apexcharts-active': { color: 'common.white' } }}>
           <ApexDonutChart />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6 }}>
-          <MainCard content={false} border={false} sx={{ bgcolor: 'background.default' }}>
-            <Stack sx={{ gap: 0.5, alignItems: 'flex-start', p: 2 }}>
-              <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                <Dot componentDiv />
-                <Typography>Item01</Typography>
-              </Stack>
+        {incomeCards.map((item, index) => (
+          <Grid size={{ xs: 12, sm: 6 }} key={index}>
+            <MainCard content={false} border={false} sx={{ bgcolor: 'secondary.lighter', boxShadow: 'none' }}>
+              <Stack sx={{ gap: 0.5, alignItems: 'flex-start', p: 2 }}>
+                <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
+                  <Dot componentDiv sx={{ bgcolor: `${item.dotColor || 'primary'}.main` }} />
+                  <Typography>{item.label}</Typography>
+                </Stack>
 
-              <Typography variant="subtitle1" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                $23,876
-                <Typography
-                  variant="caption"
-                  sx={{ color: 'text.secondary', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.25 }}
-                >
-                  <ArrowUp size={14} /> +$76,343
+                <Typography variant="subtitle1" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  ${item.value}
+                  <Typography
+                    variant="caption"
+                    sx={{ color: 'text.secondary', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.25 }}
+                  >
+                    {item.isProfit !== false ? <ArrowUp size={14} /> : <ArrowDown size={14} />} +${item.change}
+                  </Typography>
                 </Typography>
-              </Typography>
-            </Stack>
-          </MainCard>
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6 }}>
-          <MainCard content={false} border={false} sx={{ bgcolor: 'background.default' }}>
-            <Stack sx={{ gap: 0.5, alignItems: 'flex-start', p: 2 }}>
-              <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                <Dot componentDiv sx={{ bgcolor: 'primary.200' }} />
-                <Typography>Item02</Typography>
               </Stack>
-              <Typography variant="subtitle1" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                $23,876
-                <Typography
-                  variant="caption"
-                  sx={{ color: 'text.secondary', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.25 }}
-                >
-                  <ArrowUp size={14} /> +$76,343
-                </Typography>
-              </Typography>
-            </Stack>
-          </MainCard>
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6 }}>
-          <MainCard content={false} border={false} sx={{ bgcolor: 'background.default' }}>
-            <Stack sx={{ gap: 0.5, alignItems: 'flex-start', p: 2 }}>
-              <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                <Dot componentDiv color="warning" />
-                <Typography>Item03</Typography>
-              </Stack>
-              <Typography variant="subtitle1" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                $23,876
-                <Typography
-                  variant="caption"
-                  sx={{ color: 'text.secondary', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.25 }}
-                >
-                  <ArrowUp size={14} /> +$76,343
-                </Typography>
-              </Typography>
-            </Stack>
-          </MainCard>
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6 }}>
-          <MainCard content={false} border={false} sx={{ bgcolor: 'background.default' }}>
-            <Stack sx={{ gap: 0.5, alignItems: 'flex-start', p: 2 }}>
-              <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                <Dot componentDiv color="success" />
-                <Typography>Item04</Typography>
-              </Stack>
-              <Typography variant="subtitle1" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                $23,876
-                <Typography
-                  variant="caption"
-                  sx={{ color: 'text.secondary', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.25 }}
-                >
-                  <ArrowUp size={14} /> +$76,343
-                </Typography>
-              </Typography>
-            </Stack>
-          </MainCard>
-        </Grid>
+            </MainCard>
+          </Grid>
+        ))}
       </Grid>
     </MainCard>
   );

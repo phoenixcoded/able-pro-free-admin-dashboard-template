@@ -4,6 +4,9 @@
 /* scroll bar */
 @import 'simplebar-react/dist/simplebar.min.css';
 
+/* apex-chart */
+@import 'assets/third-party/apex-chart.css';
+
 /* google-fonts */
 
 @import '@fontsource/inter/400.css';
