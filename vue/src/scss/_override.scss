@@ -115,3 +115,35 @@ header {
 .v-expansion-panel--disabled .v-expansion-panel-title {
   color: rgba(var(--v-theme-on-surface), 0.15);
 }
+
+// apexchart css
+.apexcharts-canvas {
+  .apexcharts-svg {
+    background: transparent !important;
+  }
+  .apexcharts-tooltip-rangebar {
+    padding: 0px 8px 5px;
+    .category {
+      color: var(--v-theme-lightText);
+    }
+  }
+  .apexcharts-tooltip-title {
+    margin-bottom: 0;
+  }
+  .apexcharts-tooltip-marker {
+    margin-top: -7px;
+  }
+  .apexcharts-tooltip-series-group {
+    &.apexcharts-active,
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .apexcharts-menu {
+    .apexcharts-menu-item {
+      &:hover {
+        background: rgb(var(--v-theme-gray100));
+      }
+    }
+  }
+}

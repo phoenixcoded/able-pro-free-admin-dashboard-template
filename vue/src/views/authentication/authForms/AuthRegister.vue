@@ -83,7 +83,6 @@ function validate() {
         hide-details="auto"
         variant="outlined"
         color="primary"
-        @input="email"
       ></v-text-field>
     </div>
     <div class="mb-6">
@@ -98,7 +97,6 @@ function validate() {
         hide-details="auto"
         :type="show1 ? 'text' : 'password'"
         class="pwdInput mt-2"
-        @input="password"
       >
         <template v-slot:append-inner>
           <v-btn color="secondary" aria-label="icon" icon rounded variant="text">
