@@ -106,7 +106,7 @@ const pieChart = {
 };
 </script>
 <template>
-  <v-card variant="outlined" class="bg-surface" rounded="lg">
+  <v-card variant="outlined" class="bg-surface overflow-hidden" rounded="lg">
     <v-card-text>
       <div class="d-flex justify-space-between align-center">
         <h5 class="text-h5 mb-0">Total Income</h5>
@@ -132,7 +132,7 @@ const pieChart = {
         <v-col cols="12" sm="6" v-for="(item, index) in overviewList" :key="index">
           <v-sheet rounded="lg" class="pa-4" color="containerBg">
             <p class="text-body-1 mb-0">
-              <v-avatar size="8" :color="item.color" variant="flat" class="mr-2"> </v-avatar>
+              <v-avatar size="8" :color="item.color" variant="flat" class="me-2" style="margin-bottom: 2px"> </v-avatar>
               {{ item.name }}
             </p>
             <h6 class="text-subtitle-1 mb-0">
