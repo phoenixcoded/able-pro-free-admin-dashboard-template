@@ -11,11 +11,12 @@ export default function Footer() {
   return (
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1, justifyContent: 'space-between', alignItems: 'center', pt: 3, mt: 'auto' }}>
       <Typography variant="caption">
-        &copy; Able Pro crafted with ♥ by Team{' '}
-        <Link href="https://www.phoenixcoded.net/" target="_blank" underline="none">
+        &copy; Handcrafted by Team Phoenixcoded. Powered by{' '}
+        <Link href="https://codedthemes.com/" target="_blank" underline="none">
           {' '}
-          Phoenixcoded
+          CodedThemes
         </Link>
+        .
       </Typography>
       <Stack direction="row" sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: 'center' }}>
         <Link component={RouterLink} to="https://ableproadmin.com" target="_blank" variant="caption" color="text.primary">
@@ -24,7 +25,7 @@ export default function Footer() {
         <Link component={RouterLink} to="https://phoenixcoded.gitbook.io/able-pro" target="_blank" variant="caption" color="text.primary">
           Documentation
         </Link>
-        <Link component={RouterLink} to='https://codedthemes.support-hub.io/' target="_blank" variant="caption" color="text.primary">
+        <Link component={RouterLink} to="https://codedthemes.support-hub.io/" target="_blank" variant="caption" color="text.primary">
           Support
         </Link>
       </Stack>

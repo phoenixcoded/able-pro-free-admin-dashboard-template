@@ -14,6 +14,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Breadcrumbs from 'components/@extended/Breadcrumbs';
 import Loader from 'components/Loader';
+import ScrollTop from 'components/ScrollTop';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
@@ -50,9 +51,13 @@ export default function MainLayout() {
             flexDirection: 'column'
           }}
         >
-          <Breadcrumbs />
-          <Outlet />
-          <Footer />
+          <ScrollTop>
+            <>
+              <Breadcrumbs />
+              <Outlet />
+              <Footer />
+            </>
+          </ScrollTop>
           <Link style={{ textDecoration: 'none' }} href="https://codedthemes.com/item/able-pro-mui-react-admin-template/" target="_blank">
             <Button
               variant="contained"
