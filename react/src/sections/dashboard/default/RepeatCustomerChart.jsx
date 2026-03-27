@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -39,11 +39,9 @@ export default function RepeatCustomerChart() {
 
   const backgroundPaper = theme.vars.palette.background.paper;
 
-  const [options, setOptions] = useState(areaChartOptions);
-  const [series] = useState([{ name: 'Page Views', data: [30, 60, 40, 70, 50, 90, 50, 55, 45, 60, 50, 65] }]);
-
-  useEffect(() => {
-    setOptions({
+  const series = [{ name: 'Page Views', data: [30, 60, 40, 70, 50, 90, 50, 55, 45, 60, 50, 65] }];
+  const options = useMemo(
+    () => ({
       ...areaChartOptions,
       chart: { ...areaChartOptions.chart, fontFamily: fontFamily },
       colors: [primaryMain, primary700],
@@ -66,8 +64,8 @@ export default function RepeatCustomerChart() {
       yaxis: { labels: { style: { colors: [textSecondary] } } },
       grid: { ...areaChartOptions.grid, borderColor: line },
       theme: { mode: 'light' }
-    });
-  }, [backgroundPaper, fontFamily, primaryMain, primary700, textSecondary, line]);
-
+    }),
+    [backgroundPaper, fontFamily, primaryMain, primary700, textSecondary, line]
+  );
   return <ReactApexChart options={options} series={series} type="area" height={284} />;
 }

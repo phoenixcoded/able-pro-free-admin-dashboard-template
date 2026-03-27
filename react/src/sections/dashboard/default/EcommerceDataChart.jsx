@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 
 // third-party
 import ReactApexChart from 'react-apexcharts';
@@ -30,17 +30,16 @@ export default function EcommerceDataChart({ color, height }) {
     state: { fontFamily }
   } = useConfig();
 
-  const [options, setOptions] = useState(areaChartOptions);
-  const [series] = useState([{ name: 'Users', data: [10, 30, 40, 20, 60, 50, 20, 15, 20, 25, 30, 25] }]);
-
-  useEffect(() => {
-    setOptions({
+  const series = [{ name: 'Users', data: [10, 30, 40, 20, 60, 50, 20, 15, 20, 25, 30, 25] }];
+  const options = useMemo(
+    () => ({
       ...areaChartOptions,
       chart: { ...areaChartOptions.chart, fontFamily: fontFamily },
       colors: [color],
       theme: { mode: 'light' }
-    });
-  }, [color, fontFamily]);
+    }),
+    [color, fontFamily]
+  );
 
   return <ReactApexChart options={options} series={series} type="bar" height={height ? height : 50} />;
 }
