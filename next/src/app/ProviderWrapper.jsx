@@ -1,9 +1,6 @@
 'use client';
 import PropTypes from 'prop-types';
 
-// next
-import { SessionProvider } from 'next-auth/react';
-
 // project-imports
 import { ConfigProvider } from 'contexts/ConfigContext';
 import ScrollTop from 'components/ScrollTop';
@@ -16,7 +13,7 @@ export default function ProviderWrapper({ children }) {
     <ConfigProvider>
       <ThemeCustomization>
         <ScrollTop>
-          <SessionProvider refetchInterval={0}>{children}</SessionProvider>
+          {children}
         </ScrollTop>
       </ThemeCustomization>
     </ConfigProvider>
