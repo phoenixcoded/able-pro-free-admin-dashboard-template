@@ -1,7 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"]
+    },                
     "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -14,7 +16,6 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
