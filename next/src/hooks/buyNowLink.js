@@ -1,7 +1,7 @@
 // hooks/useBuyNowLink.ts
 import { useMemo } from 'react';
 
-export default function useBuyNowLink() {
+export function useBuyNowLink() {
   return useMemo(() => {
     const params = new URLSearchParams(window.location.search);
     const ispValue = params.get('isp');

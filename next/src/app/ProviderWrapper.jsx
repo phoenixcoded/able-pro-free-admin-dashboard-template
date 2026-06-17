@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // project-imports
 import { ConfigProvider } from 'contexts/ConfigContext';
 import ScrollTop from 'components/ScrollTop';
-import ThemeCustomization from '../../themes';
+import ThemeCustomization from '../themes';
 
 // ==============================|| PROVIDER WRAPPER ||============================== //
 
