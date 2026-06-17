@@ -229,3 +229,11 @@ ul {
     border-radius: 12px;
   }
 }
+
+ng-scrollbar {
+  --scrollbar-thumb-color: var(--accent-300);
+  .track-inner {
+    background: transparent !important;
+    --scrollbar-track-shape: 4px;
+  }
+}
