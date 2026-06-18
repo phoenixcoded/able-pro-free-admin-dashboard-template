@@ -97,8 +97,8 @@ Looking for even more features? Check out Able Pro's Angular [premium version](h
 
 ## Technology Stack
 
-- [Angular 20](https://angular.dev/)
-- [Angular Material (20)](https://material.angular.dev/)
+- [Angular 22](https://angular.dev/)
+- [Angular Material (22)](https://material.angular.dev/)
 - TypeScript
 - JWT (i.e. Pro version)
 - Role Base Authentication (i.e. Pro version)

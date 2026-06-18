@@ -15,8 +15,7 @@ import { SharedModule } from 'src/app/demo/shared/shared.module';
 export default class LoginComponent {
   // public props
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  Email = 'info@phoenixcoded.co';
+  email = new FormControl('info@phoenixcoded.co', [Validators.required, Validators.email]);
   password = '123456';
 
   // public method
