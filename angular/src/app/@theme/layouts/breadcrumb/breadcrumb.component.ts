@@ -1,5 +1,5 @@
 // Angular Import
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Event } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -20,11 +20,13 @@ interface titleType {
   selector: 'app-breadcrumb',
   imports: [RouterModule],
   templateUrl: './breadcrumb.component.html',
-  styleUrls: ['./breadcrumb.component.scss']
+  styleUrls: ['./breadcrumb.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BreadcrumbComponent {
   private route = inject(Router);
   private titleService = inject(Title);
+  private cdr = inject(ChangeDetectorRef);
 
   // public props
   Component = input(false);
@@ -49,6 +51,7 @@ export class BreadcrumbComponent {
         this.navigationList = breadcrumbList;
         const title = breadcrumbList[breadcrumbList.length - 1]?.title || 'Welcome';
         this.titleService.setTitle(title + ' | Able pro Angular free Admin Template');
+        this.cdr.detectChanges();
       }
     });
   }

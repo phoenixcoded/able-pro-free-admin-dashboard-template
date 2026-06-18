@@ -10,6 +10,7 @@ import { buildPalette } from './palette';
 import Typography from './typography';
 import CustomShadows from './custom-shadows';
 import componentsOverride from './overrides';
+import GlobalStyles from './GlobalStyles';
 
 import { HEADER_HEIGHT } from 'config';
 import useConfig from 'hooks/useConfig';
@@ -69,6 +70,7 @@ export default function ThemeCustomization({ children }) {
     <StyledEngineProvider injectFirst>
       <ThemeProvider disableTransitionOnChange theme={themes} modeStorageKey="theme-mode" defaultMode="light">
         <CssBaseline enableColorScheme />
+        <GlobalStyles />
         {children}
       </ThemeProvider>
     </StyledEngineProvider>
