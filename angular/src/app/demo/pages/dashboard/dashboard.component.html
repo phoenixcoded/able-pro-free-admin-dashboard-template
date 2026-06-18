@@ -295,7 +295,7 @@
     <app-card cardTitle="Project - Able Pro">
       <div class="m-b-25">
         <p class="m-b-10">Tasks done <span class="float-end">30%</span></p>
-        <mat-progress-bar mode="determinate" color="primary" value="50"></mat-progress-bar>
+        <mat-progress-bar mode="determinate" color="primary" value="50" />
       </div>
       <div class="grid gap">
         <a href="javascript:">
@@ -423,13 +423,13 @@
       </ng-template>
       <mat-tab-group mat-stretch-tabs="false" class="transactions" mat-align-tabs="start">
         <mat-tab label="All Transaction">
-          <ng-container *ngTemplateOutlet="Transaction"></ng-container>
+          <ng-container *ngTemplateOutlet="Transaction" />
         </mat-tab>
         <mat-tab label="Success">
-          <ng-container *ngTemplateOutlet="Transaction"></ng-container>
+          <ng-container *ngTemplateOutlet="Transaction" />
         </mat-tab>
         <mat-tab label="Pending">
-          <ng-container *ngTemplateOutlet="Transaction"></ng-container>
+          <ng-container *ngTemplateOutlet="Transaction" />
         </mat-tab>
       </mat-tab-group>
       <ng-template #actionTemplate>

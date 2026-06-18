@@ -1,0 +1,55 @@
+{
+  "name": "able-pro-material-next-js",
+  "version": "5.1.0",
+  "author": {
+    "name": "PhoenixCoded",
+    "email": "PhoenixCoded@gmail.com",
+    "url": "https://www.phoenixcoded.net/"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "dependencies": {
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/material": "7.3.9",
+    "@mui/system": "7.3.9",
+    "@wandersonalwes/iconsax-react": "0.0.10",
+    "apexcharts": "5.10.4",
+    "formik": "2.4.9",
+    "framer-motion": "12.36.0",
+    "next": "16.1.6",
+    "prop-types": "15.8.1",
+    "react": "19.2.4",
+    "react-apexcharts": "2.1.0",
+    "react-dom": "19.2.4",
+    "simplebar-react": "3.3.2",
+    "styled-jsx": "5.1.7",
+    "swr": "2.4.1",
+    "yup": "1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/compat": "2.0.3",
+    "@eslint/eslintrc": "3.3.5",
+    "@eslint/js": "10.0.1",
+    "eslint": "10.1.0",
+    "eslint-config-next": "16.1.6",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-prettier": "5.5.5",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "prettier": "3.8.1"
+  },
+  "overrides": {
+    "eslint": "10.1.0"
+  },
+  "packageManager": "yarn@4.13.0"
+}

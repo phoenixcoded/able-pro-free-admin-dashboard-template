@@ -2,6 +2,7 @@ body {
   &.mat-typography {
     font-feature-settings: 'salt' !important;
   }
+
   /* -------------------------------------------------------------------------- */
   /*  @ mat drawer
   /* -------------------------------------------------------------------------- */
@@ -40,6 +41,7 @@ body {
 
   // Outlined text input
   .mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+
     .mdc-notched-outline__leading,
     .mdc-notched-outline__trailing,
     .mdc-notched-outline__notch {
@@ -50,6 +52,10 @@ body {
   // filled text input
   .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: var(--accent-200) !important;
+  }
+
+  .mdc-button {
+    line-height: normal;
   }
 
   /* -------------------------------------------------------------------------- */

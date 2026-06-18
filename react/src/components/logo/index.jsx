@@ -8,7 +8,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Logo from './LogoMain';
 import LogoIcon from './LogoIcon';
 import { APP_DEFAULT_PATH } from 'config';
-import { useBuyNowLink } from 'hooks/buyNowLink';
+import useBuyNowLink from "../../hooks/buyNowLink"
 
 // ==============================|| MAIN LOGO ||============================== //
 

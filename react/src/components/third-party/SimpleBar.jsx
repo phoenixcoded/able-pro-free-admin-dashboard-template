@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-// project import
+// project-imports
 import { withAlpha } from 'utils/colorUtils';
 
 // third-party
