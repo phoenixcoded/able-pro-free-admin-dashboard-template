@@ -29,7 +29,7 @@
           <div class="text-start">
             <label for="name" class="f-w-500">Enter Your Email</label>
             <mat-form-field appearance="outline" class="w-100 m-t-5">
-              <input matInput [formControl]="email" required [(ngModel)]="Email" />
+              <input matInput [formControl]="email" required />
               @if (email.invalid) {
                 <mat-error>{{ getErrorMessage() }}</mat-error>
               }

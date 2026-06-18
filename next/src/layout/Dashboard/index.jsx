@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 
 // material-ui
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 
@@ -19,6 +21,7 @@ import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import { DRAWER_WIDTH } from 'config';
 
 // assets
+import { ShoppingCart } from '@wandersonalwes/iconsax-react';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -54,6 +57,16 @@ export default function DashboardLayout({ children }) {
           <Footer />
         </Box>
       </Box>
+      <Link style={{ textDecoration: 'none' }} href="https://codedthemes.com/item/able-pro-mui-react-admin-template/" target="_blank">
+        <Button
+          variant="contained"
+          color="error"
+          startIcon={<ShoppingCart />}
+          sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
+        >
+          Buy Now
+        </Button>
+      </Link>
     </Box>
   );
 }

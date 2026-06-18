@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <head>
         <script defer src="https://fomo.codedthemes.com/pixel/CDkpF1sQ8Tt5wpMZgqRvKpQiUhpWE3bc"></script>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ProviderWrapper>{children}</ProviderWrapper>
       </body>
     </html>
