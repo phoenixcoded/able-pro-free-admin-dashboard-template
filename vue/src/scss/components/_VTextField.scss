@@ -3,9 +3,9 @@
 }
 
 .v-field__outline {
-  color: rgb(var(--v-theme-inputBorder));
   --v-field-border-opacity: 1;
 }
+
 .inputWithbg {
   .v-field--variant-outlined {
     background-color: rgba(0, 0, 0, 0.025);
@@ -25,5 +25,5 @@
 
 .v-autocomplete__selection {
   height: 1.8rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }

@@ -1,4 +1,7 @@
+@use './variables' as *;
+
 html {
+
   .bg-success,
   .bg-info,
   .bg-darkinfo,
@@ -13,7 +16,7 @@ html {
   vertical-align: middle;
 }
 
-.v-row + .v-row {
+.v-row+.v-row {
   margin-top: 0px;
 }
 
@@ -22,12 +25,13 @@ html {
   border-color: rgb(var(--v-theme-borderLight));
 }
 
-.v-table > .v-table__wrapper > table > thead > tr > th {
+.v-table>.v-table__wrapper>table>thead>tr>th {
   color: inherit;
 }
 
 .link-hover {
   text-decoration: unset;
+
   &:hover {
     text-decoration: underline;
   }
@@ -36,11 +40,14 @@ html {
 .v-selection-control {
   flex: unset;
 }
-
 .no-spacer {
   .v-list-item__spacer {
     display: none !important;
   }
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 @keyframes progress-circular-rotate {
@@ -62,6 +69,10 @@ header {
   }
 }
 
+.text-white {
+  color: rgb(255, 255, 255) !important;
+}
+
 .v-sheet--border {
   border: 1px solid rgba(var(--v-theme-borderLight), 0.8);
 }
@@ -70,15 +81,14 @@ header {
   background-color: transparent;
 }
 
-// table css
 .v-table {
   &.v-table--hover {
-    > .v-table__wrapper {
-      > table {
-        > tbody {
-          > tr {
+    >.v-table__wrapper {
+      >table {
+        >tbody {
+          >tr {
             &:hover {
-              td {
+              td:not([class*=\ bg-]) {
                 background: rgb(var(--v-theme-containerBg));
               }
             }
@@ -92,13 +102,16 @@ header {
 // accordion page css
 .v-expansion-panel {
   border: 1px solid rgb(var(--v-theme-borderLight));
+
   &:not(:first-child) {
     margin-top: -1px;
   }
+
   .v-expansion-panel-text__wrapper {
     border-top: 1px solid rgb(var(--v-theme-borderLight));
     padding: 16px 24px;
   }
+
   &.v-expansion-panel--active {
     .v-expansion-panel-title--active {
       .v-expansion-panel-title__overlay {
@@ -107,13 +120,22 @@ header {
     }
   }
 }
+
 .v-expansion-panel--active {
-  > .v-expansion-panel-title {
+  >.v-expansion-panel-title {
     min-height: unset;
   }
 }
+
 .v-expansion-panel--disabled .v-expansion-panel-title {
   color: rgba(var(--v-theme-on-surface), 0.15);
+}
+
+// tooltip
+.v-tooltip {
+  >.v-overlay__content.smallTooltip {
+    padding: 2px 10px;
+  }
 }
 
 // apexchart css
@@ -121,29 +143,109 @@ header {
   .apexcharts-svg {
     background: transparent !important;
   }
+
   .apexcharts-tooltip-rangebar {
     padding: 0px 8px 5px;
+
     .category {
       color: var(--v-theme-lightText);
     }
   }
+
   .apexcharts-tooltip-title {
     margin-bottom: 0;
   }
+
   .apexcharts-tooltip-marker {
     margin-top: -7px;
   }
+
   .apexcharts-tooltip-series-group {
+
     &.apexcharts-active,
     &:last-child {
-      padding-bottom: 0;
+      padding-bottom: 2px;
     }
   }
+
   .apexcharts-menu {
     .apexcharts-menu-item {
       &:hover {
         background: rgb(var(--v-theme-gray100));
       }
     }
+  }
+}
+
+.v-btn-group--horizontal {
+  &.v-btn-group--divided {
+    .v-btn {
+      border-width: 1px;
+    }
+  }
+
+  .v-btn--disabled {
+    opacity: 0.5;
+  }
+}
+
+
+@layer vuetify-core {
+  h1 {
+    @extend .text-display-large;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @extend .text-display-medium;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    @extend .text-display-small;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    @extend .text-headline-large;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    @extend .text-headline-medium;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h6 {
+    @extend .text-headline-small;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-block-start: 0;
+  }
+
+  button {
+    font-size: 0.875rem;
+  }
+}
+
+@layer vuetify-components {
+
+  .v-menu>.v-overlay__content>.v-card,
+  .v-menu>.v-overlay__content>.v-sheet,
+  .v-menu>.v-overlay__content>.v-list {
+    box-shadow: var(--v-card-shadow)
+  }
+
+  .v-btn-group {
+    border-color: rgba(var(--v-border-color), 1);
+    border-radius: 8px;
   }
 }

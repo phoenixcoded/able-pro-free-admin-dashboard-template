@@ -10,8 +10,8 @@ import avatarGroup from '@/assets/images/welcome-banner.png';
     <div class="d-flex align-center flex-column">
       <v-img :src="avatarGroup" alt="book" class="mb-3" width="169px" cover></v-img>
       <div class="px-3">
-        <h5 class="text-h5 mb-1 line-height-none">Able Pro</h5>
-        <small class="text-lightText text-h6">Checkout pro features</small>
+        <h5 class="mb-1 line-height-none">Able Pro</h5>
+        <h6 class="text-lightText">Checkout pro features</h6>
       </div>
     </div>
     <div class="mt-5">

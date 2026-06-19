@@ -20,7 +20,7 @@ const sidebarItem: menu[] = [
   {
     title: 'Dashboard',
     icon: 'custom-home-trend',
-    to: '/dashboard/default'
+    to: '/dashboard'
   },
   { header: 'Utilities' },
   {
@@ -31,23 +31,23 @@ const sidebarItem: menu[] = [
   {
     title: 'Colors',
     icon: 'custom-colorpick',
-    to: '/utils/colors'
+    to: '/utils/color'
   },
   {
     title: 'Shadows',
     icon: 'custom-shadow',
-    to: '/utils/shadows'
+    to: '/utils/shadow'
   },
   { header: 'Pages' },
   {
     title: 'Login',
     icon: 'custom-shield',
-    to: '/login1'
+    to: '/authentication/login'
   },
   {
     title: 'Register',
     icon: 'custom-register',
-    to: '/register1'
+    to: '/authentication/register'
   },
   { header: 'Others' },
   {

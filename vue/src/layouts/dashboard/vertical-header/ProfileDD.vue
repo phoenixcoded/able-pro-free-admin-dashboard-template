@@ -2,10 +2,7 @@
 import { ref } from 'vue';
 import SvgSprite from '@/components/shared/SvgSprite.vue';
 
-import { useAuthStore } from '@/stores/auth';
-
 const tab = ref(null);
-const authStore = useAuthStore();
 
 const profiledata1 = ref([
   {
@@ -60,11 +57,11 @@ const profiledata2 = ref([
         <img src="@/assets/images/users/avatar-6.png" width="40" alt="profile" />
       </v-avatar>
       <div>
-        <h6 class="text-subtitle-1 mb-0">JWT User</h6>
-        <p class="text-caption text-lightText mb-0">UI/UX Designer</p>
+        <h6 class="text-body-large mb-0">JWT User</h6>
+        <p class="text-label-small text-lightText mb-0">UI/UX Designer</p>
       </div>
       <div class="ms-auto">
-        <v-btn variant="text" aria-label="logout" color="error" rounded="sm" icon size="large" @click="authStore.logout()">
+        <v-btn variant="text" aria-label="logout" color="error" rounded="sm" icon size="large">
           <SvgSprite name="custom-logout-1" />
         </v-btn>
       </div>
@@ -102,7 +99,7 @@ const profiledata2 = ref([
                 </div>
               </template>
 
-              <v-list-item-title class="text-h6">{{ item.title }}</v-list-item-title>
+              <v-list-item-title class="text-headline-small">{{ item.title }}</v-list-item-title>
             </v-list-item>
             <v-list-item color="primary" :base-color="'secondary'" rounded="md">
               <template v-slot:prepend>
@@ -111,7 +108,7 @@ const profiledata2 = ref([
                 </div>
               </template>
 
-              <v-list-item-title class="text-h6"> Logout</v-list-item-title>
+              <v-list-item-title class="text-headline-small"> Logout</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-window-item>
@@ -131,7 +128,7 @@ const profiledata2 = ref([
                 </div>
               </template>
 
-              <v-list-item-title class="text-h6">{{ item.title }}</v-list-item-title>
+              <v-list-item-title class="text-headline-small">{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-window-item>

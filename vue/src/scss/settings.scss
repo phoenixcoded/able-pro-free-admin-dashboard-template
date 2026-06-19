@@ -1,0 +1,48 @@
+@use "./grid/grid-breakpoints" as *;
+
+$custom-card-subtitle-line-height: 1.66;
+$custom-card-subtitle-padding: 0;
+$custom-card-subtitle-font-size: 0.75rem;
+$custom-card-text-padding: 24px;
+$custom-card-actions-padding: 14px 24px 14px;
+$custom-card-title-font-size : 1.25rem;
+$custom-card-title-font-weight: 500;
+
+// badge
+$custom-badge-dot-size: 8px;
+$custom-badge-padding: 4px;
+$custom-badge-size: 16px;
+$custom-badge-border-width: 1px;
+$custom-badge-font-family: var(--v-body-font-family);
+$custom-badge-wrapper-margin: 0;
+
+// list
+$custom-list-item-title-letter-spacing: .009375em;
+
+// src/styles/settings.scss
+@forward "vuetify/settings" with ($grid-breakpoints: $custom-grid-breakpoints,
+
+  // cards
+  $card-subtitle-line-height: $custom-card-subtitle-line-height,
+  $card-subtitle-padding: $custom-card-subtitle-padding,
+  $card-subtitle-font-size: $custom-card-subtitle-font-size,
+  $card-text-padding: $custom-card-text-padding,
+  $card-item-padding: $custom-card-text-padding,
+  $card-actions-padding: $custom-card-actions-padding,
+  $card-title-font-size: $custom-card-title-font-size,
+  $card-title-font-weight: $custom-card-title-font-weight,
+
+  // badge
+  $badge-dot-width: $custom-badge-dot-size,
+  $badge-dot-height: $custom-badge-dot-size,
+  $badge-padding: $custom-badge-padding,
+  $badge-min-width: $custom-badge-size,
+  $badge-height: $custom-badge-size,
+  $badge-border-width: $custom-badge-border-width,
+  $badge-font-family: $custom-badge-font-family,
+  $badge-dot-border-width: $custom-badge-border-width,
+  $badge-wrapper-margin: $custom-badge-wrapper-margin,
+
+  $list-item-title-letter-spacing: $custom-list-item-title-letter-spacing,
+  
+);
