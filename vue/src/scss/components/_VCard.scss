@@ -3,45 +3,30 @@
 // Outline Card
 .v-card--variant-outlined {
   border-color: rgba(var(--v-theme-borderLight), 1);
+
   .v-divider {
     border-color: rgba(var(--v-theme-borderLight), 0.8);
   }
 }
 
-.v-card-text {
-  padding: $card-text-spacer;
-}
-
-.v-card-actions {
-  padding: 14px $card-text-spacer 14px;
+// Elevated Card
+.v-card--variant-elevated:not([class*="elevation-"]) {
+  box-shadow: var(--v-card-shadow);
 }
 
 .v-card {
-  width: 100%;
-  overflow: visible;
   .v-card-title {
-    &.text-h6 {
+    &.text-headline-small {
       font-weight: 600;
       line-height: 1.57;
     }
   }
 }
 
-.v-card-item {
-  padding: $card-item-spacer-xy;
-}
-
 .card-hover-border {
   border: 1px solid rgb(var(--v-theme-borderLight));
+
   &:hover {
     border: 1px solid rgb(var(--v-theme-primary));
   }
-}
-
-.card-shadow {
-  box-shadow: var(--v-card-shadow);
-}
-
-.v-card-subtitle {
-  font-size: 0.75rem;
 }

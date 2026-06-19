@@ -1,3 +1,5 @@
+@use '@/scss/grid/mixins' as breakpoints;
+
 .bg-blur {
   position: absolute;
   filter: blur(140px);
@@ -6,6 +8,7 @@
   top: 0;
   right: 0;
   overflow: hidden;
+
   &::before {
     content: ' ';
     width: 300px;
@@ -17,6 +20,7 @@
     right: 0;
     opacity: 1;
   }
+
   .round-1 {
     width: 200px;
     height: 200px;
@@ -27,6 +31,7 @@
     left: -50px;
     opacity: 1;
   }
+
   .round-2 {
     width: 250px;
     height: 250px;
@@ -47,14 +52,24 @@
   .v-list {
     .v-list-item {
       border: 1px solid transparent;
+
       &:hover {
         border-color: rgb(var(--v-theme-primary));
         color: rgb(var(--v-theme-primary));
       }
     }
   }
+
   .v-label {
     --v-medium-emphasis-opacity: 1;
     color: rgb(var(--v-theme-lightText));
+  }
+}
+
+.auth-wrapper {
+  height: calc(100vh - 168px);
+
+  @include breakpoints.max('sm') {
+    height: unset;
   }
 }

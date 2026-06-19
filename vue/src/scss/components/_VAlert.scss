@@ -1,12 +1,16 @@
+@use '@/scss/grid/mixins' as breakpoints;
+
 .single-line-alert {
+
   .v-alert__close,
   .v-alert__prepend {
-    align-self: center !important;
+    align-self: center;
   }
 }
 
 .v-alert__prepend {
   align-self: center;
+
   .mdi {
     width: 18px !important;
     height: 18px !important;
@@ -14,16 +18,19 @@
   }
 }
 
-@media (max-width: 500px) {
+@include breakpoints.max('sm') {
   .single-line-alert {
     display: flex;
     flex-wrap: wrap;
+
     .v-alert__append {
       margin-inline-start: 0px;
     }
+
     .v-alert__close {
       margin-left: auto;
     }
+
     .v-alert__content {
       width: 100%;
       margin-top: 5px;

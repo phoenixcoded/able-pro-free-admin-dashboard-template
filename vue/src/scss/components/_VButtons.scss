@@ -36,11 +36,6 @@
   height: inherit !important;
 }
 
-.v-btn-group {
-  border-color: rgba(var(--v-border-color), 1);
-  border-radius: 8px;
-}
-
-.v-btn-group--divided .v-btn:not(:last-child) {
-  border-inline-end-color: rgba(var(--v-border-color), 1);
+.v-btn-group--divided .v-btn:not(:first-child) {
+  border-inline-start: 1px solid rgba(var(--v-border-color), 1);
 }

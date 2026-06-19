@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "grid-breakpoints" as *;
+
+@mixin min($name) {
+ @media (min-width: map.get($custom-grid-breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin max($name) {
+ @media (max-width: calc(#{map.get($custom-grid-breakpoints, $name)} - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin between($min, $max) {
+  $min: map.get($custom-grid-breakpoints, $min);
+  $max: calc(#{map.get($custom-grid-breakpoints, $max)} - 0.02px);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
