@@ -1,6 +1,5 @@
 .v-input--density-default:not(.v-autocomplete--multiple),
-.v-field--variant-solo,
-.v-field--variant-filled {
+.v-field--variant-solo {
   --v-input-control-height: 39px;
   --v-input-padding-top: 2px;
   input.v-field__input {
@@ -18,13 +17,6 @@
     min-height: 42px;
   }
 }
-.v-field--variant-outlined {
-  &.v-field--focused {
-    .v-field__outline {
-      --v-field-border-width: 1px;
-    }
-  }
-}
 .v-input {
   .v-input__details {
     padding-inline: 0;
@@ -40,6 +32,11 @@
   --v-medium-emphasis-opacity: 1;
   color: rgb(var(--v-theme-lightText));
 }
+
+.v-field.v-field--active .v-label.v-field-label--floating {
+  font-size: 0.75rem;
+}
+
 .v-switch .v-label,
 .v-checkbox .v-label {
   opacity: 1;

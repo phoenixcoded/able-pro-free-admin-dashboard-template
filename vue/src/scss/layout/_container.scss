@@ -1,9 +1,10 @@
 @use '../variables' as *;
+@use '@/scss/grid/mixins' as breakpoints;
 
 html {
   overflow-y: auto;
 }
-@media (min-width: 1540px) {
+@include breakpoints.min('xl') {
   .v-container:not(.v-container--fluid) {
     max-width: 1500px;
   }
@@ -11,39 +12,49 @@ html {
 
 .spacer {
   padding: 100px 0;
-  @media (max-width: 1264px) {
+
+  @include breakpoints.max('lg') {
     padding: 72px 0;
   }
 }
-@media (max-width: 800px) {
+
+@include breakpoints.max('sm') {
   .spacer {
     padding: 50px 0;
   }
 }
+
 .page-wrapper {
   background: rgb(var(--v-theme-containerBg));
 }
+
 .page-wrapper {
   .v-container {
+    padding: 16px;
+
     &:first-child {
       min-height: calc(100vh - 139px);
     }
-    padding: 16px;
-    @media (max-width: 1550px) {
+
+    @include breakpoints.max('lg') {
       max-width: 100%;
     }
-    @media (min-width: 1024px) {
+
+    @include breakpoints.min('md') {
       padding-inline: 48px;
     }
-    @media (min-width: 768px) {
+
+    @include breakpoints.min('sm') {
       padding-inline: 40px;
     }
   }
 }
+
 .maxWidth {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 $sizes: (
   'display-1': 44px,
   'display-2': 40px,
@@ -70,15 +81,12 @@ $sizes: (
   }
 }
 
-.fixed-width {
-  max-width: 1300px;
-}
-
 // font family
 
 body {
   font-family: $body-font-family;
   font-feature-settings: 'salt';
+
   .Roboto {
     font-family: 'Roboto', sans-serif !important;
   }
@@ -101,15 +109,27 @@ body {
 }
 
 @keyframes slideY {
+
   0%,
   50%,
   100% {
     transform: translateY(0px);
   }
+
   25% {
     transform: translateY(-10px);
   }
+
   75% {
     transform: translateY(10px);
+  }
+}
+
+.link {
+  color: rgb(var(--v-theme-lightText));
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(var(--v-theme-primary));
   }
 }

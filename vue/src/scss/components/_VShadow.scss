@@ -1,12 +1,8 @@
 @use '../variables' as *;
 
-.elevation-24 {
-  box-shadow: $box-shadow !important;
-}
-
 .v-menu {
-  > .v-overlay__content {
-    > .v-sheet {
+  >.v-overlay__content {
+    >.v-sheet {
       box-shadow: $box-shadow;
     }
   }
@@ -15,10 +11,12 @@
 @each $color, $value in $theme-colors {
   .#{$color}-shadow {
     box-shadow: 0 14px 12px rgba(#{$value}, 0.2);
+
     &:hover {
       box-shadow: none;
     }
   }
+
   .#{$color}-outline-shadow {
     box-shadow: 0 0 0 2px rgba(#{$value}, 0.2);
   }

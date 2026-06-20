@@ -43,7 +43,7 @@ const propsForLink = computed(() => {
       <v-badge :color="props.item.chipColor" v-if="props.item.chipColor === 'success'" :aria-label="props.item.chip" inline dot></v-badge>
     </v-list-item-title>
     <!---If Caption-->
-    <v-list-item-subtitle v-if="item.subCaption" class="text-caption mt-0 hide-menu">
+    <v-list-item-subtitle v-if="item.subCaption" class="text-label-small mt-0 hide-menu">
       {{ item.subCaption }}
     </v-list-item-subtitle>
     <!---If any chip or label-->
