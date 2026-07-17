@@ -237,3 +237,10 @@ ng-scrollbar {
     --scrollbar-track-shape: 4px;
   }
 }
+
+// ============================
+//   ApexCharts tooltip fix
+// ============================
+.apexcharts-tooltip {
+  box-shadow: none !important;
+}
