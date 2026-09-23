@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration production --base-href /angular/free/",
+    "start": "node init && ng serve",
+    "build": "node init && ng build --configuration production --base-href /angular/free/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",

@@ -5,9 +5,9 @@
   "author": "Phoenixcoded",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "build-prod": "vue-tsc --noEmit && vite build --base=/vue/free/",
+    "dev": "node init && vite",
+    "build": "node init && vue-tsc --noEmit && vite build",
+    "build-prod": "node init && vue-tsc --noEmit && vite build --base=/vue/free/",
     "preview": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint src --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-pattern .gitignore"
